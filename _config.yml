@@ -13,22 +13,23 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
+title: Build CLIs with an open framework using Node.js | oclif
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  A framework for building command line interfaces in Node.js.
+  Build simple CLIs with a few flags or advanced CLIs that have
+  subcommands (like heroku). 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://oclif.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
+  - jekyll-env
   - jekyll-feed
+
+sass:
+  sass_dir: ./_scss
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
