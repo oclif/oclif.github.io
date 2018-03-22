@@ -67,7 +67,7 @@ const siteConfig = {
   stylesheets: [
     'https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono',
   ],
-  editUrl: 'https://github.com/oclif/oclif.github.io/tree/docs/docs',
+  editUrl: 'https://github.com/oclif/oclif.github.io/tree/docs/docs/',
 };
 
 module.exports = siteConfig;
