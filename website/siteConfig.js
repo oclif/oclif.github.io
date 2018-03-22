@@ -22,9 +22,9 @@ const siteConfig = {
   baseUrl: '/',
   projectName: 'oclif',
   headerLinks: [
-    {doc: 'doc1', label: 'Docs'},
-    {doc: 'doc4', label: 'API'},
-    {page: 'help', label: 'Help'},
+    // {doc: 'doc1', label: 'Docs'},
+    {href: 'https://gitter.im/oclif/oclif', label: 'Discuss'},
+    {href: 'https://github.com/oclif/oclif', label: 'Github'},
     // {blog: true, label: 'Blog'},
   ],
   // users,
@@ -34,7 +34,7 @@ const siteConfig = {
   favicon: 'img/favicon.png',
   /* colors for website */
   colors: {
-    primaryColor: '#2E8555',
+    primaryColor: '#394351',
     secondaryColor: '#205C3B',
   },
   /* custom fonts for website */
