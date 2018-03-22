@@ -1,0 +1,137 @@
+$dark-gray: #394351;
+$mid-gray: #5F6C7E;
+$light-gray: #96A3B6;
+$green: #71C405;
+
+@import "tachyons";
+
+body {
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+// Helpers
+
+.code {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.green {
+  color: $green;
+}
+
+.dark-gray {
+  color: $dark-gray;
+}
+
+.mid-gray {
+  color: $mid-gray;
+}
+
+.light-gray {
+  color: $light-gray;
+}
+
+.b--light-gray {
+  border-color: $light-gray;
+}
+
+.b--lighter-gray {
+  border-color: rgba($light-gray, 0.2);
+}
+
+.fill-green {
+  fill: $green;
+}
+
+.fill-dark-gray {
+  fill: $dark-gray;
+}
+
+.fill-mid-gray {
+  fill: $mid-gray;
+}
+
+.fill-white {
+  fill: #fff;
+}
+
+.bg-green {
+  background-color: $green;
+}
+
+.bg-dark-gray {
+  background-color: $dark-gray;
+}
+
+.bg-mid-gray {
+  background-color: $mid-gray;
+}
+
+.bg-light-gray {
+  background-color: $light-gray;
+}
+
+.bg-lighter-gray {
+  background-color: rgba($light-gray, 0.2);
+}
+
+.bg-dark-gray-gradient {
+  background-image: linear-gradient(0deg, lighten($dark-gray, 20%) 0%, $dark-gray 100%);
+}
+
+.bg-light-gray-gradient {
+  background-image: linear-gradient(0deg, #fff 0%, #F0F5F7 100%);
+}
+
+.bg-light-gray-gradient-reversed {
+  background-image: linear-gradient(180deg, #fff 0%, #F0F5F7 100%);
+  }
+
+.lh-large {
+  line-height: 1.8;
+}
+
+.pull-heading-left {
+  margin-left: -32px;
+}
+
+// Components
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 50px;
+  background: $dark-gray;
+  background: rgba($dark-gray, 0.9);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    display: block;
+    margin-right: auto;
+  }
+}
+
+.banner {
+  padding-top: 50px;
+}
+
+.code-example {
+  box-shadow: 0 0 50px 5px rgba(#FFFFFF, 0.1);
+}
+
+.video-player {
+  border-bottom: 5px solid $green;
+}
+
+.line {
+  height: 1px;
+  border: none;
+  background-image: linear-gradient(-90deg, rgba($light-gray, 0) 0%, rgba($light-gray, 0.5) 50%, rgba($light-gray, 0) 100%);
+}

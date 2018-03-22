@@ -29,8 +29,8 @@ const siteConfig = {
   ],
   // users,
   /* path to images for header/footer */
-  headerIcon: 'img/docusaurus.svg',
-  footerIcon: 'img/docusaurus.svg',
+  headerIcon: 'img/oclif.svg',
+  footerIcon: 'img/oclif.svg',
   favicon: 'img/favicon.png',
   /* colors for website */
   colors: {
@@ -64,6 +64,7 @@ const siteConfig = {
   repoUrl: 'https://github.com/oclif/oclif',
   /* On page navigation for the current documentation page */
   // onPageNav: 'separate',
+  gaTrackingId: 'UA-39697570-45',
 };
 
 module.exports = siteConfig;
