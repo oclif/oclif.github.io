@@ -37,18 +37,16 @@ const siteConfig = {
     primaryColor: '#394351',
     secondaryColor: '#205C3B',
   },
-  /* custom fonts for website */
-  /*fonts: {
+  fonts: {
     myFont: [
-      "Times New Roman",
-      "Serif"
+      "Roboto",
+      "sans-serif"
     ],
     myOtherFont: [
       "-apple-system",
       "system-ui"
     ]
-  },*/
-  // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
+  },
   copyright:
     'Copyright © ' +
     new Date().getFullYear() +
@@ -65,6 +63,9 @@ const siteConfig = {
   /* On page navigation for the current documentation page */
   // onPageNav: 'separate',
   gaTrackingId: 'UA-39697570-45',
+  stylesheets: [
+    'https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono',
+  ],
 };
 
 module.exports = siteConfig;
