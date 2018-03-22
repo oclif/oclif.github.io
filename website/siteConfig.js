@@ -20,6 +20,7 @@ const siteConfig = {
   tagline: 'Create command line tools your users love',
   url: 'https://oclif.github.io',
   baseUrl: '/',
+  organizationName: 'oclif',
   projectName: 'oclif',
   headerLinks: [
     {doc: 'introduction', label: 'Docs'},
