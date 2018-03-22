@@ -66,7 +66,7 @@ OPTIONS
   -n, --name=name  name to print
 
 EXAMPLES
-  $ example-multi-ts hello
+  $ mynewcli hello
   hello world from ./src/hello.ts!
 ```
 
