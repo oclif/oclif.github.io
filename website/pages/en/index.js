@@ -75,7 +75,6 @@ class Index extends React.Component {
     return (
       <div>
         <main className="page-content" aria-label="Content">
-          <div className="wrapper">
           <section className='banner bg-dark-gray-gradient'>
             <div className='pt6 mw8 center ph4 tc'>
               <svg className='w4 fill-green' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 16">
@@ -108,17 +107,17 @@ class Index extends React.Component {
               <h2 className='mt0 fw4 mid-gray'>Build simple to advanced CLIs in minutes</h2>
               <p className='dark-gray f6 lh-large'>oclif is an open source framework for building a command line interface (CLI) in Node.js. Create CLIs with a few flags or advanced CLIs that have subcommands. oclif makes it easy for you to build CLIs for your company, service, or your own&nbsp;development&nbsp;needs.</p>
               <div className='mt3'>
-                <a href={docUrl('getting_started.html', language)} className='lh-solid dim db dib-ns pv3 mt1 ph4 ba b--light-gray br2 link mid-gray'>
+                <a href={docUrl('introduction.html', language)} className='lh-solid dim db dib-ns pv3 mt1 ph4 ba b--light-gray br2 link mid-gray'>
                   <svg className='v-btm pr1 fill-mid-gray' xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <path d="M31,11 C34.8663333,11 38,14.1340556 38,18 C38,21.8659444 34.8659444,25 31,25 C27.1344444,25 24,21.8659444 24,18 C24,14.1340556 27.1344444,11 31,11 Z M29.7,19.1100505 L28.5454295,17.95548 C28.269036,17.6790865 27.8252729,17.6747271 27.55,17.95 C27.276633,18.223367 27.2763233,18.6662728 27.55548,18.9454295 L29.1501549,20.5401044 C29.2974579,20.6874074 29.4922992,20.7574439 29.6838384,20.7490639 C29.8833986,20.7682041 30.0887891,20.7011604 30.2411984,20.5487511 L33.8531667,16.9367828 C34.1233202,16.6666293 34.123367,16.223367 33.85,15.95 C33.5747271,15.6747271 33.1348353,15.6752152 32.8632172,15.9468333 L29.7,19.1100505 Z" transform="translate(-24 -11)"/>
                   </svg>
-                  Get started
+                  Getting Started
                 </a>
                 <a href='https://github.com/oclif/oclif' className='lh-solid dim db dib-ns pv3 mt1 ph4 ba b--light-gray br2 link mid-gray'>
                   <svg className="v-btm pr1 fill-mid-gray" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <path d="M0,7.94661352 C0,11.4569776 2.29202861,14.4356162 5.47100893,15.4863838 C5.87126677,15.5595571 6.0171276,15.3141828 6.0171276,15.1034439 C6.0171276,14.9146569 6.010252,14.4151277 6.00632309,13.7521781 C3.78108598,14.2321946 3.31158108,12.6867758 3.31158108,12.6867758 C2.94766567,11.7686956 2.42315602,11.524297 2.42315602,11.524297 C1.69679855,11.0311094 2.47816078,11.0413536 2.47816078,11.0413536 C3.28113202,11.0974531 3.70348998,11.860406 3.70348998,11.860406 C4.4175696,13.074594 5.57610731,12.7238502 6.03186101,12.5204286 C6.10454587,12.0067525 6.31130483,11.6569844 6.5396728,11.4579532 C4.76331379,11.2574586 2.8956076,10.5759718 2.8956076,7.53098953 C2.8956076,6.66315494 3.20746493,5.95386237 3.71920562,5.39823359 C3.6371896,5.1972511 3.36265693,4.38941857 3.79778385,3.29572259 C3.79778385,3.29572259 4.46962767,3.08156891 5.99748304,4.1098968 C6.63593112,3.93379321 7.32005279,3.84549751 8.00024556,3.84257058 C8.67994721,3.84549751 9.36406888,3.93379321 10.0034992,4.1098968 C11.5303723,3.08156891 12.2012339,3.29572259 12.2012339,3.29572259 C12.6373431,4.38941857 12.3628104,5.1972511 12.2807944,5.39823359 C12.7935173,5.95386237 13.1029191,6.66315494 13.1029191,7.53098953 C13.1029191,10.5832892 11.2327573,11.2550195 9.45050493,11.4520994 C9.73780656,11.6974736 9.99318579,12.1823683 9.99318579,12.9233693 C9.99318579,13.9858447 9.98385463,14.8429472 9.98385463,15.1034439 C9.98385463,15.3161341 10.127751,15.5629718 10.5339022,15.4854082 C13.7099358,14.4326892 16,11.4564898 16,7.94661352 C16,3.60365593 12.4924674,0.0746232151 8.13783517,0.00116792798 C8.09173843,0.000390353833 8.04554676,0 7.99926333,0 C3.58218484,0 0,3.55768277 0,7.94661352 Z"></path>
                   </svg>
-                  View docs
+                  GitHub
                 </a>
               </div>
             </div>
@@ -193,8 +192,6 @@ class Index extends React.Component {
               </div>
             </div>
           </section>
-            <Button href="https://engineering.salesforce.com/open-sourcing-oclif-the-cli-framework-that-powers-our-clis-21fbda99d33a">Introduction</Button>
-          </div>
         </main>
       </div>
     );

@@ -22,14 +22,14 @@ const siteConfig = {
   baseUrl: '/',
   projectName: 'oclif',
   headerLinks: [
-    // {doc: 'doc1', label: 'Docs'},
+    {doc: 'introduction', label: 'Docs'},
     {href: 'https://gitter.im/oclif/oclif', label: 'Discuss'},
     {href: 'https://github.com/oclif/oclif', label: 'Github'},
     // {blog: true, label: 'Blog'},
   ],
   // users,
   /* path to images for header/footer */
-  headerIcon: 'img/oclif.svg',
+  // headerIcon: 'img/oclif.svg',
   footerIcon: 'img/oclif.svg',
   favicon: 'img/favicon.png',
   /* colors for website */

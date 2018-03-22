@@ -5872,3 +5872,9 @@ body {
   height: 1px;
   border: none;
   background-image: linear-gradient(-90deg, rgba(150, 163, 182, 0) 0%, rgba(150, 163, 182, 0.5) 50%, rgba(150, 163, 182, 0) 100%); }
+
+a.ba {
+  margin: 5px; }
+
+header .logo {
+  fill: #fff; }

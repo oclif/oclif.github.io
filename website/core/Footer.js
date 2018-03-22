@@ -92,8 +92,8 @@ class Footer extends React.Component {
       //     Copyright &copy; {currentYear} Facebook Inc.
       //   </section>
       // </footer>
-      <footer class="footer pb3">
-        <div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">
+      <footer className="footer pb3">
+        <div className="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">
           Made with 💜 by Heroku
         </div>
       </footer>

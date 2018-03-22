@@ -1,8 +1,6 @@
 ---
-title: Getting Started
+title: Multi-Command CLI
 ---
-# oclif getting started tutorial
-
 This tutorial is a step-by-step guide to introduce you to oclif. If you have not developed anything in a command line before, this tutorial is a great place to get started.
 
 ## Before you begin
