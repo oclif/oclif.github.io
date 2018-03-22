@@ -25,7 +25,7 @@ const siteConfig = {
   headerLinks: [
     {doc: 'introduction', label: 'Docs'},
     {href: 'https://gitter.im/oclif/oclif', label: 'Discuss'},
-    {href: 'https://github.com/oclif/oclif', label: 'Github'},
+    {href: 'https://github.com/oclif/oclif', label: 'GitHub'},
     // {blog: true, label: 'Blog'},
   ],
   // users,

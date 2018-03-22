@@ -1,6 +1,8 @@
 ---
-title: Multi-command CLI
+title: Single-command CLI
 ---
+
+### CLI Creation
 
 You can call your CLI anything you like by replacing `mynewcli` with a name of your choice. The name of your CLI can be anything you like as long as it meets the [npm restrictions](https://docs.npmjs.com/files/package.json#name). 
 

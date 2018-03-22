@@ -5,10 +5,12 @@
     "previous": "Previous",
     "tagline": "Create command line tools your users love",
     "introduction": "Introduction",
-    "multi": "Multi-Command CLI",
+    "multi": "Multi-command CLI",
+    "releasing": "Releasing",
+    "single": "Single-command CLI",
     "Docs": "Docs",
     "Discuss": "Discuss",
-    "Github": "Github",
+    "GitHub": "GitHub",
     "Getting Started": "Getting Started"
   },
   "pages-strings": {
