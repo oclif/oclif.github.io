@@ -5,6 +5,7 @@ title: Releasing your CLI
 When you're ready to release your CLI, simply publish to npm:
 
 ```sh-session
+$ npm version (major|minor|patch) # bumps version, updates README, adds git tag
 $ npm publish
 $ npm install -g mynewcli
 $ mynewcli
