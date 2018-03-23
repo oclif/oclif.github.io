@@ -17,6 +17,7 @@
 
 const siteConfig = {
   title: 'oclif: The Open CLI Framework',
+  disableHeaderTitle: true,
   tagline: 'Create command line tools your users love',
   url: 'https://oclif.github.io',
   baseUrl: '/',
@@ -32,9 +33,10 @@ const siteConfig = {
   ],
   // users,
   /* path to images for header/footer */
-  // headerIcon: 'img/oclif.svg',
+  headerIcon: 'img/oclif_rev.svg',
   footerIcon: 'img/oclif.svg',
   favicon: 'img/favicon.png',
+
   /* colors for website */
   colors: {
     primaryColor: '#394351',

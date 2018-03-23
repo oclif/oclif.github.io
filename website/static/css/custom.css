@@ -5859,6 +5859,11 @@ body {
     display: block;
     margin-right: auto; }
 
+header .logo {
+  display: block;
+  margin-right: auto;
+  height: 20px !important; }
+
 .banner {
   padding-top: 50px; }
 
