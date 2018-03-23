@@ -33,7 +33,7 @@ For reference, here are the options and what they do:
 
 When your CLI is ready, you'll see a message ending with the following: 
 
-```
+```sh-session
 Created mynewcli in /Users/nsamsami/mynewcli
 ```
 

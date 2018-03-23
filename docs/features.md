@@ -42,6 +42,6 @@ In addition to in-CLI help through `--help` and the README markdown help generat
 
 Automatically include autocomplete for your CLI. This includes not just command names and flag names, but flag values as well. For example, it's easy to configure the Heroku CLI to have completions for Heroku app names:
 
-```
+```bash
 $ heroku info --app=<tab><tab> # will complete with all the Heroku apps a user has in their account
 ```

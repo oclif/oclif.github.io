@@ -20,7 +20,7 @@ Single CLIs are like `ls` or `cat`. They can accept arguments and flags. Single 
 
 Multi CLIs are like `git` or `heroku`. They have subcommands that are themselves single CLIs. In the `package.json` there is a field `oclif.commands` that points to a directory. This directory contains all the subcommands for the CLI. For example, if you had a CLI called `mycli` with the commands `mycli create` and `mycli destroy`, you would have a project like the following:
 
-```plain
+```bash
 package.json
 src/
 └── commands/
