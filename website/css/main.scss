@@ -150,8 +150,19 @@ header .logo {
   margin-bottom: 0.83em;
 }
 
-.homepage p {
-  text-align: left;
+.homepage {
+  h1 {
+    margin: 1em 0;
+  }
+  h2 {
+    font-family: Roboto;
+  }
+  p {
+    text-align: left;
+  }
+  .center {
+    text-align: center;
+  }
 }
 
 .navigationSlider .slidingNav ul li.siteNavGroupActive a {

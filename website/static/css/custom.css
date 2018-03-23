@@ -5883,8 +5883,17 @@ header .logo {
   font-size: 1.5em;
   margin-bottom: 0.83em; }
 
+.homepage h1 {
+  margin: 1em 0; }
+
+.homepage h2 {
+  font-family: Roboto; }
+
 .homepage p {
   text-align: left; }
+
+.homepage .center {
+  text-align: center; }
 
 .navigationSlider .slidingNav ul li.siteNavGroupActive a {
   color: rgba(255, 255, 255, 0.8);
