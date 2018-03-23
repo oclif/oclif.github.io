@@ -3,11 +3,10 @@
     "Getting Started": [
       "introduction",
       "features",
-      "quickstart",
-      "generator_commands",
       "single",
       "multi",
-      "releasing"
+      "releasing",
+      "generator_commands"
     ],
     "API Reference": [
       "command",

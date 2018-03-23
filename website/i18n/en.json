@@ -17,7 +17,6 @@
     "introduction": "Introduction",
     "multi": "Multi-command CLI",
     "plugins": "Plugins",
-    "quickstart": "Quickstart",
     "related_repos": "Related Repositories",
     "releasing": "Releasing your CLI",
     "single": "Single-command CLI",
