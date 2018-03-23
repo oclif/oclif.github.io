@@ -1,5 +1,5 @@
 ---
-title: oclif Features
+title: Features
 ---
 
 ### Flag/Argument parsing
