@@ -18,7 +18,7 @@ We suggest TypeScript as we find the typing to really help when refactoring code
 
 We've put a lot of care into making it easy to make a TypeScript CLI even if you've never written TypeScript before. We generate CLIs and plugins that use [ts-node](https://github.com/TypeStrong/ts-node) to make it fast to run the TypeScript code without a compilation step. You won't have to mess around with build configuration using oclif.
 
-Still, the languages today are very similar. The code you write in JavaScript will be nearly identical to what you would have in TypeScript.
+Still, the languages today are very similar. The code you write in JavaScript will be nearly identical to what you would have in TypeScript. (Just no type definitions, of course)
 
 
 ### I want a single binary CLI like with Go
