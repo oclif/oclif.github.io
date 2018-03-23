@@ -36,7 +36,7 @@ const siteConfig = {
   favicon: 'img/favicon.png',
   /* colors for website */
   colors: {
-    primaryColor: '#394351',
+    primaryColor: '#42aecc',
     secondaryColor: '#2a323c',
   },
   fonts: {
