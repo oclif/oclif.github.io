@@ -74,7 +74,7 @@ class Index extends React.Component {
 
     return (
       <div>
-        <main className="page-content" aria-label="Content">
+        <main className="homepage page-content" aria-label="Content">
           <section className='banner bg-dark-gray-gradient'>
             <div className='pt6 mw8 center ph4 tc'>
               <svg className='w4 fill-green' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 16">

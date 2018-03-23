@@ -94,31 +94,6 @@ export class GoodbyeCommand extends Command {
 }
 ```
 
-### Topics
-
-As CLIs grow it can be useful to nest commands within topics. This is supported simply by placing command files in subdirectories. For example, with the Heroku CLI we have a topic `heroku config` with commands like `heroku config`, `heroku config:set` and `heroku config:get`. The directory structure looks like this:
-
-```
-package.json
-src/
-└── commands/
-    └── config/
-        ├── index.ts
-        ├── set.ts
-        └── get.ts
-```
-
-The help descriptions will be the description of the first command within a directory. If you'd like to customize the help description, add it to the `package.json` like so:
-
-```js
-{
-  "oclif": {
-    "topics": {
-      "apps:favorites": { "description": "manage favorite apps" },
-      "config": { "description": "manage heroku config variables" },
-    }
-  }
-}
-```
+[See topics for information on nesting commands](topics.md).
 
 <!-- TODO: link to command API reference -->

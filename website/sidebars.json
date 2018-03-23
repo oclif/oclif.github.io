@@ -2,13 +2,27 @@
   "docs": {
     "Getting Started": [
       "introduction",
+      "features",
+      "quickstart",
+      "generator_commands",
       "single",
       "multi",
       "releasing"
     ],
+    "API Reference": [
+      "command",
+      "args",
+      "flags",
+      "topics",
+      "plugins",
+      "base_class",
+      "aliases"
+    ],
     "Also See": [
       "examples",
-      "external_links"
+      "external_links",
+      "related_repos",
+      "feedback"
     ]
   }
 }
