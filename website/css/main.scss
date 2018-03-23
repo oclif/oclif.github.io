@@ -2,6 +2,7 @@ $dark-gray: #394351;
 $mid-gray: #5F6C7E;
 $light-gray: #96A3B6;
 $green: #71C405;
+$teal: #42aecc;
 
 @import "tachyons";
 
@@ -159,16 +160,25 @@ header .logo {
   background-color: #394351;
 }
 
-.navigationSlider .slidingNav ul li a:focus, .navigationSlider .slidingNav ul li a:hover {
-  background-color: #394351;
-}
-
 h2.headerTitle {
   // font-family: Roboto;
   color: rgba(255, 255, 255, 0.8);
   font-size: 16px;
 }
 
-.fixedHeaderContainer {
-  background-color: #394351;
+// override primaryColor
+// .navigationSlider .slidingNav ul li a:focus, .navigationSlider .slidingNav ul li a:hover {
+//   background-color: #394351;
+// }
+// .fixedHeaderContainer {
+//   background-color: #394351;
+// }
+
+// docs pages
+article a {
+  color: $teal;
+}
+
+nav.toc .toggleNav ul li a.navItemActive {
+  color: $teal;
 }

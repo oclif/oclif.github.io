@@ -5890,12 +5890,12 @@ header .logo {
   color: rgba(255, 255, 255, 0.8);
   background-color: #394351; }
 
-.navigationSlider .slidingNav ul li a:focus, .navigationSlider .slidingNav ul li a:hover {
-  background-color: #394351; }
-
 h2.headerTitle {
   color: rgba(255, 255, 255, 0.8);
   font-size: 16px; }
 
-.fixedHeaderContainer {
-  background-color: #394351; }
+article a {
+  color: #42aecc; }
+
+nav.toc .toggleNav ul li a.navItemActive {
+  color: #42aecc; }
