@@ -4,14 +4,13 @@ title: Generator Commands
 
 <!-- this is auto-generated from the oclif readme -->
 <!-- commands -->
-
 * [oclif command NAME](#command-name)
 * [oclif help [COMMAND]](#help-command)
+* [oclif hook NAME](#hook-name)
 * [oclif multi [PATH]](#multi-path)
 * [oclif plugin [PATH]](#plugin-path)
 * [oclif single [PATH]](#single-path)
-
-## command NAME
+## oclif command NAME
 
 add a command to an existing CLI or plugin
 
@@ -27,9 +26,9 @@ OPTIONS
   --force     overwrite existing files
 ```
 
-_See code: [src/commands/command.ts](https://github.com/oclif/oclif/blob/v1.4.9/src/commands/command.ts)_
+_See code: [src/commands/command.ts](https://github.com/oclif/oclif/blob/v1.5.2/src/commands/command.ts)_
 
-## help [COMMAND]
+## oclif help [COMMAND]
 
 display help for oclif
 
@@ -46,7 +45,26 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v1.1.6/src/commands/help.ts)_
 
-## multi [PATH]
+## oclif hook NAME
+
+add a hook to an existing CLI or plugin
+
+```
+USAGE
+  $ oclif hook NAME
+
+ARGUMENTS
+  NAME  name of hook (snake_case)
+
+OPTIONS
+  --defaults     use defaults for every setting
+  --event=event  [default: init] event to run hook on
+  --force        overwrite existing files
+```
+
+_See code: [src/commands/hook.ts](https://github.com/oclif/oclif/blob/v1.5.2/src/commands/hook.ts)_
+
+## oclif multi [PATH]
 
 generate a new multi-command CLI
 
@@ -60,12 +78,12 @@ ARGUMENTS
 OPTIONS
   --defaults         use defaults for every setting
   --force            overwrite existing files
-  --options=options  (typescript|tslint|semantic-release|mocha)
+  --options=options  (yarn|typescript|tslint|semantic-release|mocha)
 ```
 
-_See code: [src/commands/multi.ts](https://github.com/oclif/oclif/blob/v1.4.9/src/commands/multi.ts)_
+_See code: [src/commands/multi.ts](https://github.com/oclif/oclif/blob/v1.5.2/src/commands/multi.ts)_
 
-## plugin [PATH]
+## oclif plugin [PATH]
 
 create a new CLI plugin
 
@@ -79,12 +97,12 @@ ARGUMENTS
 OPTIONS
   --defaults         use defaults for every setting
   --force            overwrite existing files
-  --options=options  (typescript|tslint|semantic-release|mocha)
+  --options=options  (yarn|typescript|tslint|semantic-release|mocha)
 ```
 
-_See code: [src/commands/plugin.ts](https://github.com/oclif/oclif/blob/v1.4.9/src/commands/plugin.ts)_
+_See code: [src/commands/plugin.ts](https://github.com/oclif/oclif/blob/v1.5.2/src/commands/plugin.ts)_
 
-## single [PATH]
+## oclif single [PATH]
 
 generate a new single-command CLI
 
@@ -98,8 +116,8 @@ ARGUMENTS
 OPTIONS
   --defaults         use defaults for every setting
   --force            overwrite existing files
-  --options=options  (typescript|tslint|semantic-release|mocha)
+  --options=options  (yarn|typescript|tslint|semantic-release|mocha)
 ```
 
-_See code: [src/commands/single.ts](https://github.com/oclif/oclif/blob/v1.4.9/src/commands/single.ts)_
+_See code: [src/commands/single.ts](https://github.com/oclif/oclif/blob/v1.5.2/src/commands/single.ts)_
 <!-- commandsstop -->
