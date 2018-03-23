@@ -175,14 +175,37 @@ h2.headerTitle {
 // }
 
 // docs pages
-article a {
-  color: $teal;
+article {
+  p, a, h1, h2, h3, h4, h5, h6 {
+    font-family: Roboto;
+  }
+
+  // pre code {
+  //   font-family: "Roboto Mono";
+  // }
+
+  a {
+    color: $teal;
+  }
 }
 
-nav.toc .toggleNav ul li a.navItemActive {
-  color: $teal;
+nav.toc {
+  h3 {
+    font-family: Roboto;
+  }
+
+  a.navItem {
+    font-family: Roboto;
+  }
+
+  .toggleNav ul li a.navItemActive {
+    color: $teal;
+  }
 }
 
 .mainContainer {
   background-color: #fff;
+  .wrapper .post h3 {
+    font-size: 140%;
+  }
 }

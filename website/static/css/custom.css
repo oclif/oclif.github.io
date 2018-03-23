@@ -5894,11 +5894,22 @@ h2.headerTitle {
   color: rgba(255, 255, 255, 0.8);
   font-size: 16px; }
 
+article p, article a, article h1, article h2, article h3, article h4, article h5, article h6 {
+  font-family: Roboto; }
+
 article a {
   color: #42aecc; }
+
+nav.toc h3 {
+  font-family: Roboto; }
+
+nav.toc a.navItem {
+  font-family: Roboto; }
 
 nav.toc .toggleNav ul li a.navItemActive {
   color: #42aecc; }
 
 .mainContainer {
   background-color: #fff; }
+  .mainContainer .wrapper .post h3 {
+    font-size: 140%; }
