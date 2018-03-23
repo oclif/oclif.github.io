@@ -5899,3 +5899,6 @@ article a {
 
 nav.toc .toggleNav ul li a.navItemActive {
   color: #42aecc; }
+
+.mainContainer {
+  background-color: #fff; }
