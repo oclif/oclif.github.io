@@ -1,5 +1,5 @@
 {
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "scripts": {
     "examples": "docusaurus-examples",
     "start": "docusaurus-start",
