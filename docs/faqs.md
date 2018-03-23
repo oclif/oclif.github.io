@@ -12,6 +12,10 @@ We've found that Node has the best cross platform support of any language we've 
 
 Node has the best support for our [plugins](plugins.md) model. Plugins are a way to share code between CLIs, to modularize a single CLIs codebase, or allow users to add functionality to an existing CLI. With Node, we're able to have separate dependency versions sitting alongside one another. This means if you want to release an update to a dependency in one plugin, it won't affect how another plugin works. oclif takes this to an extreme and even flag parsing is done at the individual plugin level. If we ever want to make a breaking change to flag parsing (we certainly don't intend to, but this is just an example), you can update just one plugin and keep the old behavior in other plugins. This is very helpful for large CLI codebases where you want to migrate to new code slowly.
 
+### I want a single binary CLI like with Go
+
+Use [pkg](https://github.com/zeit/pkg).
+
 ### Should I use TypeScript or JavaScript?
 
 We suggest TypeScript as we find the typing to really help when refactoring code and updating dependencies. It's nicer to get compilation errors rather than finding errors in production.
@@ -20,7 +24,6 @@ We've put a lot of care into making it easy to make a TypeScript CLI even if you
 
 Still, the languages today are very similar. The code you write in JavaScript will be nearly identical to what you would have in TypeScript. (Just no type definitions, of course)
 
+### Should I use npm or yarn?
 
-### I want a single binary CLI like with Go
-
-Use [pkg](https://github.com/zeit/pkg).
+It really doesn't make that much of a difference. If you're just getting started, keep it simple and use npm which comes with node. We like to use yarn internally as it's a bit faster and we find the lockfiles friendlier.
