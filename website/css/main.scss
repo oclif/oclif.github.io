@@ -175,7 +175,7 @@ h2.headerTitle {
 // }
 
 // docs pages
-article {
+article, .blogContainer {
   p, a, h1, h2, h3, h4, h5, h6 {
     font-family: Roboto;
   }
@@ -186,6 +186,14 @@ article {
 
   a {
     color: $teal;
+  }
+
+  h1 a, .button {
+    color: rgb(57, 67, 81);
+  }
+
+  .button:hover {
+    color: #fff;
   }
 }
 

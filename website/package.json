@@ -2,7 +2,7 @@
   "license": "BSD-3-Clause",
   "scripts": {
     "examples": "docusaurus-examples",
-    "start": "docusaurus-start",
+    "start": "npm run build-css && docusaurus-start",
     "build": "npm run build-css && docusaurus-build",
     "build-css": "node-sass css/main.scss static/css/custom.css",
     "publish-gh-pages": "docusaurus-publish",

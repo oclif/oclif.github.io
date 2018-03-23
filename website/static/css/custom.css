@@ -5894,11 +5894,17 @@ h2.headerTitle {
   color: rgba(255, 255, 255, 0.8);
   font-size: 16px; }
 
-article p, article a, article h1, article h2, article h3, article h4, article h5, article h6 {
+article p, article a, article h1, article h2, article h3, article h4, article h5, article h6, .blogContainer p, .blogContainer a, .blogContainer h1, .blogContainer h2, .blogContainer h3, .blogContainer h4, .blogContainer h5, .blogContainer h6 {
   font-family: Roboto; }
 
-article a {
+article a, .blogContainer a {
   color: #42aecc; }
+
+article h1 a, article .button, .blogContainer h1 a, .blogContainer .button {
+  color: #394351; }
+
+article .button:hover, .blogContainer .button:hover {
+  color: #fff; }
 
 nav.toc h3 {
   font-family: Roboto; }

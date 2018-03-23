@@ -7,5 +7,5 @@
 ```sh-session
 $ git clone https://github.com/oclif/oclif.github.io
 $ cd oclif.github.io/website
-$ yarn run build-css && yarn run start
+$ yarn run start
 ```
