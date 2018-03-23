@@ -10,7 +10,7 @@
     "command": "Commands",
     "examples": "Examples",
     "external_links": "External Links",
-    "features": "oclif Features",
+    "features": "Features",
     "feedback": "Feedback",
     "flags": "Command Flags",
     "generator_commands": "Generator Commands",
