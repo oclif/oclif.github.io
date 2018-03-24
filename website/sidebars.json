@@ -14,10 +14,10 @@
       "args",
       "flags",
       "topics",
+      "hooks",
       "plugins",
       "base_class",
-      "aliases",
-      "hook"
+      "aliases"
     ],
     "Also See": [
       "examples",
