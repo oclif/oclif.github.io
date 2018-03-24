@@ -26,3 +26,5 @@ The help descriptions will be the description of the first command within a dire
   }
 }
 ```
+
+Subtopics can be created by making subdirectories within topic directories, but for UX reasons we generally discourage going more than 1 or 2 levels deep even for the largest CLIs.
