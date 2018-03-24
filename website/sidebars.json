@@ -14,6 +14,7 @@
       "args",
       "flags",
       "topics",
+      "hooks",
       "plugins",
       "base_class",
       "aliases"
