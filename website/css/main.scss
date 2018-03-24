@@ -158,6 +158,7 @@ header .logo {
 
 .homepage {
   h1 {
+    line-height: 1;
     margin: 1em 0;
   }
   h2 {
@@ -232,5 +233,13 @@ nav.toc {
   background-color: #fff;
   .wrapper .post h3 {
     font-size: 140%;
+  }
+}
+
+.docMainWrapper {
+  article {
+    h3 > code {
+      line-height: 1.2;
+    }
   }
 }

@@ -6,7 +6,7 @@ title: I/O Utilities
 
 The following assumes you are in the `run()` method of an oclif [command](commands.md).
 
-### this.log(message: string)
+### `this.log(message: string)`
 
 Output message to stdout.
 
@@ -14,7 +14,7 @@ Output message to stdout.
 this.log('hello, world!')
 ```
 
-### this.warn(message: string | Error)
+### `this.warn(message: string | Error)`
 
 Display an error or message as a warning
 
@@ -23,7 +23,7 @@ this.warn('uh oh!')
 this.warn(new Error('uh oh!'))
 ```
 
-### this.error(message: string | Error, options: {code?: string, exit?: number})
+### `this.error(message: string | Error, options?: {code?: string, exit?: number})`
 
 Display error and exit. Also add a code to error object or exit status.
 
@@ -32,7 +32,7 @@ this.error('uh oh!', {exit: 2})
 this.error(new Error('uh oh!'))
 ```
 
-### this.exit(code: number = 0)
+### `this.exit(code: number = 0)`
 
 Exit process. Defaults to status 0.
 
