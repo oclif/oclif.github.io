@@ -29,9 +29,9 @@ The hook must also be declared with the event's name and hook's file path under 
     "commands": "./lib/commands",
     "hooks": {
       "init": "./lib/hooks/init/example.js"
-    },
+    }
     ...
-  },
+  }
 ```
 
 You can create hooks with `oclif hook myhook --event=init`.
@@ -40,7 +40,7 @@ You can create hooks with `oclif hook myhook --event=init`.
 
 * `init` - runs when the CLI is initialized before a command is found to run
 * `prerun` - runs after `init` and after the commmand is found to run, but just before running the command
-* `command_not_found` - run if a command is not found before the error is displayed
+* `command_not_found` - runs if a command is not found before the error is displayed
 
 ### Custom Events
 
@@ -74,7 +74,7 @@ Then in any command you want to trigger the event:
 //...
 export class extends Command {
   async run() {
-    this.config.runHook('analytics', {id: 'my_command'})
+    await this.config.runHook('analytics', {id: 'my_command'})
     ...
   }
 }
