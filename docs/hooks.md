@@ -30,7 +30,7 @@ The hook must also be declared with the event's name and hook's file path under 
   "oclif": {
     "commands": "./lib/commands",
     "hooks": {
-      "init": "./lib/hooks/init/example.js"
+      "init": "./lib/hooks/init/example"
     }
     //...
   }
@@ -43,8 +43,8 @@ Multiple hooks of the same event type can be declared with an array.
     "commands": "./lib/commands",
     "hooks": {
       "init": [
-        "./lib/hooks/init/example.js",
-        "./lib/hooks/init/another_hook.js"
+        "./lib/hooks/init/example",
+        "./lib/hooks/init/another_hook"
       ]
     }
     //...
@@ -79,7 +79,7 @@ export default const hook = async function (opts) {
   "oclif": {
     "commands": "./lib/commands",
     "hooks": {
-      "analytics": "./lib/hooks/analytics/post.js"
+      "analytics": "./lib/hooks/analytics/post"
     },
     //...
   },
