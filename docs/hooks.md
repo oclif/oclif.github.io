@@ -2,7 +2,7 @@
 title: Hooks
 ---
 
-oclif exposes lifecycle event hooks such as `init` and `command_not_found`. [See below for a list of all the lifecycle events](#lifecycle-hooks). In addition to these built-in events, you can create your own events and allow commands/plugins to watch for these custom events. It's a great way to allow multiple plugins to interact with each other.
+oclif exposes lifecycle event hooks such as `init` and `command_not_found`. [See below for a list of all the lifecycle events](#lifecycle-events). In addition to these built-in events, you can create your own events and allow commands/plugins to watch for these custom events. It's a great way to allow multiple plugins to interact with each other.
 
 A basic hook looks like the following in TypeScript:
 
