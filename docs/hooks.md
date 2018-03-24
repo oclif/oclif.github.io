@@ -17,11 +17,9 @@ export default const hook: Hook<'init'> = async function (opts) {
 Or in JavaScript:
 
 ```js
-const hook = async function (opts) {
-  console.log(`example init hook running before ${opts.id}\n`);
-};
-
-module.exports = hook;
+module.exports = async function (opts) {
+  console.log(`example init hook running before ${opts.id}\n`)
+}
 ```
 
 The hook must also be declared with the event's name and hook's file path under oclif's settings in `package.json`:
