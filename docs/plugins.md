@@ -28,6 +28,7 @@ If you want users to be able to install their own plugins into your CLI, use the
 * [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins) - Allow users to add plugins to extend your CLI.
 * [@oclif/plugin-update](https://github.com/oclif/plugin-update) - Add autoupdate support to the CLI.
 * [@oclif/plugin-help](https://github.com/oclif/plugin-help) - Help plugin for oclif.
+* [@oclif/plugin-warn-if-update-available](https://github.com/oclif/plugin-warn-if-update-available) - Warn user if a newer version of the CLI is out.
 * [TODO: @oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete) - Add bash/zsh autocomplete.
 
 ### Building your own plugin
