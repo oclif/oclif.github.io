@@ -4,6 +4,8 @@ title: Hooks
 
 oclif exposes lifecycle event hooks such as `init` and `command_not_found`. [See below for a list of all the lifecycle events](#lifecycle-events). In addition to these built-in events, you can create your own events and allow commands/plugins to watch for these custom events. It's a great way to allow multiple plugins to interact with each other.
 
+Multiple hooks are run in parallel. **This behavior may change in a future release.**
+
 A basic hook looks like the following in TypeScript:
 
 ```typescript
@@ -80,3 +82,5 @@ export class extends Command {
 }
 //...
 ```
+
+If you need to exit during a hook, use `this.error()` or `this.exit()`. Otherwise the hook will just emit a warning. This is to prevent an issue such as a plugin failing in `init` causing the entire CLI to not function.
