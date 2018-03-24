@@ -7,7 +7,7 @@
     "aliases": "Aliases",
     "args": "Command Arguments",
     "base_class": "Command Base Class",
-    "command": "Commands",
+    "commands": "Commands",
     "examples": "Examples",
     "external_links": "External Links",
     "faqs": "FAQs",

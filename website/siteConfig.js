@@ -25,7 +25,7 @@ const siteConfig = {
   projectName: 'oclif.github.io',
   headerLinks: [
     {doc: 'introduction', label: 'Getting Started'},
-    {doc: 'command', label: 'API Reference'},
+    {doc: 'commands', label: 'API Reference'},
     {blog: true, label: 'Blog'},
     {href: 'https://gitter.im/oclif/oclif', label: 'Discuss'},
     {href: 'https://github.com/oclif/oclif', label: 'GitHub'},
