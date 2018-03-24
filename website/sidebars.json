@@ -16,7 +16,8 @@
       "topics",
       "plugins",
       "base_class",
-      "aliases"
+      "aliases",
+      "hook"
     ],
     "Also See": [
       "examples",
