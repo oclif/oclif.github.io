@@ -2,31 +2,29 @@
 title: Hooks
 ---
 
-Oclif exposes lifecycle event hooks. Likewise you can create and run your own event hooks and share those hooks between commands in your.
+oclif exposes lifecycle event hooks such as `init` and `command_not_found`. [See below for a list of all the lifecycle events](#lifecycle-hooks). In addition to these built-in events, you can create your own events and allow commands/plugins to watch for these custom events. It's a great way to allow multiple plugins to interact with each other.
 
 A basic hook looks like the following in TypeScript:
 
-```js
+```typescript
 import {Hook} from '@oclif/config'
 
-const hook: Hook<'init'> = async function (opts) {
-  process.stdout.write(`example init hook running before ${opts.id}\n`)
+export default const hook: Hook<'init'> = async function (opts) {
+  console.log(`example init hook running before ${opts.id}\n`)
 }
-
-export default hook
 ```
 
 Or in JavaScript:
 
 ```js
 const hook = async function (opts) {
-    process.stdout.write(`example init hook running before ${opts.id}\n`);
+  console.log(`example init hook running before ${opts.id}\n`);
 };
 
 module.exports = hook;
 ```
 
-And declaring the hook's event name and file path under oclif's settings in `package.json`:
+The hook must also be declared with the event's name and hook's file path under oclif's settings in `package.json`:
 
 ```js
   "oclif": {
@@ -38,33 +36,30 @@ And declaring the hook's event name and file path under oclif's settings in `pac
   },
 ```
 
+You can create hooks with `oclif hook myhook --event=init`.
 
-See the <link to hook generator>.
+### Lifecycle Events
 
-### Event Hooks
+* `init` - runs when the CLI is initialized before a command is found to run
+* `prerun` - runs after `init` and after the commmand is found to run, but just before running the command
+* `command_not_found` - run if a command is not found before the error is displayed
 
-Oclif exposes three event hooks, `init`, `prerun`, and `command_not_found`.
+### Custom Events
 
-`init` is run before the command being run is searched for. If the provided command is not found, the `command_not_found` event is fun (see <link to command not found plugin>). Lastly, after a command if found but before it is run `prerun` is fired.
-
-Hooking into these lifecycle events is as simple as declaring the hook file in `package.json` under oclif's settings and providing a function that accepts an options object (see <path to hooks objects>).
-
-### Custom Hooks
-
-Creating a custom hook is no different than for lifecycle hooks, except that you need to provide the event name in `package.json`.
+Custom events are just like lifecycle events, but you need to call `this.config.runHook()` to fire the event.
 
 For example, you could define an analytics post function that you will run in your command. First define:
 
+**src/hooks/post_analytics.ts**
 ```js
 import {Hook} from '@oclif/config'
 
-const hook: Hook<'analytics'> = async function (opts) {
+export default const hook = async function (opts) {
   // code to post opts.id to analytics server
 }
-
-export default hook
 ```
 
+**package.json**
 ```js
   "oclif": {
     "commands": "./lib/commands",
@@ -75,13 +70,11 @@ export default hook
   },
 ```
 
-Then in any Command you want to invoke the hook run:
+Then in any command you want to trigger the event:
 
 ```js
 //...
-export class MyCommand extends Command {
-  static description = 'description of this example command'
-
+export class extends Command {
   async run() {
     this.config.runHook('analytics', {id: 'my_command'})
     ...
