@@ -2,7 +2,9 @@
 title: Command Base Class
 ---
 
-Use inheritance to share functionality between common commands:
+Use inheritance to share functionality between common commands. Here is an example of a command base class that has some common shared flags and a log method that can be shared among many commands.
+
+For large CLIs with multiple plugins, it's useful to put this base class into its own npm package to be shared.
 
 ```js
 // src/base.ts
