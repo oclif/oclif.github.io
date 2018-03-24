@@ -2,7 +2,16 @@
 # This config file will prevent tests from being run on the gh-pages branch.
 version: 2
 jobs:
-  build:
-    machine: true
+  noop:
+    docker:
+      - image: node:latest
+    working_directory: ~/cli
     steps:
-      - run: echo "Skipping tests on master branch"
+      - checkout
+      - echo "no tests on this branch"
+
+workflows:
+  version: 2
+  noop:
+    jobs:
+      - noop
