@@ -4,12 +4,14 @@ title: Generator Commands
 
 <!-- this is auto-generated from the oclif readme -->
 <!-- commands -->
+
 * [oclif command NAME](#command-name)
 * [oclif help [COMMAND]](#help-command)
 * [oclif hook NAME](#hook-name)
 * [oclif multi [PATH]](#multi-path)
 * [oclif plugin [PATH]](#plugin-path)
 * [oclif single [PATH]](#single-path)
+
 ## oclif command NAME
 
 add a command to an existing CLI or plugin
