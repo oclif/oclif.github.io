@@ -2,13 +2,13 @@
 title: Command Flags
 ---
 
-Flag options are non-positional arguments passed to the command. For example, if this command was run like this:
+Flag options are non-positional arguments passed to the command. Flags can either be option flags which take an argument, or boolean flags which do not. An option flag must have an argument.
+
+For example, if this command was run like this:
 
 ```
 $ mycli --force --file=./myfile
 ```
-
-_= is optional_
 
 It would be declared like this:
 
@@ -29,6 +29,8 @@ export class MyCLI extends Command {
   }
 }
 ```
+
+_oclif supports a wide range of [alternative flag inputs](#alternative-flag-inputs)._
 
 Here are the options flags can have:
 
@@ -90,3 +92,20 @@ export class MyCLI extends Command {
 ```
 
 In the Heroku CLI, we use flags for our `--app` flag which takes advantage of a lot of functionality. It can be useful [to see how that is done](https://github.com/heroku/cli-engine-heroku/blob/oclif/src/flags/app.ts) to get ideas for making custom flags.
+
+### Alternative Flag Inputs
+
+Here are some other ways the user can use input flags. This is assuming the command has flags like `-f, --file=file` and `-v, --verbose` (string and boolean flag):
+
+```sh-session
+$ mycli --verbose
+$ mycli -v
+$ mycli --file=foo
+$ mycli --file foo
+$ mycli -f foo
+$ mycli -f=foo
+$ mycli -ffoo
+$ mycli -vffoo
+```
+
+The last one seems a little odd at first glance, but it's relatively standard in unix and makes commands like `tar -xvzfmytarball.tar.gz` possible.
