@@ -17,6 +17,8 @@ $ npm install -g oclif
 $ oclif multi mynewcli
 ```
 
+_**Note:** This won't require npm to install oclif each time it runs, but you'll need to update with `npm update -g oclif` to get newer releases of the generator._
+
 You'll now see some questions asking you to describe various aspects of your CLI. Once you register your CLI with npm, these would feed into the listing for your CLI. For now, feel free to just use the defaults for each option.
 
 For reference, here are the options and what they do:

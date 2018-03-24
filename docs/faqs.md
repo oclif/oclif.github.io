@@ -27,3 +27,7 @@ Still, the languages today are very similar. The code you write in JavaScript wi
 ### Should I use npm or yarn?
 
 It really doesn't make that much of a difference. If you're just getting started, keep it simple and use npm which comes with node. We like to use yarn internally as it's a bit faster and we find the lockfiles friendlier.
+
+### How can I make oclif run faster?
+
+If you're using npx, install it first with `npm install -g oclif`. This won't stay current with updates though, so you'll need to run `npm update -g oclif` to get new versions of the generator.
