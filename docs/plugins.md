@@ -2,6 +2,8 @@
 title: Plugins
 ---
 
+Plugins are a great way to offer experimental functionality, allow users to extend your CLI, break up a CLI into modular components, or share functionality between CLIs.
+
 Plugins can have commands or hooks just like a CLI. To add a plugin such as the [not-found plugin](https://github.com/oclif/plugin-not-found) plugin, first add it to your CLI with `yarn add @oclif/plugin-not-found`, then add the following to your `package.json`:
 
 ```js
