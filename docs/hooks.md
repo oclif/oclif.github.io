@@ -12,7 +12,7 @@ A basic hook looks like the following in TypeScript:
 import {Hook} from '@oclif/config'
 
 export default const hook: Hook<'init'> = async function (opts) {
-  console.log(`example init hook running before ${opts.id}\n`)
+  console.log(`example init hook running before ${opts.id}`)
 }
 ```
 
@@ -20,7 +20,7 @@ Or in JavaScript:
 
 ```js
 module.exports = async function (opts) {
-  console.log(`example init hook running before ${opts.id}\n`)
+  console.log(`example init hook running before ${opts.id}`)
 }
 ```
 
@@ -32,7 +32,22 @@ The hook must also be declared with the event's name and hook's file path under 
     "hooks": {
       "init": "./lib/hooks/init/example.js"
     }
-    ...
+    //...
+  }
+```
+
+Multiple hooks of the same event type can be declared with an array.
+
+```js
+  "oclif": {
+    "commands": "./lib/commands",
+    "hooks": {
+      "init": [
+        "./lib/hooks/init/example.js",
+        "./lib/hooks/init/another_hook.js"
+      ]
+    }
+    //...
   }
 ```
 
@@ -41,7 +56,7 @@ You can create hooks with `oclif hook myhook --event=init`.
 ### Lifecycle Events
 
 * `init` - runs when the CLI is initialized before a command is found to run
-* `prerun` - runs after `init` and after the commmand is found to run, but just before running the command
+* `prerun` - runs after `init` and after the command is found, but just before running the command itself
 * `command_not_found` - runs if a command is not found before the error is displayed
 
 ### Custom Events
@@ -66,7 +81,7 @@ export default const hook = async function (opts) {
     "hooks": {
       "analytics": "./lib/hooks/analytics/post.js"
     },
-    ...
+    //...
   },
 ```
 
@@ -77,7 +92,7 @@ Then in any command you want to trigger the event:
 export class extends Command {
   async run() {
     await this.config.runHook('analytics', {id: 'my_command'})
-    ...
+    //...
   }
 }
 //...
