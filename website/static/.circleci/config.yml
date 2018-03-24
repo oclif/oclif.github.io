@@ -5,10 +5,8 @@ jobs:
   noop:
     docker:
       - image: node:latest
-    working_directory: ~/cli
     steps:
-      - checkout
-      - echo "no tests on this branch"
+      - run: echo "no tests on this branch"
 
 workflows:
   version: 2
