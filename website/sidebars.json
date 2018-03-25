@@ -20,7 +20,6 @@
       "aliases"
     ],
     "Utilities": [
-      "cli_ux",
       "prompting",
       "notifications"
     ],
