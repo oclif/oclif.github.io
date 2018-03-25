@@ -13,6 +13,7 @@
       "commands",
       "args",
       "flags",
+      "config",
       "topics",
       "hooks",
       "plugins",
@@ -21,7 +22,8 @@
     ],
     "Utilities": [
       "prompting",
-      "notifications"
+      "notifications",
+      "debugging"
     ],
     "Also See": [
       "examples",
