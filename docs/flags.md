@@ -59,7 +59,7 @@ static flags = [
 ]
 ```
 
-### Custom Flags
+## Custom Flags
 
 For larger CLIs, it can be useful to declare a custom flag that can be shared amongst multiple commands. Here is an example of a custom flag:
 
@@ -93,7 +93,7 @@ export class MyCLI extends Command {
 
 In the Heroku CLI, we use flags for our `--app` flag which takes advantage of a lot of functionality. It can be useful [to see how that is done](https://github.com/heroku/cli-engine-heroku/blob/oclif/src/flags/app.ts) to get ideas for making custom flags.
 
-### Alternative Flag Inputs
+## Alternative Flag Inputs
 
 Here are some other ways the user can use input flags. This is assuming the command has flags like `-f, --file=file` and `-v, --verbose` (string and boolean flag):
 

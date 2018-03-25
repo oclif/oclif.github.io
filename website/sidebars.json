@@ -13,12 +13,15 @@
       "commands",
       "args",
       "flags",
-      "io",
       "topics",
       "hooks",
       "plugins",
       "base_class",
       "aliases"
+    ],
+    "Utilities": [
+      "cli_ux",
+      "inquirer"
     ],
     "Also See": [
       "examples",

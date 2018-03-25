@@ -2,13 +2,13 @@
 title: Examples
 ---
 
-### TypeScript
+## TypeScript
 
   * [Multi-command CLI](https://github.com/oclif/example-multi-ts)
   * [Single-command CLI](https://github.com/oclif/example-single-ts)
   * [Multi-command CLI Plugin](https://github.com/oclif/example-single-ts)
 
-### JavaScript
+## JavaScript
 
   * [Multi-command CLI](https://github.com/oclif/example-multi-js)
   * [Single-command CLI](https://github.com/oclif/example-single-js)

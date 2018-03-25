@@ -22,7 +22,7 @@ Plugins can have commands or hooks just like a CLI. To add a plugin such as the 
 
 If you want users to be able to install their own plugins into your CLI, use the [plugins plugin](https://github.com/oclif/plugin-plugins).
 
-### Useful Plugins
+## Useful Plugins
 
 * [@oclif/plugin-not-found](https://github.com/oclif/plugin-not-found) - Display a friendly "did you mean" message if a command is not found.
 * [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins) - Allow users to add plugins to extend your CLI.
@@ -31,7 +31,7 @@ If you want users to be able to install their own plugins into your CLI, use the
 * [@oclif/plugin-warn-if-update-available](https://github.com/oclif/plugin-warn-if-update-available) - Show a warning message if user is running an out of date CLI.
 * [TODO: @oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete) - Add bash/zsh autocomplete.
 
-### Building your own plugin
+## Building your own plugin
 
 Writing code for plugins is essentially the same as writing within a CLI. They can export 3 different types: commands, hooks, and other plugins.
 

@@ -74,7 +74,7 @@ $ mynewcli
 
 _**Note:** You can also use `mynewcli --help`. The `--help` flag works anywhere the user places it and cannot be overridden._
 
-### Command Development
+## Command Development
 
 Open `./src/index.ts` and replace it with the following
 

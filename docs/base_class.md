@@ -1,5 +1,5 @@
 ---
-title: Command Base Class
+title: Custom Base Class
 ---
 
 Use inheritance to share functionality between common commands. Here is an example of a command base class that has some common shared flags and a log method that can be shared among many commands.

@@ -6,7 +6,8 @@
     "tagline": "Create command line tools your users love",
     "aliases": "Aliases",
     "args": "Command Arguments",
-    "base_class": "Command Base Class",
+    "base_class": "Custom Base Class",
+    "cli_ux": "cli-ux",
     "commands": "Commands",
     "examples": "Examples",
     "external_links": "External Links",
@@ -16,8 +17,8 @@
     "flags": "Command Flags",
     "generator_commands": "Generator Commands",
     "hooks": "Hooks",
+    "inquirer": "inquirer",
     "introduction": "Introduction",
-    "io": "I/O Utilities",
     "multi": "Multi-command CLI",
     "plugins": "Plugins",
     "related_repos": "Related Repositories",
@@ -29,6 +30,7 @@
     "Blog": "Blog",
     "Discuss": "Discuss",
     "GitHub": "GitHub",
+    "Utilities": "Utilities",
     "Also See": "Also See"
   },
   "pages-strings": {

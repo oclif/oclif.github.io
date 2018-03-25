@@ -53,13 +53,13 @@ Multiple hooks of the same event type can be declared with an array.
 
 You can create hooks with `oclif hook myhook --event=init`.
 
-### Lifecycle Events
+## Lifecycle Events
 
 * `init` - runs when the CLI is initialized before a command is found to run
 * `prerun` - runs after `init` and after the command is found, but just before running the command itself
 * `command_not_found` - runs if a command is not found before the error is displayed
 
-### Custom Events
+## Custom Events
 
 Custom events are just like lifecycle events, but you need to call `this.config.runHook()` to fire the event.
 
