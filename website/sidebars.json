@@ -21,7 +21,8 @@
     ],
     "Utilities": [
       "cli_ux",
-      "inquirer"
+      "prompting",
+      "notifications"
     ],
     "Also See": [
       "examples",

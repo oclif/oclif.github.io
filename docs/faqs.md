@@ -31,7 +31,3 @@ It really doesn't make that much of a difference. If you're just getting started
 ## How can I make oclif run faster?
 
 If you're using npx, install it first with `npm install -g oclif`. This won't stay current with updates though, so you'll need to run `npm update -g oclif` to get new versions of the generator.
-
-## How do I prompt for user input?
-
-Use [inquirer](inquirer.md).
