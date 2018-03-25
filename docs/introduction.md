@@ -6,7 +6,7 @@ oclif is a framework for building CLIs in Node. It can be used like a [simple fl
 
 The oclif generator creates a CLI project in either [JavaScript](https://github.com/oclif/example-multi-js) or [TypeScript](https://github.com/oclif/example-multi-ts) to get you started quickly. It requires very few runtime dependencies and has extremely minimal overhead.
 
-Everything is customizable in oclif. Even the flag parser and help generation is optional and can be replaced. It's a platform to build off of that provides smart defaults without locking you in to any specific tools or behavior.
+Everything is customizable in oclif. Even the flag parser and help generation is optional and can be replaced. It's a platform to build upon that provides smart defaults without locking you in to any specific tools or behavior.
 
 ## Requirements
 
