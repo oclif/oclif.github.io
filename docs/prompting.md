@@ -35,7 +35,7 @@ Demo:
 
 ## `inquirer`
 
-Here is an example command that uses inquirer. You will need to add `inquirer` and `@types/inquirer` (for TypeScript CLIs) for this to work.
+Here is an example command that uses [inquirer](https://github.com/SBoudrias/Inquirer.js). You will need to add `inquirer` and `@types/inquirer` (for TypeScript CLIs) for this to work.
 
 ```typescript
 import {Command, flags} from '@oclif/command'
