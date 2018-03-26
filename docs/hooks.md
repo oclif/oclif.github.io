@@ -66,10 +66,10 @@ Custom events are just like lifecycle events, but you need to call `this.config.
 For example, you could define an analytics post function that you will run in your command. First define:
 
 **src/hooks/post_analytics.ts**
-```js
+```typescript
 import {Hook} from '@oclif/config'
 
-export default const hook = async function (opts) {
+export default const hook: Hook<'post-analytics'> = async function (opts) {
   // code to post opts.id to analytics server
 }
 ```
