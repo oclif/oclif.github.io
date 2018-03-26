@@ -67,8 +67,6 @@ For example, you could define an analytics post function that you will run in yo
 
 **src/hooks/post_analytics.ts**
 ```js
-import {Hook} from '@oclif/config'
-
 export default const hook = async function (opts) {
   // code to post opts.id to analytics server
 }
