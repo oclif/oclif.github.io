@@ -32,7 +32,6 @@ The hook must also be declared with the event's name and hook's file path under 
     "hooks": {
       "init": "./lib/hooks/init/example"
     }
-    //...
   }
 ```
 
@@ -47,7 +46,6 @@ Multiple hooks of the same event type can be declared with an array.
         "./lib/hooks/init/another_hook"
       ]
     }
-    //...
   }
 ```
 
@@ -68,9 +66,7 @@ For example, you could define an analytics post function that you will run in yo
 **src/hooks/post_analytics.ts**
 
 ```typescript
-import * as Config from '@oclif/config'
-
-export default const hook = async function (options: {id: string, config: Config.IConfig}) {
+export default const hook = async function (options: {id: string}) {
   // code to post options.id to analytics server
 }
 ```
@@ -82,22 +78,18 @@ export default const hook = async function (options: {id: string, config: Config
     "hooks": {
       "analytics": "./lib/hooks/analytics/post"
     },
-    //...
   },
 ```
 
 Then in any command you want to trigger the event:
 
 ```js
-//...
 export class extends Command {
   async run() {
-    // the config object will be added automatically to the options
+    // emit analytics
     await this.config.runHook('analytics', {id: 'my_command'})
-    //...
   }
 }
-//...
 ```
 
 If you need to exit during a hook, use `this.error()` or `this.exit()`. Otherwise the hook will just emit a warning. This is to prevent an issue such as a plugin failing in `init` causing the entire CLI to not function.
