@@ -73,6 +73,10 @@ const siteConfig = {
   ],
   editUrl: 'https://github.com/oclif/oclif.github.io/tree/docs/docs/',
   cname: 'oclif.io',
+  algolia: {
+    apiKey: '433a7758541da1949f63b813ddf5c78c',
+    indexName: 'oclif'
+  },
 };
 
 module.exports = siteConfig;
