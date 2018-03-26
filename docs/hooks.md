@@ -11,16 +11,16 @@ A basic hook looks like the following in TypeScript:
 ```typescript
 import {Hook} from '@oclif/config'
 
-export default const hook: Hook<'init'> = async function (opts) {
-  console.log(`example init hook running before ${opts.id}`)
+export default const hook: Hook<'init'> = async function (options) {
+  console.log(`example init hook running before ${options.id}`)
 }
 ```
 
 Or in JavaScript:
 
 ```js
-module.exports = async function (opts) {
-  console.log(`example init hook running before ${opts.id}`)
+module.exports = async function (options) {
+  console.log(`example init hook running before ${options.id}`)
 }
 ```
 
@@ -63,12 +63,15 @@ You can create hooks with `oclif hook myhook --event=init`.
 
 Custom events are just like lifecycle events, but you need to call `this.config.runHook()` to fire the event.
 
-For example, you could define an analytics post function that you will run in your command. First define:
+For example, you could define an analytics post function that you will run in your command after submitting analytics telemetry. First define:
 
 **src/hooks/post_analytics.ts**
-```js
-export default const hook = async function (opts) {
-  // code to post opts.id to analytics server
+
+```typescript
+import * as Config from '@oclif/config'
+
+export default const hook = async function (options: {id: string, config: Config.IConfig}) {
+  // code to post options.id to analytics server
 }
 ```
 
@@ -89,6 +92,7 @@ Then in any command you want to trigger the event:
 //...
 export class extends Command {
   async run() {
+    // the config object will be added automatically to the options
     await this.config.runHook('analytics', {id: 'my_command'})
     //...
   }
