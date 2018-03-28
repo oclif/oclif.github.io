@@ -87,7 +87,7 @@ The following assumes you are in the `run()` method of an oclif [command](comman
 
 ### `this.log(message: string)`
 
-Output message to stdout.
+Output message to stdout (non-blocking). `console.log()` works fine too, but that is a blocking call.
 
 ```typescript
 this.log('hello, world!')
