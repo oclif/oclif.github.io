@@ -41,3 +41,13 @@ The major issue has to do with topic-commands. In oclif, we support topics as co
 Some CLIs don't support topic-commands which is how this is possible for those.
 
 We also feel that using colon-separated arguments is better CLI UX anyways. It helps the user know which arguments are the command and which are arguments *to* that command. It helps them find what they need in the help more directly.
+
+## Why isn't Node 6 supported?
+
+Node 6 will only be LTS until April 2019. This is soon enough that we felt with a new framework there wasn't a great argument for supporting it in the first place.
+
+We can change the TypeScript target to support Node 6, but because we make heavy use of async/await, it makes debugging hard as the call stacks are much harder to understand. We also find it to be very helpful to look at the generated code when debugging and the code generated for Node 6 is much further away from the source as it is for Node 8.
+
+There are some other minor issues with the current project working in Node 6 beyond just the TypeScript target.
+
+After Node 8, we will continue to support the most recent Node LTS release as long as it is active and will bump the major version of oclif and its dependencies if they break compatibility with older non-LTS releases.
