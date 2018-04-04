@@ -51,3 +51,7 @@ We can change the TypeScript target to support Node 6, but because we make heavy
 There are some other minor issues with the current project working in Node 6 beyond just the TypeScript target.
 
 After Node 8, we will continue to support the most recent Node LTS release as long as it is active and will bump the major version of oclif and its dependencies if they break compatibility with older non-LTS releases.
+
+## How do I pronounce "oclif"?
+
+We say "oh-cliff".
