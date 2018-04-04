@@ -28,6 +28,16 @@ Still, the languages today are very similar. The code you write in JavaScript wi
 
 It really doesn't make that much of a difference. If you're just getting started, keep it simple and use npm which comes with node. We like to use yarn internally as it's a bit faster and we find the lockfiles friendlier.
 
-## How can I make oclif run faster?
+## How can I make the oclif generator run faster?
 
 If you're using npx, install it first with `npm install -g oclif`. This won't stay current with updates though, so you'll need to run `npm update -g oclif` to get new versions of the generator.
+
+## Why does oclif use colon-separated commands? Can it support space-separated?
+
+Short answer is that space-separated will never be supported. Longer answer is it's not possible with the way we support topics and arguments.
+
+The major issue has to do with topic-commands. In oclif, we support topics as commands such as `heroku config`. There are other commands underneath `heroku config` like `heroku config:get`. If we used space separated arguments, this could be `heroku config` and `heroku config:get`. _However_ if `heroku config` also expected an argument, there would be no way for the command parser to tell whether or not the second argument is a command or an argument.
+
+Some CLIs don't support topic-commands which is how this is possible for those.
+
+We also feel that using colon-separated arguments is better CLI UX anyways. It helps the user know which arguments are the command and which are arguments *to* that command. It helps them find what they need in the help more directly.
