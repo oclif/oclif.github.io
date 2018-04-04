@@ -36,7 +36,7 @@ If you're using npx, install it first with `npm install -g oclif`. This won't st
 
 Short answer is that space-separated will never be supported. Longer answer is it's not possible with the way we support topics and arguments.
 
-The major issue has to do with topic-commands. In oclif, we support topics as commands such as `heroku config`. There are other commands underneath `heroku config` like `heroku config:get`. If we used space separated arguments, this could be `heroku config` and `heroku config:get`. _However_ if `heroku config` also expected an argument, there would be no way for the command parser to tell whether or not the second argument is a command or an argument.
+The major issue has to do with topic-commands. In oclif, we support topics as commands such as `heroku config`. There are other commands underneath `heroku config` like `heroku config:get`. If we used space separated arguments, this could be `heroku config` and `heroku config get`. _However_ if `heroku config` also expected an argument, there would be no way for the command parser to tell whether or not the second argument is a command or an argument.
 
 Some CLIs don't support topic-commands which is how this is possible for those.
 
