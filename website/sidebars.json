@@ -16,12 +16,12 @@
       "config",
       "topics",
       "hooks",
-      "plugins",
-      "base_class",
-      "aliases",
-      "running_programmatically"
+      "plugins"
     ],
-    "Utilities": [
+    "How to": [
+      "running_programmatically",
+      "aliases",
+      "base_class",
       "prompting",
       "notifications",
       "debugging"
