@@ -83,6 +83,6 @@ export class HerokuRelease extends Command {
 }
 ```
 
-Commands have a static `.run()` method on them that can be used to instantiate the command and run the instance `.run()` method. It takes in the argv as input to the command.
+This works because commands have a static `.run()` [method on them](https://github.com/oclif/command/blob/master/src/command.ts) that can be used to instantiate the command and run the instance `.run()` method. It takes in the argv as input to the command.
 
 This works for both multi and single command CLIs.
