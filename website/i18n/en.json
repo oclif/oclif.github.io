@@ -18,6 +18,7 @@
     "flags": "Command Flags",
     "generator_commands": "Generator Commands",
     "hooks": "Hooks",
+    "index": "index",
     "introduction": "Introduction",
     "multi": "Multi-command CLI",
     "notifications": "Notifications",
