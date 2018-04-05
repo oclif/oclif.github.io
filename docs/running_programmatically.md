@@ -84,3 +84,5 @@ export class HerokuRelease extends Command {
 ```
 
 Commands have a static `.run()` method on them that can be used to instantiate the command and run the instance `.run()` method. It takes in the argv as input to the command.
+
+This works for both multi and single commands.
