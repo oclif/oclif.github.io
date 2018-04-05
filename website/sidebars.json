@@ -18,7 +18,8 @@
       "hooks",
       "plugins",
       "base_class",
-      "aliases"
+      "aliases",
+      "running_programmatically"
     ],
     "Utilities": [
       "prompting",
