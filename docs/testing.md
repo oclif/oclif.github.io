@@ -88,4 +88,4 @@ For more on how to test with oclif, check out the docs for [fancy-test](https://
 
 The stdout/stderr mocks use [stdout-stderr](https://github.com/jdxcode/stdout-stderr) under the hood. This library can be used standalone if you'd prefer to use jest or want a different testing setup but still have the ability to mock out stdout and stderr.
 
-If you want to see the output but leave it mocked, you can either pass in `{print: true}` to the options, or set `DEBUG=*` (to see all output) or `DEBUG=stdout|stderr` (to see just the stdout/stderr). Alternatively, set `TEST_OUTPUT=1`.
+If you want to see the output but leave it mocked, you can either pass in `{print: true}` to the options, or set `TEST_OUTPUT=1`.
