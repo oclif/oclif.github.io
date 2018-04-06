@@ -19,6 +19,7 @@
       "plugins"
     ],
     "How to": [
+      "testing",
       "running_programmatically",
       "aliases",
       "base_class",
