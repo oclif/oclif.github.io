@@ -87,7 +87,7 @@ The following assumes you are in the `run()` method of an oclif [command](comman
 
 ### `this.log(message: string)`
 
-Output message to stdout (non-blocking). `console.log()` works fine too, but that is a blocking call.
+Output message to stdout (non-blocking). `console.log()` works fine too, but that is a blocking call. This uses [util.format()](https://nodejs.org/api/util.html#util_util_format_format_args) which behaves the same as `console.log()`.
 
 ```typescript
 this.log('hello, world!')
