@@ -6,7 +6,6 @@
       "faqs",
       "single",
       "multi",
-      "releasing",
       "generator_commands"
     ],
     "API Reference": [
@@ -19,6 +18,7 @@
       "plugins"
     ],
     "How to": [
+      "releasing",
       "testing",
       "running_programmatically",
       "aliases",
