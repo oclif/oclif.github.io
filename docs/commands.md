@@ -111,6 +111,16 @@ this.error('uh oh!', {exit: 2})
 this.error(new Error('uh oh!'))
 ```
 
+These errors are friendly and won't show a traceback unless debugging is enabled with `DEBUG=*` or `CLI_NAME_DEBUG=1`. If you want to raise errors like this outside of a command, use `@oclif/errors`.
+
+```typescript
+import {CLIError} from '@oclif/errors'
+
+throw new CLIError('my friendly error')
+```
+
+Any error caught by the command of this `CLIError` type will be shown without traceback.
+
 ### `this.exit(code: number = 0)`
 
 Exit process. Defaults to status 0.
