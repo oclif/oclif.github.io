@@ -46,6 +46,7 @@ static flags = [
     parse: input => 'output',     // instead of the user input, return a different value
     default: 'world',             // default value if flag not passed
     required: false,              // make flag required (this is not common and you should probably use an argument instead)
+    dependsOn: ['extra-flag'],    // this flag require on another flag
   }),
 
   // flag with no value (-f, --force)
