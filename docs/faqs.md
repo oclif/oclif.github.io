@@ -14,7 +14,7 @@ Node has the best support for our [plugins](plugins.md) model. Plugins are a way
 
 ## I want a single binary CLI like with Go
 
-Use [pkg](https://github.com/zeit/pkg).
+Use [pkg](https://github.com/zeit/pkg). Just make sure to add the commands and other source files by setting `pkg.scripts: "./lib/**/*.js"` in `package.json`.
 
 ## Should I use TypeScript or JavaScript?
 
