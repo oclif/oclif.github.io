@@ -13,7 +13,7 @@ These are automatically generated whenever the oclif generator is released. They
 * TypeScript
   * [Multi-command CLI](https://github.com/oclif/example-multi-ts)
   * [Single-command CLI](https://github.com/oclif/example-single-ts)
-  * [Multi-command CLI Plugin](https://github.com/oclif/example-single-ts)
+  * [Multi-command CLI Plugin](https://github.com/oclif/example-plugin-ts)
 * JavaScript
   * [Multi-command CLI](https://github.com/oclif/example-multi-js)
   * [Single-command CLI](https://github.com/oclif/example-single-js)
