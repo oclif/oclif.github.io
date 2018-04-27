@@ -35,7 +35,7 @@ Build a windows installer with `oclif-dev pack:win`. It will build into `./dist/
 
 ## MacOS installer
 
-Build a MacOS .pkg installer with `oclif-dev pack:macos`. It will build into `./dist/macos`. This can be published to S3 with `oclif-dev publish:macos`.
+Build a MacOS .pkg installer with `oclif-dev pack:macos`. It will build into `./dist/macos`. This can be published to S3 with `oclif-dev publish:macos`. You need to set the identifier at `oclif.macos.identifier` in `package.json`.
 
 ## Ubuntu/Debian packages
 
