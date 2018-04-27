@@ -27,7 +27,7 @@ Build standalone tarballs with `oclif-dev pack` from the root of your CLI. Then,
 
 To publish, you can copy the files from `./dist` or use `oclif-dev publish` to copy the files to S3. You'll need to set `oclif.update.s3.bucket` in `package.json` to a valid S3 bucket and have credentials set in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment vars.
 
-These tarballs as well as the installers below can be made autoupdatable by adding the `@oclif/plugin-update` plugin.
+These tarballs as well as the installers below can be made autoupdatable by adding the `@oclif/plugin-update` plugin. Just add this plugin and the CLI will autoupdate in the background or when `mycli update` is run.
 
 ## Windows installer
 
