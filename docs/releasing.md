@@ -25,7 +25,9 @@ This workflow can be improved slightly by running `npm version major|minor|patch
 
 Build standalone tarballs with `oclif-dev pack` from the root of your CLI. Then, you can publish them S3 with `oclif-dev publish`.
 
-You'll need to set `oclif.update.s3.bucket` to a valid S3 bucket and have credentials set in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment vars.
+To publish, you can copy the files from `./dist` or use `oclif-dev publish` to copy the files to S3. You'll need to set `oclif.update.s3.bucket` in `package.json` to a valid S3 bucket and have credentials set in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment vars.
+
+These tarballs as well as the installers below can be made autoupdatable by adding the `@oclif/plugin-update` plugin.
 
 ## Windows installer
 
@@ -47,3 +49,5 @@ $ sudo echo "deb https://mys3bucket.s3.amazonaws.com/apt ./" > /etc/apt/sources.
 $ sudo apt-get update
 $ sudo apt-get install -y mycli
 ```
+
+These will not autoupdate as Ubuntu already has a reliable way for users to update their package.
