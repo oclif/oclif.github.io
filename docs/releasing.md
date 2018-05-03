@@ -48,8 +48,10 @@ Once it's published to S3, users can install with the following:
 ```sh-session
 $ wget -qO- https://mys3bucket.s3.amazonaws.com/apt/release.key | apt-key add - # you will need to upload this file manually
 $ sudo echo "deb https://mys3bucket.s3.amazonaws.com/apt ./" > /etc/apt/sources.list.d/mycli.list
-$ sudo apt-get update
-$ sudo apt-get install -y mycli
+$ sudo apt update
+$ sudo apt install -y mycli
 ```
+
+This can be placed in a [script](https://cli-assets.heroku.com/install-ubuntu.sh) for users to install with `curl https://pathto/myscript | sh`.
 
 These will not autoupdate as Ubuntu already has a reliable way for users to update their package.
