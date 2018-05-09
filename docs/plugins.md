@@ -20,6 +20,8 @@ Plugins can have commands or hooks just like a CLI. To add a plugin such as the 
 }
 ```
 
+If your plugin is still not in the registry, you can still add it to your CLI with `yarn add <path-to-plugin>`, in case you have a local version, or with `yarn add git+ssh://git@git.mydomain.com:Username/Repository#{branch|tag}` if it hosted on a git repository. If you are going to install from a local copy or from a repository, make sure you generate the plugin manifest file by running `yarn run prepack` beforehand, otherwise you will get an error when your CLI tries to load it.
+
 If you want users to be able to install their own plugins into your CLI, use the [plugins plugin](https://github.com/oclif/plugin-plugins).
 
 ## Useful Plugins
