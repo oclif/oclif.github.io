@@ -11,7 +11,7 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "^1.0.9",
-    "node-sass": "^4.7.2"
+    "docusaurus": "^1.0.15",
+    "node-sass": "^4.9.0"
   }
 }

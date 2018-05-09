@@ -24,6 +24,7 @@
       "aliases",
       "base_class",
       "prompting",
+      "spinner",
       "notifications",
       "debugging"
     ],
