@@ -47,6 +47,7 @@ static flags = [
     default: 'world',             // default value if flag not passed
     required: false,              // make flag required (this is not common and you should probably use an argument instead)
     dependsOn: ['extra-flag'],    // this flag requires another flag
+    exclusive: ['extra-flag'],    // this flag cannot be specified alongside this other flag
   }),
 
   // flag with no value (-f, --force)
