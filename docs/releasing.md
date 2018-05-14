@@ -23,9 +23,9 @@ This workflow can be improved slightly by running `npm version major|minor|patch
 
 ## Standalone tarballs
 
-Build standalone tarballs with `oclif-dev pack` from the root of your CLI. Then, you can publish them S3 with `oclif-dev publish`.
+Build standalone tarballs with `oclif-dev pack` from the root of your CLI. These include the node binary so the user does not have to already have node installed to use the CLI. It won't put this node binary on the PATH so the binary will not conflict with any node installation on the machine.
 
-To publish, you can copy the files from `./dist` or use `oclif-dev publish` to copy the files to S3. You'll need to set `oclif.update.s3.bucket` in `package.json` to a valid S3 bucket and have credentials set in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment vars. You can also set `oclif.update.s3.host` to an S3 CNAME or CloudFront host.
+To publish, you can copy the files from `./dist` or use `oclif-dev publish` to copy the files to S3. You'll need to set `oclif.update.s3.bucket` in `package.json` to a valid S3 bucket and have credentials set in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment vars.
 
 ## Autoupdater
 
