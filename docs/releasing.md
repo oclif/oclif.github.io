@@ -27,6 +27,8 @@ Build standalone tarballs with `oclif-dev pack` from the root of your CLI. Then,
 
 To publish, you can copy the files from `./dist` or use `oclif-dev publish` to copy the files to S3. You'll need to set `oclif.update.s3.bucket` in `package.json` to a valid S3 bucket and have credentials set in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment vars. You can also set `oclif.update.s3.host` to an S3 CNAME or CloudFront host.
 
+## Autoupdater
+
 These tarballs as well as the installers below can be made autoupdatable by adding the `@oclif/plugin-update` plugin. Just add this plugin and the CLI will autoupdate in the background or when `mycli update` is run.
 
 If you don't want to use S3, you can still run `oclif-dev pack` and it will build tarballs. To get the updater to work, set `oclif.update.s3.host` to a host that has the files built in `./dist` from `oclif-dev pack`. This host does not need to be an S3 host. To customize the URL paths, see the S3 templates in `@oclif/config`.
