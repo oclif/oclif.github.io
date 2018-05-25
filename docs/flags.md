@@ -35,7 +35,7 @@ _oclif supports a wide range of [alternative flag inputs](#alternative-flag-inpu
 Here are the options flags can have:
 
 ```js
-static flags = [
+static flags = {
   name: flags.string({
     char: 'n',                    // shorter flag version
     description: 'name to print', // help description for flag
@@ -58,7 +58,7 @@ static flags = [
     // set this to false to disable this functionality
     // allowNo: false,
   }),
-]
+}
 ```
 
 ## Custom Flags
