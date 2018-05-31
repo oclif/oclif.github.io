@@ -32,30 +32,17 @@ export class Whoami extends Command {
 }
 ```
 
-Another common tool we like to use in testing oclif CLIs is [nock](https://github.com/node-nock/nock). Before we can use fancy-test with nock though, we need to register the nock plugin as it's optional. Install the packages `@fancy-test/nock`, `nock`, and for TypeScript, `@types/nock` as devDependencies.
+Another common tool we like to use in testing oclif CLIs is [nock](https://github.com/node-nock/nock). Install the `nock` package as a devDependency.
 
-To share @oclif/test registered with nock, we have a helper file with the following:
-
-**test/test.ts**
-
-```typescript
-import Nock from '@fancy-test/nock'
-import * as Test from '@oclif/test'
-export {expect} from '@oclif/test'
-
-export const test = Test.test
-.register('nock', Nock)
-```
-
-Finally here is the test code
+Here is the test code
 
 **test/commands/whoami.ts**
 
 ```typescript
-import {expect, test} from '../test'
+import {expect, fancy} from 'fancy-test'
 
 describe('auth:whoami', () => {
-  test
+  fancy
   .nock('https://api.heroku.com', api => api
     .get('/account')
     // user is logged in, return their name
@@ -67,7 +54,7 @@ describe('auth:whoami', () => {
     expect(ctx.stdout).to.equal('jeff@example.com\n')
   })
 
-  test
+  fancy
   .nock('https://api.heroku.com', api => api
     .get('/account')
     // HTTP 401 means the user is not logged in with valid credentials
