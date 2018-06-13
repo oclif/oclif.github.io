@@ -35,7 +35,7 @@ If you don't want to use S3, you can still run `oclif-dev pack` and it will buil
 
 ## Autoupdate Channels
 
-You can have separate channels for releases that work like Google Chrome Channels (such as beta, dev, canary). To create a channel, just change the version from `1.0.0` to `1.0.0-beta` (where "beta" is any string you like). Then when you pack with `oclif-dev pack`, it will create beta tarballs. The user can change their channel with `mycli update beta` and will receive all the future releases on that channel.
+You can have separate channels for releases that work like Google Chrome Channels (such as beta, dev, canary). To create a channel, just change the version in `package.json` from `1.0.0` to `1.0.0-beta` (where "beta" is any string you like). Then when you pack with `oclif-dev pack`, it will create beta tarballs. The user can change their channel with `mycli update beta` and will receive all the future releases on that channel.
 
 In the Heroku CLI, we have it automatically build and release the beta channel on every commit to the master branch. Then we have it build and release stable channel whenever a git tag is created in our CI.
 
