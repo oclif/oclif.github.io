@@ -59,3 +59,8 @@ $ sudo apt install -y mycli
 This can be placed in a [script](https://cli-assets.heroku.com/install-ubuntu.sh) for users to install with `curl https://pathto/myscript | sh`.
 
 These will not autoupdate as Ubuntu already has a reliable way for users to update their package.
+
+
+## Snapcraft
+
+Snap is a great way to distribute Linux CLIs and comes built into Ubuntu 16+. The Heroku CLI's [snapcraft.yml](https://github.com/heroku/cli/blob/master/snap/snapcraft.yaml) file can be easily modified to work with any oclif CLI.
