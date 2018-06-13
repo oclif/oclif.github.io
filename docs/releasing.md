@@ -33,6 +33,12 @@ These tarballs as well as the installers below can be made autoupdatable by addi
 
 If you don't want to use S3, you can still run `oclif-dev pack` and it will build tarballs. To get the updater to work, set `oclif.update.s3.host` to a host that has the files built in `./dist` from `oclif-dev pack`. This host does not need to be an S3 host. To customize the URL paths, see the S3 templates in `@oclif/config`.
 
+## Autoupdate Channels
+
+You can have separate channels for releases that work like Google Chrome Channels (such as beta, dev, canary). To create a channel, just change the version from `1.0.0` to `1.0.0-beta` (where "beta" is any string you like). Then when you pack with `oclif-dev pack`, it will create beta tarballs. The user can change their channel with `mycli update beta` and will receive all the future releases on that channel.
+
+In the Heroku CLI, we have it automatically build and release the beta channel on every commit to the master branch. Then we have it build and release stable channel whenever a git tag is created in our CI.
+
 ## Windows installer
 
 Build a windows installer with `oclif-dev pack:win`. It will build into `./dist/win`. This can be published to S3 with `oclif-dev publish:win`.
