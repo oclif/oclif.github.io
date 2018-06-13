@@ -16,6 +16,8 @@ Node has the best support for our [plugins](plugins.md) model. Plugins are a way
 
 Use [pkg](https://github.com/zeit/pkg). Just make sure to add the commands and other source files by setting `pkg.scripts: "./lib/**/*.js"` in `package.json`.
 
+In the Heroku CLI, however, we prefer to ship a tarball (and various installers) that has Node baked in. Use `oclif-dev pack` to create a set of tarballs for different platforms with Node built in. You'll likely need to use [@oclif/plugin-update](https://github.com/oclif/plugin-update) with this, otherwise the users won't have a way to update the CLI from the tarball without reinstalling it.
+
 ## Should I use TypeScript or JavaScript?
 
 We suggest TypeScript as we find the typing to really help when refactoring code and updating dependencies. It's nicer to get compilation errors rather than finding errors in production.
