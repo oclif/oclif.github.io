@@ -22,6 +22,7 @@
     "introduction": "Introduction",
     "multi": "Multi-command CLI",
     "notifications": "Notifications",
+    "now_hiring": "Now Hiring!",
     "plugins": "Plugins",
     "prompting": "Prompting",
     "related_repos": "Related Repositories",
@@ -36,6 +37,7 @@
     "Blog": "Blog",
     "Discuss": "Discuss",
     "GitHub": "GitHub",
+    "Now Hiring!": "Now Hiring!",
     "How to": "How to",
     "Also See": "Also See"
   },
