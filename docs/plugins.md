@@ -31,7 +31,7 @@ If you want users to be able to install their own plugins into your CLI, use the
 * [@oclif/plugin-warn-if-update-available](https://github.com/oclif/plugin-warn-if-update-available) - Show a warning message if user is running an out of date CLI.
 * [@oclif/plugin-which](https://github.com/oclif/plugin-which) - Show which plugin a command comes from.
 * [@oclif/plugin-commands](https://github.com/oclif/plugin-commands) - Add a `commands` command to list all the commands.
-* [TODO: @oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete) - Add bash/zsh autocomplete.
+* [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete) - Add bash/zsh autocomplete.
 
 ## Building your own plugin
 
