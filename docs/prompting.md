@@ -2,7 +2,7 @@
 title: Prompting
 ---
 
-[cli-ux](cli_ux.md) provides a simple `cli.prompt()` function, for more complex input prompts, we recommend using the [inquirer](https://github.com/SBoudrias/Inquirer.js) library.
+[cli-ux](https://github.com/oclif/cli-ux) provides a simple `cli.prompt()` function, for more complex input prompts, we recommend using the [inquirer](https://github.com/SBoudrias/Inquirer.js) library.
 
 
 ## `cli.prompt()`
