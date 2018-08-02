@@ -53,7 +53,7 @@ static flags = {
   // flag with no value (-f, --force)
   force: flags.boolean({
     char: 'f',
-    // boolean flags opt-in to being reversed with `--no-` (in this case: `--no-force`).
+    // boolean flags may be reversed with `--no-` (in this case: `--no-force`).
     // The flag will be set to false if reversed. This functionality
     // is disabled by default, to enable it:
     // allowNo: true
