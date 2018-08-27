@@ -29,7 +29,7 @@ const siteConfig = {
     {blog: true, label: 'Blog'},
     {href: 'https://gitter.im/oclif/oclif', label: 'Discuss'},
     {href: 'https://github.com/oclif/oclif', label: 'GitHub'},
-    {doc: 'now_hiring', label: 'Now Hiring!'},
+    // {doc: 'now_hiring', label: 'Now Hiring!'},
   ],
   // users,
   /* path to images for header/footer */
