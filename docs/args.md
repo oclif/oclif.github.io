@@ -28,13 +28,15 @@ Here are the options arguments can have:
 ```js
 static args = [
   {
-    name: 'file',                  // name of arg to show in help and reference with args[name]
-    required: false,               // make the arg required with `required: true`
-    description: 'file to output', // help description
-    hidden: true,                  // hide this arg from help
-    parse: input => 'output',      // instead of the user input, return a different value
-    default: 'world',              // default value if no arg input
-    options: ['a', 'b'],           // only allow input to be from a discrete set
+    name: 'file',               // name of arg to show in help and reference with args[name]
+    required: false,            // make the arg required with `required: true`
+    description: 'output file', // help description
+    hidden: true,               // hide this arg from help
+    parse: input => 'output',   // instead of the user input, return a different value
+    default: 'world',           // default value if no arg input
+    options: ['a', 'b'],        // only allow input to be from a discrete set
   }
 ]
 ```
+
+For variable length arguments, disable argument validation with `static strict = false` on the command.
