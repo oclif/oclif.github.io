@@ -80,6 +80,9 @@
       "spinner": {
         "title": "Spinner"
       },
+      "table": {
+        "title": "Table"
+      },
       "testing": {
         "title": "Testing"
       },
