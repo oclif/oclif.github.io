@@ -77,6 +77,10 @@ const siteConfig = {
     apiKey: '433a7758541da1949f63b813ddf5c78c',
     indexName: 'oclif'
   },
+  cleanUrl: true,
+  enableUpdateTime: true,
+  twitter: true,
+  twitterUsername: 'oclif_',
 };
 
 module.exports = siteConfig;
