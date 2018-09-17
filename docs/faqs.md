@@ -26,6 +26,14 @@ We've put a lot of care into making it easy to make a TypeScript CLI even if you
 
 Still, the languages today are very similar. The code you write in JavaScript will be nearly identical to what you would have in TypeScript. (Just no type definitions, of course)
 
+## What editor is best for oclif?
+
+Of course if you already have a go-to editor, you should use that. Jeff (lead developer of oclif) works inside of vim, but even he would say if you're not already set on an editor you should use [vscode](https://code.visualstudio.com).
+
+Microsoft has done a great job with this editor and it works particularly well in TypeScript projects. You'll get nice type checking, linting, and autocomplete right out of the box.
+
+If you're an avid vscode user, we'd [love to hear](https://gitter.im/oclif/oclif) tips on how oclif could be improved inside of vscode specifically.
+
 ## Should I use npm or yarn?
 
 It really doesn't make that much of a difference. If you're just getting started, keep it simple and use npm which comes with node. We like to use yarn internally as it's a bit faster and we find the lockfiles friendlier.
