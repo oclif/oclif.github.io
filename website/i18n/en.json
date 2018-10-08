@@ -4,40 +4,102 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "Create command line tools your users love",
-    "aliases": "Aliases",
-    "args": "Command Arguments",
-    "base_class": "Custom Base Class",
-    "commands": "Commands",
-    "config": "Configuration",
-    "debugging": "Debugging",
-    "examples": "Examples",
-    "external_links": "External Links",
-    "faqs": "FAQs",
-    "features": "Features",
-    "feedback": "Feedback",
-    "flags": "Command Flags",
-    "generator_commands": "Generator Commands",
-    "hooks": "Hooks",
-    "index": "index",
-    "introduction": "Introduction",
-    "multi": "Multi-command CLI",
-    "notifications": "Notifications",
-    "plugins": "Plugins",
-    "prompting": "Prompting",
-    "related_repos": "Related Repositories",
-    "releasing": "Release",
-    "running_programmatically": "Running Commands Programatically",
-    "single": "Single-command CLI",
-    "spinner": "Spinner",
-    "testing": "Testing",
-    "topics": "Topics",
-    "Getting Started": "Getting Started",
-    "API Reference": "API Reference",
-    "Blog": "Blog",
-    "Discuss": "Discuss",
-    "GitHub": "GitHub",
-    "How to": "How to",
-    "Also See": "Also See"
+    "docs": {
+      "aliases": {
+        "title": "Aliases"
+      },
+      "args": {
+        "title": "Command Arguments"
+      },
+      "base_class": {
+        "title": "Custom Base Class"
+      },
+      "commands": {
+        "title": "Commands"
+      },
+      "config": {
+        "title": "Configuration"
+      },
+      "debugging": {
+        "title": "Debugging"
+      },
+      "examples": {
+        "title": "Examples"
+      },
+      "external_links": {
+        "title": "External Links"
+      },
+      "faqs": {
+        "title": "FAQs"
+      },
+      "features": {
+        "title": "Features"
+      },
+      "feedback": {
+        "title": "Feedback"
+      },
+      "flags": {
+        "title": "Command Flags"
+      },
+      "generator_commands": {
+        "title": "Generator Commands"
+      },
+      "hooks": {
+        "title": "Hooks"
+      },
+      "index": {
+        "title": "index"
+      },
+      "introduction": {
+        "title": "Introduction"
+      },
+      "multi": {
+        "title": "Multi-command CLI"
+      },
+      "notifications": {
+        "title": "Notifications"
+      },
+      "plugins": {
+        "title": "Plugins"
+      },
+      "prompting": {
+        "title": "Prompting"
+      },
+      "related_repos": {
+        "title": "Related Repositories"
+      },
+      "releasing": {
+        "title": "Release"
+      },
+      "running_programmatically": {
+        "title": "Running Commands Programatically"
+      },
+      "single": {
+        "title": "Single-command CLI"
+      },
+      "spinner": {
+        "title": "Spinner"
+      },
+      "testing": {
+        "title": "Testing"
+      },
+      "topics": {
+        "title": "Topics"
+      }
+    },
+    "links": {
+      "Getting Started": "Getting Started",
+      "API Reference": "API Reference",
+      "Blog": "Blog",
+      "Discuss": "Discuss",
+      "GitHub": "GitHub"
+    },
+    "categories": {
+      "Getting Started": "Getting Started",
+      "API Reference": "API Reference",
+      "How to": "How to",
+      "Also See": "Also See"
+    }
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",
