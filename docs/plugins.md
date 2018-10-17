@@ -33,6 +33,9 @@ If you want users to be able to install their own plugins into your CLI, use the
 * [@oclif/plugin-commands](https://github.com/oclif/plugin-commands) - Add a `commands` command to list all the commands.
 * [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete) - Add bash/zsh autocomplete.
 
+## Community Plugins
+* [conf-cli](https://github.com/natzcam/conf-cli) - Adds a `conf` command to share state/configuration between commands. Uses [sindresorhus/conf](https://github.com/sindresorhus/conf).
+
 ## Building your own plugin
 
 Writing code for plugins is essentially the same as writing within a CLI. They can export 3 different types: commands, hooks, and other plugins.
