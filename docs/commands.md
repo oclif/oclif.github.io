@@ -102,6 +102,16 @@ this.warn('uh oh!')
 this.warn(new Error('uh oh!'))
 ```
 
+For use outside of a Command:
+
+```typescript
+import {warn} from '@oclif/errors'
+
+warn('uh oh!')
+warn(new Error('uh oh!'))
+```
+
+
 ### `this.error(message: string | Error, options?: {code?: string, exit?: number})`
 
 Display error and exit. Also add a code to error object or exit status.
@@ -111,12 +121,15 @@ this.error('uh oh!', {exit: 2})
 this.error(new Error('uh oh!'))
 ```
 
-These errors are friendly and won't show a traceback unless debugging is enabled with `DEBUG=*` or `CLI_NAME_DEBUG=1`. If you want to raise errors like this outside of a command, use `@oclif/errors`.
+These errors are friendly and won't show a traceback unless debugging is enabled with `DEBUG=*` or `CLI_NAME_DEBUG=1`.
+
+For use outside of a Command:
 
 ```typescript
-import {CLIError} from '@oclif/errors'
+import {error} from '@oclif/errors'
 
-throw new CLIError('my friendly error')
+error('uh oh!', {exit: 2})
+error(new Error('uh oh!'))
 ```
 
 Any error caught by the command of this `CLIError` type will be shown without traceback.
@@ -128,5 +141,14 @@ Exit process. Defaults to status 0.
 ```typescript
 this.exit()
 this.exit(1)
+```
+
+For use outside of a Command:
+
+```typescript
+import {exit} from '@oclif/errors'
+
+exit()
+exit(1)
 ```
 
