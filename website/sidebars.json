@@ -25,6 +25,7 @@
       "base_class",
       "prompting",
       "spinner",
+      "table",
       "notifications",
       "debugging"
     ],
