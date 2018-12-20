@@ -13,8 +13,8 @@ cli.table(data, columns, options)
 Where:
 
 - `data`: array of data objects to display
-- `columns`: [Table.Columns](./src/styled/table.ts)
-- `options`: [Table.Options](./src/styled/table.ts)
+- `columns`: [Table.Columns](https://github.com/oclif/cli-ux/blob/master/src/styled/table.ts)
+- `options`: [Table.Options](https://github.com/oclif/cli-ux/blob/master/src/styled/table.ts)
 
 `cli.table.flags()` returns an object containing all the table flags to include in your command.
 
