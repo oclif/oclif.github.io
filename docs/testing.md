@@ -36,26 +36,26 @@ Another common tool we like to use in testing oclif CLIs is [nock](https://githu
 
 Here is the test code
 
-**test/commands/whoami.ts**
+**test/commands/whoami.test.ts**
 
 ```typescript
-import {expect, fancy} from 'fancy-test'
+import {expect, test} from '@oclif/test'
 
 describe('auth:whoami', () => {
-  fancy
-  .nock('https://api.heroku.com', api => api
+  test
+  .nock('https://api.heroku.com', (api: any) => api
     .get('/account')
     // user is logged in, return their name
     .reply(200, {email: 'jeff@example.com'})
   )
   .stdout()
   .command(['auth:whoami'])
-  .it('shows user email when logged in', ctx => {
+  .it('shows user email when logged in', (ctx: { stdout: string }) => {
     expect(ctx.stdout).to.equal('jeff@example.com\n')
   })
 
-  fancy
-  .nock('https://api.heroku.com', api => api
+  test
+  .nock('https://api.heroku.com', (api: any) => api
     .get('/account')
     // HTTP 401 means the user is not logged in with valid credentials
     .reply(401)
