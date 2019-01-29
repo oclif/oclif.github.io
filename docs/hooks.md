@@ -63,7 +63,7 @@ Custom events are just like lifecycle events, but you need to call `this.config.
 
 For example, you could define an analytics post function that you will run in your command after submitting analytics telemetry. First define:
 
-**src/hooks/post_analytics.ts**
+**src/hooks/analytics/post.ts**
 
 ```typescript
 export default const hook = async function (options: {id: string}) {
