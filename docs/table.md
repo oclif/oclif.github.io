@@ -42,7 +42,7 @@ const columns: Table.Columns = {
     header: 'ID', // override column header
     minWidth: '10', // column must display at this width or greater
     extended: true, // only display this column when the --extended flag is present
-    get: row => `US-O1-${row.id}`, // custom getter for data row object 
+    get: row => `US-O1-${row.id}`, // custom getter for data row object
   },
 }
 ```
