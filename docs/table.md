@@ -42,7 +42,7 @@ const columns: Table.Columns = {
     header: 'ID', // override column header
     minWidth: '10', // column must display at this width or greater
     extended: true, // only display this column when the --extended flag is present
-    get: row => `US-O1-${row.id}`, // custom getter for data row object 
+    get: row => `US-O1-${row.id}`, // custom getter for data row object
   },
 }
 ```
@@ -57,8 +57,8 @@ const options: Table.Options = {
   filter: flags.filter,
   csv: flags.csv,
   extended: flags.extended,
-  'no-truncate': flags['no-truncate]',
-  'no-header': flags['no-header]',
+  'no-truncate': flags['no-truncate'],
+  'no-header': flags['no-header'],
 }
 ```
 
