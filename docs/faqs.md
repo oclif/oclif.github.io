@@ -32,7 +32,7 @@ Of course if you already have a go-to editor, you should use that. Jeff (lead de
 
 Microsoft has done a great job with this editor and it works particularly well in TypeScript projects. You'll get nice type checking, linting, and autocomplete right out of the box.
 
-If you're an avid vscode user, we'd [love to hear](https://gitter.im/oclif/oclif) tips on how oclif could be improved inside of vscode specifically.
+If you're an avid vscode user, we'd [love to hear](https://spectrum.chat/oclif) tips on how oclif could be improved inside of vscode specifically.
 
 ## Should I use npm or yarn?
 

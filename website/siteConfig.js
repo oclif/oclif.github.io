@@ -27,7 +27,7 @@ const siteConfig = {
     {doc: 'introduction', label: 'Getting Started'},
     {doc: 'commands', label: 'API Reference'},
     {blog: true, label: 'Blog'},
-    {href: 'https://gitter.im/oclif/oclif', label: 'Discuss'},
+    {href: 'https://spectrum.chat/oclif', label: 'Discuss'},
     {href: 'https://github.com/oclif/oclif', label: 'GitHub'},
     // {doc: 'now_hiring', label: 'Now Hiring!'},
   ],
