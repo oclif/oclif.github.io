@@ -11,9 +11,7 @@ _Note the following describes GNU-style flags. Not all CLIs follow this conventi
 ## Parts of Speech
 
 Any command line interface command has a few standard "parts of speech".  As a user of CLI tools, knowing these parts of speech can help you make fewer typos. It can also help you understand complex commands other people share with you more quickly. If you are designing a CLI tool it is even more important to understand these parts of speech, so you can come up with the most ergonomic interface for your users.
-
-DIAGRAM OF PARTS OF SPEECH EXAMPLE
-
+<!-- DIAGRAM OF PARTS OF SPEECH EXAMPLE -->
 Of the many ways you can pass data to a CLI command, three of them are **parameters** that are always to the "right" of the command. The three types of parameters are **argument**, **short flag**, and **long flag**.
 
 ### Example `ls`
@@ -140,7 +138,7 @@ The long flag form is easier to read, but takes more characters to type. It is o
 The short flag form is quicker to type, and is often better for frequently used commands. Short flags are especially useful when stacking short flags together.
 
 
-## Did you mean?
+<!-- ## Did you mean?
 It is really easy to make a typo and use one dash instead of two, or vice versa. This "Long flag / short flag mismatch" is quite common. We hope that by catching these typos we will help you make fewer typos, save you from frustration, and speed up your development.
 
 `oclif` can now detect when you accidentally have the wrong number of dashes for a command, and suggest a change to the command.
@@ -161,3 +159,4 @@ heroku config ---something-long
 ```
 
 This is an example of a "did you mean?" command, like this ruby plugin [did_you_mean](https://github.com/yuki24/did_you_mean).
+-->
