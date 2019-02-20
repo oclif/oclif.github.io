@@ -12,6 +12,7 @@ _Note the following describes GNU-style flags. Not all CLIs follow this conventi
 
 Any command line interface command has a few standard "parts of speech".  As a user of CLI tools, knowing these parts of speech can help you make fewer typos. It can also help you understand complex commands other people share with you more quickly. If you are designing a CLI tool it is even more important to understand these parts of speech, so you can come up with the most ergonomic interface for your users.
 <!-- DIAGRAM OF PARTS OF SPEECH EXAMPLE -->
+
 Of the many ways you can pass data to a CLI command, three of them are **parameters** that are always to the "right" of the command. The three types of parameters are **argument**, **short flag**, and **long flag**.
 
 ### Example `ls`
