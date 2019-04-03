@@ -25,6 +25,7 @@ const siteConfig = {
   projectName: 'oclif.github.io',
   headerLinks: [
     {doc: 'introduction', label: 'Getting Started'},
+    {page: 'conf', label: 'oclifconf'},
     {doc: 'commands', label: 'API Reference'},
     {blog: true, label: 'Blog'},
     {href: 'https://spectrum.chat/oclif', label: 'Discuss'},
