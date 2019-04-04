@@ -107,9 +107,9 @@ class Conf extends React.Component {
             <p className='f4'><strong>oclifconf</strong> is the inaugural in-person event for the oclif community, organized by Heroku &amp; Salesforce Open Source. oclifconf is a one-day, single-track conference for developers &amp; product managers building CLI tools. This will be the first gathering of the oclif community and will feature speakers from a range of companies building&nbsp;on&nbsp;oclif.</p>
           </div>
 
-          <div className='bg-near-white pt4 pb4 sf relative z-1'>
+          <div className='bg-near-white pt4 pb6 sf relative z-1'>
             <div className='center mw7 mv5 ph4'>
-              <ul className='list pl0 f4'>
+              <ul className='list pl0 f4 pb4'>
                 <li className='dark-gray'>San Francisco (venue TBD)</li>
                 <li className='gray'>Friday, May 31, 2019</li>
                 <li className='gray'>9am - 4:30pm PDT followed by Happy&nbsp;Hour</li>
