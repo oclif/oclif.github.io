@@ -25,6 +25,7 @@ const siteConfig = {
   projectName: 'oclif.github.io',
   headerLinks: [
     {doc: 'introduction', label: 'Getting Started'},
+    {page: 'conf', label: 'oclifconf'},
     {doc: 'commands', label: 'API Reference'},
     {blog: true, label: 'Blog'},
     {href: 'https://spectrum.chat/oclif', label: 'Discuss'},
@@ -69,7 +70,7 @@ const siteConfig = {
   // onPageNav: 'separate',
   gaTrackingId: 'UA-39697570-45',
   stylesheets: [
-    'https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono',
+    'https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono',
   ],
   editUrl: 'https://github.com/oclif/oclif.github.io/tree/docs/docs/',
   cname: 'oclif.io',
