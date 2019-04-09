@@ -60,7 +60,8 @@ class Conf extends React.Component {
           <div className='bg-near-white pt4 pb6 sf relative z-1'>
             <div className='center mw7 mv5 ph4'>
               <ul className='list pl0 f4 pb4'>
-                <li className='dark-gray'>San Francisco (venue TBD)</li>
+                <li className='dark-gray'>Terra Gallery & Events</li>
+                <li className='gray'>511 Harrison St, San Francisco, CA 94105</li>
                 <li className='gray'>Friday, May 31, 2019</li>
                 <li className='gray'>9am - 4:30pm PDT followed by Happy&nbsp;Hour</li>
               </ul>
