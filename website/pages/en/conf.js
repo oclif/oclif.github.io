@@ -17,7 +17,7 @@ const schedule = [
   },
   {
     "time": "10:00 am",
-    "length": 30,
+    "length": 150,
     "content": "Presentations & breaks"
   },
   {
@@ -27,7 +27,7 @@ const schedule = [
   },
   {
     "time": "1:45 pm",
-    "length": 30,
+    "length": 165,
     "content": "Presentations & breaks"
   },
   {
