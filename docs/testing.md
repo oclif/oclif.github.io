@@ -10,7 +10,7 @@ Mocha is the top JavaScript testing framework and a solid choice for any project
 
 Any CLI built with oclif will come preloaded with these tools and an example test that should work out of the box with `npm test` or `yarn test`.
 
-As an example, let's look at the `heroku whoami` command which makes an API call to get the current logged in user if the user is not logged in it exits with status 100. (This is a simplified example, here is [the actual code](https://github.com/heroku/heroku-cli-plugin-auth))
+As an example, let's look at the `heroku whoami` command which makes an API call to get the current logged in user; if the user is not logged in, it exits with status 100. (This is a simplified example; here is [the actual code](https://github.com/heroku/heroku-cli-plugin-auth))
 
 **src/commands/whoami.ts**
 
