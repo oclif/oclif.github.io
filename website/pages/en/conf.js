@@ -13,77 +13,27 @@ const schedule = [
   {
     "time": "9:00 am",
     "length": 60,
-    "content": "Doors, coffee, breakfast"
+    "content": "Doors & coffee, breakfast (provided)"
   },
   {
     "time": "10:00 am",
-    "length": 30,
-    "content": "Opening Keynote"
-  },
-  {
-    "time": "10:30 am",
-    "length": 30,
-    "content": "Session"
-  },
-  {
-    "time": "11:00 am",
-    "length": 30,
-    "content": "Break"
-  },
-  {
-    "time": "11:30 am",
-    "length": 30,
-    "content": "Session"
-  },
-  {
-    "time": "12:00 pm",
-    "length": 30,
-    "content": "Session"
+    "length": 150,
+    "content": "Presentations & breaks"
   },
   {
     "time": "12:30 pm",
     "length": 75,
-    "content": "Lunch"
+    "content": "Lunch (provided)"
   },
   {
     "time": "1:45 pm",
-    "length": 30,
-    "content": "Session"
-  },
-  {
-    "time": "2:15 pm",
-    "length": 30,
-    "content": "Session"
-  },
-  {
-    "time": "2:45 pm",
-    "length": 30,
-    "content": "Break"
-  },
-  {
-    "time": "3:15 pm",
-    "length": 30,
-    "content": "Session"
-  },
-  {
-    "time": "3:45 pm",
-    "length": 30,
-    "content": "Session"
-  },
-  {
-    "time": "4:15 pm",
-    "length": 15,
-    "content": "Close Keynote"
+    "length": 165,
+    "content": "Presentations & breaks"
   },
   {
     "time": "4:30 pm",
     "length": 180,
-    "content": "Happy hour"
-  },
-  {
-    "time": "7 pm",
-    "length": null,
-    "content": "Done!"
+    "content": "Happy hour!"
   }
 ]
 
@@ -110,7 +60,8 @@ class Conf extends React.Component {
           <div className='bg-near-white pt4 pb6 sf relative z-1'>
             <div className='center mw7 mv5 ph4'>
               <ul className='list pl0 f4 pb4'>
-                <li className='dark-gray'>San Francisco (venue TBD)</li>
+                <li className='dark-gray'>Terra Gallery & Events</li>
+                <li className='gray'>511 Harrison St, San Francisco, CA 94105</li>
                 <li className='gray'>Friday, May 31, 2019</li>
                 <li className='gray'>9am - 4:30pm PDT followed by Happy&nbsp;Hour</li>
               </ul>
