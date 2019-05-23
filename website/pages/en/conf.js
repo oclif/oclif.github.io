@@ -163,7 +163,7 @@ class Conf extends React.Component {
               <li className='dark-gray'>Terra Gallery & Events</li>
               <li className='gray'>511 Harrison St, San Francisco, CA 94105</li>
               <li className='gray'>Friday, May 31, 2019</li>
-              <li className='gray'>9am - 4:30pm PDT followed by Happy&nbsp;Hour</li>
+              <li className='gray'>9am - 3:45pm PDT followed by Happy&nbsp;Hour</li>
             </ul>
             <hr />
           </div>
@@ -239,10 +239,11 @@ class Conf extends React.Component {
             </dl>
           </div>
 
-          <div className='center tl mw6 mv5 ph4'>
-            <h2 className="f4 o-70 mt0 tc">CFP</h2>
-            <p>We would love to hear from you! Consider presenting at oclifconf, by <a className="blue" href="https://docs.google.com/forms/d/e/1FAIpQLSeseVhOGzx49IpApX3aSNWNs9ITWSWVOk89Qek0DsQo_h4Aqg/viewform">submitting a talk to our CFP</a>.</p>
+          <div className='center tl mw6 mv5 ph4 tc'>
+            <h2 className="f4 o-70 mt0">Links</h2>
+            <a className="blue" href="https://success.salesforce.com/Ev_SiteCOC">Code of conduct</a>
           </div>
+
         </div>
       </div>
     )
