@@ -57,7 +57,7 @@ const schedule = [
     "title": "How Adobe I/O built an extensible CLI with oclif",
   },
   {
-    "time": "1:15pm",
+    "time": "1:45pm",
     "content": "Session",
     "speaker": "Nahid Samsami",
     // "avatar": "nahid-samsami.svg",
