@@ -251,6 +251,21 @@ nav.toc {
     border-bottom: 5px solid $green;
   }
 
+  hr {
+    border-color: rgba($light-gray, 0.1);
+  }
+
+  .avatar {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .schedule {
+    .avatar {
+      margin-left: -60px;
+      margin-right: 25px;
+    }
+  }
+
   .sf {
     &:before {
       content: '';
