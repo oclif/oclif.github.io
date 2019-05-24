@@ -127,7 +127,7 @@ const speakers = [
   //   "id": "nahid-samsami",
   //   "avatar": "nahid-samsami.jpg",
   //   "name": "Nahid Samsami",
-  //   "title": "Director of Product, Heroku oclif founding team member"
+  //   "title": "Director of Product @ Heroku, oclif core member"
   // },
   // {
   //   "id": "chris-castle",
