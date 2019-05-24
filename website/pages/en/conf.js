@@ -108,7 +108,7 @@ const speakers = [
     "avatar": "jeff-dickey.jpg",
     "name": "Jeff Dickey",
     "title": "Software Engineer, oclif founding team",
-    "bio": "Jeff led development for the Heroku CLI for over 5 years and was lead engineer for oclif from its inception. He is currently at Dropbox."
+    "bio": "Jeff led development for the Heroku CLI for over 5 years and was lead engineer for oclif from its inception. He is currently a back-end engineer at Dropbox."
   },
   {
     "id": "jesse-macfadyen",
