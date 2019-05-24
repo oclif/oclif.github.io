@@ -24,7 +24,7 @@ const schedule = [
     "speaker": "Jeff Dickey",
     "avatar": "jeff-dickey.jpg",
     "title": "The future of oclif",
-    "description": "First a brief overview of the history of oclif, followed by personnel changes in the project and future product direction."
+    "description": "A brief overview of the history of oclif and future product direction."
   },
   {
     "time": "10:40am",
@@ -107,8 +107,8 @@ const speakers = [
     "id": "jeff-dickey",
     "avatar": "jeff-dickey.jpg",
     "name": "Jeff Dickey",
-    "title": "Former oclif lead engineer",
-    "bio": "Jeff was the lead engineer for the Heroku CLI and oclif for ~5 years. Now he works on the back-end for Dropbox."
+    "title": "Software Engineer, oclif founding team",
+    "bio": "Jeff led development for the Heroku CLI for over 5 years and was lead engineer for oclif from its inception. He is currently a back-end engineer at Dropbox."
   },
   {
     "id": "jesse-macfadyen",
@@ -127,7 +127,7 @@ const speakers = [
   //   "id": "nahid-samsami",
   //   "avatar": "nahid-samsami.jpg",
   //   "name": "Nahid Samsami",
-  //   "title": "Director of Product, Heroku"
+  //   "title": "Director of Product @ Heroku, oclif core member"
   // },
   // {
   //   "id": "chris-castle",
