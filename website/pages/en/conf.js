@@ -30,8 +30,9 @@ const schedule = [
     "time": "10:40am",
     "content": "Session",
     "speaker": "Evans Hauser",
-    // "avatar": "evans-hauser.jpg",
-    "title": "Evolving tooling with oclif at Apollo"
+    "avatar": "evans-hauser.jpg",
+    "title": "Oclif + GraphQL + Apollo = 💖",
+    "description": "Apollo's journey to modern cli development"
   },
   {
     "time": "11:10am",
@@ -117,12 +118,13 @@ const speakers = [
     "title": "Sr. Computer Scientist at Adobe & VP Apache Cordova",
     "bio": "A PhoneGap contributor since day 1 and a Cordova committer since day 0. Jesse is part of a team working on developer tooling to uniformly access multiple Adobe Experience Cloud APIs and services and extensibly enable the next generation of creative apps."
   },
-  // {
-  //   "id": "evans-hauser",
-  //   "avatar": "evans-hauser.jpg",
-  //   "name": "Evans Hauser",
-  //   "title": "Open Source Engineer"
-  // },
+  {
+    "id": "evans-hauser",
+    "avatar": "evans-hauser.jpg",
+    "name": "Evans Hauser",
+    "title": "Core Developer at Apollo",
+    "bio": "Evans works on full stack developer tools and workflows at Apollo. He's an avid open source contributor and user. When his hands aren't attached to a keyboard, he enjoys dancing and yoga"
+  },
   // {
   //   "id": "nahid-samsami",
   //   "avatar": "nahid-samsami.jpg",
@@ -152,7 +154,7 @@ class Conf extends React.Component {
               <h2 className="f3 white o-70 mt0 mb1">San Francisco</h2>
               <h2 className="ttu tracked f5 white o-70 mv0">Friday May 31st, 2019</h2>
             </div>
-            </header>
+          </header>
           <div className='center tl mw7 mv5 ph4'>
             <p className='f4'><strong>oclifconf</strong> is the inaugural in-person event for the oclif community, organized by Heroku &amp; Salesforce Open Source. oclifconf is a one-day, single-track conference for developers &amp; product managers building CLI tools. This will be the first gathering of the oclif community and will feature speakers from a range of companies building&nbsp;on&nbsp;oclif.</p>
           </div>
@@ -190,12 +192,12 @@ class Conf extends React.Component {
                 </div>
               )}
             </div>
-          
+
           </div>
 
           <div className='center tl mw7 mv5 schedule'>
             <h2 className="f4 o-70 mt0 center">Schedule</h2>
-            
+
             <div className="ph4">
               <div className="overflow-auto">
                 <table className="w-100 mw6 center dt dt--fixed" cellspacing="0">
