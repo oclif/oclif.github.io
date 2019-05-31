@@ -29,10 +29,10 @@ const schedule = [
   {
     "time": "10:40am",
     "content": "Session",
-    "speaker": "Evans Hauser",
-    "avatar": "evans-hauser.jpg",
-    "title": "Oclif + GraphQL + Apollo = 💖",
-    "description": "Apollo's journey to modern cli development"
+    "speaker": "Josh Simmons",
+    "avatar": "josh-simmons.jpg",
+    "title": "Open Source Citizenship",
+    "description": "We all rely on open source software and, as our reliance grows, so do our policies for managing compliance and programs for cultivating mutually supportive relationships with the communities behind the software. In this talk, Josh will survey what companies are doing to support open source communities, what kind of support communities are actually asking for, and what you can do to cultivate a culture of open source citizenship at your company."
   },
   {
     "time": "11:10am",
@@ -60,10 +60,10 @@ const schedule = [
   {
     "time": "1:45pm",
     "content": "Session",
-    "speaker": "Josh Simmons",
-    "avatar": "josh-simmons.jpg",
-    "title": "Open Source Citizenship",
-    "description": "We all rely on open source software and, as our reliance grows, so do our policies for managing compliance and programs for cultivating mutually supportive relationships with the communities behind the software. In this talk, Josh will survey what companies are doing to support open source communities, what kind of support communities are actually asking for, and what you can do to cultivate a culture of open source citizenship at your company."
+    "speaker": "Evans Hauser",
+    "avatar": "evans-hauser.jpg",
+    "title": "Oclif + GraphQL + Apollo = 💖",
+    "description": "Apollo's journey to modern cli development"
   },
   {
     "time": "2:15pm",
