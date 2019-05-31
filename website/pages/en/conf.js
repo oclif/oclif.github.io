@@ -59,9 +59,10 @@ const schedule = [
   {
     "time": "1:45pm",
     "content": "Session",
-    "speaker": "Nahid Samsami",
-    // "avatar": "nahid-samsami.svg",
-    "title": "CLI Analytics",
+    "speaker": "Josh Simmons",
+    "avatar": "josh-simmons.jpg",
+    "title": "Open Source Citizenship",
+    "description": "We all rely on open source software and, as our reliance grows, so do our policies for managing compliance and programs for cultivating mutually supportive relationships with the communities behind the software. In this talk, Josh will survey what companies are doing to support open source communities, what kind of support communities are actually asking for, and what you can do to cultivate a culture of open source citizenship at your company."
   },
   {
     "time": "2:30pm",
@@ -74,9 +75,9 @@ const schedule = [
   {
     "time": "3:00pm",
     "content": "Session",
-    "speaker": "Chris Castle",
+    "speaker": "Moderated by Chris Castle",
     // "avatar": "chris-castle.jpg",
-    "title": "oclif core team Q & A"
+    "title": "oclif Core team Q & A"
   },
   {
     "time": "3:30pm",
@@ -117,24 +118,43 @@ const speakers = [
     "title": "Sr. Computer Scientist at Adobe & VP Apache Cordova",
     "bio": "A PhoneGap contributor since day 1 and a Cordova committer since day 0. Jesse is part of a team working on developer tooling to uniformly access multiple Adobe Experience Cloud APIs and services and extensibly enable the next generation of creative apps."
   },
-  // {
-  //   "id": "evans-hauser",
-  //   "avatar": "evans-hauser.jpg",
-  //   "name": "Evans Hauser",
-  //   "title": "Open Source Engineer"
-  // },
-  // {
-  //   "id": "nahid-samsami",
-  //   "avatar": "nahid-samsami.jpg",
-  //   "name": "Nahid Samsami",
-  //   "title": "Director of Product @ Heroku, oclif core member"
-  // },
-  // {
-  //   "id": "chris-castle",
-  //   "avatar": "chris-castle.jpg",
-  //   "name": "Chris Castle",
-  //   "title": "oclif core team"
-  // },
+  {
+    "id": "josh-simmons",
+    "avatar": "josh-simmons.jpg",
+    "name": "Josh Simmons",
+    "title": "Senior Open Source Strategist",
+    "bio": "Josh is a community strategist, open source advocate, web developer, and dusty foot philosopher. He travels frequently promoting free and open source software, inclusive community building, and teaching aspiring and junior developers how to learn by contributing to open source. Previously a community manager at O'Reilly, and an open source program manager at Google, Josh now serves as a strategist at Salesforce and as Vice President of the Open Source Initiative."
+  },
+  {
+    "id": "evans-hauser",
+    "avatar": "avatar-placeholder.svg",
+    "name": "Evans Hauser",
+    "title": "Open Source Engineer"
+  },
+  {
+    "id": "nahid-samsami",
+    "avatar": "avatar-placeholder.svg",
+    "name": "Nahid Samsami",
+    "title": "Director of Product @ Heroku, oclif Core team"
+  },
+  {
+    "id": "travis-longoria",
+    "avatar": "avatar-placeholder.svg",
+    "name": "Travis Longoria",
+    "title": "Heroku CLI Engineer, oclif Core team"
+  },
+  {
+    "id": "philipe-navarro",
+    "avatar": "avatar-placeholder.svg",
+    "name": "Philipe Navarro",
+    "title": "Heroku CLI Lead, oclif Core team"
+  },
+  {
+    "id": "chris-castle",
+    "avatar": "avatar-placeholder.svg",
+    "name": "Chris Castle",
+    "title": "Heroku Senior Dev Advocate"
+  },
 ]
 
 class Conf extends React.Component {
