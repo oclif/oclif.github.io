@@ -65,6 +65,10 @@ const schedule = [
     "description": "We all rely on open source software and, as our reliance grows, so do our policies for managing compliance and programs for cultivating mutually supportive relationships with the communities behind the software. In this talk, Josh will survey what companies are doing to support open source communities, what kind of support communities are actually asking for, and what you can do to cultivate a culture of open source citizenship at your company."
   },
   {
+    "time": "2:15pm",
+    "content": "Break"
+  },
+  {
     "time": "2:30pm",
     "content": "Session",
     "speaker": "Shawn Wang",
