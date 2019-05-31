@@ -254,15 +254,6 @@ class Conf extends React.Component {
             </div>
           </div>
 
-
-          <div className='center tl mw6 mv5 ph4'>
-            <h2 className="f4 o-70 mt0 tc">Q&amp;A</h2>
-            <dl>
-              <dt className="fw7">How do I attend oclifconf?</dt>
-              <dd>If you haven't already received an invite, <a className="blue" href="https://docs.google.com/forms/d/e/1FAIpQLScbGeMH-Nk_U5md_IdYh1L2nobBYdfEczPa5kFh9fBVPY0qHg/viewform">request one here</a>! oclifconf is limited in size and invites are emailed on a rolling&nbsp;basis.</dd>
-            </dl>
-          </div>
-
           <div className='center tl mw6 mv5 ph4 tc'>
             <h2 className="f4 o-70 mt0">Links</h2>
             <a className="blue" href="https://success.salesforce.com/Ev_SiteCOC">Code of conduct</a>
