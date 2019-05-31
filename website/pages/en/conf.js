@@ -60,9 +60,14 @@ const schedule = [
   {
     "time": "1:45pm",
     "content": "Session",
-    "speaker": "Nahid Samsami",
-    // "avatar": "nahid-samsami.svg",
-    "title": "CLI Analytics",
+    "speaker": "Josh Simmons",
+    "avatar": "josh-simmons.jpg",
+    "title": "Open Source Citizenship",
+    "description": "We all rely on open source software and, as our reliance grows, so do our policies for managing compliance and programs for cultivating mutually supportive relationships with the communities behind the software. In this talk, Josh will survey what companies are doing to support open source communities, what kind of support communities are actually asking for, and what you can do to cultivate a culture of open source citizenship at your company."
+  },
+  {
+    "time": "2:15pm",
+    "content": "Break"
   },
   {
     "time": "2:30pm",
@@ -75,9 +80,9 @@ const schedule = [
   {
     "time": "3:00pm",
     "content": "Session",
-    "speaker": "Chris Castle",
+    "speaker": "Moderated by Chris Castle",
     // "avatar": "chris-castle.jpg",
-    "title": "oclif core team Q & A"
+    "title": "oclif Core team Q & A"
   },
   {
     "time": "3:30pm",
@@ -119,24 +124,43 @@ const speakers = [
     "bio": "A PhoneGap contributor since day 1 and a Cordova committer since day 0. Jesse is part of a team working on developer tooling to uniformly access multiple Adobe Experience Cloud APIs and services and extensibly enable the next generation of creative apps."
   },
   {
+    "id": "josh-simmons",
+    "avatar": "josh-simmons.jpg",
+    "name": "Josh Simmons",
+    "title": "Senior Open Source Strategist",
+    "bio": "Josh is a community strategist, open source advocate, web developer, and dusty foot philosopher. He travels frequently promoting free and open source software, inclusive community building, and teaching aspiring and junior developers how to learn by contributing to open source. Previously a community manager at O'Reilly, and an open source program manager at Google, Josh now serves as a strategist at Salesforce and as Vice President of the Open Source Initiative."
+  },
+  {
     "id": "evans-hauser",
     "avatar": "evans-hauser.jpg",
     "name": "Evans Hauser",
     "title": "Core Developer at Apollo",
     "bio": "Evans works on full stack developer tools and workflows at Apollo. He's an avid open source contributor and user. When his hands aren't attached to a keyboard, he enjoys dancing and yoga"
   },
-  // {
-  //   "id": "nahid-samsami",
-  //   "avatar": "nahid-samsami.jpg",
-  //   "name": "Nahid Samsami",
-  //   "title": "Director of Product @ Heroku, oclif core member"
-  // },
-  // {
-  //   "id": "chris-castle",
-  //   "avatar": "chris-castle.jpg",
-  //   "name": "Chris Castle",
-  //   "title": "oclif core team"
-  // },
+  {
+    "id": "nahid-samsami",
+    "avatar": "avatar-placeholder.svg",
+    "name": "Nahid Samsami",
+    "title": "Director of Product @ Heroku, oclif Core team"
+  },
+  {
+    "id": "travis-longoria",
+    "avatar": "avatar-placeholder.svg",
+    "name": "Travis Longoria",
+    "title": "Heroku CLI Engineer, oclif Core team"
+  },
+  {
+    "id": "philipe-navarro",
+    "avatar": "avatar-placeholder.svg",
+    "name": "Philipe Navarro",
+    "title": "Heroku CLI Lead, oclif Core team"
+  },
+  {
+    "id": "chris-castle",
+    "avatar": "avatar-placeholder.svg",
+    "name": "Chris Castle",
+    "title": "Heroku Senior Dev Advocate"
+  },
 ]
 
 class Conf extends React.Component {
@@ -230,15 +254,6 @@ class Conf extends React.Component {
                 </table>
               </div>
             </div>
-          </div>
-
-
-          <div className='center tl mw6 mv5 ph4'>
-            <h2 className="f4 o-70 mt0 tc">Q&amp;A</h2>
-            <dl>
-              <dt className="fw7">How do I attend oclifconf?</dt>
-              <dd>If you haven't already received an invite, <a className="blue" href="https://docs.google.com/forms/d/e/1FAIpQLScbGeMH-Nk_U5md_IdYh1L2nobBYdfEczPa5kFh9fBVPY0qHg/viewform">request one here</a>! oclifconf is limited in size and invites are emailed on a rolling&nbsp;basis.</dd>
-            </dl>
           </div>
 
           <div className='center tl mw6 mv5 ph4 tc'>
