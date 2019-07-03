@@ -10,7 +10,7 @@ Mocha is the top JavaScript testing framework and a solid choice for any project
 
 Any CLI built with oclif will come preloaded with these tools and an example test that should work out of the box with `npm test` or `yarn test`.
 
-As an example, let's look at the `heroku whoami` command which makes an API call to get the current logged in user if the user is not logged in it exits with status 100. (This is a simplified example, here is [the actual code](https://github.com/heroku/heroku-cli-plugin-auth))
+As an example, let's look at the `heroku whoami` command which makes an API call to get the current logged in user. If the user is not logged in, it exits with status 100. (This is a simplified example, here is [the actual code](https://github.com/heroku/heroku-cli-plugin-auth))
 
 **src/commands/whoami.ts**
 
@@ -67,7 +67,7 @@ describe('auth:whoami', () => {
 })
 ```
 
-These tools are setup to not only mock out the stdout/stderr and HTTP calls, but they're setup to ensure they automatically reset after the test. A common issue we've had when building CLIs with simpler `beforeEach/afterEach` filters is that is the `afterEach` filters aren't setup correctly, a failing test can leave mocks around that make later tests fail. Using fancy-test, we avoid this problem and only have to declare our mocks once.
+These tools are setup to not only mock out the stdout/stderr and HTTP calls, but they're setup to ensure they automatically reset after the test. A common issue we've had when building CLIs with simpler `beforeEach/afterEach` filters is that if the `afterEach` filters aren't setup correctly, a failing test can leave mocks around that make later tests fail. Using fancy-test, we avoid this problem and only have to declare our mocks once.
 
 For more on how to test with oclif, check out the docs for [fancy-test](https://github.com/jdxcode/fancy-test) and [@oclif/test](https://github.com/oclif/test).
 
