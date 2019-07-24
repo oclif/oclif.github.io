@@ -41,10 +41,10 @@ oclif can package your CLI into [different installers](releasing.md) that will n
 > ### Coming soon: man pages
 > In addition to in-CLI help through `--help` and the README markdown help generation, the CLI can also automatically create man pages for all of its commands.
 
-### Coming soon: Autocomplete
+### Autocomplete
 
-Automatically include autocomplete for your CLI. This includes not just command names and flag names, but flag values as well. For example, it's easy to configure the Heroku CLI to have completions for Heroku app names:
+Automatically include terminal autocompletion for your CLI via [plugin-autocomplete](https://github.com/oclif/plugin-autocomplete). Once installed, users can complete command names and flag names.
 
 ```bash
-$ heroku info --app=<tab><tab> # will complete with all the Heroku apps a user has in their account
+$ my-cli p<tab><tab> # will list all commands starting with 'p' for completion
 ```
