@@ -43,7 +43,7 @@ oclif can package your CLI into [different installers](releasing.md) that will n
 
 ### Autocomplete
 
-Automatically include terminal autocompletion for your CLI via [plugin-autocomplete](https://github.com/oclif/plugin-autocomplete). Once installed, users can complete command names and flag names.
+Include terminal autocompletion for your CLI via [plugin-autocomplete](https://github.com/oclif/plugin-autocomplete). Once installed, users can complete command names and flag names.
 
 ```bash
 $ my-cli p<tab><tab> # will list all commands starting with 'p' for completion
