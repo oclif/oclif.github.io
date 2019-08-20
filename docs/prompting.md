@@ -21,7 +21,7 @@ export class MyCommand extends Command {
     // mask input after enter is pressed
     const secondFactor = await cli.prompt('What is your two-factor token?', {type: 'mask'})
 
-    // mask input after enter is pressed
+    // hide input while typing
     const password = await cli.prompt('What is your password?', {type: 'hide'})
 
     this.log(`You entered: ${name}, ${secondFactor}, ${password}`)
