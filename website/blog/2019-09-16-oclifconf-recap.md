@@ -10,7 +10,7 @@ Below is a listing of all of the talks from the event, along with a short summar
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1TKh2YBxRMY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-In its relatively short lifetime, oclif has already inspired many developers and companies to adopt its framework as a means for implementing their own command-line tooling. In this talk, Jeff Dickey, an oclif founding team member, recaps the project's history and inspiration. He also looks towards the future and outlines some features and improvements that the tool could adapt. This isn't so much a definitive roadmap of where oclif is headed, but rather, a call to inspiration for developers eager to contribute! And if you are interested in contributing, check out the open issues in the oclif GitHub repo and come say hi on Spectrum Chat with questions.
+In its relatively short lifetime, oclif has already inspired many developers and companies to adopt its framework as a means for implementing their own command-line tooling. In this talk, Jeff Dickey, an oclif founding team member, recaps the project's history and inspiration. He also looks towards the future and outlines some features and improvements that the tool could adapt. This isn't so much a definitive roadmap of where oclif is headed, but rather, a call to inspiration for developers eager to contribute! And if you are interested in contributing, check out the [open issues](https://github.com/oclif/oclif/issues) in the oclif GitHub repo and come say "Hello!" on [Spectrum Chat](https://spectrum.chat/oclif).
 
 ## Open Source Citizenship by Josh Simmons
 
