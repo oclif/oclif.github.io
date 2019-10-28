@@ -46,7 +46,7 @@ If you're using npx, install it first with `npm install -g oclif`. This won't st
 
 There is an [experimental plugin to support space-separated commands](https://github.com/RasPhilCo/oclif-plugin-spaced-commands). Ultimately we'd like to bring this into the core of oclif as a setting.
 
-## Why isn't Node 6 supported?
+## Why isn't Node X supported?
 
 Node 6 will only be LTS until April 2019. This is soon enough that we felt with a new framework there wasn't a great argument for supporting it in the first place.
 
