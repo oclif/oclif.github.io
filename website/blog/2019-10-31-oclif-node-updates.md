@@ -1,6 +1,6 @@
 ---
 author: Chad Carbert
-title: Preparing for Node 8 deprecation
+title: oclif's Current Node Support
 ---
 
 To maintain a healthy project trajectory, oclif follows and supports [Node Active LTS release](https://nodejs.org/en/about/releases/), currently Node 10 & Node 12. This means ensuring that oclif continues to play nice with coming Active LTS Node versions and other packages in the ecosystem. Moving forward also means leaving older versions behind. Starting in 2020, Node will stop maintaining version 8 (https://github.com/nodejs/Release#release-schedule) and it is our intent at that time to also follow suit. Let’s take a look at a few ways we will be supporting these changes.
