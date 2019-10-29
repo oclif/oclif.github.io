@@ -48,7 +48,7 @@ There is an [experimental plugin to support space-separated commands](https://gi
 
 ## Why isn't Node X supported?
 
-The oclif project follows and supports [Node's active LTS support schedule](https://nodejs.org/en/about/releases/). This allows oclif to stay current with Node's development.
+The oclif project follows and supports [Node's Active LTS support schedule](https://nodejs.org/en/about/releases/). This allows oclif to stay current with Node's development.
 
 ## How do I pronounce "oclif"?
 
