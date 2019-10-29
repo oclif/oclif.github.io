@@ -36,7 +36,7 @@ If you're an avid vscode user, we'd [love to hear](https://spectrum.chat/oclif) 
 
 ## Should I use npm or yarn?
 
-It really doesn't make that much of a difference. If you're just getting started, keep it simple and use npm which comes with node. We like to use yarn internally as it's a bit faster and we find the lockfiles friendlier.
+It really doesn't make that much of a difference. If you're just getting started, keep it simple and use npm which comes with Node. We like to use yarn internally as it's a bit faster and we find the lockfiles friendlier.
 
 ## How can I make the oclif generator run faster?
 
@@ -48,13 +48,7 @@ There is an [experimental plugin to support space-separated commands](https://gi
 
 ## Why isn't Node X supported?
 
-Node 6 will only be LTS until April 2019. This is soon enough that we felt with a new framework there wasn't a great argument for supporting it in the first place.
-
-We can change the TypeScript target to support Node 6, but because we make heavy use of async/await, it makes debugging hard as the call stacks are much harder to understand. We also find it to be very helpful to look at the generated code when debugging and the code generated for Node 6 is much further away from the source as it is for Node 8.
-
-There are some other minor issues with the current project working in Node 6 beyond just the TypeScript target.
-
-After Node 8, we will continue to support the most recent Node LTS release as long as it is active and will bump the major version of oclif and its dependencies if they break compatibility with older non-LTS releases.
+The oclif project follows and supports [Node's active LTS support schedule](https://nodejs.org/en/about/releases/). This allows oclif to stay current with Node's development.
 
 ## How do I pronounce "oclif"?
 
