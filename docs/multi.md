@@ -29,7 +29,7 @@ For reference, here are the options and what they do:
 * **author** The author is listed when you register your CLI on NPM
 * **version** each time you publish a new version this number will automatically increment.
 * **license** MIT License is set as default
-* **node version supported** oclif only supports versions of Node greater than 8.0, which is the default set here
+* **node version supported** oclif supports [Active LTS Node versions](/docs/introduction#requirements)
 * **github owner of repository (https://github.com/OWNER/repo)** owner of the Github repo
 * **github name of repository (https://github.com/owner/REPO)** name of the Github repo
 
