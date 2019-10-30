@@ -3,7 +3,7 @@ author: Chad Carbert
 title: oclif's Current Node Support
 ---
 
-To maintain a healthy project trajectory, oclif follows and supports [Node Active LTS release](https://nodejs.org/en/about/releases/), currently Node 10 & Node 12. This means ensuring that oclif continues to play nice with coming Active LTS Node versions and other packages in the ecosystem. Moving forward also means leaving older versions behind. Starting in 2020, Node will stop maintaining version 8 (https://github.com/nodejs/Release#release-schedule) and it is our intent at that time to also follow suit. Let’s take a look at a few ways we will be supporting these changes.
+To maintain a healthy project trajectory, oclif follows and supports [Node Active LTS release](https://nodejs.org/en/about/releases/), currently Node 10 & Node 12. This means ensuring that oclif continues to play nice with coming Active LTS Node versions and other packages in the ecosystem. Moving forward also means leaving older versions behind. Starting in 2020, Node will stop maintaining [Node 8](https://github.com/nodejs/Release#release-schedule) and it is our intent at that time to also follow suit. Let’s take a look at a few ways we will be supporting these changes.
 
 ## CI Environments
 
@@ -51,13 +51,11 @@ environment:
 
 ## Deprecating Node 8 & Updating packge.json engines
 
-While Node 8 is not a current Active LTS release and we don't official support it, we didn't want to enforce this via a package.json engine property. However, when Node ends Node 8 maintenence in Jan 2020, we will be bumping all our package.json engine properties across oclif to Node 10.
+In Jan 2020, Node will end its Node 8 maintenance. We will follow suit by setting the package.json engine property in oclif packages to `>=10` and bumping the package's major versions.
 
-We will not be major bumping oclif to do this.
+Depending on how you ship your CLI you may wish to also bump the engines version in your CLI's package.json. You can read more about the implications of the engines property configuration in the [npm documentation](https://docs.npmjs.com/files/package.json#engines).
 
-Depending on how you ship your CLI you may wish to also bump the engines version in your CLI's package.json now. If you chose not to, consider pinning your oclif dependecies, as your CLI users running Node 8 will get an error trying to update or install your CLI. You can read more about the implications of the engines property configuration in the npm documentation (https://docs.npmjs.com/files/package.json#engines).
-
-Also consider distributing your CLI with [it's own Node version](https://oclif.io/docs/releasing#standalone-tarballs).
+Also consider distributing your CLI with [its own Node version](https://oclif.io/docs/releasing#standalone-tarballs).
 
 ## Packaged Node Version
 
@@ -65,6 +63,6 @@ When using dev-cli to pack your CLI it will use the Node version as specified in
 
 ## Supporting the future
 
-As a community we may discover bumps along the way as we upgrade. If you notice something related to oclif please feel free to open an issue or submit a pull request under the relevant oclif package within the org (https://github.com/oclif).
+As a community we may discover bumps along the way as we upgrade. If you notice something related to oclif please feel free to open an issue or submit a pull request under the relevant oclif package within [the org](https://github.com/oclif).
 
 We look forward to using the latest from Node and the community and keeping oclif healthy along the way.
