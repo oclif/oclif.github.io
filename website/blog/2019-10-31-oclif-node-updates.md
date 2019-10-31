@@ -1,5 +1,4 @@
 ---
-author: Chad Carbert
 title: oclif's Current Node Support
 ---
 
