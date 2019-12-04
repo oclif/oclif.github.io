@@ -128,7 +128,7 @@ class Index extends React.Component {
               <h2 className='mt0 fw4 mid-gray'>See it in action</h2>
               <p className='mb0 dark-gray f6 lh-large mw6 center'>Experience going from zero to CLI with oclif.</p>
               <div className='aspect-ratio mt4 z-0' style={{paddingBottom: '60.85%'}}>
-                <iframe className='aspect-ratio--object shadow-5 video-player' src="https://player.vimeo.com/video/260856112" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe className='aspect-ratio--object shadow-5 video-player' src="https://player.vimeo.com/video/260856112?dnt=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
               </div>
             </div>
           </section>
