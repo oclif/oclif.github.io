@@ -80,8 +80,6 @@ const siteConfig = {
   },
   cleanUrl: true,
   enableUpdateTime: true,
-  twitter: true,
-  twitterUsername: 'oclif_',
 };
 
 module.exports = siteConfig;

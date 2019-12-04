@@ -1,6 +1,5 @@
 ---
 author: Jeff Dickey
-authorURL: https://twitter.com/jdxcode
 title: Introducing oclif
 ---
 
