@@ -2,7 +2,7 @@
 title: oclif TSLint to ESLint Migration
 ---
 
-Back in February of this year, plans were announced to [deprecate TSLint](https://github.com/palantir/tslint/issues/4534) in favor of ESLint. The project’s goal is to work toward a “unified developer experience” by supporting ESLint development going forward.
+Back in February of this year, plans were announced to [deprecate TSLint](https://github.com/palantir/tslint/issues/4534) in favor of ESLint. TSLint's goal has become to work toward a “unified developer experience” by supporting ESLint development going forward.
 
 ## Why the change
 
