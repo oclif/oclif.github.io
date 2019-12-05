@@ -64,7 +64,7 @@ In some cases we had our posttest duplicating the same steps as our lint script 
 ```
 
 
-If you are on a version of node that is not supported by ESLint, you will also need to update your node engine. ESLint supports Node 8, 10, and 12 so you should upgrade to the most recent node version compatible with your CLI and also supported by eslint (see eslint’s [Installation and Usage](https://www.npmjs.com/package/eslint#installation-and-usage) instructions).
+If you are on a version of Node that is not supported by ESLint, you will also need to update your Node engine. ESLint supports Node 8, 10, and 12 so you should upgrade to the most recent Node version compatible with your CLI and also supported by ESLint (see ESLint's [Installation and Usage](https://www.npmjs.com/package/eslint#installation-and-usage) instructions).
 
 ## When will this take effect
 
