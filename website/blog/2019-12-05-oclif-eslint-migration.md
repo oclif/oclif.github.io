@@ -9,7 +9,7 @@ To keep inline with the community, oclif has transitioned to ESLint for all our 
 
 ## What changed in oclif
 
-Starting in oclif v1.15.x, oclif will now optionally generate projects with ESLint for both Typescript and JavaScript CLI’s.
+Starting in v1.15.x, oclif will now optionally generate projects with ESLint for both Typescript and JavaScript CLI’s.
 
 ESLint does require Node to be on stable LTS version, at the time of writing, Node 8.10.x, Node 10.13.x & Node 12.x.x.
 
