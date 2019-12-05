@@ -68,7 +68,6 @@ const siteConfig = {
   repoUrl: 'https://github.com/oclif/oclif',
   /* On page navigation for the current documentation page */
   // onPageNav: 'separate',
-  gaTrackingId: 'UA-39697570-45',
   stylesheets: [
     'https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono',
   ],
@@ -80,8 +79,6 @@ const siteConfig = {
   },
   cleanUrl: true,
   enableUpdateTime: true,
-  twitter: true,
-  twitterUsername: 'oclif_',
 };
 
 module.exports = siteConfig;
