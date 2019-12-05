@@ -6,7 +6,9 @@ Back in February of this year, plans were announced to [deprecate TSLint](https:
 
 
 
-## What changed in oclif
+## What has changed in oclif
+
+To keep inline with the community, oclif has transitioned to ESLint for all our core libraries as well as all our official plugins.
 
 Starting in v1.15.x, oclif will now optionally generate projects with ESLint for both Typescript and JavaScript CLI’s.
 
