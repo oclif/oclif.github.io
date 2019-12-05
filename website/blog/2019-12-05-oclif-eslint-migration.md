@@ -13,7 +13,7 @@ Starting in v1.15.x, oclif will now optionally generate projects with ESLint for
 
 ESLint does require Node to be on stable LTS version, at the time of writing, Node 8.10.x, Node 10.13.x & Node 12.x.x.
 
-## How does this affect you?
+## How does this affect you
 
 Existing CLI’s are unchanged, but any newly generated CLIs will only give the option of using ESLint. If you are running tslint in your CLI, we recommend you switch to ESLint as well.
 
