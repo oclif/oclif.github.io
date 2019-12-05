@@ -79,6 +79,21 @@ const siteConfig = {
   },
   cleanUrl: true,
   enableUpdateTime: true,
+  presets: [
+    [
+      '@docusaurus/preset-classic',
+      {
+        blog: {
+          feedOptions: {
+            type: 'all',
+            title: 'oclif.io Blog',
+            description: 'The oclif.io Blog Feed',
+            copyright: `Copyright © ${new Date().getFullYear()} Salesforce`,
+          },
+        },
+      },
+    ],
+  ],
 };
 
 module.exports = siteConfig;
