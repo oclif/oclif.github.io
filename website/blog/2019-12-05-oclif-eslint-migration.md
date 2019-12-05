@@ -16,7 +16,7 @@ ESLint does require Node to be on stable LTS version, at the time of writing, No
 
 ## How does this affect you
 
-Existing CLI’s are unchanged, but any newly generated CLIs will only give the option of using ESLint. If you are running tslint in your CLI, we recommend you switch to ESLint as well.
+Existing CLI’s are unchanged, but any newly generated CLI's will only give the option of using ESLint. If you are running tslint in your CLI, we recommend you switch to ESLint as well.
 
 In migrating our projects we took the following steps (as an example of these changes you can reference this [pull request](https://github.com/oclif/githubcli/pull/10)).
 
