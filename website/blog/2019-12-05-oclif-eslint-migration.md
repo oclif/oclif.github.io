@@ -5,7 +5,7 @@ title: oclif TSLint to ESLint Migration
 Back in February of this year, plans were announced to [deprecate TSLint](https://github.com/palantir/tslint/issues/4534) in favor of ESLint. TSLint's goal has become to work toward a “unified developer experience” by supporting ESLint development going forward.
 
 
-In order to keep inline with the community, oclif has transitioned to ESLint for the core libraries as well as all official plugins.
+To keep inline with the community, oclif has transitioned to ESLint for all our core libraries as well as all our official plugins.
 
 ## What changed in oclif
 
