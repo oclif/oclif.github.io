@@ -68,7 +68,6 @@ const siteConfig = {
   repoUrl: 'https://github.com/oclif/oclif',
   /* On page navigation for the current documentation page */
   // onPageNav: 'separate',
-  gaTrackingId: 'UA-39697570-45',
   stylesheets: [
     'https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono',
   ],
@@ -80,8 +79,21 @@ const siteConfig = {
   },
   cleanUrl: true,
   enableUpdateTime: true,
-  twitter: true,
-  twitterUsername: 'oclif_',
+  presets: [
+    [
+      '@docusaurus/preset-classic',
+      {
+        blog: {
+          feedOptions: {
+            type: 'all',
+            title: 'oclif.io Blog',
+            description: 'The oclif.io Blog Feed',
+            copyright: `Copyright © ${new Date().getFullYear()} Salesforce`,
+          },
+        },
+      },
+    ],
+  ],
 };
 
 module.exports = siteConfig;

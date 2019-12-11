@@ -67,7 +67,7 @@ describe('auth:whoami', () => {
 })
 ```
 
-These tools are setup to not only mock out the stdout/stderr and HTTP calls, but they're setup to ensure they automatically reset after the test. A common issue we've had when building CLIs with simpler `beforeEach/afterEach` filters is that is the `afterEach` filters aren't setup correctly, a failing test can leave mocks around that make later tests fail. Using fancy-test, we avoid this problem and only have to declare our mocks once.
+These tools are setup to not only mock out the stdout/stderr and HTTP calls, but they're setup to ensure they automatically reset after the test. A common issue we've had when building CLIs with simpler `beforeEach/afterEach` filters is that if the `afterEach` filters aren't setup correctly, a failing test can leave mocks around that make later tests fail. Using fancy-test, we avoid this problem and only have to declare our mocks once.
 
 For more on how to test with oclif, check out the docs for [fancy-test](https://github.com/jdxcode/fancy-test) and [@oclif/test](https://github.com/oclif/test).
 

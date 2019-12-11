@@ -1,6 +1,5 @@
 ---
 author: Casey Watts and Jeff Dickey
-authorURL: https://twitter.com/kyloma
 title: CLI Flags Explained
 ---
 

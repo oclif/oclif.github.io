@@ -36,7 +36,7 @@ If you're an avid vscode user, we'd [love to hear](https://spectrum.chat/oclif) 
 
 ## Should I use npm or yarn?
 
-It really doesn't make that much of a difference. If you're just getting started, keep it simple and use npm which comes with node. We like to use yarn internally as it's a bit faster and we find the lockfiles friendlier.
+It really doesn't make that much of a difference. If you're just getting started, keep it simple and use npm which comes with Node. We like to use yarn internally as it's a bit faster and we find the lockfiles friendlier.
 
 ## How can I make the oclif generator run faster?
 
@@ -44,23 +44,11 @@ If you're using npx, install it first with `npm install -g oclif`. This won't st
 
 ## Why does oclif use colon-separated commands? Can it support space-separated?
 
-Short answer is that space-separated will never be supported. Longer answer is it's not possible with the way we support topics and arguments.
+There is an [experimental plugin to support space-separated commands](https://github.com/RasPhilCo/oclif-plugin-spaced-commands). Ultimately we'd like to bring this into the core of oclif as a setting.
 
-The major issue has to do with topic-commands. In oclif, we support topics as commands such as `heroku config`. There are other commands underneath `heroku config` like `heroku config:get`. If we used space separated arguments, this could be `heroku config` and `heroku config get`. _However_ if `heroku config` also expected an argument, there would be no way for the command parser to tell whether or not the second argument is a command or an argument.
+## Why isn't Node X supported?
 
-Some CLIs don't support topic-commands which is how this is possible for those.
-
-We also feel that using colon-separated arguments is better CLI UX anyways. It helps the user know which arguments are the command and which are arguments *to* that command. It helps them find what they need in the help more directly.
-
-## Why isn't Node 6 supported?
-
-Node 6 will only be LTS until April 2019. This is soon enough that we felt with a new framework there wasn't a great argument for supporting it in the first place.
-
-We can change the TypeScript target to support Node 6, but because we make heavy use of async/await, it makes debugging hard as the call stacks are much harder to understand. We also find it to be very helpful to look at the generated code when debugging and the code generated for Node 6 is much further away from the source as it is for Node 8.
-
-There are some other minor issues with the current project working in Node 6 beyond just the TypeScript target.
-
-After Node 8, we will continue to support the most recent Node LTS release as long as it is active and will bump the major version of oclif and its dependencies if they break compatibility with older non-LTS releases.
+The oclif project follows and supports [Node's Active LTS support schedule](https://nodejs.org/en/about/releases/). This allows oclif to stay current with Node's development.
 
 ## How do I pronounce "oclif"?
 

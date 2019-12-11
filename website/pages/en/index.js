@@ -128,7 +128,7 @@ class Index extends React.Component {
               <h2 className='mt0 fw4 mid-gray'>See it in action</h2>
               <p className='mb0 dark-gray f6 lh-large mw6 center'>Experience going from zero to CLI with oclif.</p>
               <div className='aspect-ratio mt4 z-0' style={{paddingBottom: '60.85%'}}>
-                <iframe className='aspect-ratio--object shadow-5 video-player' src="https://player.vimeo.com/video/260856112" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe className='aspect-ratio--object shadow-5 video-player' src="https://player.vimeo.com/video/260856112?dnt=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
               </div>
             </div>
           </section>
@@ -182,6 +182,12 @@ class Index extends React.Component {
                     <path d="M8.79497857,10.9931044 C8.41078241,11.8797381 7.52782617,12.5 6.5,12.5 C5.44000655,12.5 4.53409275,11.8403066 4.17042594,10.9090871 C3.95706772,10.968335 3.73223173,11 3.5,11 C2.11928813,11 1,9.88071187 1,8.5 C1,7.61137949 1.4636267,6.8310448 2.16218417,6.38769186 C2.05738058,6.11183491 2,5.81261843 2,5.5 C2,4.11928813 3.11928813,3 4.5,3 C5.43852258,3 6.25625588,3.51716036 6.68377135,4.28205251 C7.13946702,3.80045375 7.78464614,3.5 8.5,3.5 C9.5003117,3.5 10.3634059,4.08749811 10.7630588,4.93627064 C11.1917705,4.66018468 11.7021787,4.5 12.25,4.5 C13.7687831,4.5 15,5.73121694 15,7.25 C15,8.76878306 13.7687831,10 12.25,10 C11.9384222,10 11.638947,9.94818254 11.3597219,9.85269511 C10.8104528,10.5513111 9.95762487,11 9,11 C8.93109222,11 8.86272706,10.9976768 8.79497857,10.9931044 L8.79497857,10.9931044 Z"/>
                   </svg>
                   Salesforce CLI
+                </a>
+                <a href='https://twilio.com/cli' className='dim db dib-ns pv3 mt1 ph4 ba b--light-gray br2 link mid-gray lh-solid'>
+                  <svg className="fill-mid-gray v-btm pr1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 30 30">
+                  <path d="M15 0C6.7 0 0 6.7 0 15s6.7 15 15 15 15-6.7 15-15S23.3 0 15 0zm0 26C8.9 26 4 21.1 4 15S8.9 4 15 4s11 4.9 11 11-4.9 11-11 11zm6.8-14.7c0 1.7-1.4 3.1-3.1 3.1s-3.1-1.4-3.1-3.1 1.4-3.1 3.1-3.1 3.1 1.4 3.1 3.1zm0 7.4c0 1.7-1.4 3.1-3.1 3.1s-3.1-1.4-3.1-3.1c0-1.7 1.4-3.1 3.1-3.1s3.1 1.4 3.1 3.1zm-7.4 0c0 1.7-1.4 3.1-3.1 3.1s-3.1-1.4-3.1-3.1c0-1.7 1.4-3.1 3.1-3.1s3.1 1.4 3.1 3.1zm0-7.4c0 1.7-1.4 3.1-3.1 3.1S8.2 13 8.2 11.3s1.4-3.1 3.1-3.1 3.1 1.4 3.1 3.1z"/>
+                  </svg>
+                  Twilio CLI
                 </a>
                 <a href='https://github.com/oclif/kaomoji' className='dim db dib-ns pv3 mt1 ph4 ba b--light-gray br2 link mid-gray lh-solid'>
                   <svg className="fill-mid-gray v-btm pr1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
