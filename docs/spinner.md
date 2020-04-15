@@ -10,7 +10,7 @@ Shows a basic spinner
 // start the spinner
 cli.action.start('starting a process')
 // show on stdout instead of stderr
-cli.action.start('starting a process', {stdout: true})
+cli.action.start('starting a process', 'initializing', {stdout: true})
 
 // stop the spinner
 cli.action.stop() // shows 'starting a process... done'
