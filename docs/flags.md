@@ -13,7 +13,7 @@ $ mycli --force --file=./myfile
 It would be declared like this:
 
 ```js
-import Command, {flags} from '@oclif/command'
+import {Command, flags} from '@oclif/command'
 
 export class MyCLI extends Command {
   static flags = {
