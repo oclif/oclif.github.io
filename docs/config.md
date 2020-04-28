@@ -9,7 +9,7 @@ Inside a command, `this.config` provides useful properties you can use in your c
 * **pjson** - parsed and [normalized](https://github.com/npm/normalize-package-data) CLI `package.json`
 * **bin** - CLI bin name
 * **cacheDir** - CLI cache directory
-  * MacOS: `~/Library/Caches/mycli`
+  * macOS: `~/Library/Caches/mycli`
   * Unix: `~/.cache/mycli`
   * Windows: `%LOCALAPPDATA%\mycli`
   * Can be overridden with `XDG_CACHE_HOME`

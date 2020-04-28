@@ -47,9 +47,9 @@ In the Heroku CLI, we have it automatically build and release the beta channel o
 
 Build a windows installer with `oclif-dev pack:win`. It will build into `./dist/win`. This can be published to S3 with `oclif-dev publish:win`.
 
-## MacOS installer
+## macOS installer
 
-Build a MacOS .pkg installer with `oclif-dev pack:macos`. It will build into `./dist/macos`. This can be published to S3 with `oclif-dev publish:macos`. You need to set the MacOS identifier at `oclif.macos.identifier` in `package.json`. (For the Heroku CLI we use "com.heroku.cli" as the identifier)
+Build a macOS .pkg installer with `oclif-dev pack:macos`. It will build into `./dist/macos`. This can be published to S3 with `oclif-dev publish:macos`. You need to set the macOS identifier at `oclif.macos.identifier` in `package.json`. (For the Heroku CLI we use "com.heroku.cli" as the identifier)
 
 To [sign the installer](https://developer.apple.com/developer-id/), set `oclif.macos.sign` to a certificate (For the Heroku CLI this is "Developer ID Installer: Heroku INC"). And optionally set the keychain with `OSX_KEYCHAIN`.
 

@@ -26,14 +26,14 @@ For reference, here are the options and what they do:
 * **npm package name** the name of the package as it will be listed on npm.
 * **command bin name the CLI will export** the word the user will type to invoke the cli, e.g., "heroku" in the case of the Heroku command line interface. You may use any word here but be careful about using a word that may conflict with commonly used command line terms such as grep. In the case of conflict, the terminal will use what is loaded in the path sooner.
 * **description** this description is part of the npm package details. This description will stay local until you publish to npm
-* **author** The author is listed when you register your CLI on NPM
+* **author** The author is listed when you register your CLI on npm
 * **version** each time you publish a new version this number will automatically increment.
 * **license** MIT License is set as default
 * **node version supported** oclif supports [Active LTS Node versions](/docs/introduction#requirements)
-* **github owner of repository (https://github.com/OWNER/repo)** owner of the Github repo
-* **github name of repository (https://github.com/owner/REPO)** name of the Github repo
+* **github owner of repository (https://github.com/OWNER/repo)** owner of the GitHub repo
+* **github name of repository (https://github.com/owner/REPO)** name of the GitHub repo
 
-When your CLI is ready, you'll see a message ending with the following: 
+When your CLI is ready, you'll see a message ending with the following:
 
 ```sh-session
 Created mynewcli in /Users/nsamsami/mynewcli
