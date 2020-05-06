@@ -28,7 +28,7 @@ Note: `@oclif/plugin-help` is packaged with `@oclif/command` so you do not need 
 
 ## Custom Help
 
-Starting in `@oclif/command@vX.X.X` which packages v3 of `@oclif/plugin-help`, you can now customize your CLI's help output by implementing the abstract `HelpBase` class.
+Starting in `@oclif/command@vX.X.X` which packages v3 of `@oclif/plugin-help`, you can now customize your CLI's help output by implementing the `HelpBase` abstract class.
 
 If you have not done so yet, update `@oclif/command`.
 
@@ -36,7 +36,7 @@ If you have not done so yet, update `@oclif/command`.
 $ yarn add --latest @oclif/command
 ```
 
-To get started, first define the filepath to your help class in oclif config in package.json. This is a relative path to the help class, without a file extension.
+To get started, first define the filepath to your help class in oclif's config in package.json. This is a relative path to the help class, without a file extension.
 
 For this example, the help class will be created in a file at "[project root]/src/help.ts".
 
