@@ -8,14 +8,12 @@ User can invoke help with the `--help` flag.
 
 ```
 $ my-cli login --help
-
 ```
 
 And with the `-h` short flag if all argument positions have been filled (otherwise the short flag will be considered arg input).
 
 ```
 $ my-cli whoami -h
-
 ```
 
 If you want your CLI to have an explicit `help` command, add `@oclif/plugin-help` as an [oclif plugin in your config](./plugins.md).
@@ -42,7 +40,7 @@ To get started, first define the filepath to your help class in oclif config in 
 
 For this example, the help class will be created in a file at "[project root]/src/help.ts".
 
-```json
+```
 {
   // ...
   "oclif": {
@@ -167,12 +165,15 @@ Display my custom command help!
 ## Building custom help classes in JavaScript projects
 
 These examples above followed a TypeScript project. For  JavaScript project with an example help file at "[project root]/src/help.js" would have a package.json with the `helpClass` defined:
-```json
+
+```
 {
-  ...
+  // ...
   "oclif": {
     "helpClass": "./src/help"
+    // ...
   }
+  // ...
 }
 ```
 
