@@ -28,7 +28,7 @@ Note: `@oclif/plugin-help` is packaged with `@oclif/command` so you do not need 
 
 ## Custom Help
 
-Starting in `@oclif/command@vX.X.X` which packages v3 of `@oclif/plugin-help`, you can now customize your CLI's help output by implementing the `HelpBase` abstract class.
+Starting in `@oclif/command@1.6.0` which packages v3 of `@oclif/plugin-help`, you can now customize your CLI's help output by implementing the `HelpBase` abstract class.
 
 If you have not done so yet, update `@oclif/command`.
 

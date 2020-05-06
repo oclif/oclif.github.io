@@ -6,7 +6,7 @@ Out of the box oclif provides a great help experience for both single and multi-
 
 But what if, as an oclif developer, you want to customize some or all of the output?
 
-Starting in `@oclif/command@vX.X.X` which packages v3 of `@oclif/plugin-help`, you can now customize your CLI's help output by implementing the `HelpBase` abstract class.
+Starting in `@oclif/command@1.6.0` which packages v3 of `@oclif/plugin-help`, you can now customize your CLI's help output by implementing the `HelpBase` abstract class.
 
 
 ## Getting started with custom help
