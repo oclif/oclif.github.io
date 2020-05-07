@@ -44,6 +44,9 @@
       "generator_commands": {
         "title": "Generator Commands"
       },
+      "help_classes": {
+        "title": "Help Classes"
+      },
       "hooks": {
         "title": "Hooks"
       },

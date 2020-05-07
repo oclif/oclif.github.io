@@ -15,7 +15,8 @@
       "config",
       "topics",
       "hooks",
-      "plugins"
+      "plugins",
+      "help_classes"
     ],
     "How to": [
       "releasing",
