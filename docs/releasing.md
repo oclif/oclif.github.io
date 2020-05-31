@@ -35,7 +35,7 @@ Your formula can be distributed through Brew. The main caveat is you must set th
 
 These tarballs as well as the installers below can be made autoupdatable by adding the `@oclif/plugin-update` plugin. Just add this plugin and the CLI will autoupdate in the background or when `mycli update` is run.
 
-If you don't want to use S3, you can still run `oclif-dev pack` and it will build tarballs. To get the updater to work, set `oclif.update.s3.host` to a host that has the files built in `./dist` from `oclif-dev pack`. This host does not need to be an S3 host. To customize the URL paths, see the S3 templates in `@oclif/config`.
+If you don't want to use S3, you can still run `oclif-dev pack` and it will build tarballs. To get the updater to work, set `oclif.update.s3.host` in `package.json` to a host that has the files built in `./dist` from `oclif-dev pack`. This host does not need to be an S3 host. To customize the URL paths, see the S3 templates in `@oclif/config`.
 
 ## Autoupdate Channels
 
@@ -51,7 +51,7 @@ Build a windows installer with `oclif-dev pack:win`. It will build into `./dist/
 
 Build a macOS .pkg installer with `oclif-dev pack:macos`. It will build into `./dist/macos`. This can be published to S3 with `oclif-dev publish:macos`. You need to set the macOS identifier at `oclif.macos.identifier` in `package.json`. (For the Heroku CLI we use "com.heroku.cli" as the identifier)
 
-To [sign the installer](https://developer.apple.com/developer-id/), set `oclif.macos.sign` to a certificate (For the Heroku CLI this is "Developer ID Installer: Heroku INC"). And optionally set the keychain with `OSX_KEYCHAIN`.
+To [sign the installer](https://developer.apple.com/developer-id/), set `oclif.macos.sign` in `package.json` to a certificate (For the Heroku CLI this is "Developer ID Installer: Heroku INC"). And optionally set the keychain with `OSX_KEYCHAIN`.
 
 ## Ubuntu/Debian packages
 
