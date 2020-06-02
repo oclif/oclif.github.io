@@ -194,9 +194,9 @@ module.exports = class MyHelpClass extends HelpBase {
 ```
 
 ```js
-const {HelpBase} = require('@oclif/plugin-help');
+const Help = require('@oclif/plugin-help').default;
 
-module.exports = class MyHelpClass extends HelpBase {
+module.exports = class MyHelpClass extends Help {
   showHelp(args) {
   }
 
