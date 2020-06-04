@@ -57,7 +57,7 @@ A PR will be closed if:
 
 oclif packages follow semantic versioning and therefore only deprecate features in new major version releases.
 
-In the exceptional case a deprecation needs to happen outside a new major version, we will notify users via our blog post or, as appropriate, with deprecation warnings in the tooling itself.
+In the exceptional case a deprecation needs to happen outside a new major version, we will notify users via our blog or, as appropriate, with deprecation warnings in the tooling itself.
 
 ## Blog Posts
 
