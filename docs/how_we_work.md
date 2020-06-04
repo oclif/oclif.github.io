@@ -4,19 +4,19 @@ title: How We Work
 
 oclif is an open-source project built and maintained by Salesforce and an essential component of Salesforce's developer experiences, powering millions of users' CLIs a day via the Heroku CLI, the SFDX CLI and others.
 
-As an open-source project, (oclif repos live on GitHub)[https://github.com/oclif] and are published to (npmjs.com (http://npmjs.com/))[https://www.npmjs.com/search?q=oclif].
+As an open-source project, [oclif repos live on GitHub](https://github.com/oclif) and are published to [npmjs.com](https://www.npmjs.com/search?q=oclif).
 
 ## Code of Conduct & Community Guidelines
 
-We are thrilled to offer oclif as open-source. As such, please review our project (Code of Conduct)[https://github.com/salesforce/oss-template/blob/master/CODE_OF_CONDUCT.md]. If you have any questions or concerns, please (contact us)[https://oclif.io/docs/feedback].
+We are thrilled to offer oclif as open-source. As such, please review our project [Code of Conduct](https://github.com/salesforce/oss-template/blob/master/CODE_OF_CONDUCT.md). If you have any questions or concerns, please [contact us](https://oclif.io/docs/feedback).
 
 ## Work Tracking
 
-We use a (GitHub Project board)[https://github.com/orgs/oclif/projects/1] to manage our work across all oclif repos. This board is used kanban style, in which, cards (i.e. work items) move left to right as they progress towards “Done” and higher priority cards sit towards the top of the columns, with lower priority cards sitting further below.
+We use a [GitHub Project board](https://github.com/orgs/oclif/projects/1) to manage our work across all oclif repos. This board is used kanban style, in which, cards (i.e. work items) move left to right as they progress towards “Done” and higher priority cards sit towards the top of the columns, with lower priority cards sitting further below.
 
 ## Issues
 
-Issues are made in their corresponding repo as appropriate. If you are unsure which repo an issue might belong to, make an (issue in the oclif repo)[https://github.com/oclif/oclif/issues]. 
+Issues are made in their corresponding repo as appropriate. If you are unsure which repo an issue might belong to, make an [issue in the oclif repo](https://github.com/oclif/oclif/issues).
 
 We triage issues as we can, usually with a week of when it was created (unfortunately, we can make no commitment to when an issue will be triaged).
 
@@ -61,11 +61,11 @@ In the exceptional case a deprecation needs to happen outside a new major versio
 
 ## Blog Posts
 
-We aim to announce most features via (our blog)[https://oclif.io/blog]. Be sure to check back regularly to see new announcements!
+We aim to announce most features via [our blog](https://oclif.io/blog). Be sure to check back regularly to see new announcements!
 
 ## Feedback
 
-See our (Feedback page)[https://oclif.io/docs/feedback].
+See our [Feedback page](https://oclif.io/docs/feedback).
 
 ## Updates to How We Work
 
