@@ -16,11 +16,14 @@ export class MyCommand extends Command {
   async run() {
     // start the spinner
     cli.action.start('starting a process')
-    // show on stdout instead of stderr
-    cli.action.start('starting a process', 'initializing', {stdout: true})
-
+    // do some action...
     // stop the spinner
     cli.action.stop() // shows 'starting a process... done'
+    
+    // show on stdout instead of stderr
+    cli.action.start('starting a process', 'initializing', {stdout: true})    
+    // do some action...
+    // stop the spinner with a custom message
     cli.action.stop('custom message') // shows 'starting a process... custom message'
   }
 }
