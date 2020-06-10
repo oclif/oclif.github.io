@@ -2,7 +2,7 @@
 title: Spinner
 ---
 
-[cli-ux](https://github.com/oclif/cli-ux) provides a simple `cli..action`, for more complex progress indicators we recommend using the [listr](https://www.npmjs.com/package/listr) library.
+[cli-ux](https://github.com/oclif/cli-ux) provides a simple `cli.action`, for more complex progress indicators we recommend using the [listr](https://www.npmjs.com/package/listr) library.
 
 ## `cli-ux.action`
 
