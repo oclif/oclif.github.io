@@ -51,7 +51,7 @@ export class HerokuRelease extends Command {
 **./src/display_config_vars.ts**
 
 ```typescript
-async function displayConfigVars(app: string) {
+export async function displayConfigVars(app: string) {
   const config = await api.get(`/apps/${app}config-vars`)
   for (let [key, value] of Object.entries(config)) {
     this.log(`${key}=${value}`)

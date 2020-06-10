@@ -2,19 +2,31 @@
 title: Spinner
 ---
 
+[cli-ux](https://github.com/oclif/cli-ux) provides a simple `cli.action`, for more complex progress indicators we recommend using the [listr](https://www.npmjs.com/package/listr) library.
+
 ## `cli-ux.action`
 
 Shows a basic spinner
 
 ```typescript
-// start the spinner
-cli.action.start('starting a process')
-// show on stdout instead of stderr
-cli.action.start('starting a process', 'initializing', {stdout: true})
+import {Command} from '@oclif/command'
+import cli from 'cli-ux'
 
-// stop the spinner
-cli.action.stop() // shows 'starting a process... done'
-cli.action.stop('custom message') // shows 'starting a process... custom message'
+export class MyCommand extends Command {
+  async run() {
+    // start the spinner
+    cli.action.start('starting a process')
+    // do some action...
+    // stop the spinner
+    cli.action.stop() // shows 'starting a process... done'
+    
+    // show on stdout instead of stderr
+    cli.action.start('starting a process', 'initializing', {stdout: true})    
+    // do some action...
+    // stop the spinner with a custom message
+    cli.action.stop('custom message') // shows 'starting a process... custom message'
+  }
+}
 ```
 
 This degrades gracefully when not connected to a TTY. It queues up any writes to stdout/stderr so they are displayed above the spinner.
@@ -23,6 +35,6 @@ This degrades gracefully when not connected to a TTY. It queues up any writes to
 
 ## listr
 
-Use [listr](https://www.npmjs.com/package/listr) for complex workflows like this:
+Here is an example of the complex workflows supported by [listr](https://www.npmjs.com/package/listr).
 
 ![listr demo](/img/listr.gif)
