@@ -30,10 +30,13 @@ export default abstract class extends Command {
     this.flags = flags
   }
   async catch(err) {
-    // handle any error from the command
+    // add any custom logic to handle errors from the command
+    // or simply return the parent class error handling
+    return super.catch(err);
   }
   async finally(err) {
     // called after run and catch regardless of whether or not the command errored
+    return super.finally(_);
   }
 }
 
