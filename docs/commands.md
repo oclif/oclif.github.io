@@ -102,7 +102,7 @@ this.warn('uh oh!')
 this.warn(new Error('uh oh!'))
 ```
 
-### `this.error(message: string | Error, options?: {code?: string, exit?: number})`
+### `this.error(message: string | Error, options?: {code?: string, exit?: number, ref?: string; suggestions?: string[];})`
 
 Display error and exit. Also add a code to error object or exit status.
 
@@ -110,6 +110,16 @@ Display error and exit. Also add a code to error object or exit status.
 this.error('uh oh!', {exit: 2})
 this.error(new Error('uh oh!'))
 ```
+
+The options object has the following options:
+* `exit` — exit code to use
+* `code` — a unique error code for the type of error
+* `suggestions` —  an array of suggestions for a user to try next that may be useful or provide additional context
+* `ref` — a url to documentation related to this error or fixing it
+
+The `message`, `code`, `suggestions`, `ref` properties will be displayed when an error is shown. Reusable `Error` classes can be created that display the optional outputs above by implementing the `PrettyPrintableError` interface from @oclif/errors and `this.error` will handle them appropriately.
+
+Note: You may need to install the latest `@oclif/command` and `@oclif/errors` for `code`, `suggestions` and `ref` to be displayed.
 
 These errors are friendly and won't show a traceback unless debugging is enabled with `DEBUG=*` or `CLI_NAME_DEBUG=1`. If you want to raise errors like this outside of a command, use `@oclif/errors`.
 

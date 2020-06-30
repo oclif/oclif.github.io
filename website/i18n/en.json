@@ -23,6 +23,9 @@
       "debugging": {
         "title": "Debugging"
       },
+      "error_handling": {
+        "title": "Error Handling"
+      },
       "examples": {
         "title": "Examples"
       },

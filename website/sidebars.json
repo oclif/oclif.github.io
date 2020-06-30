@@ -16,7 +16,8 @@
       "topics",
       "hooks",
       "plugins",
-      "help_classes"
+      "help_classes",
+      "error_handling"
     ],
     "How to": [
       "releasing",
