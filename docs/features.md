@@ -38,9 +38,6 @@ Everything in the core of oclif is written in TypeScript and the generator can b
 
 oclif can package your CLI into [different installers](releasing.md) that will not require the user to already have node installed on the machine. These can be made auto-updatable by using [plugin-update](https://github.com/oclif/plugin-update).
 
-> ### Coming soon: man pages
-> In addition to in-CLI help through `--help` and the README markdown help generation, the CLI can also automatically create man pages for all of its commands.
-
 ### Autocomplete
 
 Include terminal autocompletion for your CLI via [plugin-autocomplete](https://github.com/oclif/plugin-autocomplete). Once installed, users can complete command names and flag names.
