@@ -55,6 +55,7 @@ You can create hooks with `oclif hook myhook --event=init`.
 
 * `init` - runs when the CLI is initialized before a command is found to run
 * `prerun` - runs after `init` and after the command is found, but just before running the command itself
+* `postrun` - runs after the command only if the command finishes with no error
 * `command_not_found` - runs if a command is not found before the error is displayed
 
 ## Custom Events
