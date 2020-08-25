@@ -28,7 +28,6 @@ const siteConfig = {
     {page: 'conf', label: 'oclifconf'},
     {doc: 'commands', label: 'API Reference'},
     {blog: true, label: 'Blog'},
-    {href: 'https://spectrum.chat/oclif', label: 'Discuss'},
     {href: 'https://github.com/oclif/oclif', label: 'GitHub'},
     // {doc: 'now_hiring', label: 'Now Hiring!'},
   ],
