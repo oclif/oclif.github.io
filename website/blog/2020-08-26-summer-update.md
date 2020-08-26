@@ -4,7 +4,7 @@ title: oclif Summer Update
 
 Hello oclif developers! We hope you are all doing well.
 
-Earlier this year, we started our planning for oclifconf v2 and, like all conference, had to change course. We opted not to hold a virtual conference for the time being. However, we wanted to take some time to highlight a few oclif features shipped over the last year.
+Earlier this year, we started our planning for oclifconf v2 and, like all conference, had to change course. We opted not to hold a virtual conference, however, we wanted to take some time to highlight a few oclif features shipped this year.
 
 ## Feature: Help templating
 
