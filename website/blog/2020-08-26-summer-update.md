@@ -20,7 +20,7 @@ Read [the announcement](/blog/2020/07/01/pretty-printable-errors).
 
 ## Feature: postrun hooks
 
-We have added a new lifecycle event via postrun. Your CLI can now run a hook after a command has ran.
+We have added a new lifecycle event `postrun`. Your CLI can now run a hook after a command has ran.
 
 See our [hook documentation](/docs/hooks).
 
