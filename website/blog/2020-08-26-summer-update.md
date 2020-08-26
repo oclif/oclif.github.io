@@ -24,7 +24,7 @@ We have added a new lifecycle event via postrun. Your CLI can now run a hook aft
 
 See our [hook documentation](/docs/hooks).
 
-## Feature: root index command
+## Feature: Root index command
 
 Previously, oclif would display CLI help if only the binary name with no command ID was invoked, oclif now supports a "root index" command. If present, a command defined at `src/commands/index.ts` will be run if no command ID is found.
 
@@ -38,4 +38,3 @@ This year has been presented its challenges on everyone. We want to thank you, o
 All our best,
 
 The oclif team
-
