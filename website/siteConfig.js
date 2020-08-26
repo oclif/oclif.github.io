@@ -93,6 +93,7 @@ const siteConfig = {
       },
     ],
   ],
+  blogSidebarCount: 'ALL',
 };
 
 module.exports = siteConfig;
