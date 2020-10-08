@@ -2,7 +2,7 @@
 title: Running Commands Programmatically
 ---
 
-If you need to run a command from another, or programmatically run a command in another codebase, there are a couple options.
+If you need to run a command from another, or programmatically run a command in another codebase, there are a couple of options.
 
 First, it is generally a bad idea to run a command directly as the command exports a user interface, not a code interface. It's a design smell that should rarely (if ever) be used. Generally speaking, it's better to break up the code so that it can be called directly rather than as a command. We'll show this better method first.
 
