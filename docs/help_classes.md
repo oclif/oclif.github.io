@@ -33,7 +33,7 @@ Starting in `@oclif/command@1.6.0` which packages v3 of `@oclif/plugin-help`, yo
 If you have not done so yet, update `@oclif/command`.
 
 ```
-$ yarn add --latest @oclif/command
+$ yarn add @oclif/command --latest
 ```
 
 To get started, first define the filepath to your help class in oclif's config in package.json. This is a relative path to the help class, without a file extension.
