@@ -19,7 +19,6 @@ Core also introduces:
 - Use colon or spaced command syntax
 - Async parsing 
 - Command piping to arguments
-- Global flags
 
 With default command functionality, Core simplifies the oclif project and removes the notion of single vs multi command CLIs. Core CLIs can have 1 or many commands.
 
