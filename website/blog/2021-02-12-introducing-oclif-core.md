@@ -15,7 +15,7 @@ We have learned a lot in the last three years of developing oclif and developing
 Core combines the essential oclif packages into one "core" package, aptly named `@oclif/core`. 
 
 Core also introduces:
-- A default command option so "multi" CLIs can execute a default command at the bare bin
+- A default command option
 - Use colon or spaced command syntax
 - Async parsing 
 - Command piping to arguments
