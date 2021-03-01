@@ -9,32 +9,30 @@ We hope this blog post finds you well.
 
 We are excited to announce the next iteration of the oclif project today: `@oclif/core`.
 
-We have learned a lot in the last three years of developing oclif and developing on oclif, running millions of commands a day via Heroku & Salesforce CLIs.
-`@oclif/core` ("Core") simplifies the development experience and introduces highly requested new features.
+We have learned a lot in the last three years of developing oclif, developing on oclif and supporting millions of command runs a day via Heroku and Salesforce CLIs.
+`@oclif/core` ("Core") simplifies the oclif development experience and introduces highly requested new features.
 
 Core combines the essential oclif packages into one "core" package, aptly named `@oclif/core`. 
 
 Core also introduces:
 - A default command option
-- Use colon or spaced command syntax
-- Async parsing 
+- Colon or space command syntax
+- Async command parsing
 - Command piping to arguments
 
-With default command functionality, Core simplifies the oclif project and removes the notion of single vs multi command CLIs. Core CLIs can have 1 or many commands.
+With the introduction of default command functionality, Core simplifies the oclif project and removes the notion of single or multi command CLIs. Core CLIs can have 1 or many commands.
 
-Along with Core, we have combined the oclif and oclif-dev CLIs into a single CLI with a new AWS S3 compatible publishing scheme.
+Along with Core, we moved the oclif-dev CLI into the oclif CLI creating a single "utility" CLI. This CLI also introduces a new AWS S3 compatible publishing scheme.
 
 ### What to expect in the near future
 
 Core is in pre-release beta and being actively developed for new internal Salesforce CLIs.
 
-Much documentation needs to be written in the comming months including migration paths. Look for forthcoming blog posts and documentation on [oclif.io](https://oclif.io).
+Much documentation needs to be written in the comming months including migration paths. Migration onto Core should be as painless as possible with many exports remaining entirely unchanged. Look for forthcoming blog posts and documentation on [oclif.io](https://oclif.io).
 
-I've written Core with current CLIs migration in mind. Migration onto it should be as painless as possible with many exports remaining entirely unchanged.
+Early this summer, tentively June 1, we will release Core v1. Core's release will coincide with major bumps to many other oclif plugin packages. See the compatablility matrix below.
 
-Early this summer, tentively June 1, we will release Core v1. Core's release will coincide with major bumps to many oclif plugin packages. See the compatablility matrix below (which will be included in documentaion).
-
-At Core's v1 release, the current essential oclif packages (namely: command, config, errors & parser) will go into maintenance mode until Jan 2022. They will receive _only_ bug and security fixes and they remain compatable with current versions of the oclif and oclif-dev CLIs.
+At Core's v1 release, the current "main" oclif packages (namely: command, config, errors & parser) will go into maintenance mode until Jan 2022. They will receive _only_ bug and security fixes and they remain compatable with current versions of the oclif and oclif-dev CLIs. Afterwhich, they will be archived.
 
 Companioning Core, the next major release of the oclif CLI (literally `oclif@2`) will generate Core CLIs. 
 
@@ -50,8 +48,8 @@ The oclif team
 
 | | oclif "v1" | oclif "Core" |
 | - | - | -| 
-| Helper CLIs | oclif@<2<br/>@oclif/dev-cli@<2 | oclif@>=2
-| Essential packages | @oclif/command@<2<br/>@oclif/config@<2<br/>@oclif/errors@<2<br/>@oclif/parser@<4<br/>@oclif/plugin-help@<4<br/> | @oclif/core@>=1
+| Utility CLIs | oclif@<2<br/>@oclif/dev-cli@<2 | oclif@>=2
+| Main packages | @oclif/command@<2<br/>@oclif/config@<2<br/>@oclif/errors@<2<br/>@oclif/parser@<4<br/>@oclif/plugin-help@<4<br/> | @oclif/core@>=1
 | Node LTS | Node v8-14 | Node v12+ |
 | Typescript | typescript@<4 | typescript@>=4 |
 | Main plugins | @oclif/plugin-autocomplete@<1<br/>@oclif/plugin-commands@<2<br/>@oclif/plugin-help@<4<br/>@oclif/plugin-not-found@<2<br/>@oclif/plugin-plugins@<2<br/>@oclif/plugin-update@<2<br/>plugin-warn-if-update-available@<2<br/>plugin-which@<2<br/> | @oclif/plugin-autocomplete@>=2<br/>@oclif/plugin-commands@>=2<br/>@oclif/plugin-help@>=4<br/>@oclif/plugin-not-found@>=2<br/>@oclif/plugin-plugins@>=2<br/>@oclif/plugin-update@>=2<br/>@oclif/plugin-warn-if-update-available@>=2<br/>@oclif/plugin-which@>=2<br/> |
