@@ -28,11 +28,11 @@ Along with Core, we moved the oclif-dev CLI into the oclif CLI creating a single
 
 Core is in pre-release beta and being actively developed for new internal Salesforce CLIs.
 
-Much documentation needs to be written in the comming months including migration paths. Migration onto Core should be as painless as possible with many exports remaining entirely unchanged. Look for forthcoming blog posts and documentation on [oclif.io](https://oclif.io).
+Much documentation needs to be written in the coming months including migration paths. Migration onto Core should be as painless as possible with many exports remaining entirely unchanged. Look for forthcoming blog posts and documentation on [oclif.io](https://oclif.io).
 
-Early this summer, tentively June 1, we will release Core v1. Core's release will coincide with major bumps to many other oclif plugin packages. See the compatablility matrix below.
+Early this summer, tentively June 1, we will release Core v1. Core's release will coincide with major bumps to many other oclif plugin packages. See the compatibility matrix below.
 
-At Core's v1 release, the current "main" oclif packages (namely: command, config, errors & parser) will go into maintenance mode until Jan 2022. They will receive _only_ bug and security fixes and they remain compatable with current versions of the oclif and oclif-dev CLIs. Afterwhich, they will be archived.
+At Core's v1 release, the current "main" oclif packages (namely: command, config, errors & parser) will go into maintenance mode until Jan 2022. They will receive _only_ bug and security fixes and they remain compatible with current versions of the oclif and oclif-dev CLIs. Afterwhich, they will be archived.
 
 Companioning Core, the next major release of the oclif CLI (literally `oclif@2`) will generate Core CLIs. 
 
