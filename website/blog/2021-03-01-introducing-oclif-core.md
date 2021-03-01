@@ -44,7 +44,7 @@ Best,
 
 The oclif team
 
-#### Reference: Compatability matrix
+#### Reference: Compatibility matrix
 
 | | oclif "v1" | oclif "Core" |
 | - | - | -| 
