@@ -80,11 +80,12 @@ Open `./src/index.ts` and replace it with the following
 
 ```js
 import {Command} from '@oclif/command'
-export class GoodbyeCommand extends Command {
+class GoodbyeCommand extends Command {
   async run() {
     console.log('goodbye, world!')
   }
 }
+export = GoodbyeCommand
 ```
 
 <!-- TODO: link to command API reference -->
