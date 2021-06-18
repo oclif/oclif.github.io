@@ -27,7 +27,7 @@ export default abstract class extends Command {
   async init() {
     // do some initialization
 
-    // [NOTE] When called from the base class, this.parse must always be passed this.constructor as an argument. Otherwise, derived classes are unable to safely add arguments and flags. (see https://github.com/oclif/oclif/issues/225) 
+    // NOTE!!! When called from the base class, this.parse must always be passed this.constructor as an argument. Otherwise, derived classes are unable to safely add arguments and flags. (see https://github.com/oclif/oclif/issues/225) 
     // typescript alias: const {flags} = this.parse(this.constructor as Input<typeof BaseCommand.flags>);
     const {flags} = this.parse(this.constructor)
     this.flags = flags
