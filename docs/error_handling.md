@@ -9,7 +9,7 @@ oclif handles intentionally - and unintentionally - thrown errors in two places.
 Every `Command` instance has a `catch` method that is called when an error occurs throughout the course of a command run. This method handles the edge case of users asking for help or version output, if applicable, otherwise, it re-throws the error. You can extend or overwrite the `catch` method in your command class.
 
 ```js
-import {Command, flags} from '@oclif/command'
+import {Command, flags} from '@oclif/core'
 
 export default class Hello extends Command {
   async catch(error) {

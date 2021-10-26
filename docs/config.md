@@ -29,6 +29,7 @@ Inside a command, `this.config` provides useful properties you can use in your c
 * **shell** - current shell in use
 * **userAgent** - user-agent intended for http calls. example: `mycli/1.2.3 (darwin-x64) node-9.0.0`
 * **windows** - boolean
+* **topicSeparator** - the separator to use between topics - only colons (`":"`) and spaces (`" "`) are supported.
 * **debug** - set to 1 if debug is enabled (with `${BIN}_DEBUG=1` or `DEBUG=$BIN`). In the future this may be used for multiple debug levels.
 * **npmRegistry** - current npm registry to use with the [plugins](https://github.com/oclif/plugin-plugins) plugin
 * **plugins** - loaded plugins
@@ -39,7 +40,7 @@ Inside a command, `this.config` provides useful properties you can use in your c
 
 <!--
 * **findCommand(id, opts: {must?: true})** - find a command in the CLI
-* **findCommand(id: string, opts?: {must: boolean})** - 
+* **findCommand(id: string, opts?: {must: boolean})** -
 * **findTopic(id: string, opts: {must: true}): Topic
 * **findTopic(id: string, opts?: {must: boolean}): Topic | undefined
 * **scopedEnvVar(key: string): string | undefined
@@ -55,7 +56,7 @@ Inside a command, `this.config` provides useful properties you can use in your c
 Often it's useful to have a custom configuration for your users. One way to implement this is to read a `config.json` file from the CLI's config directory:
 
 ```typescript
-import {Command} from '@oclif/command'
+import {Command} from '@oclif/core'
 import * as fs from 'fs-extra'
 import * as path from 'path'
 

@@ -2,7 +2,7 @@
 title: Help Classes
 ---
 
-Out of the box oclif provides a great help experience for both single and multi-command CLIs via [@oclif/plugin-help](https://github.com/oclif/plugin-help). 
+Out of the box oclif provides a great help experience for both single and multi-command CLIs via [@oclif/plugin-help](https://github.com/oclif/plugin-help).
 
 User can invoke help with the `--help` flag.
 
@@ -22,18 +22,18 @@ If you want your CLI to have an explicit `help` command, add `@oclif/plugin-help
 $ my-cli help
 ```
 
-Note: `@oclif/plugin-help` is packaged with `@oclif/command` so you do not need to add it to your dev dependencies.
+Note: `@oclif/plugin-help` is packaged with `@oclif/core` so you do not need to add it to your dev dependencies.
 
 
 
 ## Custom Help
 
-Starting in `@oclif/command@1.6.0` which packages v3 of `@oclif/plugin-help`, you can now customize your CLI's help output by implementing the `HelpBase` abstract class.
+Starting in `@oclif/core@1.6.0` which packages v3 of `@oclif/plugin-help`, you can now customize your CLI's help output by implementing the `HelpBase` abstract class.
 
-If you have not done so yet, update `@oclif/command`.
+If you have not done so yet, update `@oclif/core`.
 
 ```
-$ yarn add @oclif/command --latest
+$ yarn add @oclif/core --latest
 ```
 
 To get started, first define the filepath to your help class in oclif's config in package.json. This is a relative path to the help class, without a file extension.
@@ -77,7 +77,7 @@ The `showHelp` method is called by oclif to display help in multi-command CLIs, 
 
 The class is instantiated with a `config` property that provides helpful context for constructing your custom output.
 
-To see an example of what is possible take a look at the source code for the [default `Help` class exported from @oclif/plugin-help](https://github.com/oclif/plugin-help/blob/master/src/index.ts).
+To see an example of what is possible take a look at the source code for the [default `Help` class exported from @oclif/plugin-help](https://github.com/oclif/plugin-help/blob/main/src/index.ts).
 
 
 ## Extending the default `Help` class
@@ -138,7 +138,7 @@ export default class MyHelpClass extends Help {
 }
 ```
 
-To see the default implementation of these methods take a look at the [default `Help` class exported from @oclif/plugin-help](https://github.com/oclif/plugin-help/blob/master/src/index.ts).
+To see the default implementation of these methods take a look at the [default `Help` class exported from @oclif/plugin-help](https://github.com/oclif/plugin-help/blob/main/src/index.ts).
 
 To start experimenting, define `showCommandHelp` in your custom help class and change the output.
 

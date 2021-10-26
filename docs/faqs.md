@@ -16,7 +16,7 @@ Node has the best support for our [plugins](plugins.md) model. Plugins are a way
 
 Use [pkg](https://github.com/zeit/pkg). Just make sure to add the commands and other source files by setting `pkg.scripts: "./lib/**/*.js"` in `package.json`.
 
-In the Heroku CLI, however, we prefer to ship a tarball (and various installers) that has Node baked in. Use `oclif-dev pack` to create a set of tarballs for different platforms with Node built in. You'll likely need to use [@oclif/plugin-update](https://github.com/oclif/plugin-update) with this, otherwise the users won't have a way to update the CLI from the tarball without reinstalling it.
+In the Heroku CLI, however, we prefer to ship a tarball (and various installers) that has Node baked in. Use `oclif pack` to create a set of tarballs for different platforms with Node built in. You'll likely need to use [@oclif/plugin-update](https://github.com/oclif/plugin-update) with this, otherwise the users won't have a way to update the CLI from the tarball without reinstalling it.
 
 ## Should I use TypeScript or JavaScript?
 
@@ -28,7 +28,7 @@ Still, the languages today are very similar. The code you write in JavaScript wi
 
 ## What editor is best for oclif?
 
-Of course if you already have a go-to editor, you should use that. Jeff (lead developer of oclif) works inside of vim, but even he would say if you're not already set on an editor you should use [vscode](https://code.visualstudio.com).
+Of course if you already have a go-to editor, you should use that. However, we typically recommend [vscode](https://code.visualstudio.com).
 
 Microsoft has done a great job with this editor and it works particularly well in TypeScript projects. You'll get nice type checking, linting, and autocomplete right out of the box.
 
@@ -39,10 +39,6 @@ It really doesn't make that much of a difference. If you're just getting started
 ## How can I make the oclif generator run faster?
 
 If you're using npx, install it first with `npm install -g oclif`. This won't stay current with updates though, so you'll need to run `npm update -g oclif` to get new versions of the generator.
-
-## Why does oclif use colon-separated commands? Can it support space-separated?
-
-There is an [experimental plugin to support space-separated commands](https://github.com/RasPhilCo/oclif-plugin-spaced-commands). Ultimately we'd like to bring this into the core of oclif as a setting.
 
 ## Why isn't Node X supported?
 

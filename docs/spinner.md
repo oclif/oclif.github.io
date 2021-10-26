@@ -9,7 +9,7 @@ title: Spinner
 Shows a basic spinner
 
 ```typescript
-import {Command} from '@oclif/command'
+import {Command} from '@oclif/core'
 import cli from 'cli-ux'
 
 export class MyCommand extends Command {
@@ -19,9 +19,9 @@ export class MyCommand extends Command {
     // do some action...
     // stop the spinner
     cli.action.stop() // shows 'starting a process... done'
-    
+
     // show on stdout instead of stderr
-    cli.action.start('starting a process', 'initializing', {stdout: true})    
+    cli.action.start('starting a process', 'initializing', {stdout: true})
     // do some action...
     // stop the spinner with a custom message
     cli.action.stop('custom message') // shows 'starting a process... custom message'

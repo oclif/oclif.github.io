@@ -13,7 +13,7 @@ $ mycli --force --file=./myfile
 It would be declared like this:
 
 ```js
-import Command, {flags} from '@oclif/command'
+import Command, {flags} from '@oclif/core'
 
 export class MyCLI extends Command {
   static flags = {
@@ -68,7 +68,7 @@ For larger CLIs, it can be useful to declare a custom flag that can be shared am
 
 ```js
 // src/flags.ts
-import {flags} from '@oclif/command'
+import {flags} from '@oclif/core'
 function getTeam() {
   // imagine this reads a configuration file or something to find the team
 }
@@ -80,7 +80,7 @@ export const team = flags.build({
 
 // src/commands/mycommand.ts
 import {team} from '../flags'
-import Command from '@oclif/command'
+import Command from '@oclif/core'
 
 export class MyCLI extends Command {
   static flags = {

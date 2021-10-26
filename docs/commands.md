@@ -5,7 +5,7 @@ title: Commands
 A basic command looks like the following in TypeScript:
 
 ```js
-import Command from '@oclif/command'
+import Command from '@oclif/core'
 
 export class MyCommand extends Command {
   static description = 'description of this example command'
@@ -21,7 +21,7 @@ The only part that is required is the run function. Accept user input with [argu
 In JavaScript:
 
 ```js
-const {Command} = require('@oclif/command')
+const {Command} = require('@oclif/core')
 
 class MyCommand extends Command {
   async run() {
@@ -38,10 +38,10 @@ Note that the following examples will be in TypeScript. As JavaScript does not y
 
 ### Other Command Options
 
-[See the base class to get an idea of what methods can be called on a command](https://github.com/oclif/command/blob/master/src/command.ts).
+[See the base class to get an idea of what methods can be called on a command](https://github.com/oclif/core/blob/main/src/command.ts).
 
 ```js
-import Command, {flags} from '@oclif/command'
+import Command, {flags} from '@oclif/core'
 
 export class MyCommand extends Command {
   static description = `
@@ -119,7 +119,7 @@ The options object has the following options:
 
 The `message`, `code`, `suggestions`, `ref` properties will be displayed when an error is shown. Reusable `Error` classes can be created that display the optional outputs above by implementing the `PrettyPrintableError` interface from @oclif/errors and `this.error` will handle them appropriately.
 
-Note: You may need to install the latest `@oclif/command` and `@oclif/errors` for `code`, `suggestions` and `ref` to be displayed.
+Note: You may need to install the latest `@oclif/core` and `@oclif/errors` for `code`, `suggestions` and `ref` to be displayed.
 
 These errors are friendly and won't show a traceback unless debugging is enabled with `DEBUG=*` or `CLI_NAME_DEBUG=1`. If you want to raise errors like this outside of a command, use `@oclif/errors`.
 

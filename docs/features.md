@@ -6,9 +6,13 @@ title: Features
 
 No CLI framework would be complete without a flag parser. We've built a custom one from years of experimentation that we feel consistently handles user input flexible enough for the user to be able to easily use the CLI in ways they expect, but without compromising strictness guarantees to the developer.
 
+### Configurable Topic Separators
+
+By default topics will be separated with colons, e.g. `my:awesome:command`. However, you have the option to use spaces if you prefer, e.g. `my awesome command`.
+
 ### Super Speed
 
-The overhead for running an oclif CLI command is almost nothing. [It requires very few dependencies](https://www.npmjs.com/package/@oclif/command?activeTab=dependencies) (only 35 dependencies in a minimal setup—including all transitive dependencies). Also, only the command to be executed will be required with node. So large CLIs with many commands will load just as fast as a small one with a single command.
+The overhead for running an oclif CLI command is almost nothing. [It requires very few dependencies](https://www.npmjs.com/package/@oclif/core?activeTab=dependencies) (only 35 dependencies in a minimal setup—including all transitive dependencies). Also, only the command to be executed will be required with node. So large CLIs with many commands will load just as fast as a small one with a single command.
 
 ### CLI Generator
 
@@ -16,11 +20,11 @@ Run a single command to scaffold out a fully functional CLI and get started quic
 
 ### Testing Helpers
 
-We've put a lot of work into making commands easily testable and easy to mock out stdout/stderr. The generator will automatically create [scaffolded tests](https://github.com/oclif/example-multi-ts/blob/master/test/commands/hello.test.ts).
+We've put a lot of work into making commands easily testable and easy to mock out stdout/stderr. The generator will automatically create [scaffolded tests](https://github.com/oclif/hello-world/blob/main/test/commands/hello/world.test.ts).
 
 ### Auto-documentation
 
-By default you can pass `--help` to the CLI to get help such as flag options and argument information. This information is also automatically placed in the README whenever the npm package of the CLI is published. See the [multi-command CLI example](https://github.com/oclif/example-multi-ts)
+By default you can pass `--help` to the CLI to get help such as flag options and argument information. This information is also automatically placed in the README whenever the npm package of the CLI is published. See the [hello-world CLI example](https://github.com/oclif/hello-world)
 
 ### Plugins
 
@@ -29,6 +33,10 @@ Using plugins, users of the CLI can extend it with new functionality, a CLI can 
 ### Hooks
 
 Use lifecycle hooks to run functionality any time a CLI starts, or on custom triggers. Use this whenever custom functionality needs to be shared between various components of the CLI.
+
+### JSON Output
+
+You can opt-in to using the `--json` flag which will automatically supress console logs and display the final result of the command as valid JSON output. This is very useful if you want your CLI to be used for scripting in CI/CD environments.
 
 ### TypeScript (or not)
 

@@ -4,8 +4,6 @@
       "introduction",
       "features",
       "faqs",
-      "single",
-      "multi",
       "generator_commands"
     ],
     "API Reference": [
@@ -14,10 +12,12 @@
       "flags",
       "config",
       "topics",
+      "topic_separator",
       "hooks",
       "plugins",
       "help_classes",
-      "error_handling"
+      "error_handling",
+      "json"
     ],
     "How to": [
       "releasing",

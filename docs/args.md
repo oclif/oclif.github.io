@@ -5,7 +5,7 @@ title: Command Arguments
 Arguments are positional arguments passed to the command. For example, if this command was run with `mycli arg1 arg2` it would be declared like this:
 
 ```js
-import Command from '@oclif/command'
+import Command from '@oclif/core'
 
 export class MyCLI extends Command {
   static args = [
