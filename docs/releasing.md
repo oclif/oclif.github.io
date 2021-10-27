@@ -49,7 +49,7 @@ Build a windows installer with `oclif pack:win`. It will build into `./dist/win`
 
 ## macOS installer
 
-Build a macOS .pkg installer with `oclif pack:macos`. It will build into `./dist/macos`. This can be published to S3 with `oclif promote --macos`. You need to set the macOS identifier at `oclif.macos.identifier` in `package.json`. (For the Heroku CLI we use "com.heroku.cli" as the identifier and for the Salesforce CLI we "com.salesforce.cli")
+Build a macOS .pkg installer with `oclif pack:macos`. It will build into `./dist/macos`. This can be published to S3 with `oclif promote --macos`. You need to set the macOS identifier at `oclif.macos.identifier` in `package.json` (we use "com.heroku.cli" and "com.salesforce.cli" as the identifiers for the Heroku CLI and the Salesforce CLI, respectively).
 
 To [sign the installer](https://developer.apple.com/developer-id/), set `oclif.macos.sign` in `package.json` to a certificate (For the Heroku CLI this is "Developer ID Installer: Heroku INC"). And optionally set the keychain with `OSX_KEYCHAIN`.
 
