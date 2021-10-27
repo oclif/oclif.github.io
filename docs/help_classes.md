@@ -2,7 +2,7 @@
 title: Help Classes
 ---
 
-Out of the box oclif provides a great help experienc CLIs via [@oclif/plugin-help](https://github.com/oclif/plugin-help).
+Out of the box oclif provides a great help experience for CLIs via [@oclif/plugin-help](https://github.com/oclif/plugin-help).
 
 User can invoke help with the `--help` flag.
 
