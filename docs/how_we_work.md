@@ -2,7 +2,7 @@
 title: How We Work
 ---
 
-oclif is an open-source project built and maintained by Salesforce and an essential component of Salesforce's developer experiences, powering millions of users' CLIs a day via the Salesforce CLI, the Heroku CLI and others.
+oclif is an open-source project built and maintained by Salesforce and an essential component of Salesforce's developer experiences, powering millions of users' CLIs a day via the Salesforce CLI, the Heroku CLI and [others](https://www.npmjs.com/browse/depended/@oclif/core).
 
 As an open-source project, [oclif repos live on GitHub](https://github.com/oclif) and are published to [npmjs.com](https://www.npmjs.com/search?q=oclif).
 
