@@ -2,18 +2,12 @@
 title: Help Classes
 ---
 
-Out of the box oclif provides a great help experience for both single and multi-command CLIs via [@oclif/plugin-help](https://github.com/oclif/plugin-help).
+Out of the box oclif provides a great help experienc CLIs via [@oclif/plugin-help](https://github.com/oclif/plugin-help).
 
 User can invoke help with the `--help` flag.
 
 ```
 $ my-cli login --help
-```
-
-And with the `-h` short flag if all argument positions have been filled (otherwise the short flag will be considered arg input).
-
-```
-$ my-cli whoami -h
 ```
 
 If you want your CLI to have an explicit `help` command, add `@oclif/plugin-help` as an [oclif plugin in your config](./plugins.md).
@@ -22,15 +16,7 @@ If you want your CLI to have an explicit `help` command, add `@oclif/plugin-help
 $ my-cli help
 ```
 
-Note: `@oclif/plugin-help` is packaged with `@oclif/core` so you do not need to add it to your dev dependencies.
-
-
-
 ## Custom Help
-
-Starting in `@oclif/core@1.6.0` which packages v3 of `@oclif/plugin-help`, you can now customize your CLI's help output by implementing the `HelpBase` abstract class.
-
-If you have not done so yet, update `@oclif/core`.
 
 ```
 $ yarn add @oclif/core --latest
@@ -59,8 +45,7 @@ From here there are two paths, implement the `HelpBase` abstract class yourself 
 The `HelpBase` abstract class provides a starting point requiring the minimum needed methods implemented to be compatible with oclif.
 
 ```TypeScript
-import {HelpBase} from '@oclif/plugin-help';
-import {Command} from '@oclif/config';
+import {Command, HelpBase} from '@oclif/core';
 
 export default class CustomHelp extends HelpBase {
   showHelp(args: string[]) {
@@ -77,7 +62,7 @@ The `showHelp` method is called by oclif to display help in multi-command CLIs, 
 
 The class is instantiated with a `config` property that provides helpful context for constructing your custom output.
 
-To see an example of what is possible take a look at the source code for the [default `Help` class exported from @oclif/plugin-help](https://github.com/oclif/plugin-help/blob/main/src/index.ts).
+To see an example of what is possible take a look at the source code for the [default `Help` class exported from @oclif/core](https://github.com/oclif/core/blob/main/src/help/index.ts).
 
 
 ## Extending the default `Help` class
@@ -85,8 +70,7 @@ To see an example of what is possible take a look at the source code for the [de
 The default `Help` class provides many method “hooks” that make it easy to override the particular parts of help's output you want to customize.
 
 ```TypeScript
-import Help from '@oclif/plugin-help';
-import {Command, Topic} from '@oclif/config';
+import {Command, Help, Topic} from '@oclif/core';
 
 export default class MyHelpClass extends Help {
   // acts as a "router"
@@ -138,14 +122,13 @@ export default class MyHelpClass extends Help {
 }
 ```
 
-To see the default implementation of these methods take a look at the [default `Help` class exported from @oclif/plugin-help](https://github.com/oclif/plugin-help/blob/main/src/index.ts).
+To see the default implementation of these methods take a look at the [default `Help` class exported from @oclif/core](https://github.com/oclif/core/blob/main/src/help/index.ts).
 
 To start experimenting, define `showCommandHelp` in your custom help class and change the output.
 
 
 ```TypeScript
-import Help from '@oclif/plugin-help';
-import {Command, Topic} from '@oclif/config';
+import {Command, Help, Topic} from '@oclif/core';
 
 export default class MyHelpClass extends Help {
   public showCommandHelp(command: Config.Command) {
@@ -180,7 +163,7 @@ These examples above followed a TypeScript project. For  JavaScript project with
 The imports are handled slightly different for JavaScript projects but the rest of the help class mimic the TypeScript examples above, except without type annotations.
 
 ```js
-const {HelpBase} = require('@oclif/plugin-help');
+const {HelpBase} = require('@oclif/core');
 
 module.exports = class MyHelpClass extends HelpBase {
   showHelp(args) {
@@ -188,13 +171,13 @@ module.exports = class MyHelpClass extends HelpBase {
   }
 
   showCommandHelp(command) {
-    console.log('This will be displayed in single-command CLIs')
+    console.log('This will be displayed for a single command')
   }
 }
 ```
 
 ```js
-const {Help} = require('@oclif/plugin-help');
+const {Help} = require('@oclif/core');
 
 module.exports = class MyHelpClass extends Help {
   showHelp(args) {
