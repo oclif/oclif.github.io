@@ -2,7 +2,7 @@
 title: Topics
 ---
 
-As Multi CLIs grow it can be useful to nest commands within topics. This is supported simply by placing command files in subdirectories. For example, with the Heroku CLI we have a topic `heroku config` with commands like `heroku config`, `heroku config:set` and `heroku config:get`. The directory structure looks like this:
+As CLIs grow it can be useful to nest commands within topics. This is supported simply by placing command files in subdirectories. For example, with the Salesforce CLI we have a topic `sf config` with commands like `sf config set` and `sf config get`. The directory structure looks like this:
 
 ```
 package.json

@@ -10,7 +10,7 @@ title: Prompting
 Prompt for basic input with `cli-ux`:
 
 ```typescript
-import {Command} from '@oclif/command'
+import {Command} from '@oclif/core'
 import cli from 'cli-ux'
 
 export class MyCommand extends Command {
@@ -38,7 +38,7 @@ Demo:
 Here is an example command that uses [inquirer](https://github.com/SBoudrias/Inquirer.js). You will need to add `inquirer` and `@types/inquirer` (for TypeScript CLIs) for this to work.
 
 ```typescript
-import {Command, flags} from '@oclif/command'
+import {Command, flags} from '@oclif/core'
 import * as inquirer from 'inquirer'
 
 export class MyCommand extends Command {

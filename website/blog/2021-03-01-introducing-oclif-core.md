@@ -5,14 +5,14 @@ Greetings!
 
 We hope this blog post finds you well.
 
-### Introducing... 
+### Introducing...
 
 We are excited to announce the next iteration of the oclif project today: `@oclif/core`.
 
 We have learned a lot in the last three years of developing oclif, developing on oclif and supporting millions of command runs a day via Heroku and Salesforce CLIs.
 `@oclif/core` ("Core") simplifies the oclif development experience and introduces highly requested new features.
 
-Core combines the essential oclif packages into one "core" package, aptly named `@oclif/core`. 
+Core combines the essential oclif packages into one "core" package, aptly named `@oclif/core`.
 
 Core also introduces:
 - A default command option
@@ -34,7 +34,7 @@ Early this summer, tentively June 1, we will release Core v1. Core's release wil
 
 At Core's v1 release, the current "main" oclif packages (namely: command, config, errors & parser) will go into maintenance mode until Jan 2022. They will receive _only_ bug and security fixes and they remain compatible with current versions of the oclif and oclif-dev CLIs. Afterwhich, they will be archived.
 
-Companioning Core, the next major release of the oclif CLI (literally `oclif@2`) will generate Core CLIs. 
+Companioning Core, the next major release of the oclif CLI (literally `oclif@2`) will generate Core CLIs.
 
 ### Going forward
 
@@ -47,9 +47,9 @@ The oclif team
 #### Reference: Compatibility matrix
 
 | | oclif "v1" | oclif "Core" |
-| - | - | -| 
+| - | - | -|
 | Utility CLIs | oclif@<2<br/>@oclif/dev-cli@<2 | oclif@>=2
-| Main packages | @oclif/command@<2<br/>@oclif/config@<2<br/>@oclif/errors@<2<br/>@oclif/parser@<4<br/>@oclif/plugin-help@<4<br/> | @oclif/core@>=1
+| Main packages | @oclif/core@<2<br/>@oclif/config@<2<br/>@oclif/errors@<2<br/>@oclif/parser@<4<br/>@oclif/plugin-help@<4<br/> | @oclif/core@>=1
 | Node LTS | Node v8-14 | Node v12+ |
 | Typescript | typescript@<4 | typescript@>=4 |
 | Main plugins | @oclif/plugin-autocomplete@<1<br/>@oclif/plugin-commands@<2<br/>@oclif/plugin-help@<4<br/>@oclif/plugin-not-found@<2<br/>@oclif/plugin-plugins@<2<br/>@oclif/plugin-update@<2<br/>plugin-warn-if-update-available@<2<br/>plugin-which@<2<br/> | @oclif/plugin-autocomplete@>=2<br/>@oclif/plugin-commands@>=2<br/>@oclif/plugin-help@>=4<br/>@oclif/plugin-not-found@>=2<br/>@oclif/plugin-plugins@>=2<br/>@oclif/plugin-update@>=2<br/>@oclif/plugin-warn-if-update-available@>=2<br/>@oclif/plugin-which@>=2<br/> |

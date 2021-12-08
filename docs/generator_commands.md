@@ -5,12 +5,10 @@ title: Generator Commands
 <!-- this is auto-generated from the oclif readme -->
 <!-- commands -->
 
-* [oclif command NAME](#oclif-command-name)
-* [oclif help [COMMAND]](#oclif-help-command)
-* [oclif hook NAME](#oclif-hook-name)
-* [oclif multi [PATH]](#oclif-multi-path)
-* [oclif plugin [PATH]](#oclif-plugin-path)
-* [oclif single [PATH]](#oclif-single-path)
+- [oclif command NAME](#oclif-command-name)
+- [oclif help [COMMAND]](#oclif-help-command)
+- [oclif hook NAME](#oclif-hook-name)
+- [oclif generate NAME](#oclif-generate-name)
 
 ## oclif command NAME
 
@@ -45,7 +43,7 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v1.1.7/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/main/src/commands/help.ts)_
 
 ## oclif hook NAME
 
@@ -64,62 +62,25 @@ OPTIONS
   --force        overwrite existing files
 ```
 
-_See code: [src/commands/hook.ts](https://github.com/oclif/oclif/blob/v1.5.3/src/commands/hook.ts)_
+_See code: [src/commands/hook.ts](https://github.com/oclif/oclif/blob/main/src/commands/hook.ts)_
 
-## oclif multi [PATH]
+## `oclif generate NAME`
 
-generate a new multi-command CLI
-
-```
-USAGE
-  $ oclif multi [PATH]
-
-ARGUMENTS
-  PATH  path to project, defaults to current directory
-
-OPTIONS
-  --defaults         use defaults for every setting
-  --force            overwrite existing files
-  --options=options  (yarn|typescript|tslint|semantic-release|mocha)
-```
-
-_See code: [src/commands/multi.ts](https://github.com/oclif/oclif/blob/v1.5.3/src/commands/multi.ts)_
-
-## oclif plugin [PATH]
-
-create a new CLI plugin
+generate a new CLI
 
 ```
 USAGE
-  $ oclif plugin [PATH]
+  $ oclif generate [NAME]
 
 ARGUMENTS
-  PATH  path to project, defaults to current directory
+  NAME  directory name of new project
 
-OPTIONS
-  --defaults         use defaults for every setting
-  --force            overwrite existing files
-  --options=options  (yarn|typescript|tslint|semantic-release|mocha)
+DESCRIPTION
+  generate a new CLI
+
+  This will clone the template repo 'oclif/hello-world' and update package properties
 ```
 
-_See code: [src/commands/plugin.ts](https://github.com/oclif/oclif/blob/v1.5.3/src/commands/plugin.ts)_
+_See code: [src/commands/multi.ts](https://github.com/oclif/oclif/blob/main/src/commands/generate.ts)_
 
-## oclif single [PATH]
-
-generate a new single-command CLI
-
-```
-USAGE
-  $ oclif single [PATH]
-
-ARGUMENTS
-  PATH  path to project, defaults to current directory
-
-OPTIONS
-  --defaults         use defaults for every setting
-  --force            overwrite existing files
-  --options=options  (yarn|typescript|tslint|semantic-release|mocha)
-```
-
-_See code: [src/commands/single.ts](https://github.com/oclif/oclif/blob/v1.5.3/src/commands/single.ts)_
 <!-- commandsstop -->

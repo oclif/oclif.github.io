@@ -7,7 +7,7 @@ Use [node-notifier](https://github.com/mikaelbr/node-notifier) for cross-platfor
 Example:
 
 ```typescript
-import {Command} from '@oclif/command'
+import {Command} from '@oclif/core'
 import * as notifier from 'node-notifier'
 
 export class MyCommand extends Command {

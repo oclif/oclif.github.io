@@ -23,9 +23,9 @@ This workflow can be improved slightly by running `npm version major|minor|patch
 
 ## Standalone tarballs
 
-Build standalone tarballs with `oclif-dev pack` from the root of your CLI. These include the node binary so the user does not have to already have node installed to use the CLI. It won't put this node binary on the PATH so the binary will not conflict with any node installation on the machine.
+Build standalone tarballs with `oclif pack` from the root of your CLI. These include the node binary so the user does not have to already have node installed to use the CLI. It won't put this node binary on the PATH so the binary will not conflict with any node installation on the machine.
 
-To publish, you can copy the files from `./dist` or use `oclif-dev publish` to copy the files to S3. You'll need to set `oclif.update.s3.bucket` in `package.json` to a valid S3 bucket and have credentials set in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment vars.
+To publish, you can copy the files from `./dist` or use `oclif promote` to copy the files to S3. You'll need to set `oclif.update.s3.bucket` in `package.json` to a valid S3 bucket and have credentials set in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment vars.
 
 ## Brew
 
@@ -35,27 +35,27 @@ Your formula can be distributed through Brew. The main caveat is you must set th
 
 These tarballs as well as the installers below can be made autoupdatable by adding the `@oclif/plugin-update` plugin. Just add this plugin and the CLI will autoupdate in the background or when `mycli update` is run.
 
-If you don't want to use S3, you can still run `oclif-dev pack` and it will build tarballs. To get the updater to work, set `oclif.update.s3.host` in `package.json` to a host that has the files built in `./dist` from `oclif-dev pack`. This host does not need to be an S3 host. To customize the URL paths, see the S3 templates in `@oclif/config`.
+If you don't want to use S3, you can still run `oclif pack` and it will build tarballs. To get the updater to work, set `oclif.update.s3.host` in `package.json` to a host that has the files built in `./dist` from `oclif pack`. This host does not need to be an S3 host. To customize the URL paths, see the S3 templates in `@oclif/core`.
 
 ## Autoupdate Channels
 
-You can have separate channels for releases that work like Google Chrome Channels (such as beta, dev, canary). To create a channel, just change the version in `package.json` from `1.0.0` to `1.0.0-beta` (where "beta" is any string you like). Then when you pack with `oclif-dev pack`, it will create beta tarballs. The user can change their channel with `mycli update beta` and will receive all the future releases on that channel.
+You can have separate channels for releases that work like Google Chrome Channels (such as beta, dev, canary). To create a channel, just change the version in `package.json` from `1.0.0` to `1.0.0-beta` (where "beta" is any string you like). Then when you pack with `oclif pack`, it will create beta tarballs. The user can change their channel with `mycli update beta` and will receive all the future releases on that channel.
 
 In the Heroku CLI, we have it automatically build and release the beta channel on every commit to the master branch. Then we have it build and release stable channel whenever a git tag is created in our CI.
 
 ## Windows installer
 
-Build a windows installer with `oclif-dev pack:win`. It will build into `./dist/win`. This can be published to S3 with `oclif-dev publish:win`.
+Build a windows installer with `oclif pack:win`. It will build into `./dist/win`. This can be published to S3 with `oclif promote --win`.
 
 ## macOS installer
 
-Build a macOS .pkg installer with `oclif-dev pack:macos`. It will build into `./dist/macos`. This can be published to S3 with `oclif-dev publish:macos`. You need to set the macOS identifier at `oclif.macos.identifier` in `package.json`. (For the Heroku CLI we use "com.heroku.cli" as the identifier)
+Build a macOS .pkg installer with `oclif pack:macos`. It will build into `./dist/macos`. This can be published to S3 with `oclif promote --macos`. You need to set the macOS identifier at `oclif.macos.identifier` in `package.json` (we use "com.heroku.cli" and "com.salesforce.cli" as the identifiers for the Heroku CLI and the Salesforce CLI, respectively).
 
 To [sign the installer](https://developer.apple.com/developer-id/), set `oclif.macos.sign` in `package.json` to a certificate (For the Heroku CLI this is "Developer ID Installer: Heroku INC"). And optionally set the keychain with `OSX_KEYCHAIN`.
 
 ## Ubuntu/Debian packages
 
-Build a deb package with `oclif-dev pack:deb`. Set the `MYCLI_DEB_KEY` to a gpg key id to create the gpg files. This will include all the files needed for an apt repository in `./dist/deb`. They can be published to S3 with `oclif-dev publish:deb`.
+Build a deb package with `oclif pack:deb`. Set the `MYCLI_DEB_KEY` to a gpg key id to create the gpg files. This will include all the files needed for an apt repository in `./dist/deb`. They can be published to S3 with `oclif promote --deb`.
 
 Once it's published to S3, users can install with the following:
 

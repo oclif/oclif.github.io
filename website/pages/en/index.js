@@ -91,7 +91,7 @@ class Index extends React.Component {
                 </svg>
                 <div className='white pa4 pb5 pt3 tc'>
                   <code className='lh-copy f6 dib tl'>
-                    <span className='db'><span className='white-60'>$</span> npx oclif single mynewcli</span>
+                    <span className='db'><span className='white-60'>$</span> npx oclif generate mynewcli</span>
                     <span className='db pt1'><span className='white-60'>? npm package name (mynewcli):</span> mynewcli</span>
                     <span className='db pt1'><span className='white-60'>$</span> cd mynewcli</span>
                     <span className='db pt1'><span className='white-60'>$</span> ./bin/run</span>
@@ -123,16 +123,6 @@ class Index extends React.Component {
             </div>
           </section>
 
-          <section>
-            <div className='center ph4 tc mw7 pb6'>
-              <h2 className='mt0 fw4 mid-gray'>See it in action</h2>
-              <p className='mb0 dark-gray f6 lh-large mw6 center'>Experience going from zero to CLI with oclif.</p>
-              <div className='aspect-ratio mt4 z-0' style={{paddingBottom: '60.85%'}}>
-                <iframe className='aspect-ratio--object shadow-5 video-player' src="https://player.vimeo.com/video/260856112?dnt=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-              </div>
-            </div>
-          </section>
-
           <section className='bg-light-gray-gradient-reversed pb6'>
             <div className="mw8 center ph4 f6">
               <div className="cf">
@@ -145,7 +135,7 @@ class Index extends React.Component {
                 <div className="fl w-100 w-25-l pb4 pb0-l pr4-l tc tl-l">
                   <div className='mw6 center'>
                     <h2 className='mt0 fw4 mid-gray flex-l'><span className="lh-title-l lh-solid v-mid pr2">👐</span>Open source</h2>
-                    <p className="lh-large dark-gray mb0">oclif is <a href='https://github.com/oclif/oclif/blob/master/LICENSE'>open source</a> and free to use or modify. We think you’ll love it too and you can also help make it&nbsp;better.</p>
+                    <p className="lh-large dark-gray mb0">oclif is <a href='https://github.com/oclif/oclif/blob/main/LICENSE'>open source</a> and free to use or modify. We think you’ll love it too and you can also help make it&nbsp;better.</p>
                   </div>
                 </div>
                 <div className="fl w-100 w-25-l pb4 pb0-l pr4-l tc tl-l">

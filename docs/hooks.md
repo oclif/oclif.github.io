@@ -9,7 +9,7 @@ Multiple hooks are run in parallel. **This behavior may change in a future relea
 A basic hook looks like the following in TypeScript:
 
 ```typescript
-import {Hook} from '@oclif/config'
+import {Hook} from '@oclif/core'
 
 export default const hook: Hook<'init'> = async function (options) {
   console.log(`example init hook running before ${options.id}`)

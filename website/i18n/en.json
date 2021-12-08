@@ -62,6 +62,9 @@
       "introduction": {
         "title": "Introduction"
       },
+      "json": {
+        "title": "JSON"
+      },
       "multi": {
         "title": "Multi-command CLI"
       },
@@ -95,13 +98,15 @@
       "testing": {
         "title": "Testing"
       },
+      "topic_separator": {
+        "title": "Topic Separators"
+      },
       "topics": {
         "title": "Topics"
       }
     },
     "links": {
       "Getting Started": "Getting Started",
-      "oclifconf": "oclifconf",
       "API Reference": "API Reference",
       "Blog": "Blog",
       "GitHub": "GitHub"
