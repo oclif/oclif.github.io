@@ -28,7 +28,7 @@ The following libraries have been consolidated under [`@oclif/core`](https://git
 
 ### No more single vs multi command CLIs
 
-There is only 1 "type" of oclif v2 CLI but it can have as few or as many commands as a developer wants. This also means there’s only one command for generating CLIs, `oclif generate ` as opposed to the old `oclif single` and `oclif multi` commands.
+There is only 1 "type" of oclif v2 CLI but it can have as few or as many commands as a developer wants. This also means there’s only one command for generating CLIs, `oclif generate` as opposed to the old `oclif single` and `oclif multi` commands.
 
 ### Node > 12
 
