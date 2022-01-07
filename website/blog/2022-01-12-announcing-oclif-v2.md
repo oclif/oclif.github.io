@@ -6,7 +6,7 @@ Hello and happy new year! It's our great pleasure to announce that we have relea
 
 oclif v2 includes many changes that improve the experience of both creating and using an oclif CLI.
 
-Going forward we do not plan to make any updates to oclif v1 and its corresponding libraries except for critical security fixes (please see the [compatibility matrix](#Compatibility-Matrix) for a list of these libraries). We are not completely dropping support yet in order to give developers time to migrate from v1 to v2 but at some point in the future we will archive v1 repositories and deprecate their versions on NPM.
+Going forward, we don't plan to make any updates to oclif v1 and its corresponding libraries, except for critical security fixes. See the [compatibility matrix](#Compatibility-Matrix) for a list of these libraries. In order to give developers time to migrate from v1 to v2, we're not completely dropping support yet. But at some point in the future we'll archive the v1 repositories and deprecate their versions on NPM.
 
 ## What’s changing?
 
