@@ -12,7 +12,7 @@ Going forward, we don't plan to make any updates to oclif v1 and its correspondi
 
 ### Repository Changes
 
-All repositories under the [oclif org](https://github.com/oclif/) now use `main` as their primary branch and `oclif-v1` as the legacy branch. The `main`  branch corresponds to oclif v2 and the `oclif-v1` branch to oclif v1. If you find any repos that don’t have a `main` branch you can safely assume that they are not used in oclif v2 and will be deprecated at some point in the future.
+All repositories under the [oclif org](https://github.com/oclif/) now use `main` as their primary branch and `oclif-v1` as the legacy branch. The `main`  branch corresponds to oclif v2 and the `oclif-v1` branch to oclif v1. If you find any repos that don’t have a `main` branch, you can safely assume that they're not used in oclif v2 and will be deprecated in the future.
 
 ### Consolidating Tools & Libraries
 
