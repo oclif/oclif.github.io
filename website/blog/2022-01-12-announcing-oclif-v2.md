@@ -53,6 +53,8 @@ $ mycli do:something
 $ mycli do something
 ```
 
+> Note: Spaced commands are backwards compatible so if you enable spaced commands for your CLI users will still be able to use `:` as a separator. This ensures that any existing scripts are not broken.
+
 ### New Help Output
 
 We’ve revamped the way help for commands is output to the terminal to make it both easier to implement and easier to read. You can see the difference between the old help output on the left and the new help output on the right in the screenshots down below.
@@ -90,7 +92,7 @@ The oclif team
 
 #### Migration Guide
 
-This guide explains how to upgrade a CLI or plugin from the old Ioclif v1 libraries to the new `@oclif/core` library oclif v2 uses.
+This guide explains how to upgrade a CLI or plugin from the old oclif v1 libraries to the new `@oclif/core` library oclif v2 uses.
 
 https://github.com/oclif/core/blob/main/MIGRATION.md
 
