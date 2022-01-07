@@ -98,7 +98,7 @@ https://github.com/oclif/core/blob/main/MIGRATION.md
 
 #### Compatibility Matrix
 
-The following matrix shows how the v1 libraries and plugins relate to the new ones for v2. You can use this as a guide to know what to drop and which versions to switch when upgrading your plugins and CLIs to v2.
+The following matrix shows how the v1 libraries and plugins relate to the new v2 ones. Use this matrix as a guide to know what to drop and which versions to switch when upgrading your plugins and CLIs to v2.
 
 | | oclif "v1" | oclif "v2" |
 | - | - | -|
