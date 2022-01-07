@@ -2,7 +2,7 @@
 title: Announcing oclif v2!
 ---
 
-Hello and happy new year! It is our great pleasure to announce that with the turn of a new year we have finally released oclif v2, which uses the new [@oclif/core](https://github.com/oclif/core) library! 🎉
+Hello and happy new year! It's our great pleasure to announce that we have released oclif v2, which uses the new [@oclif/core](https://github.com/oclif/core) library! 🎉
 
 oclif v2 includes many changes that improve the experience of both creating and using an oclif CLI.
 
