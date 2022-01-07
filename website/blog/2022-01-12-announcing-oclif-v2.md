@@ -65,8 +65,8 @@ We’ve revamped the way help for commands is output to the terminal to make it 
     <td>oclif v2</td>
  </tr>
  <tr>
-    <td><img src="../static/img/2022-01-12-announcing-oclif-v2/sfdx-help.png"/></td>
-    <td><img src="../static/img/2022-01-12-announcing-oclif-v2/sf-help.png"/></td>
+    <td><img src="/img/2022-01-12-announcing-oclif-v2/sfdx-help.png"/></td>
+    <td><img src="/img/2022-01-12-announcing-oclif-v2/sf-help.png"/></td>
  </tr>
 </table>
 
