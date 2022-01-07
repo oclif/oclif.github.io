@@ -16,9 +16,9 @@ All repositories under the [oclif org](https://github.com/oclif/) now use `main`
 
 ### Consolidating Tools & Libraries
 
-The [`oclif-dev`](https://github.com/oclif/dev-cli) CLI has now been incorporated into [`oclif`](https://github.com/oclif/oclif). Now you no longer need to install a separate package to manage your entire CLI’s lifecycle.
+The [`oclif-dev`](https://github.com/oclif/dev-cli) CLI has now been incorporated into [`oclif`](https://github.com/oclif/oclif). You now no longer need to install a separate package to manage your entire CLI’s lifecycle.
 
-The following libraries have been consolidated under [`@oclif/core`](https://github.com/oclif/core) and will be deprecated at some point in the future. You can read the [migration guide](https://github.com/oclif/core/blob/main/MIGRATION.md) to see how to update your CLI or plugin to use the new core library.
+The following libraries have been consolidated under [`@oclif/core`](https://github.com/oclif/core) and will be deprecated at some point in the future. Read the [migration guide](https://github.com/oclif/core/blob/main/MIGRATION.md) to learn how to update your CLI or plugin to use the new core library.
 
 * `@oclif/command`
 * `@oclif/config`
@@ -28,21 +28,21 @@ The following libraries have been consolidated under [`@oclif/core`](https://git
 
 ### No more single vs multi command CLIs
 
-There is only 1 "type" of oclif v2 CLI but it can have as few or as many commands as a developer wants. This also means there’s only one command for generating CLIs, `oclif generate` as opposed to the old `oclif single` and `oclif multi` commands.
+There's only one "type" of oclif v2 CLI, but it can have as few or as many commands as a developer wants. As a result, there’s only one command to generate CLIs, `oclif generate`, as opposed to the old `oclif single` and `oclif multi` commands.
 
 ### Node > 12
 
-In order to ensure oclif CLIs are as secure as possible all v2 libraries and plugins only support Node 12 or higher as of now and, going forward, will only be supporting Node Maintenance or higher as defined by Node's release schedule here: https://nodejs.org/en/about/releases/.
+To ensure oclif CLIs are as secure as possible, all v2 libraries and plugins support only Node 12 or higher as of now. Going forward, they'll support only Node Maintenance or higher, as defined by Node's release schedule here: https://nodejs.org/en/about/releases/.
 
 ## What’s new?
 
 ### New example CLI
 
-[`oclif-hello-world`](https://github.com/oclif/hello-world/) is our new example repo. This is also the repo that is [used as a template](https://github.com/oclif/oclif/blob/edc6616e51/src/generators/cli.ts#L74) when running `oclif generate` to create a new CLI. This repo will always be able to be referenced as an example of what an oclif v2 CLI should look like.
+[`oclif-hello-world`](https://github.com/oclif/hello-world/) is our new example repo. This is also the repo that's [used as a template](https://github.com/oclif/oclif/blob/edc6616e51/src/generators/cli.ts#L74) when running `oclif generate` to create a new CLI. This repo will always be able to be referenced as an example of what an oclif v2 CLI should look like.
 
 ### Spaced commands
 
-oclif CLIs can now use spaces to separate topics and subcommands instead of colons. To enable this feature simply add `“topicSeparator": " "` to the oclif config in your package.json. You can see an example of this in our [example repo](https://github.com/oclif/hello-world/blob/main/package.json#L55).
+oclif CLIs can now use spaces, instead of colons, to separate topics and subcommands. To enable this feature, simply add `“topicSeparator": " "` to the oclif config in your package.json. See an example in our [example repo](https://github.com/oclif/hello-world/blob/main/package.json#L55).
 
 ```
 // Old commands that use :
@@ -53,11 +53,11 @@ $ mycli do:something
 $ mycli do something
 ```
 
-> Note: Spaced commands are backwards compatible so if you enable spaced commands for your CLI users will still be able to use `:` as a separator. This ensures that any existing scripts are not broken.
+> Note: Spaced commands are backwards compatible. So if you enable spaced commands for your CLI, users will still be able to use `:` as a separator. This ensures that any existing scripts don't break.
 
 ### New Help Output
 
-We’ve revamped the way help for commands is output to the terminal to make it both easier to implement and easier to read. You can see the difference between the old help output on the left and the new help output on the right in the screenshots down below.
+We’ve revamped the way command help is outputted to the terminal, making it both easier to implement and easier to read. See the difference between the old help output on the left and the new help output on the right in the screenshots below.
 
 <table border="0">
  <tr>
@@ -70,15 +70,15 @@ We’ve revamped the way help for commands is output to the terminal to make it 
  </tr>
 </table>
 
-You’ll notice that there are new sections for flags and global flags, examples are displayed with better spacing, and there is a section at the bottom called Configuration Variables. The Configuration Variables section is not part of the new help by default but we now have support for custom help sections which is what the `sf` CLI uses to create it.
+Notice that there are new sections for flags and global flags, examples are displayed with better spacing, and there is a section at the bottom called Configuration Variables. This Configuration Variables section is not part of the new help by default. But we've added support for custom help sections, which is what the `sf` CLI uses to create the new section. 
 
 ### Async Command Parsing
 
-We’ve also improved the performance of new CLIs by rewriting how commands are parsed on initialization. The [new parser](https://github.com/oclif/core/blob/main/src/parser/parse.ts) is asynchronous which makes CLIs with a lot of commands or installed  plugins much faster.
+We’ve also improved the performance of new CLIs by rewriting how commands are parsed on initialization. The [new parser](https://github.com/oclif/core/blob/main/src/parser/parse.ts) is asynchronous, which makes CLIs with a lot of commands or installed  plugins much faster.
 
-## What’s coming?
+## What’s coming next?
 
-Part of our charter for the release of oclif v2 includes improving our engagement with the oclif community. We know that over the past couple of years we’ve reduced our involvement and a lot of issues and PRs have languished in limbo. Hopefully you’ve already seen increased activity and responses from oclif maintainers recently but if you haven’t please don’t hesitate to ping us by tagging [@admins](https://github.com/orgs/oclif/teams/admins) in oclif repos.
+Part of our charter for the release of oclif v2 includes improving our engagement with the oclif community. We know that over the past couple of years we’ve reduced our involvement, and a lot of issues and PRs have languished in limbo. Hopefully you’ve already seen increased activity and responses from oclif maintainers recently, but if you haven’t, please don’t hesitate to ping us by tagging [@admins](https://github.com/orgs/oclif/teams/admins) in oclif repos.
 
 We also want to start interviewing members of the oclif community to acquire feedback and prioritize the features and fixes you deem most important!
 
@@ -92,7 +92,7 @@ The oclif team
 
 #### Migration Guide
 
-This guide explains how to upgrade a CLI or plugin from the old oclif v1 libraries to the new `@oclif/core` library oclif v2 uses.
+This guide explains how to upgrade a CLI or plugin from the old oclif v1 libraries to the new `@oclif/core` library that oclif v2 uses.
 
 https://github.com/oclif/core/blob/main/MIGRATION.md
 
