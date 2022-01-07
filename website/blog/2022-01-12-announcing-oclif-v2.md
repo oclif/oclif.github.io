@@ -84,16 +84,17 @@ Best,
 
 The oclif team
 
+<br/>
 
-## Reference material 
+### Reference material 
 
-### Migration Guide
+#### Migration Guide
 
 This guide explains how to upgrade a CLI or plugin from the old Ioclif v1 libraries to the new `@oclif/core` library oclif v2 uses.
 
 https://github.com/oclif/core/blob/main/MIGRATION.md
 
-### Compatibility Matrix
+#### Compatibility Matrix
 
 The following matrix shows how the v1 libraries and plugins relate to the new ones for v2. You can use this as a guide to know what to drop and which versions to switch when upgrading your plugins and CLIs to v2.
 
