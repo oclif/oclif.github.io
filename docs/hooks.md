@@ -16,14 +16,6 @@ export default const hook: Hook<'init'> = async function (options) {
 }
 ```
 
-Or in JavaScript:
-
-```js
-module.exports = async function (options) {
-  console.log(`example init hook running before ${options.id}`)
-}
-```
-
 The hook must also be declared with the event's name and hook's file path under oclif's settings in `package.json`:
 
 ```js
@@ -49,7 +41,7 @@ Multiple hooks of the same event type can be declared with an array.
   }
 ```
 
-You can create hooks with `oclif hook myhook --event=init`.
+You can create hooks with `oclif generate hook myhook --event=init`.
 
 ## Lifecycle Events
 
