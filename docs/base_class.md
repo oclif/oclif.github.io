@@ -8,11 +8,11 @@ For large CLIs with multiple plugins, it's useful to put this base class into it
 
 ```js
 // src/base.ts
-import Command, {flags} from '@oclif/core'
+import {Command, Flags} from '@oclif/core'
 
 export default abstract class extends Command {
   static flags = {
-    loglevel: flags.string({options: ['error', 'warn', 'info', 'debug']})
+    loglevel: Flags.string({options: ['error', 'warn', 'info', 'debug']})
   }
 
   log(msg, level) {
@@ -46,7 +46,7 @@ import Command from '../base'
 export class MyCommand extends Command {
   static flags = {
     ...Command.flags,
-    extraflag: flags.string()
+    extraflag: Flags.string()
   }
 
   async run() {

@@ -15,7 +15,7 @@ For example, if we use `heroku config` as an example, we could have a command th
 ```typescript
 export class HerokuConfig extends Command {
   static flags = {
-    app: flags.string({required: true})
+    app: Flags.string({required: true})
   }
 
   async run() {
@@ -37,7 +37,7 @@ import {displayConfigVars} from '../display_config_vars'
 
 export class HerokuRelease extends Command {
   static flags = {
-    app: flags.string({required: true})
+    app: Flags.string({required: true})
   }
 
   async run() {
@@ -72,7 +72,7 @@ import {HerokuConfig} from './config'
 
 export class HerokuRelease extends Command {
   static flags = {
-    app: flags.string({required: true})
+    app: Flags.string({required: true})
   }
 
   async run() {

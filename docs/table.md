@@ -2,21 +2,21 @@
 title: Table
 ---
 
-## `cli-ux.table`
+## `CliUx.ux.table`
 
 Displays tabular data
 
 ```typescript
-cli.table(data, columns, options)
+CliUx.ux.table(data, columns, options)
 ```
 
 Where:
 
 - `data`: array of data objects to display
-- `columns`: [Table.Columns](https://github.com/oclif/cli-ux/blob/master/src/styled/table.ts)
-- `options`: [Table.Options](https://github.com/oclif/cli-ux/blob/master/src/styled/table.ts)
+- `columns`: [Table.Columns](https://github.com/oclif/core/blob/main/src/cli-ux/styled/table.ts)
+- `options`: [Table.Options](https://github.com/oclif/core/blob/main/src/cli-ux/styled/table.ts)
 
-`cli.table.flags()` returns an object containing all the table flags to include in your command.
+`CliUx.ux.table.flags()` returns an object containing all the table flags to include in your command.
 
 ```typescript
 {
@@ -32,10 +32,10 @@ Where:
 
 Passing `{only: ['columns']}` or `{except: ['columns']}` as an argument into `cli.table.flags()` will allow/block those flags from the returned object.
 
-`Table.Columns` defines the table columns and their display options.
+`CliUx.Table.Columns` defines the table columns and their display options.
 
 ```typescript
-const columns: Table.Columns = {
+const columns: CliUx.Table.Columns = {
   // where `.name` is a property of a data object
   name: {}, // "Name" inferred as the column header
   id: {
@@ -47,10 +47,10 @@ const columns: Table.Columns = {
 }
 ```
 
-`Table.Options` defines the table options, most of which are the parsed flags from the user for display customization, all of which are optional.
+`CliUx.Table.Options` defines the table options, most of which are the parsed flags from the user for display customization, all of which are optional.
 
 ```typescript
-const options: Table.Options = {
+const options: CliUx.Table.Options = {
   printLine: myLogger, // custom logger
   columns: flags.columns,
   sort: flags.sort,
@@ -65,20 +65,19 @@ const options: Table.Options = {
 Example class:
 
 ```typescript
-import {Command} from '@oclif/core'
-import {cli} from 'cli-ux'
+import {Command, CliUx} from '@oclif/core'
 import axios from 'axios'
 
 export default class Users extends Command {
   static flags = {
-    ...cli.table.flags()
+    ...CliUx.ux.table.flags()
   }
 
   async run() {
     const {flags} = this.parse(Users)
     const {data: users} = await axios.get('https://jsonplaceholder.typicode.com/users')
 
-    cli.table(users, {
+    CliUx.ux.table(users, {
       name: {
         minWidth: 7,
       },

@@ -5,7 +5,7 @@ title: Commands
 A basic command looks like the following in TypeScript:
 
 ```js
-import Command from '@oclif/core'
+import {Command} from '@oclif/core'
 
 export class MyCommand extends Command {
   static description = 'description of this example command'
@@ -41,7 +41,7 @@ Note that the following examples will be in TypeScript. As JavaScript does not y
 [See the base class to get an idea of what methods can be called on a command](https://github.com/oclif/core/blob/main/src/command.ts).
 
 ```js
-import Command, {flags} from '@oclif/core'
+import {Command, Flags} from '@oclif/core'
 
 export class MyCommand extends Command {
   static description = `
