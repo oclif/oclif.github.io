@@ -13,13 +13,13 @@ $ mycli --force --file=./myfile
 It would be declared like this:
 
 ```js
-import Command, {flags} from '@oclif/core'
+import {Command, Flags} from '@oclif/core'
 
 export class MyCLI extends Command {
   static flags = {
     // can pass either --force or -f
-    force: flags.boolean({char: 'f'}),
-    file: flags.string(),
+    force: Flags.boolean({char: 'f'}),
+    file: Flags.string(),
   }
 
   async run() {
@@ -36,7 +36,7 @@ Here are the options flags can have:
 
 ```js
 static flags = {
-  name: flags.string({
+  name: Flags.string({
     char: 'n',                    // shorter flag version
     description: 'name to print', // help description for flag
     hidden: false,                // hide from help
@@ -51,7 +51,7 @@ static flags = {
   }),
 
   // flag with no value (-f, --force)
-  force: flags.boolean({
+  force: Flags.boolean({
     char: 'f',
     default: true,                // default value if flag not passed (can be a function that returns a boolean)
     // boolean flags may be reversed with `--no-` (in this case: `--no-force`).
@@ -68,11 +68,11 @@ For larger CLIs, it can be useful to declare a custom flag that can be shared am
 
 ```js
 // src/flags.ts
-import {flags} from '@oclif/core'
-function getTeam() {
+import {Flags} from '@oclif/core'
+function getTeam(): Promise<string> {
   // imagine this reads a configuration file or something to find the team
 }
-export const team = flags.build({
+export const team = Flags.build({
   char: 't',
   description: 'team to use',
   default: () => getTeam(),
@@ -80,7 +80,7 @@ export const team = flags.build({
 
 // src/commands/mycommand.ts
 import {team} from '../flags'
-import Command from '@oclif/core'
+import {Command} from '@oclif/core'
 
 export class MyCLI extends Command {
   static flags = {
