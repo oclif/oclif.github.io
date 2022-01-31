@@ -19,13 +19,15 @@ $ npx mynewcli
 
 You'll need to [register with npm](https://www.npmjs.com/signup) and have verified your email address in order to publish.
 
-This workflow can be improved slightly by running `npm version major|minor|patch` before publishing which will create a git tag and bump the version automatically. We like to use [np](https://npm.im/np) which is like `npm version`, but will also run the tests and other health checks before publishing.
+This workflow can be improved slightly by running `npm version major|minor|patch` before publishing which will create a git tag and bump the version automatically.
 
 ## Standalone tarballs
 
-Build standalone tarballs with `oclif pack` from the root of your CLI. These include the node binary so the user does not have to already have node installed to use the CLI. It won't put this node binary on the PATH so the binary will not conflict with any node installation on the machine.
+Build standalone tarballs with `oclif pack tarballs` from the root of your CLI. These include the node binary so the user does not have to already have node installed to use the CLI. It won't put this node binary on the PATH so the binary will not conflict with any node installation on the machine.
 
-To publish, you can copy the files from `./dist` or use `oclif promote` to copy the files to S3. You'll need to set `oclif.update.s3.bucket` in `package.json` to a valid S3 bucket and have credentials set in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment vars.
+To publish, you can copy the files from `./dist` or use `oclif upload tarballs` to copy the files to S3. You'll need to set `oclif.update.s3.bucket` in `package.json` to a valid S3 bucket and have credentials set in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment vars.
+
+After you've uploaded the tarballs to S3, you can promote the tarballs to a different release channel within S3 using `oclif promote`. This allows you to quickly promote and demote a specific version between your various release channels. For example, the Salesforce CLI has separate `stable` and `stable-rc` channels that are updated weekly.
 
 ## Brew
 
@@ -45,17 +47,17 @@ In the Heroku CLI, we have it automatically build and release the beta channel o
 
 ## Windows installer
 
-Build a windows installer with `oclif pack:win`. It will build into `./dist/win`. This can be published to S3 with `oclif promote --win`.
+Build a windows installer with `oclif pack:win`. It will build into `./dist/win`. This can be uploaded to S3 with `oclif upload:win` and promoted within S3 with `oclif promote --win`.
 
 ## macOS installer
 
-Build a macOS .pkg installer with `oclif pack:macos`. It will build into `./dist/macos`. This can be published to S3 with `oclif promote --macos`. You need to set the macOS identifier at `oclif.macos.identifier` in `package.json` (we use "com.heroku.cli" and "com.salesforce.cli" as the identifiers for the Heroku CLI and the Salesforce CLI, respectively).
+Build a macOS .pkg installer with `oclif pack:macos`. It will build into `./dist/macos`. This can be uploaded to S3 with `oclif upload:macos` and promoted within S3 with `oclif promote --macos`. You need to set the macOS identifier at `oclif.macos.identifier` in `package.json` (we use "com.heroku.cli" and "com.salesforce.cli" as the identifiers for the Heroku CLI and the Salesforce CLI, respectively).
 
 To [sign the installer](https://developer.apple.com/developer-id/), set `oclif.macos.sign` in `package.json` to a certificate (For the Heroku CLI this is "Developer ID Installer: Heroku INC"). And optionally set the keychain with `OSX_KEYCHAIN`.
 
 ## Ubuntu/Debian packages
 
-Build a deb package with `oclif pack:deb`. Set the `MYCLI_DEB_KEY` to a gpg key id to create the gpg files. This will include all the files needed for an apt repository in `./dist/deb`. They can be published to S3 with `oclif promote --deb`.
+Build a deb package with `oclif pack:deb`. Set the `MYCLI_DEB_KEY` to a gpg key id to create the gpg files. This will include all the files needed for an apt repository in `./dist/deb`. They can be uploaded to S3 with `oclif upload:deb` and promoted within S3 using `oclif promote --deb`.
 
 Once it's published to S3, users can install with the following:
 
