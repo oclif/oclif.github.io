@@ -16,7 +16,7 @@ The overhead for running an oclif CLI command is almost nothing. [It requires ve
 
 ### CLI Generator
 
-Run a single command to scaffold out a fully functional CLI and get started quickly. See [Usage](#-usage) below.
+Run a single command to scaffold out a fully functional CLI and get started quickly. See [Generator Commands](https://oclif.io/docs/generator_commands).
 
 ### Testing Helpers
 
