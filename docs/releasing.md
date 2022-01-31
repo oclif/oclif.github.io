@@ -27,7 +27,7 @@ Build standalone tarballs with `oclif pack tarballs` from the root of your CLI. 
 
 To publish, you can copy the files from `./dist` or use `oclif upload tarballs` to copy the files to S3. You'll need to set `oclif.update.s3.bucket` in `package.json` to a valid S3 bucket and have credentials set in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment vars.
 
-After you've uploaded the tarballs to S3, you can promote the tarballs to a different release channel within S3 using `oclif promote`. This allows you to quickly promote and demote a specific version between your various release channels. For example, the Salesforce CLI has separate `stable` and `stable-rc` channels that are updated weekly.
+After you've uploaded the tarballs to S3, you can promote the tarballs to a release channel within S3 using `oclif promote`. This allows you to quickly promote and demote a specific version between release channels. For example, the Salesforce CLI has separate `stable` and `stable-rc` channels that are updated weekly.
 
 ## Brew
 
