@@ -47,17 +47,17 @@ In the Heroku CLI, we have it automatically build and release the beta channel o
 
 ## Windows installer
 
-Build a windows installer with `oclif pack:win`. It will build into `./dist/win`. This can be uploaded to S3 with `oclif upload:win` and promoted within S3 with `oclif promote --win`.
+Build a windows installer with `oclif pack win`. It will build into `./dist/win`. This can be uploaded to S3 with `oclif upload win` and promoted within S3 with `oclif promote --win`.
 
 ## macOS installer
 
-Build a macOS .pkg installer with `oclif pack:macos`. It will build into `./dist/macos`. This can be uploaded to S3 with `oclif upload:macos` and promoted within S3 with `oclif promote --macos`. You need to set the macOS identifier at `oclif.macos.identifier` in `package.json` (we use "com.heroku.cli" and "com.salesforce.cli" as the identifiers for the Heroku CLI and the Salesforce CLI, respectively).
+Build a macOS .pkg installer with `oclif pack macos`. It will build into `./dist/macos`. This can be uploaded to S3 with `oclif upload macos` and promoted within S3 with `oclif promote --macos`. You need to set the macOS identifier at `oclif.macos.identifier` in `package.json` (we use "com.heroku.cli" and "com.salesforce.cli" as the identifiers for the Heroku CLI and the Salesforce CLI, respectively).
 
 To [sign the installer](https://developer.apple.com/developer-id/), set `oclif.macos.sign` in `package.json` to a certificate (For the Heroku CLI this is "Developer ID Installer: Heroku INC"). And optionally set the keychain with `OSX_KEYCHAIN`.
 
 ## Ubuntu/Debian packages
 
-Build a deb package with `oclif pack:deb`. Set the `MYCLI_DEB_KEY` to a gpg key id to create the gpg files. This will include all the files needed for an apt repository in `./dist/deb`. They can be uploaded to S3 with `oclif upload:deb` and promoted within S3 using `oclif promote --deb`.
+Build a deb package with `oclif pack deb`. Set the `MYCLI_DEB_KEY` to a gpg key id to create the gpg files. This will include all the files needed for an apt repository in `./dist/deb`. They can be uploaded to S3 with `oclif upload deb` and promoted within S3 using `oclif promote --deb`.
 
 Once it's published to S3, users can install with the following:
 
