@@ -6,27 +6,19 @@ Use inheritance to share functionality between common commands. Here is an examp
 
 For large CLIs with multiple plugins, it's useful to put this base class into its own npm package to be shared.
 
-### Inferred Flags Type
-This is needed to get type safety working in derived classes
-```ts
-// src/types/inferredFlagsType.ts
-
-import { FlagInput } from '@oclif/core/lib/interfaces';
-
-export type InferredFlagsType<T> = T extends FlagInput<infer F>
-  ? F & {
-      json: boolean | undefined;
-    }
-  : any;
-```
-
 ### Base Class:
 ```ts
 // src/base.ts
 
 import { Command, Flags } from '@oclif/core';
 import { FlagInput, OutputFlags, ParserOutput } from '@oclif/core/lib/interfaces';
-import { InferredFlagsType } from './types/inferredFlagsType';
+
+// This is needed to get type safety working in derived classes
+export type InferredFlagsType<T> = T extends FlagInput<infer F>
+  ? F & {
+      json: boolean | undefined;
+    }
+  : any;
 
 export default abstract class BaseCommand<T extends FlagInput<any>> extends Command {
   static flags = {
