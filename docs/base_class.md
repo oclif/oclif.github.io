@@ -22,7 +22,7 @@ export type InferredFlagsType<T> = T extends FlagInput<infer F>
 
 export default abstract class BaseCommand<T extends FlagInput<any>> extends Command {
   static flags = {
-    loglevel: Flags.string({ options: ['error', 'warn', 'info', 'debug'], default: 'log' }),
+    loglevel: Flags.string({ options: ['error', 'warn', 'info', 'debug'], default: 'info' }),
   };
 
   protected parsedOutput?: ParserOutput<any, any>;
@@ -97,7 +97,10 @@ export default class MyCommand extends BaseCommand<typeof MyCommand.flags> {
     });
 
     // We now get complete type safety on 'this.processedFlags'!!
-    console.log(this.processedFlags.force);
+    this.log(this.processedFlags.force, 'info');
+    
+    this.log('information', 'info');
+    this.log('uh oh!', 'error');
   }
 }
 ```
