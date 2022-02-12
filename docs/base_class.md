@@ -38,11 +38,15 @@ export default abstract class BaseCommand<T extends FlagInput<any>> extends Comm
     return this.processedFlags as Partial<OutputFlags<typeof BaseCommand.flags>>;
   }
 
-  log(msg: any, level: string) {
+  log(msg: any, level: string = 'info') {
     switch (this.baseFlags.loglevel) {
       case 'error':
         // eslint-disable-next-line no-console
         if (level === 'error') console.error(msg);
+        break;
+      case 'info':
+        // eslint-disable-next-line no-console
+        if (level === 'info') console.info(msg);
         break;
       // a complete example would need to have all the levels
     }
@@ -91,7 +95,7 @@ export default class MyCommand extends BaseCommand<typeof MyCommand.flags> {
   static args: ArgInput = [{ name: 'file' }];
 
   public async run(): Promise<void> {
-    console.log({
+    this.log({
       args: this.processedArgs,
       flags: this.processedFlags,
     });
