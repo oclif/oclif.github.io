@@ -20,7 +20,7 @@ export type InferredFlagsType<T> = T extends FlagInput<infer F>
     }
   : any;
 
-export default abstract class BaseCommand<T extends FlagInput<any>> extends Command {
+export default abstract class BaseCommand<T extends typeof BaseCommand.flags> extends Command {
   static flags = {
     loglevel: Flags.string({ options: ['error', 'warn', 'info', 'debug'], default: 'info' }),
   };
