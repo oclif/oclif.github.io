@@ -2,12 +2,15 @@
 title: Flexible Taxonomy
 ---
 
-If you'd like for your customers to execute commands without adhereing to the defined command taxonomy, you can enable `flexibleTaxonomy` to the `oclif` section of your package.json:
+If you'd like for your customers to execute commands without adhereing to the defined command taxonomy, you can enable `flexibleTaxonomy` and add a hook to the `oclif` section of your package.json:
 
 ```json
 {
   "oclif": {
-    "flexibleTaxonomy": true
+    "flexibleTaxonomy": true,
+    "hooks": {
+      "command_incomplete": "./dist/hooks/command_incomplete.js"
+    }
   }
 }
 ```
