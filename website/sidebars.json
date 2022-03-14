@@ -29,7 +29,8 @@
       "spinner",
       "table",
       "notifications",
-      "debugging"
+      "debugging",
+      "flexible_taxonomy"
     ],
     "Also See": [
       "examples",
