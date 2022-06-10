@@ -26,7 +26,7 @@ export default abstract class extends Command {
 
   async init() {
     // do some initialization
-    const {flags} = this.parse(this.constructor)
+    const {flags} = await this.parse(this.constructor)
     this.flags = flags
   }
   async catch(err) {
