@@ -24,7 +24,7 @@ In JavaScript:
 const {Command} = require('@oclif/core')
 
 class MyCommand extends Command {
-  async run(): Promise<void> {
+  async run() {
     console.log('running my command')
   }
 }
@@ -68,7 +68,7 @@ can be multiline
   // set it to false if you need to accept variable arguments
   static strict = false
 
-  async run(): Promise<void> {
+  async run() {
     // show a warning
     this.warn('uh oh!')
     // exit with an error message
