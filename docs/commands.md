@@ -10,7 +10,7 @@ import {Command} from '@oclif/core'
 export class MyCommand extends Command {
   static description = 'description of this example command'
 
-  async run() {
+  async run(): Promise<void> {
     console.log('running my command')
   }
 }
@@ -24,7 +24,7 @@ In JavaScript:
 const {Command} = require('@oclif/core')
 
 class MyCommand extends Command {
-  async run() {
+  async run(): Promise<void> {
     console.log('running my command')
   }
 }
@@ -68,7 +68,7 @@ can be multiline
   // set it to false if you need to accept variable arguments
   static strict = false
 
-  async run() {
+  async run(): Promise<void> {
     // show a warning
     this.warn('uh oh!')
     // exit with an error message
