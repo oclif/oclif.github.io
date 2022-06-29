@@ -30,7 +30,8 @@
       "table",
       "notifications",
       "debugging",
-      "flexible_taxonomy"
+      "flexible_taxonomy",
+      "global_flags"
     ],
     "Also See": [
       "examples",
