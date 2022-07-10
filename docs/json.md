@@ -9,7 +9,7 @@ When this property is set and the user supplies the `--json` flag, the command w
 ```typescript
 import {Command} from '@oclif/core'
 export class HelloCommand extends Command {
-  private static enableJsonFlag = true
+  static enableJsonFlag = true
   public async run(): Promise<{ message: string }> {
     console.log('hello, world!')
     return { message: 'hello, world!' }
