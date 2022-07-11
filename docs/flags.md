@@ -23,7 +23,7 @@ export class MyCLI extends Command {
   }
 
   async run() {
-    const {flags} = this.parse(MyCLI)
+    const {flags} = await this.parse(MyCLI)
     if (flags.force) console.log('--force is set')
     if (flags.file) console.log(`--file is: ${flags.file}`)
   }
@@ -88,7 +88,7 @@ export class MyCLI extends Command {
   }
 
   async run() {
-    const {flags} = this.parse(MyCLI)
+    const {flags} = await this.parse(MyCLI)
     if (flags.team) console.log(`--team is ${flags.team}`)
   }
 }
