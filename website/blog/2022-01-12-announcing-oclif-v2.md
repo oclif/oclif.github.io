@@ -6,7 +6,7 @@ Hello and happy new year! It's our great pleasure to announce that we have relea
 
 oclif v2 includes many changes that improve the experience of both creating and using an oclif CLI.
 
-Going forward, we don't plan to make any updates to oclif v1 and its corresponding libraries, except for critical security fixes. See the [compatibility matrix](#compatibility-matrix) for a list of these libraries. In order to give developers time to migrate from v1 to v2, we're not completely dropping support yet. But at some point in the future we'll archive the v1 repositories and deprecate their versions on NPM.
+Going forward, we don't plan to make any updates to oclif v1 and its corresponding libraries, except for critical security fixes. See the [compatibility matrix](#compatibility-matrix) for a list of these libraries. In order to give developers time to migrate from v1 to v2, we're not completely dropping support yet. But at some point in the future we'll archive the v1 repositories and deprecate their versions on npm.
 
 ## What’s changing?
 
@@ -105,5 +105,5 @@ The following matrix shows how the v1 libraries and plugins relate to the new v2
 | Utility CLIs | oclif@<2<br/>@oclif/dev-cli@<2 | oclif@>=2
 | Main packages | @oclif/command<br/>@oclif/config<br/>@oclif/errors<br/>@oclif/parser<br/>@oclif/plugin-help<br/> | @oclif/core@>=1
 | Node LTS | Node v8-14 | Node v12+ (at time of writing) |
-| Typescript | typescript@<4 | typescript@>=4 |
+| TypeScript | typescript@<4 | typescript@>=4 |
 | Main plugins | @oclif/plugin-autocomplete@<1<br/>@oclif/plugin-commands@<2<br/>@oclif/plugin-help@<4<br/>@oclif/plugin-not-found@<2<br/>@oclif/plugin-plugins@<2<br/>@oclif/plugin-update@<2<br/>plugin-warn-if-update-available@<2<br/>plugin-which@<2<br/> | @oclif/plugin-autocomplete@>=1<br/>@oclif/plugin-commands@>=2<br/>@oclif/plugin-help@>=4<br/>@oclif/plugin-not-found@>=2<br/>@oclif/plugin-plugins@>=2<br/>@oclif/plugin-update@>=2<br/>@oclif/plugin-warn-if-update-available@>=2<br/>@oclif/plugin-which@>=2<br/> |

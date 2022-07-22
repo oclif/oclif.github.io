@@ -42,7 +42,7 @@ If you're using npx, install it first with `npm install -g oclif`. This won't st
 
 ## Why isn't Node X supported?
 
-The oclif project follows and supports [Node's Active LTS support schedule](https://nodejs.org/en/about/releases/). This allows oclif to stay current with Node's development.
+The oclif project follows and supports [Node's LTS support schedule](https://nodejs.org/en/about/releases/). This allows oclif to stay current with Node's development.
 
 ## How do I pronounce "oclif"?
 
