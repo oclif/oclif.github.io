@@ -41,4 +41,4 @@ If you want users to be able to install their own plugins into your CLI, use the
 
 Writing code for plugins is essentially the same as writing within a CLI. They can export 3 different types: commands, hooks, and other plugins.
 
-Run `npx oclif plugin mynewplugin` to create a plugin in a new directory. This will come with a sample command called `hello`.
+Run `npx oclif generate mynewplugin` to create a plugin in a new directory. This will come with a sample command called `hello`.
