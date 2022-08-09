@@ -4,7 +4,8 @@
       "introduction",
       "features",
       "faqs",
-      "generator_commands"
+      "generator_commands",
+      "command_execution"
     ],
     "API Reference": [
       "commands",
