@@ -36,6 +36,12 @@ module.exports = MyCommand
 
 Note that the following examples will be in TypeScript. As JavaScript does not yet have static class properties, you will have to add them to the class after it is declared like we did with the description above.
 
+### Avoiding Timeouts
+
+In order to avoid command executions running indefinitely, oclif will terminate the node process 10 seconds after `Command.run` resolves. This means that all command logic inside the `run` method should either run synchronously or should return a `Promise`. This will allow the entire command to run before the 10 second timeout starts.
+
+In other words, **if you execute a promise in `Command.run` without a awaiting it, then the command will likely timeout before it's completed.**
+
 ### Other Command Options
 
 [See the base class to get an idea of what methods can be called on a command](https://github.com/oclif/core/blob/main/src/command.ts).
