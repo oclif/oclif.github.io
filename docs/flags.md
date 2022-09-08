@@ -37,23 +37,44 @@ Here are the options flags can have:
 ```js
 static flags = {
   name: Flags.string({
-    char: 'n',                    // shorter flag version
-    description: 'name to print', // help description for flag
-    hidden: false,                // hide from help
-    multiple: false,              // allow setting this flag multiple times
-    env: 'MY_NAME',               // default to value of environment variable
-    options: ['a', 'b'],          // only allow the value to be from a discrete set
-    parse: input => 'output',     // instead of the user input, return a different value
-    default: 'world',             // default value if flag not passed (can be a function that returns a string or undefined)
-    required: false,              // make flag required (this is not common and you should probably use an argument instead)
-    dependsOn: ['extra-flag'],    // this flag requires another flag
-    exclusive: ['extra-flag'],    // this flag cannot be specified alongside this other flag
+    char: 'n',                                   // shorter flag version
+    summary: 'brief summary',                    // help summary for flag
+    helpGroup: 'THE BEST FLAGS',                 // Put flag into THE BEST FLAGS group in help
+    description: 'in-depth overview',            // help description for flag
+    hidden: false,                               // hide from help
+    multiple: false,                             // allow setting this flag multiple times
+    env: 'MY_NAME',                              // default to value of environment variable
+    options: ['a', 'b'],                         // only allow the value to be from a discrete set
+    parse: async input => 'output',              // instead of the user input, return a different value
+    default: 'world',                            // default value if flag not passed (can be a async function that returns a string or undefined)
+    required: false,                             // make flag required
+    dependsOn: ['extra-flag'],                   // this flag requires another flag
+    exclusive: ['extra-flag'],                   // this flag cannot be specified alongside this other flag
+    exactlyOne: ['extra-flag', 'another-flag'],  // exactly one of these flags must be provided
+    output
+    relationships: [                             // define complex relationships between flags
+      // Make this flag dependent on all of these flags
+      {type: 'all', flags: ['flag-one', 'flag-two']}
+      // Make this flag dependent on at least one of these flags
+      {type: 'some', flags: ['flag-three', 'flag-four']}
+      // Make this flag exclusive of all these flags
+      {type: 'none', flags: ['flag-five', 'flag-six']}
+
+      // Make this flag dependent on all of these flags
+      {type: 'all', flags: [
+        'flag-one',
+        'flag-two',
+        // Include flag-seven but only when flag-eight is equal to FooBar
+        {name: 'flag-seven', when: async (flags) => flags['flag-eight'] === 'FooBar'}
+      ]}
+    ]
   }),
 
   // flag with no value (-f, --force)
   force: Flags.boolean({
-    char: 'f',
+    char: 'f',                    // shorter flag version
     default: true,                // default value if flag not passed (can be a function that returns a boolean)
+    env: 'MY_NAME',               // default to value of environment variable
     // boolean flags may be reversed with `--no-` (in this case: `--no-force`).
     // The flag will be set to false if reversed. This functionality
     // is disabled by default, to enable it:
@@ -69,10 +90,18 @@ For larger CLIs, it can be useful to declare a custom flag that can be shared am
 ```js
 // src/flags.ts
 import {Flags} from '@oclif/core'
-function getTeam(): Promise<string> {
-  // imagine this reads a configuration file or something to find the team
+
+class Team {
+  public name: string;
+  // etc...
 }
-export const team = Flags.build({
+
+function getTeam(): Promise<Team> {
+  // imagine this reads a configuration file or something to find the team
+  return new Team()
+}
+
+export const team = Flags.custom<Team>({
   char: 't',
   description: 'team to use',
   default: () => getTeam(),
@@ -89,12 +118,19 @@ export class MyCLI extends Command {
 
   async run() {
     const {flags} = await this.parse(MyCLI)
-    if (flags.team) console.log(`--team is ${flags.team}`)
+    if (flags.team) console.log(`--team is ${flags.team.name}`)
   }
 }
 ```
 
-In the Heroku CLI, we use flags for our `--app` flag which takes advantage of a lot of functionality. It can be useful [to see how that is done](https://github.com/heroku/cli-engine-heroku/blob/oclif/src/flags/app.ts) to get ideas for making custom flags.
+In the Salesforce CLI we make heavy use of custom flags. For example,
+
+- A [`salesforceId`](https://salesforcecli.github.io/sf-plugins-core/globals.html#salesforceidflag) flag that ensures the provided string is a valid Salesforce Id.
+- A [`duration`](https://salesforcecli.github.io/sf-plugins-core/globals.html#durationflag) flag that converts a provided integer into a `Duration` instance that we use for working with time based values.
+
+These and more are located [here](https://github.com/salesforcecli/sf-plugins-core) if you want to see more examples. You can also read the [API docs](https://salesforcecli.github.io/sf-plugins-core/globals.html).
+
+
 
 ## Alternative Flag Inputs
 

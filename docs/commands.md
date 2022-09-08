@@ -46,13 +46,14 @@ In other words, **if you execute a promise in `Command.run` without a awaiting i
 
 [See the base class to get an idea of what methods can be called on a command](https://github.com/oclif/core/blob/main/src/command.ts).
 
-```js
+```typescript
 import {Command, Flags} from '@oclif/core'
 
 export class MyCommand extends Command {
+  static summary = 'A brief overview of your command.'
   static description = `
-description of my command
-can be multiline
+an in-depth description of the command.
+It can be multiline.
 `
 
   // hide the command from help
@@ -63,16 +64,30 @@ can be multiline
   static usage = 'mycommand --myflag'
 
   // examples to add to help
-  // each can be multiline
+  // <%= config.bin %> resolves to the executable name
+  // <%= command.id %> resolves to the command name
   static examples = [
-    '$ mycommand --force',
-    '$ mycommand --help',
+    // Examples can be simple strings
+    '<%= config.bin %> <%= command.id %> --help',
+    // Or objects that provide a description of the example command
+    {
+      description: 'Force the command to execute',
+      command: '<%= config.bin %> <%= command.id %> --force',
+    }
   ]
 
   // this makes the parser not fail when it receives invalid arguments
   // defaults to true
-  // set it to false if you need to accept variable arguments
+  // set it to false if you need to accept a variable number arguments
   static strict = false
+
+  // define aliases that can execute this command.
+  static aliases = ['alternate:name:for:this:command']
+
+  // Set to true if you want to add the --json flag to your command.
+  // oclif will automatically suppress logs (if you use this.log, this.warn, or this.error) and
+  // display the JSON returned by the command's run method.
+  static enableJsonFlag = true
 
   async run() {
     // show a warning
@@ -93,7 +108,7 @@ The following assumes you are in the `run()` method of an oclif [command](comman
 
 ### `this.log(message: string)`
 
-Output message to stdout (non-blocking). `console.log()` works fine too, but that is a blocking call. This uses [util.format()](https://nodejs.org/api/util.html#util_util_format_format_args) which behaves the same as `console.log()`.
+Output message to stdout (non-blocking). `console.log()` works fine too, but that is a blocking call and won't be automatically suppressed when the `--json` flag is present. This uses [util.format()](https://nodejs.org/api/util.html#util_util_format_format_args) which behaves the same as `console.log()`.
 
 ```typescript
 this.log('hello, world!')
@@ -146,3 +161,18 @@ this.exit()
 this.exit(1)
 ```
 
+### `this.logToStderr(message: string)`
+
+Log a message to the terminal's `stderr`.
+
+### `this.jsonEnabled()`
+
+Returns to `true` if the `--json` flag is present and `enableJsonFlag` is set to `true`
+
+### `this.toSuccessJson(result: unknown)`
+
+Modify the command's success JSON output before it's displayed to the user.
+
+### `this.toErrorJson(result: unknown)`
+
+Modify the command's error JSON output before it's displayed to the user.
