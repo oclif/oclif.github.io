@@ -52,7 +52,7 @@ import {Command, Flags} from '@oclif/core'
 export class MyCommand extends Command {
   static summary = 'A brief overview of your command.'
   static description = `
-an in-depth description of the command.
+An in-depth description of the command.
 It can be multiline.
 `
 
@@ -78,7 +78,7 @@ It can be multiline.
 
   // this makes the parser not fail when it receives invalid arguments
   // defaults to true
-  // set it to false if you need to accept a variable number arguments
+  // set it to false if you need to accept a variable number of arguments
   static strict = false
 
   // define aliases that can execute this command.

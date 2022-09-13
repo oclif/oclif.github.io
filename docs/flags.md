@@ -46,12 +46,11 @@ static flags = {
     env: 'MY_NAME',                              // default to value of environment variable
     options: ['a', 'b'],                         // only allow the value to be from a discrete set
     parse: async input => 'output',              // instead of the user input, return a different value
-    default: 'world',                            // default value if flag not passed (can be a async function that returns a string or undefined)
+    default: 'world',                            // default value if flag not passed (can be an async function that returns a string or undefined)
     required: false,                             // make flag required
     dependsOn: ['extra-flag'],                   // this flag requires another flag
     exclusive: ['extra-flag'],                   // this flag cannot be specified alongside this other flag
     exactlyOne: ['extra-flag', 'another-flag'],  // exactly one of these flags must be provided
-    output
     relationships: [                             // define complex relationships between flags
       // Make this flag dependent on all of these flags
       {type: 'all', flags: ['flag-one', 'flag-two']}
@@ -72,9 +71,9 @@ static flags = {
 
   // flag with no value (-f, --force)
   force: Flags.boolean({
-    char: 'f',                    // shorter flag version
+    char: 'f',                    // short character for flag
     default: true,                // default value if flag not passed (can be a function that returns a boolean)
-    env: 'MY_NAME',               // default to value of environment variable
+    env: 'MY_NAME',               // default value to the value of an environment variable
     // boolean flags may be reversed with `--no-` (in this case: `--no-force`).
     // The flag will be set to false if reversed. This functionality
     // is disabled by default, to enable it:
@@ -128,7 +127,7 @@ In the Salesforce CLI we make heavy use of custom flags. For example,
 - A [`salesforceId`](https://salesforcecli.github.io/sf-plugins-core/globals.html#salesforceidflag) flag that ensures the provided string is a valid Salesforce Id.
 - A [`duration`](https://salesforcecli.github.io/sf-plugins-core/globals.html#durationflag) flag that converts a provided integer into a `Duration` instance that we use for working with time based values.
 
-These and more are located [here](https://github.com/salesforcecli/sf-plugins-core) if you want to see more examples. You can also read the [API docs](https://salesforcecli.github.io/sf-plugins-core/globals.html).
+These and more are located [here](https://github.com/salesforcecli/sf-plugins-core/tree/main/src/flags) if you want to see more examples. You can also read the [API docs](https://salesforcecli.github.io/sf-plugins-core/globals.html).
 
 
 
