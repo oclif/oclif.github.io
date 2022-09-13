@@ -4,7 +4,7 @@ title: JSON
 
 If you want to use the `--json` flag to return JSON output to the user, then you can set the `enableJsonFlag` property on the `Command` class.
 
-When this property is set and the user supplies the `--json` flag, the command will supress all console logs and instead log the return value to the console in JSON format
+When this property is set and the user supplies the `--json` flag, the command will suppress all logs and instead log the return value to the console in JSON format. **Note** log suppression will only work if you use the logging methods on the `Command` class instance. In other words, `this.log` will be automatically suppressed but `console.log` will not be.
 
 ```typescript
 import {Command} from '@oclif/core'
