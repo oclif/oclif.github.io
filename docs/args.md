@@ -18,7 +18,7 @@ export class MyCLI extends Command {
     const {args} = await this.parse(MyCLI)
     console.log(`running my command with args: ${args.firstArg}, ${args.secondArg}`)
     // can also get the args as an array
-    const {argv} = this.parse(MyCLI)
+    const {argv} = await this.parse(MyCLI)
     console.log(`running my command with args: ${argv[0]}, ${argv[1]}`)
   }
 }
