@@ -74,7 +74,7 @@ export default class Users extends Command {
   }
 
   async run() {
-    const {flags} = this.parse(Users)
+    const {flags} = await this.parse(Users)
     const {data: users} = await axios.get('https://jsonplaceholder.typicode.com/users')
 
     CliUx.ux.table(users, {

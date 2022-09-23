@@ -46,7 +46,7 @@ export class MyCommand extends Command {
   }
 
   async run() {
-    const {flags} = this.parse(MyCommand)
+    const {flags} = await this.parse(MyCommand)
     let stage = flags.stage
     if (!stage) {
       let responses: any = await inquirer.prompt([{

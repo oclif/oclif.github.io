@@ -19,7 +19,7 @@ export class HerokuConfig extends Command {
   }
 
   async run() {
-    const {flags} = this.parse(HerokuConfig)
+    const {flags} = await this.parse(HerokuConfig)
     const config = await api.get(`/apps/${flags.app}/config-vars`)
     for (let [key, value] of Object.entries(config)) {
       this.log(`${key}=${value}`)
@@ -41,7 +41,7 @@ export class HerokuRelease extends Command {
   }
 
   async run() {
-    const {flags} = this.parse(HerokuRelease)
+    const {flags} = await this.parse(HerokuRelease)
     await this.doRelease(flags.app)
     await displayConfigVars(flags.app)
   }
@@ -76,7 +76,7 @@ export class HerokuRelease extends Command {
   }
 
   async run() {
-    const {flags} = this.parse(HerokuRelease)
+    const {flags} = await this.parse(HerokuRelease)
     await this.doRelease(flags.app)
     await HerokuConfig.run(['--app', flags.app])
   }
