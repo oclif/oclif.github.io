@@ -16,6 +16,8 @@ jobs:
         with:
           token: ${{secrets.SF_CLI_BOT_GITHUB_TOKEN}}
       - uses: actions/setup-node@v3
+        with:
+          node-version: latest
       - uses: oclif/github-workflows/.github/actions/gitConfig@main
       - run: yarn install --network-timeout 600000
       - run: yarn run publish-gh-pages
