@@ -1,0 +1,24 @@
+# test
+name: build-docs
+
+on:
+  push:
+    branches: [docs]
+
+jobs:
+  docs:
+    defaults:
+      run:
+        shell: bash
+        working-directory: scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{secrets.SF_CLI_BOT_GITHUB_TOKEN}}
+      - uses: actions/setup-node@v3
+        with:
+          cache: yarn
+      - uses: oclif/github-workflows/.github/actions/gitConfig@main
+      - run: yarn install --network-timeout 600000
+      - run: yarn run publish-gh-pages
