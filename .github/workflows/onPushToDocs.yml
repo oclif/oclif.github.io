@@ -9,7 +9,7 @@ jobs:
   docs:
     defaults:
       run:
-        working-directory: scripts
+        working-directory: website
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
