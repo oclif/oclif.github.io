@@ -21,12 +21,17 @@ jobs:
         with:
           node-version: lts/*
       - uses: oclif/github-workflows/.github/actions/gitConfig@main
-      - name: build docs
+      - name: clean and git prep
         run: |
           rm -rf website/build
           git worktree prune
           git fetch origin gh-pages:gh-pages
           git worktree add website/build gh-pages
+      - name: doc build
+        working-directory: website
+        run: |
+          yarn install
+          yarn build
       - name: send to git
         run: |
           git add website/build
