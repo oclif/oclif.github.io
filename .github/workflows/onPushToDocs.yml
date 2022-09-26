@@ -19,6 +19,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: yarn
+          cache-dependency-path: website/yarn.lock
       - uses: oclif/github-workflows/.github/actions/gitConfig@main
       - run: yarn install --network-timeout 600000
       - run: yarn run publish-gh-pages
