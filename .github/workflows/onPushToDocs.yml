@@ -10,16 +10,26 @@ jobs:
     defaults:
       run:
         working-directory: website
+    env:
+      GITHUB_TOKEN: ${{ secrets.SF_CLI_BOT_GITHUB_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
-          token: ${{secrets.SF_CLI_BOT_GITHUB_TOKEN}}
+          token: ${{ secrets.SF_CLI_BOT_GITHUB_TOKEN }}
       - uses: actions/setup-node@v3
         with:
           node-version: lts/*
       - uses: oclif/github-workflows/.github/actions/gitConfig@main
-      - run: yarn install --network-timeout 600000
-      - run: yarn run publish-gh-pages
-        env:
-          GIT_USER: ${{ secrets.GIT_USER }}
+      - name: build docs
+        run: |
+          rm -rf website/build
+          git worktree prune
+          git fetch origin gh-pages:gh-pages
+          git worktree add website/build gh-pages
+      - name: send to git
+        run: |
+          cd website/build
+          git add .
+          git commit -m 'docs: publishing gh-pages [skip ci]' --no-verify
+          git push origin gh-pages --no-verify
