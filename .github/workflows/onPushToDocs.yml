@@ -21,3 +21,5 @@ jobs:
       - uses: oclif/github-workflows/.github/actions/gitConfig@main
       - run: yarn install --network-timeout 600000
       - run: yarn run publish-gh-pages
+        env:
+          GIT_USER: ${{ secrets.GIT_USER }}
