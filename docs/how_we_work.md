@@ -61,11 +61,11 @@ In the exceptional case a deprecation needs to happen outside a new major versio
 
 ## Blog Posts
 
-We aim to announce most features via [our blog](https://oclif.io/blog). Be sure to check back regularly to see new announcements!
+We aim to announce most features via [our blog](../website/blog). Be sure to check back regularly to see new announcements!
 
 ## Feedback
 
-See our [Feedback page](https://oclif.io/docs/feedback).
+See our [Feedback page](/feedback).
 
 ## Updates to How We Work
 
