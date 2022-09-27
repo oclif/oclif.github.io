@@ -10,7 +10,7 @@ import {Command} from '@oclif/core'
 export class MyCommand extends Command {
   static description = 'description of this example command'
 
-  async run() {
+  async run(): Promise<void> {
     console.log('running my command')
   }
 }
