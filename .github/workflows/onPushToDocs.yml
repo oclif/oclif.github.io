@@ -26,6 +26,5 @@ jobs:
         working-directory: website
         run: |
           yarn install
-          yarn build
           echo "machine github.com login SF-CLI-BOT password ${{ secrets.SF_CLI_BOT_GITHUB_TOKEN }}" > ~/.netrc
-          yarn publish-gh-pages
+          yarn run publish-gh-pages
