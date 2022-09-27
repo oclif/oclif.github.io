@@ -8,7 +8,7 @@ As an open-source project, [oclif repos live on GitHub](https://github.com/oclif
 
 ## Code of Conduct & Community Guidelines
 
-We are thrilled to offer oclif as open-source. As such, please review our project [Code of Conduct](https://github.com/salesforce/oss-template/blob/master/CODE_OF_CONDUCT.md). If you have any questions or concerns, please [contact us](https://oclif.io/docs/feedback).
+We are thrilled to offer oclif as open-source. As such, please review our project [Code of Conduct](https://github.com/salesforce/oss-template/blob/master/CODE_OF_CONDUCT.md). If you have any questions or concerns, please [contact us](feedback.md).
 
 ## Work Tracking
 
@@ -61,11 +61,11 @@ In the exceptional case a deprecation needs to happen outside a new major versio
 
 ## Blog Posts
 
-We aim to announce most features via [our blog](../website/blog). Be sure to check back regularly to see new announcements!
+We aim to announce most features via [our blog](/blog). Be sure to check back regularly to see new announcements!
 
 ## Feedback
 
-See our [Feedback page](/feedback).
+See our [Feedback page](feedback.md).
 
 ## Updates to How We Work
 
