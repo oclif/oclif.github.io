@@ -4,7 +4,8 @@
       "introduction",
       "features",
       "faqs",
-      "generator_commands"
+      "generator_commands",
+      "command_execution"
     ],
     "API Reference": [
       "commands",
@@ -30,7 +31,8 @@
       "table",
       "notifications",
       "debugging",
-      "flexible_taxonomy"
+      "flexible_taxonomy",
+      "global_flags"
     ],
     "Also See": [
       "examples",

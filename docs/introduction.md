@@ -10,7 +10,7 @@ Everything is customizable in oclif. Even the flag parser and help generation is
 
 ## Requirements
 
-Only [Active LTS Node versions](https://nodejs.org/en/about/releases/) are supported. You can add the [node](https://www.npmjs.com/package/node) package to your CLI to ensure users are on a specific Node version.
+Only [LTS Node versions](https://nodejs.org/en/about/releases/) are supported. You can add the [node](https://www.npmjs.com/package/node) package to your CLI to ensure users are on a specific Node version.
 
 
 ## Quickstart
