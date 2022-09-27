@@ -33,7 +33,7 @@ For this example, the help class will be created in a file at "[project root]/sr
 }
 ```
 
-From here there are two paths, implement the `HelpBase` abstract class yourself or overwrite the parts of the default `Help` class you want to customize (ex: how command usage is displayed). We recommend the latter approach but cover both in the new [Help Classes docs](../../docs/help_classes).
+From here there are two paths, implement the `HelpBase` abstract class yourself or overwrite the parts of the default `Help` class you want to customize (ex: how command usage is displayed). We recommend the latter approach but cover both in the new [Help Classes docs](../../../../docs/help_classes).
 
 
 ## Separating TOPICS & COMMANDS in the new deafult `Help` class
