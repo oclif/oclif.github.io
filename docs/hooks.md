@@ -11,9 +11,11 @@ A basic hook looks like the following in TypeScript:
 ```typescript
 import {Hook} from '@oclif/core'
 
-export default const hook: Hook<'init'> = async function (options) {
+const hook: Hook<'init'> = async function (options) {
   console.log(`example init hook running before ${options.id}`)
 }
+
+export default hook
 ```
 
 The hook must also be declared with the event's name and hook's file path under oclif's settings in `package.json`:
@@ -59,9 +61,11 @@ For example, you could define an analytics post function that you will run in yo
 **src/hooks/analytics/post.ts**
 
 ```typescript
-export default const hook = async function (options: {id: string}) {
+const hook = async function (options: {id: string}) {
   // code to post options.id to analytics server
 }
+
+export default hook
 ```
 
 **package.json**
