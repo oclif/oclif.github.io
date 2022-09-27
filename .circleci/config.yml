@@ -5,10 +5,13 @@ jobs:
       - image: circleci/node:10
     steps:
       - checkout
-      - uses: salesforcecli/github-workflows/.github/actions/gitConfig@main
       - run:
           name: Deploying to GitHub Pages
           command: |
+            git config --global user.email "alm-cli@salesforce.com"
+            git config --global user.name "SF-CLI-BOT"
+            echo "machine github.com login SF-CLI-BOT password $GH_TOKEN" > ~/.netrc
+            cd website && yarn install && GIT_USER=SF-CLI-BOT yarn run publish-gh-pages
             cd website && yarn install && yarn build
 
 workflows:
