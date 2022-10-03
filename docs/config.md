@@ -34,6 +34,7 @@ Inside a command, `this.config` provides useful properties you can use in your c
 * **npmRegistry** - current npm registry to use with the [plugins](https://github.com/oclif/plugin-plugins) plugin
 * **plugins** - loaded plugins
 * **commands** - all commands in CLI
+* **default** - default cli command
 * **topics** - all topics in CLI
 * **commandIDs** - string IDs of all commands
 * **async runHook(event, opts)** - trigger a hook
