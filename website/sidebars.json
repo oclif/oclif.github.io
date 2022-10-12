@@ -32,7 +32,8 @@
       "notifications",
       "debugging",
       "flexible_taxonomy",
-      "global_flags"
+      "global_flags",
+      "single_command_cli"
     ],
     "Also See": [
       "examples",
