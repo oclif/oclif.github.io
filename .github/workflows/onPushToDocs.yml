@@ -14,7 +14,8 @@ jobs:
           token: ${{ secrets.SF_CLI_BOT_GITHUB_TOKEN }}
       - uses: actions/setup-node@v3
         with:
-          node-version: lts/*
+          # node-version: lts/*
+          node-version: 16
       - uses: oclif/github-workflows/.github/actions/gitConfig@main
       - name: doc build
         env:
