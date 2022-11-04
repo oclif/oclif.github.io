@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          token: ${{ secrets.SF_CLI_BOT_GITHUB_TOKEN }}
+          token: ${{ secrets.SVC_CLI_BOT_GITHUB_TOKEN }}
       - uses: actions/setup-node@v3
         with:
           # node-version: lts/*
@@ -19,10 +19,10 @@ jobs:
       - uses: oclif/github-workflows/.github/actions/gitConfig@main
       - name: doc build
         env:
-          GIT_USER: SF-CLI-BOT
-          GIT_PASS: ${{ secrets.SF_CLI_BOT_GITHUB_TOKEN }}
+          GIT_USER: svc-cli-bot
+          GIT_PASS: ${{ secrets.SVC_CLI_BOT_GITHUB_TOKEN }}
         working-directory: website
         run: |
           yarn install
-          echo "machine github.com login SF-CLI-BOT password ${{ secrets.SF_CLI_BOT_GITHUB_TOKEN }}" > ~/.netrc
+          echo "machine github.com login svc-cli-bot password ${{ secrets.SVC_CLI_BOT_GITHUB_TOKEN }}" > ~/.netrc
           yarn run publish-gh-pages
