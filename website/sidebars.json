@@ -33,7 +33,8 @@
       "debugging",
       "flexible_taxonomy",
       "global_flags",
-      "single_command_cli"
+      "single_command_cli",
+      "esm"
     ],
     "Also See": [
       "examples",
