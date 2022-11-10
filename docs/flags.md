@@ -48,6 +48,8 @@ static flags = {
     parse: async input => 'output',              // instead of the user input, return a different value
     default: 'world',                            // default value if flag not passed (can be an async function that returns a string or undefined)
     required: false,                             // make flag required
+    aliases: ['username', 'u'],                  // aliases for the flag - can be short char or long flags
+    deprecateAliases: false,                     // emit deprecation warning anytime a flag alias is provided
     dependsOn: ['extra-flag'],                   // this flag requires another flag
     exclusive: ['extra-flag'],                   // this flag cannot be specified alongside this other flag
     exactlyOne: ['extra-flag', 'another-flag'],  // exactly one of these flags must be provided
