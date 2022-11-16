@@ -2,12 +2,11 @@
 title: Customizing Help in oclif
 ---
 
-Out of the box oclif provides a great help experience for both single and multi-command CLIs via [@oclif/plugin-help](https://github.com/oclif/plugin-help).
+Out of the box oclif provides a great help experience for CLIs.
 
 But what if, as an oclif developer, you want to customize some or all of the output?
 
-Starting in `@oclif/core@1.6.0` which packages v3 of `@oclif/plugin-help`, you can now customize your CLI's help output by implementing the `HelpBase` abstract class.
-
+You can now customize your CLI's help output by implementing the `HelpBase` abstract class.
 
 ## Getting started with custom help
 
@@ -40,7 +39,7 @@ From here there are two paths, implement the `HelpBase` abstract class yourself 
 
 Previously, topics and child commands were listed in help output under a single list heading called "COMMANDS". But we found this can be slightly confusing. Some topics are commands also (a.k.a. topic-commands) while others are simply organizational namespacing (and when ran just show their help).
 
- The new default `Help` class provided in version 3 of `@oclif/plugin-help` splits the list of children into distinct lists of "TOPICS" and "COMMANDS", with the possibility of an item appearing in both if it a topic-command. This makes it clearer what is expected to be ran - "COMMANDS" - and what is providing structure - "TOPICS" - when looking at the help output.
+The new default `Help` class splits the list of children into distinct lists of "TOPICS" and "COMMANDS", with the possibility of an item appearing in both if it a topic-command. This makes it clearer what is expected to be ran - "COMMANDS" - and what is providing structure - "TOPICS" - when looking at the help output.
 
 ```
 VERSION
