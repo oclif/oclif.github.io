@@ -11,6 +11,7 @@ If you want to write your CLI or plugins using ESM you just need to make a few c
   "compilerOptions": {
     "module": "ES2020",
     "moduleResolution": "node",
+    "composite": true
   },
   "ts-node": {
     "esm": true
@@ -18,7 +19,7 @@ If you want to write your CLI or plugins using ESM you just need to make a few c
 }
 ```
 
-2. Rename `bin/dev` to `bin/dev.js` and replace the contents with the following:
+2. Rename `bin/dev` to `bin/dev.mjs` and replace the contents with the following:
 
 ```javascript
 #!/usr/bin/env ts-node
@@ -48,7 +49,7 @@ oclif
 .catch(oclif.Errors.handle)
 ```
 
-3. Rename `bin/run` to `bin/run.js` and replace the contents with the following:
+3. Rename `bin/run` to `bin/run.mjs` and replace the contents with the following:
 
 ```javascript
 #!/usr/bin/env node
@@ -60,3 +61,13 @@ oclif
 .then(oclif.flush)
 .catch(oclif.Errors.handle)
 ```
+
+4. Update package.json bin in order to use new run.mjs file
+```json
+{
+  ...
+  "bin": {
+    "<Your CLI Name>": "./bin/run.mjs"
+  },
+  ...
+}
