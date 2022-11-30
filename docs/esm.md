@@ -71,3 +71,19 @@ oclif
   },
   ...
 }
+```
+
+5. Replace Content of `test/tsconfig.json` with the following: 
+
+```json
+{
+  "extends": "../tsconfig",
+  "compilerOptions": {
+    "noEmit": true,
+    "module": "commonjs",
+  },
+  "references": [
+    {"path": ".."}
+  ]
+}
+```
