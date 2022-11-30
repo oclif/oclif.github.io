@@ -67,7 +67,7 @@ oclif
 {
   ...
   "bin": {
-    "<Your CLI Name>": "./bin/run.mjs"
+    "<Your_CLI_Name>": "./bin/run.mjs"
   },
   ...
 }
