@@ -26,7 +26,7 @@ export abstract class BaseCommand<T extends typeof Command> extends Command {
 
   // define flags that can be inherited by any command that extends BaseCommand
   static baseFlags = {
-    'log-level': Flags.enum<LogLevel>({
+    'log-level': Flags.custom<LogLevel>({
       summary: 'Specify level for logging.',
       options: Object.values(LogLevel),
       helpGroup: 'GLOBAL',
