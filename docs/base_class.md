@@ -17,7 +17,8 @@ enum LogLevel {
   error = 'error',
 }
 
-export type Flags<T extends typeof Command> = Interfaces.InferredFlags<typeof BaseCommand['globalFlags'] & T['flags']>
+export type Flags<T extends typeof Command> = Interfaces.InferredFlags<typeof BaseCommand['baseFlags'] & T['flags']>
+export type Args<T extends typeof Command> = Interfaces.InferredArgs<T['args']>
 
 export abstract class BaseCommand<T extends typeof Command> extends Command {
   // add the --json flag
@@ -33,11 +34,18 @@ export abstract class BaseCommand<T extends typeof Command> extends Command {
   }
 
   protected flags!: Flags<T>
+  protected args!: Args<T>
 
   public async init(): Promise<void> {
     await super.init()
-    const {flags} = await this.parse(this.constructor as Interfaces.Command.Class)
-    this.flags = flags
+        const {args, flags} = await this.parse({
+      flags: this.ctor.flags,
+      baseFlags: (super.ctor as typeof BaseCommand).baseFlags,
+      args: this.ctor.args,
+      strict: this.ctor.strict,
+    })
+    this.flags = flags as Flags<T>
+    this.args = args as Args<T>
   }
 
   protected async catch(err: Error & {exitCode?: number}): Promise<any> {
