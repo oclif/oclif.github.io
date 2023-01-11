@@ -2,26 +2,26 @@
 title: Prompting
 ---
 
-[cli-ux](https://github.com/oclif/cli-ux) provides a simple `cli.prompt()` function, for more complex input prompts, we recommend using the [inquirer](https://github.com/SBoudrias/Inquirer.js) library.
+The [ux](https://github.com/oclif/core/blob/main/src/cli-ux/README.md) export provides a simple `cli.prompt()` function, for more complex input prompts, we recommend using the [inquirer](https://github.com/SBoudrias/Inquirer.js) library.
 
 
-## `CliUx.ux.prompt()`
+## `ux.prompt()`
 
-Prompt for basic input with `cli-ux`:
+Prompt for basic input with `ux`:
 
 ```typescript
-import {Command, CliUx} from '@oclif/core'
+import {Command, ux} from '@oclif/core'
 
 export class MyCommand extends Command {
   async run() {
     // just prompt for input
-    const name = await CliUx.ux.prompt('What is your name?')
+    const name = await ux.prompt('What is your name?')
 
     // mask input after enter is pressed
-    const secondFactor = await CliUx.ux.prompt('What is your two-factor token?', {type: 'mask'})
+    const secondFactor = await ux.prompt('What is your two-factor token?', {type: 'mask'})
 
     // hide input while typing
-    const password = await CliUx.ux.prompt('What is your password?', {type: 'hide'})
+    const password = await ux.prompt('What is your password?', {type: 'hide'})
 
     this.log(`You entered: ${name}, ${secondFactor}, ${password}`)
   }

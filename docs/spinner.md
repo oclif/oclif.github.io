@@ -4,26 +4,26 @@ title: Spinner
 
 [@oclif/core](https://github.com/oclif/core) provides a simple `ux.action`, for more complex progress indicators we recommend using the [listr](https://www.npmjs.com/package/listr) library.
 
-## `CliUx.ux.action`
+## `ux.action`
 
 Shows a basic spinner
 
 ```typescript
-import {Command, CliUx} from '@oclif/core'
+import {Command, ux} from '@oclif/core'
 
 export class MyCommand extends Command {
   async run() {
     // start the spinner
-    CliUx.ux.action.start('starting a process')
+    ux.action.start('starting a process')
     // do some action...
     // stop the spinner
-    CliUx.ux.action.stop() // shows 'starting a process... done'
+    ux.action.stop() // shows 'starting a process... done'
 
     // show on stdout instead of stderr
-    CliUx.ux.action.start('starting a process', 'initializing', {stdout: true})
+    ux.action.start('starting a process', 'initializing', {stdout: true})
     // do some action...
     // stop the spinner with a custom message
-    CliUx.ux.action.stop('custom message') // shows 'starting a process... custom message'
+    ux.action.stop('custom message') // shows 'starting a process... custom message'
   }
 }
 ```

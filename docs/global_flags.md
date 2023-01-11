@@ -9,7 +9,7 @@ There are some instances where you might want to define a flag once for all of y
 import { Command, Flags } from '@oclif/core';
 
 export abstract class BaseCommand extends Command {
-  static globalFlags = {
+  static baseFlags = {
     interactive: Flags.boolean({
       char: 'i',
       description: 'Run command in interactive mode',
