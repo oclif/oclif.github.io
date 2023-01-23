@@ -60,3 +60,45 @@ oclif
 .then(oclif.flush)
 .catch(oclif.Errors.handle)
 ```
+
+Alternatively, you can use the `execute` function to abstract out the bin scripts. You will still need to modify your tsconfig.json as documented above.
+
+Example for ESM dev.js
+```js
+#!/usr/bin/env ts-node
+// eslint-disable-next-line node/shebang
+(async () => {
+  const oclif = await import('@oclif/core')
+  await oclif.execute({type: 'esm', development: true, dir: import.meta.url})
+})()
+```
+
+Example for ESM run.js
+```js
+#!/usr/bin/env node
+// eslint-disable-next-line node/shebang
+(async () => {
+  const oclif = await import('@oclif/core')
+  await oclif.execute({type: 'esm', dir: import.meta.url})
+})()
+```
+
+Example for CJS dev.js
+```js
+#!/usr/bin/env node
+// eslint-disable-next-line node/shebang
+(async () => {
+  const oclif = await import('@oclif/core')
+  await oclif.execute({type: 'cjs', development: true, dir: __dirname})
+})()
+```
+
+Example for CJS run.js
+```js
+#!/usr/bin/env node
+// eslint-disable-next-line node/shebang
+(async () => {
+  const oclif = await import('@oclif/core')
+  await oclif.execute({type: 'cjs', dir: import.meta.url})
+})()
+```

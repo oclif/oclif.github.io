@@ -2,12 +2,12 @@
 title: Table
 ---
 
-## `CliUx.ux.table`
+## `ux.table`
 
 Displays tabular data
 
 ```typescript
-CliUx.ux.table(data, columns, options)
+ux.table(data, columns, options)
 ```
 
 Where:
@@ -16,7 +16,7 @@ Where:
 - `columns`: [Table.Columns](https://github.com/oclif/core/blob/main/src/cli-ux/styled/table.ts)
 - `options`: [Table.Options](https://github.com/oclif/core/blob/main/src/cli-ux/styled/table.ts)
 
-`CliUx.ux.table.flags()` returns an object containing all the table flags to include in your command.
+`ux.table.flags()` returns an object containing all the table flags to include in your command.
 
 ```typescript
 {
@@ -32,10 +32,10 @@ Where:
 
 Passing `{only: ['columns']}` or `{except: ['columns']}` as an argument into `cli.table.flags()` will allow/block those flags from the returned object.
 
-`CliUx.Table.Columns` defines the table columns and their display options.
+`ux.Table.Columns` defines the table columns and their display options.
 
 ```typescript
-const columns: CliUx.Table.Columns = {
+const columns: ux.Table.Columns = {
   // where `.name` is a property of a data object
   name: {}, // "Name" inferred as the column header
   id: {
@@ -47,10 +47,10 @@ const columns: CliUx.Table.Columns = {
 }
 ```
 
-`CliUx.Table.Options` defines the table options, most of which are the parsed flags from the user for display customization, all of which are optional.
+`ux.Table.Options` defines the table options, most of which are the parsed flags from the user for display customization, all of which are optional.
 
 ```typescript
-const options: CliUx.Table.Options = {
+const options: ux.Table.Options = {
   printLine: myLogger, // custom logger
   columns: flags.columns,
   sort: flags.sort,
@@ -65,19 +65,19 @@ const options: CliUx.Table.Options = {
 Example class:
 
 ```typescript
-import {Command, CliUx} from '@oclif/core'
+import {Command, ux} from '@oclif/core'
 import axios from 'axios'
 
 export default class Users extends Command {
   static flags = {
-    ...CliUx.ux.table.flags()
+    ...ux.table.flags()
   }
 
   async run() {
     const {flags} = await this.parse(Users)
     const {data: users} = await axios.get('https://jsonplaceholder.typicode.com/users')
 
-    CliUx.ux.table(users, {
+    ux.table(users, {
       name: {
         minWidth: 7,
       },
