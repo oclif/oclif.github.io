@@ -99,6 +99,6 @@ Example for CJS run.js
 // eslint-disable-next-line node/shebang
 (async () => {
   const oclif = await import('@oclif/core')
-  await oclif.execute({type: 'cjs', dir: import.meta.url})
+  await oclif.execute({type: 'cjs', dir: __dirname})
 })()
 ```
