@@ -102,3 +102,24 @@ Example for CJS run.js
   await oclif.execute({type: 'cjs', dir: import.meta.url})
 })()
 ```
+
+3. Update the `bin` property in the package.json
+
+Change
+
+```json
+  "bin": {
+    "my-cli": "./bin/run"
+  },
+```
+to
+
+```json
+  "bin": {
+    "my-cli": "./bin/run.js"
+  },
+```
+
+4. Update any other references to `bin/dev` and `bin/run` to `bin/dev.js` and `bin/run.js`
+
+You may have references to the bin scripts in your `.vscode/launch.json`. You'll need to update these as well.
