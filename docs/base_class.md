@@ -30,7 +30,7 @@ export abstract class BaseCommand<T extends typeof Command> extends Command {
       summary: 'Specify level for logging.',
       options: Object.values(LogLevel),
       helpGroup: 'GLOBAL',
-    }),
+    })(),
   }
 
   protected flags!: Flags<T>
