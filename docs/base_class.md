@@ -38,7 +38,7 @@ export abstract class BaseCommand<T extends typeof Command> extends Command {
 
   public async init(): Promise<void> {
     await super.init()
-        const {args, flags} = await this.parse({
+    const {args, flags} = await this.parse({
       flags: this.ctor.flags,
       baseFlags: (super.ctor as typeof BaseCommand).baseFlags,
       args: this.ctor.args,
