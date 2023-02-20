@@ -27,16 +27,16 @@ If this type of error handling is being implemented across multiple commands con
 Every oclif CLI has a ./bin/run file that is the entry point of command invocation. Errors that occur in the CLI, including re-thrown errors from a Command, are caught here in the bin/run `catch` handler.
 
 ```js
-.catch(require('@oclif/errors/handle'))
+.catch(require('@oclif/core/handle'))
 ```
 
 This catch handler uses the `@oclif/errors/handle` function to display (and cleanup, if necessary) the error to the user. This handler can be swapped for any function that receives an error argument.
 
-If you chose to implement your own handler here, we still recommend you delegate finally to the `@oclif/errors/handle` function for clean-up and exiting logic.
+If you chose to implement your own handler here, we still recommend you delegate finally to the `@oclif/core/handle` function for clean-up and exiting logic.
 
 ```js
 .catch((error) => {
-  const oclifHandler = require('@oclif/errors/handle');
+  const oclifHandler = require('@oclif/core/handle');
   // do any extra work with error
   return oclifHandler(error);
 })
