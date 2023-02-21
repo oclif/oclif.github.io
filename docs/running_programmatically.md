@@ -8,18 +8,18 @@ First, it is generally a bad idea to run a command directly as the command expor
 
 ## Sharing code with modules
 
-For example, if we use `heroku config` as an example, we could have a command that outputs the config vars of an app to the screen like this:
+For example, if we use `sf config list` as an example, we could have a command that outputs the config vars of an app to the screen like this:
 
-**./src/commands/config.ts**
+**./src/commands/config/list.ts**
 
 ```typescript
-export class HerokuConfig extends Command {
+export class ConfigList extends Command {
   static flags = {
     app: Flags.string({required: true})
   }
 
   async run() {
-    const {flags} = await this.parse(HerokuConfig)
+    const {flags} = await this.parse(ConfigList)
     const config = await api.get(`/apps/${flags.app}/config-vars`)
     for (let [key, value] of Object.entries(config)) {
       this.log(`${key}=${value}`)
@@ -28,27 +28,27 @@ export class HerokuConfig extends Command {
 }
 ```
 
-If we had another command such as `heroku release` that would do some logic then display these commands using the same logic, we should create a new module that we could call directly:
+If we had another command such as `sf config update` that would do some logic then display the config variables using the same logic, we should create a new module that we could call directly:
 
-**./src/commands/release.ts**
+**./src/commands/config/update.ts**
 
 ```typescript
-import {displayConfigVars} from '../display_config_vars'
+import {displayConfigVars} from '../displayConfigVars'
 
-export class HerokuRelease extends Command {
+export class ConfigUpdate extends Command {
   static flags = {
     app: Flags.string({required: true})
   }
 
   async run() {
-    const {flags} = await this.parse(HerokuRelease)
-    await this.doRelease(flags.app)
+    const {flags} = await this.parse(ConfigUpdate)
+    await this.doUpdate(flags.app)
     await displayConfigVars(flags.app)
   }
 }
 ```
 
-**./src/display_config_vars.ts**
+**./src/displayConfigVars.ts**
 
 ```typescript
 export async function displayConfigVars(app: string) {
@@ -63,26 +63,44 @@ This is the recommended way to share code. This can be extended further by putti
 
 ## Calling commands directly
 
-Still, if you _really_ want to call a command directly, it's easy to do. For this, we could write our `heroku release` command like so:
+Still, if you _really_ want to call a command directly, it's easy to do. You have a couple of options.
 
-**./src/commands/release.ts**
+If you know that the command you want to run is installed in the CLI, you can use `this.config.runCommand`. For this, we could write our `sf config update` command like so:
+
+**./src/commands/config/update.ts**
 
 ```typescript
-import {HerokuConfig} from './config'
-
-export class HerokuRelease extends Command {
+export class ConfigUpdate extends Command {
   static flags = {
     app: Flags.string({required: true})
   }
 
   async run() {
-    const {flags} = await this.parse(HerokuRelease)
-    await this.doRelease(flags.app)
-    await HerokuConfig.run(['--app', flags.app])
+    const {flags} = await this.parse(ConfigUpdate)
+    await this.doUpdate(flags.app)
+    await this.config.runCommand('config:list', ['--global'])
+  }
+}
+```
+
+Or you could import the command directly and execute it directly like so:
+
+**./src/commands/config/update.ts**
+
+```typescript
+import {ConfigList} from './config/list'
+
+export class ConfigUpdate extends Command {
+  static flags = {
+    app: Flags.string({required: true})
+  }
+
+  async run() {
+    const {flags} = await this.parse(ConfigUpdate)
+    await this.doUpdate(flags.app)
+    await ConfigList.run(['--global'])
   }
 }
 ```
 
 This works because commands have a static `.run()` [method on them](https://github.com/oclif/core/blob/main/src/command.ts) that can be used to instantiate the command and run the instance `.run()` method. It takes in the argv as input to the command.
-
-This works for both multi and single command CLIs.
