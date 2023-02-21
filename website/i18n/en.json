@@ -71,6 +71,9 @@
       "introduction": {
         "title": "Introduction"
       },
+      "jit_plugins": {
+        "title": "Just-in-Time Plugins"
+      },
       "json": {
         "title": "JSON"
       },

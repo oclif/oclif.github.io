@@ -24,6 +24,7 @@
       "releasing",
       "testing",
       "running_programmatically",
+      "jit_install",
       "aliases",
       "base_class",
       "prompting",
