@@ -4,7 +4,9 @@
       "introduction",
       "features",
       "faqs",
-      "generator_commands",
+      "generator_commands"
+    ],
+    "Architecture": [
       "command_execution",
       "plugin_loading"
     ],
