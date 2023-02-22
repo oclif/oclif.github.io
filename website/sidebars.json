@@ -5,7 +5,8 @@
       "features",
       "faqs",
       "generator_commands",
-      "command_execution"
+      "command_execution",
+      "plugin_loading"
     ],
     "API Reference": [
       "commands",

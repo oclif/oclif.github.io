@@ -80,6 +80,9 @@
       "notifications": {
         "title": "Notifications"
       },
+      "plugin_loading": {
+        "title": "Plugin Loading"
+      },
       "plugins": {
         "title": "Plugins"
       },
