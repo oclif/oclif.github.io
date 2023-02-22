@@ -4,8 +4,11 @@
       "introduction",
       "features",
       "faqs",
-      "generator_commands",
-      "command_execution"
+      "generator_commands"
+    ],
+    "Architecture": [
+      "command_execution",
+      "plugin_loading"
     ],
     "API Reference": [
       "commands",
@@ -24,6 +27,7 @@
       "releasing",
       "testing",
       "running_programmatically",
+      "jit_install",
       "aliases",
       "base_class",
       "prompting",

@@ -71,11 +71,17 @@
       "introduction": {
         "title": "Introduction"
       },
+      "jit_plugins": {
+        "title": "Just-in-Time Plugins"
+      },
       "json": {
         "title": "JSON"
       },
       "notifications": {
         "title": "Notifications"
+      },
+      "plugin_loading": {
+        "title": "Plugin Loading"
       },
       "plugins": {
         "title": "Plugins"
@@ -116,6 +122,7 @@
     },
     "categories": {
       "Getting Started": "Getting Started",
+      "Architecture": "Architecture",
       "API Reference": "API Reference",
       "How to": "How to",
       "Also See": "Also See"
