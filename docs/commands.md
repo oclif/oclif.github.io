@@ -145,9 +145,9 @@ Note: You may need to install the latest `@oclif/core` and `@oclif/errors` for `
 These errors are friendly and won't show a traceback unless debugging is enabled with `DEBUG=*` or `CLI_NAME_DEBUG=1`. If you want to raise errors like this outside of a command, use `@oclif/errors`.
 
 ```typescript
-import {CLIError} from '@oclif/errors'
+import { error } from '@oclif/errors'
 
-throw new CLIError('my friendly error')
+error('my friendly error', { suggestions: 'You can try X' })
 ```
 
 Any error caught by the command of this `CLIError` type will be shown without traceback.
