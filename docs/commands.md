@@ -150,7 +150,7 @@ import { error } from '@oclif/errors'
 error('my friendly error', { suggestions: 'You can try X' })
 ```
 
-Any error caught by the command of this `CLIError` type will be shown without traceback.
+Any error caught by the command of this `error` type will be shown without traceback.
 
 ### `this.exit(code: number = 0)`
 
