@@ -94,7 +94,7 @@ class Footer extends React.Component {
       // </footer>
       <footer className="footer pb3">
         <div className="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">
-          Made with 💜 by <a className="blue" href="https://developer.salesforce.com/home">Salesforce</a> — <a className="blue" href="https://github.com/oclif/oclif/blob/main/LICENSE">MIT License</a>
+          Made with 💜 by <a className="blue" href="https://developer.salesforce.com/">Salesforce</a> — <a className="blue" href="https://github.com/oclif/oclif/blob/main/LICENSE">MIT License</a>
         </div>
       </footer>
     );
