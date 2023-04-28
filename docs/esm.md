@@ -4,7 +4,9 @@ title: ESM
 
 If you want to write your CLI or plugins using ESM you just need to make a few changes to your tsconfig.json and bin scripts.
 
-1. Add the following options to the `tsconfig.json` in your project:
+1. Run `npm i --save-dev esm` or `yarn add --dev esm`.
+
+2. Add the following options to the `tsconfig.json` in your project:
 
 ```json
 {
@@ -18,7 +20,7 @@ If you want to write your CLI or plugins using ESM you just need to make a few c
 }
 ```
 
-2. Rename `bin/dev` to `bin/dev.js` and replace the contents with the following:
+3. Rename `bin/dev` to `bin/dev.js` and replace the contents with the following:
 
 ```javascript
 #!/usr/bin/env ts-node
@@ -48,7 +50,7 @@ oclif
 .catch(oclif.Errors.handle)
 ```
 
-3. Rename `bin/run` to `bin/run.js` and replace the contents with the following:
+4. Rename `bin/run` to `bin/run.js` and replace the contents with the following:
 
 ```javascript
 #!/usr/bin/env node
@@ -103,7 +105,7 @@ Example for CJS run.js
 })()
 ```
 
-3. Update the `bin` property in the package.json
+5. Update the `bin` property in the package.json
 
 Change
 
@@ -120,6 +122,6 @@ to
   },
 ```
 
-4. Update any other references to `bin/dev` and `bin/run` to `bin/dev.js` and `bin/run.js`
+6. Update any other references to `bin/dev` and `bin/run` to `bin/dev.js` and `bin/run.js`
 
 You may have references to the bin scripts in your `.vscode/launch.json`. You'll need to update these as well.
