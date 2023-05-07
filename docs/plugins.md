@@ -35,6 +35,7 @@ If you want users to be able to install their own plugins into your CLI, use the
 
 ## Community Plugins
 * [conf-cli](https://github.com/natzcam/conf-cli) - Adds a `conf` command to share state/configuration between commands. Uses [sindresorhus/conf](https://github.com/sindresorhus/conf).
+* [dynamic-commands](https://www.npmjs.com/package/oclif-dynamic-commands) - Load commands dynamically based on commands found under the current working directory.
 * [Add yours here](https://github.com/oclif/oclif.github.io/blob/docs/docs/plugins.md)!
 
 ## Building your own plugin
