@@ -126,10 +126,10 @@ export class MyCLI extends Command {
 
 In the Salesforce CLI we make heavy use of custom flags. For example,
 
-- A [`salesforceId`](https://salesforcecli.github.io/sf-plugins-core/globals.html#salesforceidflag) flag that ensures the provided string is a valid Salesforce Id.
-- A [`duration`](https://salesforcecli.github.io/sf-plugins-core/globals.html#durationflag) flag that converts a provided integer into a `Duration` instance that we use for working with time based values.
+- A [`salesforceId`](https://salesforcecli.github.io/sf-plugins-core/functions/flags_salesforceId.salesforceIdFlag.html) flag that ensures the provided string is a valid Salesforce Id.
+- A [`duration`](https://salesforcecli.github.io/sf-plugins-core/functions/flags_duration.durationFlag.html) flag that converts a provided integer into a `Duration` instance that we use for working with time based values.
 
-These and more are located [here](https://github.com/salesforcecli/sf-plugins-core/tree/main/src/flags) if you want to see more examples. You can also read the [API docs](https://salesforcecli.github.io/sf-plugins-core/globals.html).
+These and more are located [here](https://github.com/salesforcecli/sf-plugins-core/tree/main/src/flags) if you want to see more examples. You can also read the [API docs](https://salesforcecli.github.io/sf-plugins-core/).
 
 
 
