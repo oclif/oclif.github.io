@@ -21,7 +21,7 @@ If you want to write your CLI or plugins using ESM you just need to make a few c
 2. Rename `bin/dev` to `bin/dev.js` and replace the contents with the following:
 
 ```javascript
-#!/usr/bin/env ts-node
+#!/usr/bin/env node --loader ts-node/esm
 
 /* eslint-disable node/shebang */
 
@@ -65,7 +65,7 @@ Alternatively, you can use the `execute` function to abstract out the bin script
 
 Example for ESM dev.js
 ```js
-#!/usr/bin/env ts-node
+#!/usr/bin/env node --loader ts-node/esm
 // eslint-disable-next-line node/shebang
 (async () => {
   const oclif = await import('@oclif/core')
@@ -120,6 +120,12 @@ to
   },
 ```
 
-4. Update any other references to `bin/dev` and `bin/run` to `bin/dev.js` and `bin/run.js`
+4. Add `type` property to the package.json
+
+```
+"type": "module",
+```
+
+5. Update any other references to `bin/dev` and `bin/run` to `bin/dev.js` and `bin/run.js`
 
 You may have references to the bin scripts in your `.vscode/launch.json`. You'll need to update these as well.
