@@ -116,9 +116,9 @@ export default {
       "style": "light"
     },
     "algolia": {
-      "apiKey": "1e9844582f15f9a12816f4bca873e0c5",
-      "indexName": "oclif",
-      "appId": "2HPWKFRBE6",
+      "apiKey": "6032dd3bbb99cdcfacc285354871966c",
+      "indexName": "oclifio",
+      "appId": "Q04FC8Q6OZ",
       "contextualSearch": true,
       "searchParameters": {},
       "searchPagePath": "search"
