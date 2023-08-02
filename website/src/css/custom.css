@@ -1,30 +1,5 @@
 :root {
   --ifm-font-family-base: 'Roboto', sans-serif;
-  --ifm-color-primary-lightest: #4A5769;
-  --ifm-color-primary-lighter: #424D5D;
-  --ifm-color-primary-light: #3F4A59;
-  --ifm-color-primary: #394351;
-  --ifm-color-primary-dark: #333C49;
-  --ifm-color-primary-darker: #303945;
-  --ifm-color-primary-darkest: #282F39;
-  --ifm-color-info: #0d9dda;
-  --ifm-color-info-dark: #0c8dc4;
-  --ifm-color-info-darker: #0b85b9;
-  --ifm-color-info-darkest: #096e99;
-  --ifm-color-info-light: #0eadf0;
-  --ifm-color-info-lighter: #18b1f1;
-  --ifm-color-info-lightest: #39bcf3;
-  --ifm-link-color: #0d9dda;
-}
-
-[data-theme='dark'] {
-  --ifm-color-info: #0d9dda;
-  --ifm-color-info-dark: #0c8dc4;
-  --ifm-color-info-darker: #0b85b9;
-  --ifm-color-info-darkest: #096e99;
-  --ifm-color-info-light: #0eadf0;
-  --ifm-color-info-lighter: #18b1f1;
-  --ifm-color-info-lightest: #39bcf3;
 }
 
 .center {
@@ -40,8 +15,15 @@
 
 .get-started-example {
   background-color: #282F39;
-  border-radius: .25rem;
   color: #fff;
+  border-radius: .25rem;
+  text-align: left;
+}
+
+.get-started-example-dark {
+  background-color: #fff;
+  color: #282F39;
+  border-radius: .25rem;
   text-align: left;
 }
 
@@ -65,3 +47,15 @@
 .opacity--60 {
   opacity: 60%;
 }
+
+.company-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-logo {
+  margin: 0 1rem;
+}
+

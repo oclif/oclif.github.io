@@ -107,7 +107,7 @@ export default {
       "links": [],
       "copyright": "Copyright © 2023 Salesforce",
       "logo": {
-        "src": "img/salesforce.svg",
+        "src": "img/salesforce-logo.svg",
         "alt": "Salesforce",
         "href": "https://developer.salesforce.com",
         "width": 160,
