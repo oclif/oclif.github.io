@@ -1,0 +1,29 @@
+{
+  "unversionedId": "flexible_taxonomy",
+  "id": "flexible_taxonomy",
+  "title": "Flexible Taxonomy",
+  "description": "If you'd like for your customers to execute commands without adhereing to the defined command taxonomy, you can enable flexibleTaxonomy and add a hook to the oclif section of your package.json:",
+  "source": "@site/../docs/flexible_taxonomy.md",
+  "sourceDirName": ".",
+  "slug": "/flexible_taxonomy",
+  "permalink": "/docs/flexible_taxonomy",
+  "draft": false,
+  "editUrl": "https://github.com/oclif/oclif.github.io/tree/docs/docs/../docs/flexible_taxonomy.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Flexible Taxonomy"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Debugging",
+    "permalink": "/docs/debugging"
+  },
+  "next": {
+    "title": "Global Flags",
+    "permalink": "/docs/global_flags"
+  }
+}

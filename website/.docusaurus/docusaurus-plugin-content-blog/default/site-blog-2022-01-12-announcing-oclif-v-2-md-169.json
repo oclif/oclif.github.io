@@ -1,0 +1,19 @@
+{
+  "permalink": "/blog/2022/01/12/announcing-oclif-v2",
+  "source": "@site/blog/2022-01-12-announcing-oclif-v2.md",
+  "title": "Announcing oclif v2!",
+  "description": "Hello and happy new year! It's our great pleasure to announce that we have released oclif v2, which uses the new @oclif/core library! 🎉",
+  "date": "2022-01-12T00:00:00.000Z",
+  "formattedDate": "January 12, 2022",
+  "tags": [],
+  "readingTime": 4.48,
+  "hasTruncateMarker": false,
+  "authors": [],
+  "frontMatter": {
+    "title": "Announcing oclif v2!"
+  },
+  "nextItem": {
+    "title": "Introducing @oclif/core",
+    "permalink": "/blog/2021/03/01/introducing-oclif-core"
+  }
+}

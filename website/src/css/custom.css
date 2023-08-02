@@ -1,0 +1,73 @@
+:root {
+  --ifm-font-family-base: 'Roboto', sans-serif;
+  --ifm-color-primary-lightest: #4A5769;
+  --ifm-color-primary-lighter: #424D5D;
+  --ifm-color-primary-light: #3F4A59;
+  --ifm-color-primary: #394351;
+  --ifm-color-primary-dark: #333C49;
+  --ifm-color-primary-darker: #303945;
+  --ifm-color-primary-darkest: #282F39;
+}
+
+.center {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.code-font {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.oclif-example-container {
+  box-shadow: 0 0 50px 5px rgba(#FFFFFF, 0.1);
+  border: 1px solid #333;
+  border-radius: .25rem;
+  padding: 1rem 5rem 3rem 5rem;
+}
+
+.oclif-example {
+  text-align: left;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.bg-green {
+  background-color: #71C405;
+}
+
+.dark-gray {
+  color: #333;
+}
+
+.border-radius--25 {
+  border-radius: .25rem;
+}
+
+.sixty-percent {
+  opacity: 60%;
+}
+
+.link-button {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.button-svg {
+  padding-top: 1px;
+}
+
+.small-oclif-img {
+  display: inline-block;
+}
+
+.horizontal-align {
+  display: inline-block;
+}

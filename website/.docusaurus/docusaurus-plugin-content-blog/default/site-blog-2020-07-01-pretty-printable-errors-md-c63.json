@@ -1,0 +1,23 @@
+{
+  "permalink": "/blog/2020/07/01/pretty-printable-errors",
+  "source": "@site/blog/2020-07-01-pretty-printable-errors.md",
+  "title": "Pretty Printable Errors",
+  "description": "Often CLIs are used as handy tools and when things go wrong it’s useful to have additional context. In oclif we have added a couple of additional properties that can show extra context to the users when an error is displayed. The code, ref and suggestions will now be displayed if they are included. This will work with an existing oclif CLI by adding the latest @oclif/errors and @oclif/core to the CLI's package.json dependencies.",
+  "date": "2020-07-01T00:00:00.000Z",
+  "formattedDate": "July 1, 2020",
+  "tags": [],
+  "readingTime": 0.995,
+  "hasTruncateMarker": false,
+  "authors": [],
+  "frontMatter": {
+    "title": "Pretty Printable Errors"
+  },
+  "prevItem": {
+    "title": "oclif Summer Update",
+    "permalink": "/blog/2020/08/26/summer-update"
+  },
+  "nextItem": {
+    "title": "Customizing Help in oclif",
+    "permalink": "/blog/2020/05/05/introducing-custom-help-classes"
+  }
+}

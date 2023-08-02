@@ -1,0 +1,29 @@
+{
+  "unversionedId": "topics",
+  "id": "topics",
+  "title": "Topics",
+  "description": "As CLIs grow it can be useful to nest commands within topics. This is supported simply by placing command files in subdirectories. For example, with the Salesforce CLI we have a topic sf config with commands like sf config set and sf config get. The directory structure looks like this:",
+  "source": "@site/../docs/topics.md",
+  "sourceDirName": ".",
+  "slug": "/topics",
+  "permalink": "/docs/topics",
+  "draft": false,
+  "editUrl": "https://github.com/oclif/oclif.github.io/tree/docs/docs/../docs/topics.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Topics"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Configuration",
+    "permalink": "/docs/config"
+  },
+  "next": {
+    "title": "Topic Separators",
+    "permalink": "/docs/topic_separator"
+  }
+}

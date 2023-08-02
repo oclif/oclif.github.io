@@ -1,5 +1,5 @@
 ---
-title: oclifconf 2019: A Recap
+title: "oclifconf 2019: A Recap"
 ---
 
 In May, Heroku and Salesforce Open Source organized [oclifconf](https://oclif.io/conf), a conference for developers & product managers building CLI tools on top of [the open source oclif framework](https://github.com/oclif/oclif). The speakers came from various tech companies, such as Adobe, Netlify, and Apollo, who have already built amazing CLI experiences. The topics covered everything from the incredible capabilities oclif has unlocked, to the community-built plugins extending its functionality, and even what the behavior of an adaptive CLI tool might look like.
