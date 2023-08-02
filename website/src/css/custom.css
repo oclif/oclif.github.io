@@ -21,8 +21,7 @@
 }
 
 .oclif-example-container {
-  box-shadow: 0 0 50px 5px rgba(#FFFFFF, 0.1);
-  border: 1px solid #333;
+  border: 1px solid #394351;
   border-radius: .25rem;
   padding: 1rem 5rem 3rem 5rem;
 }
@@ -39,12 +38,12 @@
   display: inline-block;
 }
 
-.bg-green {
+.background--green {
   background-color: #71C405;
 }
 
 .dark-gray {
-  color: #333;
+  color: #394351;
 }
 
 .border-radius--25 {
@@ -53,21 +52,4 @@
 
 .sixty-percent {
   opacity: 60%;
-}
-
-.link-button {
-  margin: 1rem;
-  padding: 1rem;
-}
-
-.button-svg {
-  padding-top: 1px;
-}
-
-.small-oclif-img {
-  display: inline-block;
-}
-
-.horizontal-align {
-  display: inline-block;
 }
