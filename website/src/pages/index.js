@@ -19,7 +19,6 @@ function docUrl(doc, language) {
 }
 
 export default (props) => {
-  const {siteConfig} = useDocusaurusContext();
   return <Layout>
     <div>
       <main className="homepage page-content" aria-label="Content">
