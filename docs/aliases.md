@@ -14,7 +14,7 @@ export class ConfigIndex extends Command {
 
 ## Bin Aliases
 
-Creating a CLI that responds to different names or "aliases" is incredibly easy, and can be done by adding a `binAliases` property to your CLI's `oclif` property in `package.json`:
+Creating a CLI that responds to different names or "aliases" is easy, simply add a `binAliases` property to your CLI's `oclif` property in `package.json`:
 
 ```json
 {
