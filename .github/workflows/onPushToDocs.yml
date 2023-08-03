@@ -24,4 +24,4 @@ jobs:
         run: |
           yarn install
           echo "machine github.com login svc-cli-bot password ${{ secrets.SVC_CLI_BOT_GITHUB_TOKEN }}" > ~/.netrc
-          yarn run publish-gh-pages
+          yarn deploy
