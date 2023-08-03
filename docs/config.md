@@ -5,7 +5,7 @@ title: Configuration
 Inside a command, `this.config` provides useful properties you can use in your command. Here are a list of its methods and properties:
 
 * **name** - name of CLI
-* **version** - version of CLI
+* **version** - Version of the CLI.
 * **pjson** - parsed and [normalized](https://github.com/npm/normalize-package-data) CLI `package.json`
 * **bin** - CLI bin name
 * **binAliases** - An array of strings that will all execute the CLI's bin. This is useful for backwards compatibility and for CLIs built with installers or tarballs. For npm-installed CLIs, change the `bin` property in `package.json` instead. See [Bin Aliases](https://oclif.io/docs/aliases) for more information.
