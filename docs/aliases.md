@@ -32,5 +32,5 @@ Creating a CLI that responds to different names or "aliases" is easy, simply add
 }
 ```
 
-This will allow your CLI to respond to either of those names, and will be used during the bundling and building process when shipping your CLI. Notice above, that the `bin` section was also modified to include both aliases, this is how npm creates bin aliases, and to create a unified experience, no matter the installation method, a CLI author must change both to match. Bin aliases also play nicely with `@oclif/plugin-autocomplete` and typing an alias and using autocomplete will be the same experience as using the original name.
+Adding this property allows your CLI to respond to either of those names, and is used during the bundling and building process when shipping your CLI. Note that the `bin` section was also modified to include both aliases, which is how npm creates bin aliases. To create a unified experience, regardless of the installation method, a CLI author must change both to match. Bin aliases also play nicely with `@oclif/plugin-autocomplete`, so typing an alias and using autocomplete is the same experience as using the original name.
 
