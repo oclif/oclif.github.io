@@ -4,107 +4,107 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/__docusaurus/debug',
-    component: ComponentCreator('/__docusaurus/debug', '76b'),
+    component: ComponentCreator('/__docusaurus/debug', 'ace'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/config',
-    component: ComponentCreator('/__docusaurus/debug/config', 'ac3'),
+    component: ComponentCreator('/__docusaurus/debug/config', 'a19'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/content',
-    component: ComponentCreator('/__docusaurus/debug/content', '0f3'),
+    component: ComponentCreator('/__docusaurus/debug/content', '5a1'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/globalData',
-    component: ComponentCreator('/__docusaurus/debug/globalData', '080'),
+    component: ComponentCreator('/__docusaurus/debug/globalData', '3a7'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/metadata',
-    component: ComponentCreator('/__docusaurus/debug/metadata', 'bb9'),
+    component: ComponentCreator('/__docusaurus/debug/metadata', 'ec1'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/registry',
-    component: ComponentCreator('/__docusaurus/debug/registry', 'a80'),
+    component: ComponentCreator('/__docusaurus/debug/registry', '95b'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/routes',
-    component: ComponentCreator('/__docusaurus/debug/routes', '4e2'),
+    component: ComponentCreator('/__docusaurus/debug/routes', '10b'),
     exact: true
   },
   {
     path: '/blog',
-    component: ComponentCreator('/blog', '0c9'),
+    component: ComponentCreator('/blog', 'd74'),
     exact: true
   },
   {
     path: '/blog/2018/03/20/introducing-oclif',
-    component: ComponentCreator('/blog/2018/03/20/introducing-oclif', 'df8'),
+    component: ComponentCreator('/blog/2018/03/20/introducing-oclif', '16a'),
     exact: true
   },
   {
     path: '/blog/2019/02/20/cli-flags-explained',
-    component: ComponentCreator('/blog/2019/02/20/cli-flags-explained', '57b'),
+    component: ComponentCreator('/blog/2019/02/20/cli-flags-explained', 'f33'),
     exact: true
   },
   {
     path: '/blog/2019/09/16/oclifconf-recap',
-    component: ComponentCreator('/blog/2019/09/16/oclifconf-recap', '0e9'),
+    component: ComponentCreator('/blog/2019/09/16/oclifconf-recap', 'b9d'),
     exact: true
   },
   {
     path: '/blog/2019/10/31/oclif-node-updates',
-    component: ComponentCreator('/blog/2019/10/31/oclif-node-updates', '7da'),
+    component: ComponentCreator('/blog/2019/10/31/oclif-node-updates', '5c6'),
     exact: true
   },
   {
     path: '/blog/2019/12/05/oclif-eslint-migration',
-    component: ComponentCreator('/blog/2019/12/05/oclif-eslint-migration', '805'),
+    component: ComponentCreator('/blog/2019/12/05/oclif-eslint-migration', 'aa4'),
     exact: true
   },
   {
     path: '/blog/2020/05/05/introducing-custom-help-classes',
-    component: ComponentCreator('/blog/2020/05/05/introducing-custom-help-classes', '14e'),
+    component: ComponentCreator('/blog/2020/05/05/introducing-custom-help-classes', 'b61'),
     exact: true
   },
   {
     path: '/blog/2020/07/01/pretty-printable-errors',
-    component: ComponentCreator('/blog/2020/07/01/pretty-printable-errors', '070'),
+    component: ComponentCreator('/blog/2020/07/01/pretty-printable-errors', 'e15'),
     exact: true
   },
   {
     path: '/blog/2020/08/26/summer-update',
-    component: ComponentCreator('/blog/2020/08/26/summer-update', 'b45'),
+    component: ComponentCreator('/blog/2020/08/26/summer-update', '5c0'),
     exact: true
   },
   {
     path: '/blog/2021/03/01/introducing-oclif-core',
-    component: ComponentCreator('/blog/2021/03/01/introducing-oclif-core', '1c1'),
+    component: ComponentCreator('/blog/2021/03/01/introducing-oclif-core', 'bde'),
     exact: true
   },
   {
     path: '/blog/2022/01/12/announcing-oclif-v2',
-    component: ComponentCreator('/blog/2022/01/12/announcing-oclif-v2', '5d8'),
+    component: ComponentCreator('/blog/2022/01/12/announcing-oclif-v2', 'd77'),
     exact: true
   },
   {
     path: '/blog/archive',
-    component: ComponentCreator('/blog/archive', '6dc'),
+    component: ComponentCreator('/blog/archive', '050'),
     exact: true
   },
   {
     path: '/search',
-    component: ComponentCreator('/search', '487'),
+    component: ComponentCreator('/search', 'e0e'),
     exact: true
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '627'),
+    component: ComponentCreator('/docs', '509'),
     routes: [
       {
         path: '/docs/',
@@ -262,6 +262,12 @@ export default [
         sidebar: "docs"
       },
       {
+        path: '/docs/nsis-installer_customization',
+        component: ComponentCreator('/docs/nsis-installer_customization', 'bcb'),
+        exact: true,
+        sidebar: "docs"
+      },
+      {
         path: '/docs/plugin_loading',
         component: ComponentCreator('/docs/plugin_loading', '750'),
         exact: true,
@@ -337,7 +343,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '054'),
+    component: ComponentCreator('/', 'ff0'),
     exact: true
   },
   {

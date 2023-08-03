@@ -29,6 +29,7 @@
       "running_programmatically",
       "jit_plugins",
       "aliases",
+      "nsis-installer_customization",
       "base_class",
       "prompting",
       "spinner",

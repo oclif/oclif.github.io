@@ -23,7 +23,7 @@
     "permalink": "/docs/jit_plugins"
   },
   "next": {
-    "title": "Custom Base Class",
-    "permalink": "/docs/base_class"
+    "title": "NSIS Installer Customization",
+    "permalink": "/docs/nsis-installer_customization"
   }
 }

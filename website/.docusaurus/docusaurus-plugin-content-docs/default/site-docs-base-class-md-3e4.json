@@ -19,8 +19,8 @@
   },
   "sidebar": "docs",
   "previous": {
-    "title": "Aliases",
-    "permalink": "/docs/aliases"
+    "title": "NSIS Installer Customization",
+    "permalink": "/docs/nsis-installer_customization"
   },
   "next": {
     "title": "Prompting",

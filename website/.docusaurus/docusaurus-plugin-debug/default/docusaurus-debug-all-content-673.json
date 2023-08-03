@@ -15,9 +15,9 @@
           "editUrlLocalized": "https://github.com/oclif/oclif.github.io/tree/docs/docs/i18n/en/docusaurus-plugin-content-docs/current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/mdonnalley/repos/oclif/oclif.github.io/website/sidebars.json",
-          "contentPath": "/Users/mdonnalley/repos/oclif/oclif.github.io/docs",
-          "contentPathLocalized": "/Users/mdonnalley/repos/oclif/oclif.github.io/website/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/william.ruemmele/projects/oclif/oclif.github.io/website/sidebars.json",
+          "contentPath": "/Users/william.ruemmele/projects/oclif/oclif.github.io/docs",
+          "contentPathLocalized": "/Users/william.ruemmele/projects/oclif/oclif.github.io/website/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "aliases",
@@ -44,8 +44,8 @@
                 "permalink": "/docs/jit_plugins"
               },
               "next": {
-                "title": "Custom Base Class",
-                "permalink": "/docs/base_class"
+                "title": "NSIS Installer Customization",
+                "permalink": "/docs/nsis-installer_customization"
               }
             },
             {
@@ -98,8 +98,8 @@
               },
               "sidebar": "docs",
               "previous": {
-                "title": "Aliases",
-                "permalink": "/docs/aliases"
+                "title": "NSIS Installer Customization",
+                "permalink": "/docs/nsis-installer_customization"
               },
               "next": {
                 "title": "Prompting",
@@ -755,6 +755,35 @@
               }
             },
             {
+              "unversionedId": "nsis-installer_customization",
+              "id": "nsis-installer_customization",
+              "title": "NSIS Installer Customization",
+              "description": "Sometimes you might need to verify some dependencies, ensure there's no conflicting CLIs installed, or do some other custom logic before installing your CLI. For npm-scenarios, this is easy enough by specifying a preinstall script, but when it comes to windows installers, there's no such thing. You must write your own nsis modification to do these checks. You can see exactly where this custom script gets placed in the installer at the oclif/oclif repo.",
+              "source": "@site/../docs/nsis-installer_customization.md",
+              "sourceDirName": ".",
+              "slug": "/nsis-installer_customization",
+              "permalink": "/docs/nsis-installer_customization",
+              "draft": false,
+              "editUrl": "https://github.com/oclif/oclif.github.io/tree/docs/docs/../docs/nsis-installer_customization.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "NSIS Installer Customization"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Aliases",
+                "permalink": "/docs/aliases"
+              },
+              "next": {
+                "title": "Custom Base Class",
+                "permalink": "/docs/base_class"
+              }
+            },
+            {
               "unversionedId": "plugin_loading",
               "id": "plugin_loading",
               "title": "Plugin Loading",
@@ -1221,6 +1250,10 @@
                   {
                     "type": "doc",
                     "id": "aliases"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "nsis-installer_customization"
                   },
                   {
                     "type": "doc",

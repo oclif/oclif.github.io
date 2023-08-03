@@ -1,51 +1,51 @@
 {
-  "/__docusaurus/debug-76b": {
+  "/__docusaurus/debug-ace": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-1-d-7-e39"
+      "plugin": "plugin---docusaurus-debugb-3-f-737"
     }
   },
-  "/__docusaurus/debug/config-ac3": {
+  "/__docusaurus/debug/config-a19": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-1-d-7-e39"
+      "plugin": "plugin---docusaurus-debugb-3-f-737"
     }
   },
-  "/__docusaurus/debug/content-0f3": {
+  "/__docusaurus/debug/content-5a1": {
     "__comp": "__comp---theme-debug-contentba-8-ce7",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-1-d-7-e39"
+      "plugin": "plugin---docusaurus-debugb-3-f-737"
     },
     "allContent": "allContent---docusaurus-debug-content-246-9aa"
   },
-  "/__docusaurus/debug/globalData-080": {
+  "/__docusaurus/debug/globalData-3a7": {
     "__comp": "__comp---theme-debug-global-dataede-0fa",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-1-d-7-e39"
+      "plugin": "plugin---docusaurus-debugb-3-f-737"
     }
   },
-  "/__docusaurus/debug/metadata-bb9": {
+  "/__docusaurus/debug/metadata-ec1": {
     "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-1-d-7-e39"
+      "plugin": "plugin---docusaurus-debugb-3-f-737"
     }
   },
-  "/__docusaurus/debug/registry-a80": {
+  "/__docusaurus/debug/registry-95b": {
     "__comp": "__comp---theme-debug-registry-679-501",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-1-d-7-e39"
+      "plugin": "plugin---docusaurus-debugb-3-f-737"
     }
   },
-  "/__docusaurus/debug/routes-4e2": {
+  "/__docusaurus/debug/routes-10b": {
     "__comp": "__comp---theme-debug-routes-946-699",
     "__context": {
-      "plugin": "plugin---docusaurus-debug-1-d-7-e39"
+      "plugin": "plugin---docusaurus-debugb-3-f-737"
     }
   },
-  "/blog-0c9": {
+  "/blog-d74": {
     "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
     "__context": {
-      "plugin": "plugin---blogaa-5-856"
+      "plugin": "plugin---blog-38-e-ae4"
     },
     "sidebar": "sidebar---blog-814-8ac",
     "items": [
@@ -82,103 +82,103 @@
     ],
     "metadata": "metadata---blogb-2-b-df1"
   },
-  "/blog/2018/03/20/introducing-oclif-df8": {
+  "/blog/2018/03/20/introducing-oclif-16a": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "plugin---blogaa-5-856"
+      "plugin": "plugin---blog-38-e-ae4"
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2018-03-20-introducing-oclif-4-fd-63f"
   },
-  "/blog/2019/02/20/cli-flags-explained-57b": {
+  "/blog/2019/02/20/cli-flags-explained-f33": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "plugin---blogaa-5-856"
+      "plugin": "plugin---blog-38-e-ae4"
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2019-02-20-cli-flags-explained-048-fae"
   },
-  "/blog/2019/09/16/oclifconf-recap-0e9": {
+  "/blog/2019/09/16/oclifconf-recap-b9d": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "plugin---blogaa-5-856"
+      "plugin": "plugin---blog-38-e-ae4"
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2019-09-16-oclifconf-recap-61-d-7e2"
   },
-  "/blog/2019/10/31/oclif-node-updates-7da": {
+  "/blog/2019/10/31/oclif-node-updates-5c6": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "plugin---blogaa-5-856"
+      "plugin": "plugin---blog-38-e-ae4"
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2019-10-31-oclif-node-updates-765-3ee"
   },
-  "/blog/2019/12/05/oclif-eslint-migration-805": {
+  "/blog/2019/12/05/oclif-eslint-migration-aa4": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "plugin---blogaa-5-856"
+      "plugin": "plugin---blog-38-e-ae4"
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2019-12-05-oclif-eslint-migration-853-c62"
   },
-  "/blog/2020/05/05/introducing-custom-help-classes-14e": {
+  "/blog/2020/05/05/introducing-custom-help-classes-b61": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "plugin---blogaa-5-856"
+      "plugin": "plugin---blog-38-e-ae4"
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2020-05-05-introducing-custom-help-classes-6-de-0f1"
   },
-  "/blog/2020/07/01/pretty-printable-errors-070": {
+  "/blog/2020/07/01/pretty-printable-errors-e15": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "plugin---blogaa-5-856"
+      "plugin": "plugin---blog-38-e-ae4"
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2020-07-01-pretty-printable-errorsc-63-678"
   },
-  "/blog/2020/08/26/summer-update-b45": {
+  "/blog/2020/08/26/summer-update-5c0": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "plugin---blogaa-5-856"
+      "plugin": "plugin---blog-38-e-ae4"
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2020-08-26-summer-updateb-43-690"
   },
-  "/blog/2021/03/01/introducing-oclif-core-1c1": {
+  "/blog/2021/03/01/introducing-oclif-core-bde": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "plugin---blogaa-5-856"
+      "plugin": "plugin---blog-38-e-ae4"
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2021-03-01-introducing-oclif-coref-85-534"
   },
-  "/blog/2022/01/12/announcing-oclif-v2-5d8": {
+  "/blog/2022/01/12/announcing-oclif-v2-d77": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "plugin---blogaa-5-856"
+      "plugin": "plugin---blog-38-e-ae4"
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2022-01-12-announcing-oclif-v-2169-ea3"
   },
-  "/blog/archive-6dc": {
+  "/blog/archive-050": {
     "__comp": "__comp---theme-blog-archive-page-9-e-4-1d8",
     "__context": {
-      "plugin": "plugin---blogaa-5-856"
+      "plugin": "plugin---blog-38-e-ae4"
     },
     "archive": "archive---blog-archiveb-2-f-393"
   },
-  "/search-487": {
+  "/search-e0e": {
     "__comp": "__comp---theme-search-page-1-a-4-d6f",
     "__context": {
-      "plugin": "plugin---search-9-c-4-de8"
+      "plugin": "plugin---search-4-fb-914"
     }
   },
-  "/docs-627": {
+  "/docs-509": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
-      "plugin": "plugin---docs-936-d33"
+      "plugin": "plugin---docsa-5-e-ec4"
     },
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -286,6 +286,10 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-notificationsa-96-682"
   },
+  "/docs/nsis-installer_customization-bcb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-nsis-installer-customizationd-0-e-c91"
+  },
   "/docs/plugin_loading-750": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-plugin-loading-355-acd"
@@ -334,10 +338,10 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-topics-2-a-3-cd9"
   },
-  "/-054": {
+  "/-ff0": {
     "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
     "__context": {
-      "plugin": "plugin---4-c-8-267"
+      "plugin": "plugin---256-a45"
     },
     "config": "config---5-e-9-4f3"
   }

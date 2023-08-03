@@ -11,3 +11,26 @@ export class ConfigIndex extends Command {
   static aliases = ['config:index', 'config:list']
 }
 ```
+
+## Bin Aliases
+
+Creating a CLI that responds to different names or "aliases" is incredibly easy, and can be done by adding a `binAliases` property to your CLI's `oclif` property in `package.json`:
+
+```json
+{
+  "name": "mycli",
+  "version": "0.0.0",
+  "description": "My CLI",
+  "main": "bin/run",
+  "bin": {
+    "mycli": "./bin/run",
+    "mycli-alias": "./bin/run"
+  },
+  "oclif": {
+    "binAliases": ["mycli", "mycli-alias"]
+  }
+}
+```
+
+This will allow your CLI to respond to either of those names, and will be used during the bundling and building process when shipping your CLI. Notice above, that the `bin` section was also modified to include both aliases, this is how npm creates bin aliases, and to create a unified experience, no matter the installation method, a CLI author must change both to match. Bin aliases also play nicely with `@oclif/plugin-autocomplete` and typing an alias and using autocomplete will be the same experience as using the original name.
+

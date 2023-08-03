@@ -140,6 +140,11 @@
               "sidebar": "docs"
             },
             {
+              "id": "nsis-installer_customization",
+              "path": "/docs/nsis-installer_customization",
+              "sidebar": "docs"
+            },
+            {
               "id": "plugin_loading",
               "path": "/docs/plugin_loading",
               "sidebar": "docs"
