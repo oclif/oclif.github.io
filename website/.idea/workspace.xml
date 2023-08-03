@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d6feab45-b031-4cf9-a695-90638ded0d77" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/static/.nojekyll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/CNAME" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.github/workflows/onPushToDocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/onPushToDocs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.docusaurus/registry.js" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/registry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.docusaurus/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.docusaurus/routesChunkNames.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/routesChunkNames.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2TTp9rq1DrfhZ07d1hucxpeF4bg" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d6feab45-b031-4cf9-a695-90638ded0d77" name="Changes" comment="" />
+      <created>1691076776120</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691076776120</updated>
+      <workItem from="1691076777357" duration="20000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

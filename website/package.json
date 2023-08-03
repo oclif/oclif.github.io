@@ -4,7 +4,6 @@
     "examples": "docusaurus-examples",
     "start": "docusaurus start",
     "build": "docusaurus build",
-    "publish-gh-pages": "npm run && docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",

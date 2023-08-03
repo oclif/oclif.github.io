@@ -104,11 +104,11 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '509'),
+    component: ComponentCreator('/docs', '1fb'),
     routes: [
       {
-        path: '/docs/',
-        component: ComponentCreator('/docs/', 'a6b'),
+        path: '/docs',
+        component: ComponentCreator('/docs', 'b57'),
         exact: true
       },
       {
