@@ -9,7 +9,7 @@ Inside a command, `this.config` provides useful properties you can use in your c
 * **pjson** - parsed and [normalized](https://github.com/npm/normalize-package-data) CLI `package.json`
 * **bin** - CLI bin name
 * **binAliases** - An array of strings that will all execute the CLI's bin. This is useful for backwards compatibility and for CLIs built with installers or tarballs. For npm-installed CLIs, change the `bin` property in `package.json` instead. See [Bin Aliases](https://oclif.io/docs/aliases) for more information.
-* **nsisCustomization** - a path to a .nsis file that will be used to customize the installer for Windows. See [nsis-custom](https://github.com/oclif/nsis-custom) for more information.
+* **nsisCustomization** - A path to a .nsis file that's used to customize the installer for Windows. See [nsis-custom](https://github.com/oclif/nsis-custom) for more information.
 * **cacheDir** - CLI cache directory
   * macOS: `~/Library/Caches/mycli`
   * Unix: `~/.cache/mycli`
