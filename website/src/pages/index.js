@@ -99,8 +99,10 @@ export default (props) => {
           <div className='container top-border'>
             <div className='row'>
               <div className='col col--6 col--offset-3'>
-                <h2 className='hero__subtitle center'>CLIs built using <ImageSwitcher lightImageSrc={'img/oclif.svg'} darkImageSrc={'img/oclif_rev.svg'} className='center margin-left--xs inline-block' width={128}/></h2>
-                <p className='center'>With oclif you can build command line tools for your business, open source project, or your own development workflow. Check out what others have built.</p>
+                <span className='center'>
+                  <h2 className='hero__subtitle'>CLIs built using <ImageSwitcher lightImageSrc={'img/oclif.svg'} darkImageSrc={'img/oclif_rev.svg'} className='margin-left--xs inline-block' width={128}/></h2>
+                  <p>With oclif you can build command line tools for your business, open source project, or your own development workflow. Check out what others have built.</p>
+                </span>
               </div>
             </div>
             <div className='row'>
