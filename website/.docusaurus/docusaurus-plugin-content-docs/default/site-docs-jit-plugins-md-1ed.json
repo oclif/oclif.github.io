@@ -1,0 +1,29 @@
+{
+  "unversionedId": "jit_plugins",
+  "id": "jit_plugins",
+  "title": "Just-in-Time Plugin Installation",
+  "description": "Sometimes you might want to have a plugin that isn't bundled in your CLI but gets installed the first time it's executed by the user - we call this just-in-time plugin installation, or JIT for short. This can be useful if you need to reduce the package size of your CLI while still allowing users access to all the plugins.",
+  "source": "@site/../docs/jit_plugins.md",
+  "sourceDirName": ".",
+  "slug": "/jit_plugins",
+  "permalink": "/docs/jit_plugins",
+  "draft": false,
+  "editUrl": "https://github.com/oclif/oclif.github.io/tree/docs/docs/../docs/jit_plugins.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Just-in-Time Plugin Installation"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Running Commands Programmatically",
+    "permalink": "/docs/running_programmatically"
+  },
+  "next": {
+    "title": "Aliases",
+    "permalink": "/docs/aliases"
+  }
+}

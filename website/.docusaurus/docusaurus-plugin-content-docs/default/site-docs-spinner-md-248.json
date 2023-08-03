@@ -1,0 +1,29 @@
+{
+  "unversionedId": "spinner",
+  "id": "spinner",
+  "title": "Spinner",
+  "description": "@oclif/core provides a simple ux.action, for more complex progress indicators we recommend using the listr library.",
+  "source": "@site/../docs/spinner.md",
+  "sourceDirName": ".",
+  "slug": "/spinner",
+  "permalink": "/docs/spinner",
+  "draft": false,
+  "editUrl": "https://github.com/oclif/oclif.github.io/tree/docs/docs/../docs/spinner.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Spinner"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Prompting",
+    "permalink": "/docs/prompting"
+  },
+  "next": {
+    "title": "Table",
+    "permalink": "/docs/table"
+  }
+}

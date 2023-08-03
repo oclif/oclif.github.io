@@ -1,0 +1,23 @@
+{
+  "permalink": "/blog/2020/08/26/summer-update",
+  "source": "@site/blog/2020-08-26-summer-update.md",
+  "title": "oclif Summer Update",
+  "description": "Hello oclif developers! We hope you are all doing well.",
+  "date": "2020-08-26T00:00:00.000Z",
+  "formattedDate": "August 26, 2020",
+  "tags": [],
+  "readingTime": 1.355,
+  "hasTruncateMarker": false,
+  "authors": [],
+  "frontMatter": {
+    "title": "oclif Summer Update"
+  },
+  "prevItem": {
+    "title": "Introducing @oclif/core",
+    "permalink": "/blog/2021/03/01/introducing-oclif-core"
+  },
+  "nextItem": {
+    "title": "Pretty Printable Errors",
+    "permalink": "/blog/2020/07/01/pretty-printable-errors"
+  }
+}

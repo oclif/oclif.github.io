@@ -1,0 +1,29 @@
+{
+  "unversionedId": "help_classes",
+  "id": "help_classes",
+  "title": "Help Classes",
+  "description": "Out of the box oclif provides a great help experience for CLIs. Users can invoke help with the --help flag.",
+  "source": "@site/../docs/help_classes.md",
+  "sourceDirName": ".",
+  "slug": "/help_classes",
+  "permalink": "/docs/help_classes",
+  "draft": false,
+  "editUrl": "https://github.com/oclif/oclif.github.io/tree/docs/docs/../docs/help_classes.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Help Classes"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Plugins",
+    "permalink": "/docs/plugins"
+  },
+  "next": {
+    "title": "Error Handling",
+    "permalink": "/docs/error_handling"
+  }
+}

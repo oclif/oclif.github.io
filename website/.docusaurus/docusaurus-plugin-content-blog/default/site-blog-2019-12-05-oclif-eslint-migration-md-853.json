@@ -1,0 +1,23 @@
+{
+  "permalink": "/blog/2019/12/05/oclif-eslint-migration",
+  "source": "@site/blog/2019-12-05-oclif-eslint-migration.md",
+  "title": "oclif TSLint to ESLint Migration",
+  "description": "Back in February of this year, plans were announced to deprecate TSLint in favor of ESLint. TSLint's goal has become to work toward a “unified developer experience” by supporting ESLint development going forward.",
+  "date": "2019-12-05T00:00:00.000Z",
+  "formattedDate": "December 5, 2019",
+  "tags": [],
+  "readingTime": 2.18,
+  "hasTruncateMarker": false,
+  "authors": [],
+  "frontMatter": {
+    "title": "oclif TSLint to ESLint Migration"
+  },
+  "prevItem": {
+    "title": "Customizing Help in oclif",
+    "permalink": "/blog/2020/05/05/introducing-custom-help-classes"
+  },
+  "nextItem": {
+    "title": "oclif's Current Node Support",
+    "permalink": "/blog/2019/10/31/oclif-node-updates"
+  }
+}

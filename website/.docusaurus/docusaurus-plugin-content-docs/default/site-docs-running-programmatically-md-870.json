@@ -1,0 +1,29 @@
+{
+  "unversionedId": "running_programmatically",
+  "id": "running_programmatically",
+  "title": "Running Commands Programmatically",
+  "description": "If you need to run a command from another, or programmatically run a command in another codebase, there are a couple options.",
+  "source": "@site/../docs/running_programmatically.md",
+  "sourceDirName": ".",
+  "slug": "/running_programmatically",
+  "permalink": "/docs/running_programmatically",
+  "draft": false,
+  "editUrl": "https://github.com/oclif/oclif.github.io/tree/docs/docs/../docs/running_programmatically.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Running Commands Programmatically"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Testing",
+    "permalink": "/docs/testing"
+  },
+  "next": {
+    "title": "Just-in-Time Plugin Installation",
+    "permalink": "/docs/jit_plugins"
+  }
+}

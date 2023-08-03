@@ -1,0 +1,28 @@
+{
+  "permalink": "/blog/2019/02/20/cli-flags-explained",
+  "source": "@site/blog/2019-02-20-cli-flags-explained.md",
+  "title": "CLI Flags Explained",
+  "description": "oclif makes it easy to create a command line interface (CLI) in node. Most commands have parameters — also known as \"flags\", \"args\", and sometimes \"options\". This blog post explains what these parameters are and when to use them. We also have a new feature that makes it easier for users to detect typos when using parameters.",
+  "date": "2019-02-20T00:00:00.000Z",
+  "formattedDate": "February 20, 2019",
+  "tags": [],
+  "readingTime": 4.925,
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "Casey Watts and Jeff Dickey"
+    }
+  ],
+  "frontMatter": {
+    "author": "Casey Watts and Jeff Dickey",
+    "title": "CLI Flags Explained"
+  },
+  "prevItem": {
+    "title": "oclifconf 2019: A Recap",
+    "permalink": "/blog/2019/09/16/oclifconf-recap"
+  },
+  "nextItem": {
+    "title": "Introducing oclif",
+    "permalink": "/blog/2018/03/20/introducing-oclif"
+  }
+}

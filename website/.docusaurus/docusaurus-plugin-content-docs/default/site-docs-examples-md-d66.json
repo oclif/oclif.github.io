@@ -1,0 +1,29 @@
+{
+  "unversionedId": "examples",
+  "id": "examples",
+  "title": "Examples",
+  "description": "Here are some examples to get an idea of how to use oclif in various setups.",
+  "source": "@site/../docs/examples.md",
+  "sourceDirName": ".",
+  "slug": "/examples",
+  "permalink": "/docs/examples",
+  "draft": false,
+  "editUrl": "https://github.com/oclif/oclif.github.io/tree/docs/docs/../docs/examples.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Examples"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "ESM",
+    "permalink": "/docs/esm"
+  },
+  "next": {
+    "title": "External Links",
+    "permalink": "/docs/external_links"
+  }
+}

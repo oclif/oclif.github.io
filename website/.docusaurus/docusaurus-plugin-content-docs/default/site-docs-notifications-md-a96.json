@@ -1,0 +1,29 @@
+{
+  "unversionedId": "notifications",
+  "id": "notifications",
+  "title": "Notifications",
+  "description": "Use node-notifier for cross-platform OS notifications.",
+  "source": "@site/../docs/notifications.md",
+  "sourceDirName": ".",
+  "slug": "/notifications",
+  "permalink": "/docs/notifications",
+  "draft": false,
+  "editUrl": "https://github.com/oclif/oclif.github.io/tree/docs/docs/../docs/notifications.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Notifications"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Table",
+    "permalink": "/docs/table"
+  },
+  "next": {
+    "title": "Debugging",
+    "permalink": "/docs/debugging"
+  }
+}

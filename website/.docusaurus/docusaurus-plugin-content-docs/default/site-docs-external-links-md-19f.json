@@ -1,0 +1,29 @@
+{
+  "unversionedId": "external_links",
+  "id": "external_links",
+  "title": "External Links",
+  "description": "* Salesforce Release Announcement",
+  "source": "@site/../docs/external_links.md",
+  "sourceDirName": ".",
+  "slug": "/external_links",
+  "permalink": "/docs/external_links",
+  "draft": false,
+  "editUrl": "https://github.com/oclif/oclif.github.io/tree/docs/docs/../docs/external_links.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "External Links"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Examples",
+    "permalink": "/docs/examples"
+  },
+  "next": {
+    "title": "Related Repositories",
+    "permalink": "/docs/related_repos"
+  }
+}

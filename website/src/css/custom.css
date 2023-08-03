@@ -1,0 +1,61 @@
+:root {
+  --ifm-font-family-base: 'Roboto', sans-serif;
+}
+
+.center {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.code-font {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.get-started-example {
+  background-color: #282F39;
+  color: #fff;
+  border-radius: .25rem;
+  text-align: left;
+}
+
+.get-started-example-dark {
+  background-color: #fff;
+  color: #282F39;
+  border-radius: .25rem;
+  text-align: left;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.top-border {
+  border-top: 1px solid #e2f0f1;
+  padding-top: 5rem;
+}
+
+.border-radius--25 {
+  border-radius: .25rem;
+}
+
+.opacity--60 {
+  opacity: 60%;
+}
+
+.company-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-logo {
+  margin: 0 1rem;
+}
+

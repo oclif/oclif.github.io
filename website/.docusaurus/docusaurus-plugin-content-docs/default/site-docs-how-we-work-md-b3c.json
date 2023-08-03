@@ -1,0 +1,29 @@
+{
+  "unversionedId": "how_we_work",
+  "id": "how_we_work",
+  "title": "How We Work",
+  "description": "oclif is an open-source project built and maintained by Salesforce and an essential component of Salesforce's developer experiences, powering millions of users' CLIs a day via the Salesforce CLI, the Heroku CLI and others.",
+  "source": "@site/../docs/how_we_work.md",
+  "sourceDirName": ".",
+  "slug": "/how_we_work",
+  "permalink": "/docs/how_we_work",
+  "draft": false,
+  "editUrl": "https://github.com/oclif/oclif.github.io/tree/docs/docs/../docs/how_we_work.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "How We Work"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Related Repositories",
+    "permalink": "/docs/related_repos"
+  },
+  "next": {
+    "title": "Feedback",
+    "permalink": "/docs/feedback"
+  }
+}

@@ -1,5 +1,5 @@
 ---
-title: Introducing @oclif/core
+title: "Introducing @oclif/core"
 ---
 Greetings!
 

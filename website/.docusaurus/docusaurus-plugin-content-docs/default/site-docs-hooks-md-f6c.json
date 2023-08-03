@@ -1,0 +1,29 @@
+{
+  "unversionedId": "hooks",
+  "id": "hooks",
+  "title": "Hooks",
+  "description": "oclif exposes lifecycle event hooks such as init and commandnotfound. See below for a list of all the lifecycle events. In addition to these built-in events, you can create your own events and allow commands/plugins to watch for these custom events. It's a great way to allow multiple plugins to interact with each other.",
+  "source": "@site/../docs/hooks.md",
+  "sourceDirName": ".",
+  "slug": "/hooks",
+  "permalink": "/docs/hooks",
+  "draft": false,
+  "editUrl": "https://github.com/oclif/oclif.github.io/tree/docs/docs/../docs/hooks.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Hooks"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Topic Separators",
+    "permalink": "/docs/topic_separator"
+  },
+  "next": {
+    "title": "Plugins",
+    "permalink": "/docs/plugins"
+  }
+}
