@@ -6,7 +6,6 @@ module.exports={
   "organizationName": "oclif",
   "projectName": "oclif.github.io",
   "deploymentBranch": "main",
-  "trailingSlash": false,
   "scripts": [
     "https://buttons.github.io/buttons.js"
   ],
