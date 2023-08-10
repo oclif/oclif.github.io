@@ -115,7 +115,7 @@ module.exports={
       "apiKey": "6032dd3bbb99cdcfacc285354871966c",
       "indexName": "oclifio",
       "appId": "Q04FC8Q6OZ",
-      "contextualSearch": false,
+      "contextualSearch": true,
     }
   }
 }
