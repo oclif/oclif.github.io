@@ -2,6 +2,7 @@
 title: Aliases
 ---
 
+## Command Aliases
 Aliases let you define a string that maps to a command. This command can be run as `mycli config`, `mycli config:index`, or `mycli config:list`:
 
 ```js
@@ -10,6 +11,32 @@ import {Command, Flags} from '@oclif/core'
 export class ConfigIndex extends Command {
   static aliases = ['config:index', 'config:list']
 }
+```
+
+By default, aliases find the "real" command and just work.  If you're providing command aliases for backward compatibility but prefer users to use the "real" command, set `deprecateAliases` to `true` to warn users about the correct name
+
+```js
+export class ConfigIndex extends Command {
+  static aliases = ['config:index', 'config:list']
+  static deprecateAliases = true
+}
+```
+
+## Flag Aliases
+
+Like command aliases, but on an individual flag.  You can alias the name and short character, and optionally emit warnings when aliased names are used.
+
+```js
+export class ConfigIndex extends Command {
+  static flags = {
+    'new-name': Flags.boolean({
+      char: 'c',
+      aliases: ['old-name', 'o'],
+      deprecateAliases: true
+    })
+  }
+}
+
 ```
 
 ## Bin Aliases
