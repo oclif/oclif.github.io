@@ -178,3 +178,4 @@ ExperimentalWarning: Custom ESM Loaders is an experimental feature. This feature
 
 That being said, if the loader were to introduce a breaking change *it would only affect linked plugins*. Installed plugins would still work the same since they do not depend on `ts-node` to transpile the code at runtime.
 
+Please see [node's stability index](https://nodejs.org/api/documentation.html#documentation_stability_index) for more.
