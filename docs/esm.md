@@ -118,7 +118,8 @@ After updating the bin scripts you now need to update the `tsconfig.json` to inc
     "moduleResolution": "node16",
   },
   "ts-node": {
-    "esm": true
+    "esm": true,
+    "scope": true
   }
 }
 ```
