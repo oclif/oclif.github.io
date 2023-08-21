@@ -2,9 +2,25 @@
 title: ESM
 ---
 
-Version [2.12.0 of `@oclif/core`](https://github.com/oclif/core/tree/2.12.0) officially supports ESM plugin development and CJS/ESM interoperability.
+Version [3.0.0 of `@oclif/core`](https://github.com/oclif/core/tree/3.0.0-beta.1) officially supports ESM plugin development and CJS/ESM interoperability, meaning that you can have a root plugin written with CJS and your bundled plugins written in ESM or vice versa.
 
-## Interoperability
+- [Interoperability Overview](#interoperability-overview)
+  - [ESM Root plugin](#esm-root-plugin)
+  - [CJS Root plugin](#cjs-root-plugin)
+- [Creating an ESM plugin](#creating-an-esm-plugin)
+- [Migrating a CJS plugin to ESM](#migrating-a-cjs-plugin-to-esm)
+  - [Update bin scripts](#update-bin-scripts)
+    - [bin/dev → bin/dev.js](#bindev--bindevjs)
+    - [bin/run → bin/run.js](#binrun--binrunjs)
+  - [Update tsconfig.json](#update-tsconfigjson)
+  - [Update package.json to "module" type](#update-packagejson-to-module-type)
+  - [Update references to bin scripts](#update-references-to-bin-scripts)
+- [Linked Plugins](#linked-plugins)
+
+
+## Interoperability Overview
+
+Here's a high level overview of ESM/CJS interoperability:
 
 ### ESM Root plugin
 ✅ Install CJS plugins
@@ -13,9 +29,9 @@ Version [2.12.0 of `@oclif/core`](https://github.com/oclif/core/tree/2.12.0) off
 
 ✅ Link CJS plugins
 
-✅ Link ESM plugins
+⚠️ Link ESM plugins
 
-If your root plugin is written in ESM, then you will be able to install and link both CJS and ESM plugins.
+  - Auto-compilation will **not** work with linked ESM plugins unless `NODE_OPTIONS="--loader=ts-node"` is set in the environment. Otherwise, oclif will use the plugin's compiled source - this means that you must compile the plugin yourself before executing any of the commands. See [linked plugins](#linked-plugins) for more information.
 
 ### CJS Root plugin
 ✅ Install CJS plugins
@@ -24,9 +40,9 @@ If your root plugin is written in ESM, then you will be able to install and link
 
 ✅ Link CJS plugins
 
-❌ Link ESM plugins
+⚠️ Link ESM plugins
 
-If your root plugin is written in CJS you will be able to install both CJS and ESM plugins. However, you will only be able to link CJS plugins. *Linking of ESM plugins to CJS root plugins is not supported.*
+  - Auto-compilation will **not** work with linked ESM plugins. Instead, oclif will use the plugin's compiled source - this means that you must compile the plugin yourself before executing any of the commands. See [linked plugins](#linked-plugins) for more information.
 
 ## Creating an ESM plugin
 
@@ -50,18 +66,18 @@ First you will need to update the bin scripts under the `bin` directory.
 Rename `bin/dev` to `bin/dev.js` and replace the existing code with the following:
 
 ```js
-#!/usr/bin/env -S node --loader ts-node/esm --no-warnings=ExperimentalWarning
+#!/usr/bin/env node
 // eslint-disable-next-line node/shebang
 (async () => {
   const oclif = await import('@oclif/core')
-  await oclif.execute({type: 'esm', development: true, dir: import.meta.url})
+  await oclif.execute({development: true, dir: import.meta.url})
 })()
 ```
 
 This leverages oclif's `execute` function which handles all the development setup for you. You no longer need set the `NODE_ENV` env var or register the project with `ts-node`. You still adjust oclif `settings` before executing the CLI. For example,
 
 ```js
-#!/usr/bin/env -S node --loader ts-node/esm --no-warnings=ExperimentalWarning
+#!/usr/bin/env node
 // eslint-disable-next-line node/shebang
 (async () => {
   const oclif = await import('@oclif/core')
@@ -70,42 +86,17 @@ This leverages oclif's `execute` function which handles all the development setu
 })()
 ```
 
-See [Supporting linked plugins](#supporting-linked-plugins) for more information on why `--loader ts-node/esm` has been added to the `node` shebang
-
 #### bin/run → bin/run.js
 
 Rename `bin/run` to `bin/run.js` and replace the existing code with the following:
 
 ```js
-#!/usr/bin/env -S node --loader ts-node/esm --no-warnings=ExperimentalWarning
-// eslint-disable-next-line node/shebang
+#!/usr/bin/env node
 (async () => {
   const oclif = await import('@oclif/core')
-  await oclif.execute({type: 'esm', dir: import.meta.url})
+  await oclif.execute({dir: import.meta.url})
 })()
 ```
-
-See [Supporting linked plugins](#supporting-linked-plugins) for more information on why `--loader ts-node/esm` has been added to the `node` shebang
-
-#### run.cmd and dev.cmd
-
-In both `bin/run.cmd` and `bin/dev.cmd` you will need to add `--loader ts-node/esm --no-warnings=ExperimentalWarning` to the `node` invocation:
-
-`bin/run.cmd`
-```
-@echo off
-
-node --loader ts-node/esm --no-warnings=ExperimentalWarning "%~dp0\run" %*
-```
-
-`bin/dev.cmd`
-```
-@echo off
-
-node --loader ts-node/esm --no-warnings=ExperimentalWarning "%~dp0\dev" %*
-```
-
-See [Supporting linked plugins](#supporting-linked-plugins) for more information on why `--loader ts-node/esm` has been added to the `node` shebang
 
 ### Update tsconfig.json
 
@@ -149,34 +140,23 @@ to
 You may have references to the bin scripts in your `.vscode/launch.json`. You'll need to update these as well.
 
 
-### Update references to bin scripts
+## Linked Plugins
 
-## Considerations
+In version 2 of `@oclif/core` linked plugins are transpiled at runtime using `ts-node`. This is problematic for ESM plugins because `node` depends on special ESM hooks being registered in the process in order to use ESM file paths. So in order for `ts-node` to successfully transpile ESM plugins one of the two must be true:
+1. `ts-node` (with ESM enabled) is used to execute the CLI instead of `node`
+2. `node` is used to execute the CLI with the `--loader=ts-node/esm` option set. This can be done through `NODE_OPTIONS` or exec args
 
-### CLIs with multiple plugins
+You likely don't want to depend on `ts-node` being available on every machine your CLI is executed so that really only leaves the second option.
 
-If your CLI contains multiple plugins, then we strongly suggest that you begin your migration with the root plugin since an ESM root plugin is able to link CJS plugins whereas a CJS root plugin cannot link an ESM plugin.
+Practically speaking you have two options to support linked plugins:
+1. Change the `node` shebang at the top of `bin/run.js` and `bin/dev.js` to `#!/usr/bin/env -S node --loader ts-node/esm --no-warnings=ExperimentalWarning`
+2. Ask users to set `NODE_OPTIONS="--loader=ts-node/esm"` in their environment if they'd like for ESM plugins to transpile at runtime.
 
-### Supporting linked plugins
-
-Linked plugins are transpiled at runtime using `ts-node`. In order for `ts-node` to successfully transpile ESM plugins oclif must be executed with `node --loader ts-node/esm`. Here's the `bin/run.js` from the [hello-world-esm template](https://github.com/oclif/hello-world-esm) as an example:
-
-```javascript
-#!/usr/bin/env -S node --loader ts-node/esm --no-warnings=ExperimentalWarning
-// eslint-disable-next-line node/shebang
-(async () => {
-  const oclif = await import('@oclif/core')
-  await oclif.execute({type: 'esm', dir: import.meta.url})
-})()
-```
-[Source](https://github.com/oclif/hello-world-esm/blob/main/bin/run.js)
-
-**This is an experimental loader that could change at any time.** If you removed the `--no-warnings=ExperimentalWarning`, you will see this warning,
-
-```
-ExperimentalWarning: Custom ESM Loaders is an experimental feature. This feature could change at any time
-```
-
-That being said, if the loader were to introduce a breaking change *it would only affect linked plugins*. Installed plugins would still work the same since they do not depend on `ts-node` to transpile the code at runtime.
+Option #1 is viable but it's important to understand that it is still an experimental loader and could change at anytime. That being said, if the loader were to introduce a breaking change *it would only affect linked plugins*. Installed plugins would still work the same since they do not depend on `ts-node` to transpile the code at runtime.
 
 Please see [node's stability index](https://nodejs.org/api/documentation.html#documentation_stability_index) for more.
+
+Option #2 still leverages the experimental `ts-node/esm` loader but by asking users to opt into it it distances your CLI from any breaking changes that might suddenly occur.
+
+Regardless of which path you take to support linked plugins, oclif will fall back on the linked plugin's compiled source code if it can't transpile it at runtime. This means that your users can still use linked ESM plugins without setting `NODE_OPTIONS="--loader=ts-node/esm"` in their environment *as long as they understand the plugin must be compiled first*.
+
