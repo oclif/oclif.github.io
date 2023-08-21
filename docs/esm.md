@@ -2,7 +2,7 @@
 title: ESM
 ---
 
-Version [3.0.0 of `@oclif/core`](https://github.com/oclif/core/tree/3.0.0-beta.1) officially supports ESM plugin development and CJS/ESM interoperability, meaning that you can have a root plugin written with CJS and your bundled plugins written in ESM or vice versa.
+Version [3.0.0 of `@oclif/core`](https://github.com/oclif/core/tree/3.0.0-beta.2) officially supports ESM plugin development and CJS/ESM interoperability, meaning that you can have a root plugin written with CJS and your bundled plugins written in ESM or vice versa.
 
 - [Interoperability Overview](#interoperability-overview)
   - [ESM Root plugin](#esm-root-plugin)
@@ -152,9 +152,17 @@ Practically speaking you have two options to support linked plugins:
 1. Change the `node` shebang at the top of `bin/run.js` and `bin/dev.js` to `#!/usr/bin/env -S node --loader ts-node/esm --no-warnings=ExperimentalWarning`
 2. Ask users to set `NODE_OPTIONS="--loader=ts-node/esm"` in their environment if they'd like for ESM plugins to transpile at runtime.
 
-Option #1 is viable but it's important to understand that it is still an experimental loader and could change at anytime. That being said, if the loader were to introduce a breaking change *it would only affect linked plugins*. Installed plugins would still work the same since they do not depend on `ts-node` to transpile the code at runtime.
+Option #1 is viable but it's important to understand that it is still an experimental loader and could change at anytime. That being said, if the loader were to introduce a breaking change *it would only affect linked plugins*. Installed plugins would still work the same since they do not depend on `ts-node` to transpile the code at runtime. Please see [node's stability index](https://nodejs.org/api/documentation.html#documentation_stability_index) for more.
 
-Please see [node's stability index](https://nodejs.org/api/documentation.html#documentation_stability_index) for more.
+Also, if you choose to include the `ts-node/esm` loader in the shebang, we recommend adding the following to your root plugin's tsconfig
+
+```json
+"ts-node": {
+  "scope": true
+}
+```
+
+This will allow `ts-node` to successfully register multiple projects without any interference from the root plugin's tsconfig settings.
 
 Option #2 still leverages the experimental `ts-node/esm` loader but by asking users to opt into it it distances your CLI from any breaking changes that might suddenly occur.
 
