@@ -15,6 +15,7 @@ Version [3.0.0 of `@oclif/core`](https://github.com/oclif/core/tree/3.0.0-beta.2
   - [Update tsconfig.json](#update-tsconfigjson)
   - [Update package.json to "module" type](#update-packagejson-to-module-type)
   - [Update references to bin scripts](#update-references-to-bin-scripts)
+  - [Update mocharc settings](#update-mocharc-settings)
 - [Linked Plugins](#linked-plugins)
 
 
@@ -68,7 +69,7 @@ Rename `bin/dev` to `bin/dev.js` and replace the existing code with the followin
 ```js
 #!/usr/bin/env node
 // eslint-disable-next-line node/shebang
-(async () => {
+void (async () => {
   const oclif = await import('@oclif/core')
   await oclif.execute({development: true, dir: import.meta.url})
 })()
@@ -79,7 +80,7 @@ This leverages oclif's `execute` function which handles all the development setu
 ```js
 #!/usr/bin/env node
 // eslint-disable-next-line node/shebang
-(async () => {
+void (async () => {
   const oclif = await import('@oclif/core')
   oclif.settings.performanceEnabled = true
   await oclif.execute({type: 'esm', development: true, dir: import.meta.url})
@@ -92,7 +93,7 @@ Rename `bin/run` to `bin/run.js` and replace the existing code with the followin
 
 ```js
 #!/usr/bin/env node
-(async () => {
+void (async () => {
   const oclif = await import('@oclif/core')
   await oclif.execute({dir: import.meta.url})
 })()
@@ -139,6 +140,28 @@ to
 
 You may have references to the bin scripts in your `.vscode/launch.json`. You'll need to update these as well.
 
+
+### Update mocharc settings
+
+In order for your mocha tests to run, you'll need to make a couple of changes:
+
+1. Add the following to the `.mocharc.json`
+
+```json
+{
+  "node-option": [
+    "loader=ts-node/esm"
+  ]
+}
+```
+
+2. Update `test/helpers/init.js`
+
+If your plugin was generated `oclif generate` then you likely have a `test/helpers/init.js` file that needs to be updated. You can either update the file extension to `.cjs` or update the `require` at the top of the file to an `import`,
+
+```js
+import path from 'node:path'
+```
 
 ## Linked Plugins
 
