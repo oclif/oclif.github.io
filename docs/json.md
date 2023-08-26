@@ -11,7 +11,7 @@ import {Command} from '@oclif/core'
 export class HelloCommand extends Command {
   public static enableJsonFlag = true
   public async run(): Promise<{ message: string }> {
-    console.log('hello, world!')
+    this.log('hello, world!')
     return { message: 'hello, world!' }
   }
 }
