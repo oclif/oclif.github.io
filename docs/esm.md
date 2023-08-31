@@ -2,7 +2,7 @@
 title: ESM
 ---
 
-Version [3.0.0 of `@oclif/core`](https://github.com/oclif/core/tree/3.0.0-beta.2) officially supports ESM plugin development and CJS/ESM interoperability, meaning that you can have a root plugin written with CJS and your bundled plugins written in ESM or vice versa.
+Version [3.0.0 of `@oclif/core`](https://github.com/oclif/core/tree/3.0.0-beta.4) officially supports ESM plugin development and CJS/ESM interoperability, meaning that you can have a root plugin written with CJS and your bundled plugins written in ESM or vice versa.
 
 - [Interoperability Overview](#interoperability-overview)
   - [ESM Root plugin](#esm-root-plugin)
