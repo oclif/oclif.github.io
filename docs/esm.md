@@ -2,7 +2,7 @@
 title: ESM
 ---
 
-Version [3.0.0 of `@oclif/core`](https://github.com/oclif/core/tree/3.0.0-beta.12) officially supports ESM plugin development and CJS/ESM interoperability, meaning that you can have a root plugin written with CJS and your bundled plugins written in ESM or vice versa.
+Version 3.0.0 of `@oclif/core` officially supports ESM plugin development and CJS/ESM interoperability, meaning that you can have a root plugin written with CJS and your bundled plugins written in ESM or vice versa.
 
 - [Interoperability Overview](#interoperability-overview)
   - [ESM Root plugin](#esm-root-plugin)
@@ -68,7 +68,7 @@ Rename `bin/dev` to `bin/dev.js` and replace the existing code with the followin
 ```js
 #!/usr/bin/env node
 // eslint-disable-next-line node/shebang
-void (async () => {
+(async () => {
   const oclif = await import('@oclif/core')
   await oclif.execute({development: true, dir: import.meta.url})
 })()
@@ -79,7 +79,7 @@ This leverages oclif's `execute` function which handles all the development setu
 ```js
 #!/usr/bin/env node
 // eslint-disable-next-line node/shebang
-void (async () => {
+(async () => {
   const oclif = await import('@oclif/core')
   oclif.settings.performanceEnabled = true
   await oclif.execute({type: 'esm', development: true, dir: import.meta.url})
@@ -92,7 +92,7 @@ Rename `bin/run` to `bin/run.js` and replace the existing code with the followin
 
 ```js
 #!/usr/bin/env node
-void (async () => {
+(async () => {
   const oclif = await import('@oclif/core')
   await oclif.execute({dir: import.meta.url})
 })()
@@ -136,8 +136,7 @@ to
   },
 ```
 
-You may have references to the bin scripts in your `.vscode/launch.json`. You'll need to update these as well.
-
+You may have references to the bin scripts in your `.vscode/launch.json` or in the `scripts` of your `package.json`. You'll need to update these as well.
 
 ### Update mocharc settings
 

@@ -39,8 +39,7 @@
       "flexible_taxonomy",
       "global_flags",
       "single_command_cli",
-      "esm",
-      "ES2022"
+      "esm"
     ],
     "Also See": [
       "examples",
