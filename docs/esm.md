@@ -154,3 +154,5 @@ If your plugin was generated `oclif generate` then you likely have a `test/helpe
 ```js
 import path from 'node:path'
 ```
+
+Alternatively, you can safely delete this file since it's no longer necessary.
