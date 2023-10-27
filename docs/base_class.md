@@ -41,6 +41,7 @@ export abstract class BaseCommand<T extends typeof Command> extends Command {
     const {args, flags} = await this.parse({
       flags: this.ctor.flags,
       baseFlags: (super.ctor as typeof BaseCommand).baseFlags,
+      enableJsonFlag: this.ctor.enableJsonFlag,
       args: this.ctor.args,
       strict: this.ctor.strict,
     })
