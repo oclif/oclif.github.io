@@ -49,6 +49,13 @@ In the Heroku CLI, we have it automatically build and release the beta channel o
 
 Build a windows installer with `oclif pack win`. It will build into `./dist/win`. This can be uploaded to S3 with `oclif upload win` and promoted within S3 with `oclif promote --win`.
 
+The installer uses 7zip and nsis.  If you're in a mac or unix environment and don't have them, you can use homebrew to insall them.
+
+```sh
+brew install nsis
+brew install p7zip
+```
+
 ## macOS installer
 
 Build a macOS .pkg installer with `oclif pack macos`. It will build into `./dist/macos`. This can be uploaded to S3 with `oclif upload macos` and promoted within S3 with `oclif promote --macos`. You need to set the macOS identifier at `oclif.macos.identifier` in `package.json` (we use "com.heroku.cli" and "com.salesforce.cli" as the identifiers for the Heroku CLI and the Salesforce CLI, respectively).
