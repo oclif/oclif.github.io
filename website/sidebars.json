@@ -6,10 +6,7 @@
       "faqs",
       "generator_commands"
     ],
-    "Architecture": [
-      "command_execution",
-      "plugin_loading"
-    ],
+    "Architecture": ["command_execution", "plugin_loading"],
     "API Reference": [
       "commands",
       "args",
@@ -39,7 +36,8 @@
       "flexible_taxonomy",
       "global_flags",
       "single_command_cli",
-      "esm"
+      "esm",
+      "themes"
     ],
     "Also See": [
       "examples",
