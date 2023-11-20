@@ -6,49 +6,27 @@ oclif supports themes that users can either define for themselves or select from
 
 By default, the theme only applies to help output but you can extend the theme for your own purposes if you want. See [Extending Themes](#extending-themes) section below.
 
-## themes.json
+## theme.json
 
-By default oclif will read themes from `~/.config/<CLI>/themes.json`.
+By default oclif will read themes from `~/.config/<CLI>/theme.json`.
 
 This file takes the following shape:
 
 ```json
 {
-  // the theme that oclif will use. Must correspond to one of the themes under the `themes` property
-  "selected": "dark"
-  // the list of themes that the user can choose from
-  "themes": {
-    "dark": {
-      "bin": "white",
-      "command": "cyan",
-      "commandSummary": "white",
-      "dollarSign": "white",
-      "flag": "white",
-      "flagDefaultValue": "blue",
-      "flagOptions": "white",
-      "flagRequired": "red",
-      "flagSeparator": "white",
-      "sectionDescription": "white",
-      "sectionHeader": "underline",
-      "topic": "white",
-      "version": "white"
-    },
-    "light": {
-      "bin": "black",
-      "command": "cyan",
-      "commandSummary": "black",
-      "dollarSign": "black",
-      "flag": "black",
-      "flagDefaultValue": "blue",
-      "flagOptions": "black",
-      "flagRequired": "red",
-      "flagSeparator": "black",
-      "sectionDescription": "black",
-      "sectionHeader": "underline",
-      "topic": "black",
-      "version": "black"
-    }
-  }
+  "bin": "white",
+  "command": "cyan",
+  "commandSummary": "white",
+  "dollarSign": "white",
+  "flag": "white",
+  "flagDefaultValue": "blue",
+  "flagOptions": "white",
+  "flagRequired": "red",
+  "flagSeparator": "white",
+  "sectionDescription": "white",
+  "sectionHeader": "underline",
+  "topic": "white",
+  "version": "white"
 }
 ```
 
@@ -77,29 +55,6 @@ The values for each of these must be one of the following:
 - a style supported by `chalk` (see https://github.com/chalk/chalk/#styles)
 
 Any invalid values will be ignored.
-
-## Shipping Themes with Your CLI
-
-If you'd like to ship one or more themes with your CLI you only need to do a couple of things:
-
-In your CLI's package.json you need to point oclif to your themes JSON file and be sure to include the file in the `files` section so that it gets included in the published package:
-
-```json
-// package.json
-"files": ["themes.json"],
-"oclif": {
-  "themesFile": "themes.json"
-}
-```
-
-oclif will now read themes from the configured themes files instead of the default `~/.config/<CLI>/themes.json`.
-
-## Managing Themes
-
-Users can manage themes in a couple of different ways.
-
-1. They can modify the themes file directly. If your CLI configures a `themesFile` (as described above) then they will modify that file. If not, then they would need to modify the default `~/.config/<CLI>/themes.json`.
-2. They can install `@oclif/plugin-theme` to get a set of commands for managing themes.
 
 ## Disabling Themes
 
