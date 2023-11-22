@@ -21,6 +21,6 @@ Creating a CLI:
 $ npx oclif generate mynewcli
 ? npm package name (mynewcli): mynewcli
 $ cd mynewcli
-$ ./bin/dev hello world
+$ ./bin/dev.js hello world
 hello world! (./src/commands/hello/world.ts)
 ```
