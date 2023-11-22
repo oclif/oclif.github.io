@@ -48,10 +48,10 @@ Creating a CLI that responds to different names or "aliases" is easy, simply add
   "name": "mycli",
   "version": "0.0.0",
   "description": "My CLI",
-  "main": "bin/run",
+  "main": "bin/run.js",
   "bin": {
-    "mycli": "./bin/run",
-    "mycli-alias": "./bin/run"
+    "mycli": "./bin/run.js",
+    "mycli-alias": "./bin/run.js"
   },
   "oclif": {
     "binAliases": ["mycli", "mycli-alias"]

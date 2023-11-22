@@ -22,9 +22,9 @@ export default class Hello extends Command {
 
 If this type of error handling is being implemented across multiple commands consider using a Custom Base Class (https://oclif.io/docs/base_class#docsNav) for your commands and overriding the `catch` method.
 
-## bin/run `catch` handler
+## bin/run.js `catch` handler
 
-Every oclif CLI has a ./bin/run file that is the entry point of command invocation. Errors that occur in the CLI, including re-thrown errors from a Command, are caught here in the bin/run `catch` handler.
+Every oclif CLI has a ./bin/run.js file that is the entry point of command invocation. Errors that occur in the CLI, including re-thrown errors from a Command, are caught here in the bin/run.js `catch` handler.
 
 ```js
 .catch(require('@oclif/core/handle'))
