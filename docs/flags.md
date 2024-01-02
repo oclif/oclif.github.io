@@ -47,6 +47,7 @@ static flags = {
     options: ['a', 'b'],                         // only allow the value to be from a discrete set
     parse: async input => 'output',              // instead of the user input, return a different value
     default: 'world',                            // default value if flag not passed (can be an async function that returns a string or undefined)
+    defaultHelp: 'a dynamic value'               // dyanmic default value to show in help output (e.g. current working directory). Can be an async function that returns a string or undefined
     required: false,                             // make flag required
     aliases: ['username', 'u'],                  // aliases for the flag - can be short char or long flags
     deprecateAliases: false,                     // emit deprecation warning anytime a flag alias is provided
