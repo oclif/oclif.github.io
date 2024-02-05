@@ -76,7 +76,19 @@ async function main() {
 await main()
 ```
 
-This leverages oclif's `execute` function which handles all the development setup for you. You no longer need set the `NODE_ENV` env var or register the project with `ts-node`. You still adjust oclif `settings` before executing the CLI. For example,
+This leverages oclif's `execute` function which handles all the development setup for you. You no longer need set the `NODE_ENV` env var or register the project with `ts-node`. You can still adjust oclif `settings` before executing the CLI. For example,
+
+```js
+#!/usr/bin/env -S node --loader ts-node/esm --no-warnings=ExperimentalWarning
+// eslint-disable-next-line node/shebang
+async function main() {
+  const {execute, settings} = await import('@oclif/core')
+  settings.performanceEnabled = true
+  await execute({development: true, dir: import.meta.url})
+}
+
+await main()
+```
 
 
 #### bin/run → bin/run.js
