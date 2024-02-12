@@ -67,27 +67,22 @@ Rename `bin/dev` to `bin/dev.js` and replace the existing code with the followin
 
 ```js
 #!/usr/bin/env -S node --loader ts-node/esm --no-warnings=ExperimentalWarning
-// eslint-disable-next-line node/shebang
-async function main() {
-  const {execute} = await import('@oclif/core')
-  await execute({development: true, dir: import.meta.url})
-}
 
-await main()
+import {execute} from '@oclif/core'
+
+await execute({development: true, dir: import.meta.url})
 ```
 
 This leverages oclif's `execute` function which handles all the development setup for you. You no longer need set the `NODE_ENV` env var or register the project with `ts-node`. You can still adjust oclif `settings` before executing the CLI. For example,
 
 ```js
 #!/usr/bin/env -S node --loader ts-node/esm --no-warnings=ExperimentalWarning
-// eslint-disable-next-line node/shebang
-async function main() {
-  const {execute, settings} = await import('@oclif/core')
-  settings.performanceEnabled = true
-  await execute({development: true, dir: import.meta.url})
-}
 
-await main()
+import {execute, settings} from '@oclif/core'
+
+settings.performanceEnabled = true
+
+await execute({development: true, dir: import.meta.url})
 ```
 
 
@@ -97,12 +92,10 @@ Rename `bin/run` to `bin/run.js` and replace the existing code with the followin
 
 ```js
 #!/usr/bin/env node
-async function main() {
-  const {execute} = await import('@oclif/core')
-  await execute({dir: import.meta.url})
-}
 
-await main()
+import {execute} from '@oclif/core'
+
+await execute({dir: import.meta.url})
 ```
 
 ### Update tsconfig.json
