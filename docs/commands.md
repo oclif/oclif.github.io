@@ -138,11 +138,9 @@ The options object has the following options:
 * `suggestions` —  an array of suggestions for a user to try next that may be useful or provide additional context
 * `ref` — a url to documentation related to this error or fixing it
 
-The `message`, `code`, `suggestions`, `ref` properties will be displayed when an error is shown. Reusable `Error` classes can be created that display the optional outputs above by implementing the `PrettyPrintableError` interface from @oclif/errors and `this.error` will handle them appropriately.
+The `message`, `code`, `suggestions`, `ref` properties will be displayed when an error is shown. Reusable `Error` classes can be created that display the optional outputs above by implementing the `PrettyPrintableError` interface from the `Errors` namespace from `@oclif/core` and `this.error` will handle them appropriately.
 
-Note: You may need to install the latest `@oclif/core` and `@oclif/errors` for `code`, `suggestions` and `ref` to be displayed.
-
-These errors are friendly and won't show a traceback unless debugging is enabled with `DEBUG=*` or `CLI_NAME_DEBUG=1`. If you want to raise errors like this outside of a command, use `@oclif/errors`.
+These errors are friendly and won't show a traceback unless debugging is enabled with `DEBUG=*` or `CLI_NAME_DEBUG=1`.
 
 ```typescript
 import {CLIError} from '@oclif/errors'
