@@ -35,7 +35,7 @@ For this example, the help class will be created in a file at "[project root]/sr
 From here there are two paths, implement the `HelpBase` abstract class yourself or overwrite the parts of the default `Help` class you want to customize (ex: how command usage is displayed). We recommend the latter approach but cover both in the new [Help Classes docs](../../../../docs/help_classes).
 
 
-## Separating TOPICS & COMMANDS in the new deafult `Help` class
+## Separating TOPICS & COMMANDS in the new default `Help` class
 
 Previously, topics and child commands were listed in help output under a single list heading called "COMMANDS". But we found this can be slightly confusing. Some topics are commands also (a.k.a. topic-commands) while others are simply organizational namespacing (and when ran just show their help).
 
