@@ -11,10 +11,35 @@ Plugins can have commands or hooks just like a CLI. To add a plugin such as the 
   "name": "mycli",
   "version": "0.0.0",
   // ...
+  "dependencies": {
+    "@oclif/core": "^3",
+    "@oclif/plugin-help": "^6",
+    "@oclif/plugin-not-found": "^3",
+  }
   "oclif": {
     "plugins": [
       "@oclif/plugin-help",
       "@oclif/plugin-not-found"
+    ]
+  }
+}
+```
+
+Plugins can also be specified using [minimatch](https://www.npmjs.com/package/minimatch?activeTab=readme) patterns:
+
+```js
+{
+  "name": "mycli",
+  "version": "0.0.0",
+  // ...
+  "dependencies": {
+    "@oclif/core": "^3",
+    "@oclif/plugin-help": "^6",
+    "@oclif/plugin-not-found": "^3",
+  }
+  "oclif": {
+    "plugins": [
+      "@oclif/plugin-*",
     ]
   }
 }
@@ -35,11 +60,10 @@ If you want users to be able to install their own plugins into your CLI, use the
 
 ## Community Plugins
 * [conf-cli](https://github.com/natzcam/conf-cli) - Adds a `conf` command to share state/configuration between commands. Uses [sindresorhus/conf](https://github.com/sindresorhus/conf).
-* [dynamic-commands](https://www.npmjs.com/package/oclif-dynamic-commands) - Load commands dynamically based on commands found under the current working directory.
 * [Add yours here](https://github.com/oclif/oclif.github.io/blob/docs/docs/plugins.md)!
 
 ## Building your own plugin
 
 Writing code for plugins is essentially the same as writing within a CLI. They can export 3 different types: commands, hooks, and other plugins.
 
-Run `npx oclif generate mynewplugin` to create a plugin in a new directory. This will come with a sample command called `hello`.
+Run `npx oclif generate mynewplugin` to create a plugin in a new directory. This will come with a sample commands called `hello` and `hello world`.

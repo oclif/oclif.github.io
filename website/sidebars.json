@@ -8,11 +8,11 @@
     ],
     "Architecture": ["command_execution", "plugin_loading"],
     "API Reference": [
-      "command_discovery_strategies",
+      "config",
       "commands",
       "args",
       "flags",
-      "config",
+      "command_discovery_strategies",
       "topics",
       "topic_separator",
       "hooks",
