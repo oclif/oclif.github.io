@@ -70,7 +70,7 @@ We’ve revamped the way command help is outputted to the terminal, making it bo
  </tr>
 </table>
 
-Notice that there are new sections for flags and global flags, examples are displayed with better spacing, and there is a section at the bottom called Configuration Variables. This Configuration Variables section is not part of the new help by default. But we've added support for custom help sections, which is what the `sf` CLI uses to create the new section. 
+Notice that there are new sections for flags and global flags, examples are displayed with better spacing, and there is a section at the bottom called Configuration Variables. This Configuration Variables section is not part of the new help by default. But we've added support for custom help sections, which is what the `sf` CLI uses to create the new section.
 
 ### Async Command Parsing
 
@@ -88,7 +88,7 @@ The oclif team
 
 <br/>
 
-### Reference material 
+### Reference material
 
 #### Migration Guide
 
@@ -102,8 +102,8 @@ The following matrix shows how the v1 libraries and plugins relate to the new v2
 
 | | oclif "v1" | oclif "v2" |
 | - | - | -|
-| Utility CLIs | oclif@<2<br/>@oclif/dev-cli@<2 | oclif@>=2
+| Utility CLIs | oclif@\<2<br/>@oclif/dev-cli@\<2 | oclif@>=2
 | Main packages | @oclif/command<br/>@oclif/config<br/>@oclif/errors<br/>@oclif/parser<br/>@oclif/plugin-help<br/> | @oclif/core@>=1
 | Node LTS | Node v8-14 | Node v12+ (at time of writing) |
-| TypeScript | typescript@<4 | typescript@>=4 |
-| Main plugins | @oclif/plugin-autocomplete@<1<br/>@oclif/plugin-commands@<2<br/>@oclif/plugin-help@<4<br/>@oclif/plugin-not-found@<2<br/>@oclif/plugin-plugins@<2<br/>@oclif/plugin-update@<2<br/>plugin-warn-if-update-available@<2<br/>plugin-which@<2<br/> | @oclif/plugin-autocomplete@>=1<br/>@oclif/plugin-commands@>=2<br/>@oclif/plugin-help@>=4<br/>@oclif/plugin-not-found@>=2<br/>@oclif/plugin-plugins@>=2<br/>@oclif/plugin-update@>=2<br/>@oclif/plugin-warn-if-update-available@>=2<br/>@oclif/plugin-which@>=2<br/> |
+| TypeScript | typescript@\<4 | typescript@>=4 |
+| Main plugins | @oclif/plugin-autocomplete@\<1<br/>@oclif/plugin-commands@\<2<br/>@oclif/plugin-help@\<4<br/>@oclif/plugin-not-found@\<2<br/>@oclif/plugin-plugins@\<2<br/>@oclif/plugin-update@\<2<br/>plugin-warn-if-update-available@\<2<br/>plugin-which@\<2<br/> | @oclif/plugin-autocomplete@>=1<br/>@oclif/plugin-commands@>=2<br/>@oclif/plugin-help@>=4<br/>@oclif/plugin-not-found@>=2<br/>@oclif/plugin-plugins@>=2<br/>@oclif/plugin-update@>=2<br/>@oclif/plugin-warn-if-update-available@>=2<br/>@oclif/plugin-which@>=2<br/> |

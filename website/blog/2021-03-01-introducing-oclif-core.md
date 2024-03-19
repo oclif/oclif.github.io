@@ -48,8 +48,8 @@ The oclif team
 
 | | oclif "v1" | oclif "Core" |
 | - | - | -|
-| Utility CLIs | oclif@<2<br/>@oclif/dev-cli@<2 | oclif@>=2
-| Main packages | @oclif/core@<2<br/>@oclif/config@<2<br/>@oclif/errors@<2<br/>@oclif/parser@<4<br/>@oclif/plugin-help@<4<br/> | @oclif/core@>=1
+| Utility CLIs | oclif@\<2<br/>@oclif/dev-cli@\<2 | oclif@>=2
+| Main packages | @oclif/core@\<2<br/>@oclif/config@\<2<br/>@oclif/errors@\<2<br/>@oclif/parser@\<4<br/>@oclif/plugin-help@\<4<br/> | @oclif/core@>=1
 | Node LTS | Node v8-14 | Node v12+ |
-| TypeScript | typescript@<4 | typescript@>=4 |
-| Main plugins | @oclif/plugin-autocomplete@<1<br/>@oclif/plugin-commands@<2<br/>@oclif/plugin-help@<4<br/>@oclif/plugin-not-found@<2<br/>@oclif/plugin-plugins@<2<br/>@oclif/plugin-update@<2<br/>plugin-warn-if-update-available@<2<br/>plugin-which@<2<br/> | @oclif/plugin-autocomplete@>=2<br/>@oclif/plugin-commands@>=2<br/>@oclif/plugin-help@>=4<br/>@oclif/plugin-not-found@>=2<br/>@oclif/plugin-plugins@>=2<br/>@oclif/plugin-update@>=2<br/>@oclif/plugin-warn-if-update-available@>=2<br/>@oclif/plugin-which@>=2<br/> |
+| TypeScript | typescript@\<4 | typescript@>=4 |
+| Main plugins | @oclif/plugin-autocomplete@\<1<br/>@oclif/plugin-commands@\<2<br/>@oclif/plugin-help@\<4<br/>@oclif/plugin-not-found@\<2<br/>@oclif/plugin-plugins@\<2<br/>@oclif/plugin-update@\<2<br/>plugin-warn-if-update-available@\<2<br/>plugin-which@\<2<br/> | @oclif/plugin-autocomplete@>=2<br/>@oclif/plugin-commands@>=2<br/>@oclif/plugin-help@>=4<br/>@oclif/plugin-not-found@>=2<br/>@oclif/plugin-plugins@>=2<br/>@oclif/plugin-update@>=2<br/>@oclif/plugin-warn-if-update-available@>=2<br/>@oclif/plugin-which@>=2<br/> |
