@@ -4,7 +4,8 @@
       "introduction",
       "features",
       "faqs",
-      "generator_commands"
+      "generator_commands",
+      "templates"
     ],
     "Architecture": ["command_execution", "plugin_loading"],
     "API Reference": [
