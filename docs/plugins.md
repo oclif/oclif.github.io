@@ -57,10 +57,8 @@ If you want users to be able to install their own plugins into your CLI, use the
 * [@oclif/plugin-which](https://github.com/oclif/plugin-which) - Show which plugin a command comes from.
 * [@oclif/plugin-commands](https://github.com/oclif/plugin-commands) - Add a `commands` command to list all the commands.
 * [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete) - Add bash/zsh autocomplete.
-
-## Community Plugins
-* [conf-cli](https://github.com/natzcam/conf-cli) - Adds a `conf` command to share state/configuration between commands. Uses [sindresorhus/conf](https://github.com/sindresorhus/conf).
-* [Add yours here](https://github.com/oclif/oclif.github.io/blob/docs/docs/plugins.md)!
+* [@oclif/plugin-search](https://github.com/oclif/plugin-search) - Add `search` command to your CLI.
+* [@oclif/plugin-version](https://github.com/oclif/plugin-version) - Add `version` command to your CLI.
 
 ## Building your own plugin
 
