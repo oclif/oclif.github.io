@@ -16,22 +16,15 @@ $ my-cli help
 
 ## Custom Help
 
-```
-$ yarn add @oclif/core --latest
-```
-
 To get started, first define the filepath to your help class in oclif's config in package.json. This is a relative path to the help class, without a file extension.
 
 For this example, the help class will be created in a file at "[project root]/src/help.ts".
 
-```
+```json
 {
-  // ...
   "oclif": {
     "helpClass": "./dist/help"
-    // ...
   }
-  // ...
 }
 ```
 
@@ -50,7 +43,7 @@ export default class CustomHelp extends HelpBase {
     console.log('This will be displayed in multi-command CLIs')
   }
 
-  showCommandHelp(command: Command) {
+  showCommandHelp(command: Command.Loadable) {
     console.log('This will be displayed in single-command CLIs')
   }
 }
@@ -68,27 +61,23 @@ To see an example of what is possible take a look at the source code for the [de
 The default `Help` class provides many method “hooks” that make it easy to override the particular parts of help's output you want to customize.
 
 ```TypeScript
-import {Command, Help, Topic} from '@oclif/core';
+import {Command, Help, Interfaces} from '@oclif/core'
 
 export default class MyHelpClass extends Help {
   // acts as a "router"
   // and based on the args it receives
   // calls one of showRootHelp, showTopicHelp,
-  // or showCommandHelp
-  showHelp(args: string[]): void {
-  }
+  // the formatting for an individual command
+  formatCommand(command: Command.Loadable): string {}
 
-  // display the root help of a CLI
-  showRootHelp(): void {
-  }
+  // the formatting for a list of commands
+  formatCommands(commands: Command.Loadable[]): string {}
 
-  // display help for a topic
-  showTopicHelp(topic: Topic): void {
-  }
+  // displayed for the root help
+  formatRoot(): string {}
 
-  // display help for a command
-  showCommandHelp(command: Command): void {
-  }
+  // the formatting for an individual topic
+  formatTopic(topic: Interfaces.Topic): string {}
 
   // the default implementations of showRootHelp
   // showTopicHelp and showCommandHelp
@@ -98,26 +87,22 @@ export default class MyHelpClass extends Help {
   // these can be overwritten as well
 
   // the formatting responsible for the header
-  // displayed for the root help
-  formatRoot(): string {
-  }
-
-  // the formatting for an individual topic
-  formatTopic(topic: Config.Topic): string {
-  }
-
   // the formatting for a list of topics
-  protected formatTopics(topics: Config.Topic[]): string {
-  }
+  protected formatTopics(topics: Interfaces.Topic[]): string {}
 
-  // the formatting for a list of commands
-  formatCommands(commands: Config.Command[]): string {
-  }
+  // display help for a command
+  showCommandHelp(command: Command.Loadable): void {}
 
-  // the formatting for an individual command
-  formatCommand(command: Config.Command): string {
-  }
+  // or showCommandHelp
+  showHelp(args: string[]): void {}
+
+  // display the root help of a CLI
+  showRootHelp(): void {}
+
+  // display help for a topic
+  showTopicHelp(topic: Interfaces.Topic): void {}
 }
+
 ```
 
 To see the default implementation of these methods take a look at the [default `Help` class exported from @oclif/core](https://github.com/oclif/core/blob/main/src/help/index.ts).
@@ -126,10 +111,10 @@ To start experimenting, define `showCommandHelp` in your custom help class and c
 
 
 ```TypeScript
-import {Command, Help, Topic} from '@oclif/core';
+import {Command, Help} from '@oclif/core';
 
 export default class MyHelpClass extends Help {
-  public showCommandHelp(command: Config.Command) {
+  public showCommandHelp(command: Command.Loadable) {
     console.log('Display my custom command help!')
   }
 }
@@ -140,69 +125,4 @@ Then run help for any command.
 ```
 $ my-cli login --help
 Display my custom command help!
-```
-
-
-## Building custom help classes in JavaScript projects
-
-These examples above followed a TypeScript project. For  JavaScript project with an example help file at "[project root]/src/help.js" would have a package.json with the `helpClass` defined:
-
-```
-{
-  // ...
-  "oclif": {
-    "helpClass": "./src/help"
-    // ...
-  }
-  // ...
-}
-```
-
-The imports are handled slightly different for JavaScript projects but the rest of the help class mimic the TypeScript examples above, except without type annotations.
-
-```js
-const {HelpBase} = require('@oclif/core');
-
-module.exports = class MyHelpClass extends HelpBase {
-  showHelp(args) {
-    console.log('This will be displayed in multi-command CLIs')
-  }
-
-  showCommandHelp(command) {
-    console.log('This will be displayed for a single command')
-  }
-}
-```
-
-```js
-const {Help} = require('@oclif/core');
-
-module.exports = class MyHelpClass extends Help {
-  showHelp(args) {
-  }
-
-  showRootHelp() {
-  }
-
-  showTopicHelp(topic) {
-  }
-
-  showCommandHelp(command) {
-  }
-
-  formatRoot() {
-  }
-
-  formatTopic(topic) {
-  }
-
-  formatTopics(topics) {
-  }
-
-  formatCommands(commands) {
-  }
-
-  formatCommand(command) {
-  }
-}
 ```
