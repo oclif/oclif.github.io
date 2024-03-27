@@ -38,7 +38,8 @@
       "global_flags",
       "single_command_cli",
       "esm",
-      "themes"
+      "themes",
+      "performance"
     ],
     "Also See": [
       "examples",
