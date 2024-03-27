@@ -21,23 +21,23 @@ To use this feature you need to:
 
 3. Implement the `jit_plugin_not_installed` hook.
 
-`@oclif/core` attempts to be UX-agnostic, meaning that we don't want to impose any particular user experience on you. Any time a user experience is required we utilize hooks so that you can design the exact user experience you want your users to have.
+oclif attempts to be UX-agnostic, meaning that we don't want to impose any particular user experience on you. Any time a user experience is required we utilize [hooks](./hooks.md) so that you can design the exact user experience you want your users to have.
 
 In the case of JIT plugin installation, there are many possible user experiences that you might want - maybe you want to prompt the user for confirmation first, or maybe you want to log a specific message, etc...
 
 Here's an example of how you might implement the hook,
 
 ```typescript
-import { Hook, CLIError, ux } from '@oclif/core';
+import { Hook, Errors, ux } from '@oclif/core';
 
-const hook: Hook<'jit_plugin_not_installed'> = async function (opts) {
+const hook: Hook.JitPluginNotInstalled = async function (opts) {
   try {
     const answer = await ux.confirm(`${opts.command.pluginName} not installed. Would you like to install?`)
     if (answer === 'y') {
       await opts.config.runCommand('plugins:install', [`${opts.command.pluginName}@${opts.pluginVersion}`]);
     }
   } catch (error) {
-    throw new CLIError(`Could not install ${opts.command.pluginName}`, 'JitPluginInstallError');
+    throw new Errors.CLIError(`Could not install ${opts.command.pluginName}`, 'JitPluginInstallError');
   }
 };
 
