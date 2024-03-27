@@ -2,7 +2,7 @@
 title: Error Handling
 ---
 
-oclif handles intentionally - and unintentionally - thrown errors in two places. First in the `Command.catch` method and then, finally, in the bin/run `catch` handler where the Error is printed and the CLI exits. This error flow makes it possible for you to control and respond to errors that occur in your CLI as you see fit.
+oclif handles intentionally - and unintentionally - thrown errors in two places. First in the `Command.catch` method and then, finally, in the `bin/run.js` `catch` handler where the Error is printed and the CLI exits. This error flow makes it possible for you to control and respond to errors that occur in your CLI as you see fit.
 
 ## Error Handling in the `catch` method
 
@@ -20,24 +20,41 @@ export default class Hello extends Command {
 }
 ```
 
-If this type of error handling is being implemented across multiple commands consider using a Custom Base Class (https://oclif.io/docs/base_class#docsNav) for your commands and overriding the `catch` method.
+If this type of error handling is being implemented across multiple commands consider using a [Custom Base Class](./base_class.md) for your commands and overriding the `catch` method.
 
 ## bin/run.js `catch` handler
 
-Every oclif CLI has a ./bin/run.js file that is the entry point of command invocation. Errors that occur in the CLI, including re-thrown errors from a Command, are caught here in the bin/run.js `catch` handler.
+Every oclif CLI has a `./bin/run.js` file that is the entry point of command invocation. Errors that occur in the CLI, including re-thrown errors from a Command, are caught and handled by oclif's `handle` function, which displays the error to the user.
 
-```js
-.catch(require('@oclif/core/handle'))
+If you generated your CLI using `oclif generate`, then you will see an `execute` function that's responsible for running the CLI and catching any errors. You can, however, implement this yourself if you need to customize the error handling.
+
+Here's the generic `bin/run.js` that comes with `oclif generate`:
+
+```javascript
+#!/usr/bin/env node
+
+import {execute} from '@oclif/core'
+
+await execute({dir: import.meta.url})
 ```
 
-This catch handler uses the `@oclif/errors/handle` function to display (and cleanup, if necessary) the error to the user. This handler can be swapped for any function that receives an error argument.
+To customize error handling, you'll want to use oclif's `run` function instead of `execute`:
 
-If you chose to implement your own handler here, we still recommend you delegate finally to the `@oclif/core/handle` function for clean-up and exiting logic.
+```javascript
+#!/usr/bin/env node
+
+import {run, handle, flush} from '@oclif/core'
+
+await run(process.argv.slice(2), import.meta.url)
+  .catch(async (error) => handle(error))
+  .finally(async () => flush())
+```
+
+The `catch` handler can be swapped for any function that receives an error argument. If you chose to implement your own handler here, we still recommend you delegate finally to the `handle` function for clean-up and exiting logic.
 
 ```js
 .catch((error) => {
-  const oclifHandler = require('@oclif/core/handle');
   // do any extra work with error
-  return oclifHandler(error);
+  return handle(error);
 })
 ```
