@@ -20,27 +20,27 @@ export default hook
 
 The hook must also be declared with the event's name and hook's file path under oclif's settings in `package.json`:
 
-```js
-  "oclif": {
-    "commands": "./lib/commands",
-    "hooks": {
-      "init": "./lib/hooks/init/example"
-    }
+```json
+"oclif": {
+  "commands": "./lib/commands",
+  "hooks": {
+    "init": "./lib/hooks/init/example"
   }
+}
 ```
 
 Multiple hooks of the same event type can be declared with an array.
 
-```js
-  "oclif": {
-    "commands": "./lib/commands",
-    "hooks": {
-      "init": [
-        "./lib/hooks/init/example",
-        "./lib/hooks/init/another_hook"
-      ]
-    }
+```json
+"oclif": {
+  "commands": "./lib/commands",
+  "hooks": {
+    "init": [
+      "./lib/hooks/init/example",
+      "./lib/hooks/init/another_hook"
+    ]
   }
+}
 ```
 
 You can create hooks with `oclif generate hook myhook --event=init`.
@@ -49,8 +49,11 @@ You can create hooks with `oclif generate hook myhook --event=init`.
 
 * `init` - runs when the CLI is initialized before a command is found to run
 * `prerun` - runs after `init` and after the command is found, but just before running the command itself
-* `postrun` - runs after the command only if the command finishes with no error
 * `command_not_found` - runs if a command is not found before the error is displayed
+* `command_incomplete` - runs if a command is not found but it is a partial of an existing command. Useful for instances where you'd like to present a prompt with all the matching commands. See Salesforce CLI's [implementation](https://github.com/salesforcecli/cli/blob/main/src/hooks/incomplete.ts).
+* `jit_plugin_not_installed` - runs if a command from a [JIT plugin](./jit_plugins.md) is executed but the plugin isn't installed yet. See Salesforce CLI's [implementation](https://github.com/salesforcecli/plugin-trust/blob/main/src/hooks/jitPluginInstall.ts).
+* `preparse` - runs before flags and args are parsed and validated. Useful if you need to manipulate the input. See Salesforce CLI's [implementation](https://github.com/salesforcecli/cli/blob/main/src/hooks/preparse.ts).
+* `postrun` - runs after the command only if the command finishes with no error
 
 ## Custom Events
 
@@ -89,4 +92,4 @@ export class extends Command {
 }
 ```
 
-If you need to exit during a hook, use `this.error()` or `this.exit()`. Otherwise the hook will just emit a warning. This is to prevent an issue such as a plugin failing in `init` causing the entire CLI to not function.
+If you need to exit during a hook, use `options.context.error()` or `options.context.exit()`. Throwing an `Error` will not cause the CLI to exit - this is to prevent an issues such a single plugin's `init` hook causing a CLI to immediately fail on every command execution.
