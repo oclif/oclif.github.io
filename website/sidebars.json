@@ -19,7 +19,8 @@
       "plugins",
       "help_classes",
       "error_handling",
-      "json"
+      "json",
+      "performance"
     ],
     "How to": [
       "releasing",
@@ -38,8 +39,7 @@
       "global_flags",
       "single_command_cli",
       "esm",
-      "themes",
-      "performance"
+      "themes"
     ],
     "Also See": [
       "examples",
