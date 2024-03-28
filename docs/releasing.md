@@ -49,12 +49,29 @@ In the Heroku CLI, we have it automatically build and release the beta channel o
 
 Build a windows installer with `oclif pack win`. It will build into `./dist/win`. This can be uploaded to S3 with `oclif upload win` and promoted within S3 with `oclif promote --win`.
 
-The installer uses 7zip and nsis.  If you're in a mac or unix environment and don't have them, you can use homebrew to insall them.
+`oclif pack win` depends on having 7zip and nsis installed. If you're in a mac or unix environment and don't have them, you can use homebrew to install them.
 
 ```sh
 brew install nsis
 brew install p7zip
 ```
+
+### Signing the installer
+
+To produce a signed installer you need to set the scoped `<CLI>_WINDOWS_SIGNING_PASS` env var (e.g. `MY_CLI_WINDOWS_SIGNING_PASS`) and set `windows.name` and `windows.keypath` in your package.json:
+
+```json
+{
+  "oclif": {
+    "windows": {
+      "name": "My CLI",
+      "keypath": "path/to/private.key"
+    }
+  }
+}
+```
+
+Refer to [Microsoft's documentation](https://learn.microsoft.com/en-us/windows/win32/msi/authoring-a-fully-verified-signed-installation) on how to acquire a verified digital signature for your CLI.
 
 ## macOS installer
 
@@ -66,8 +83,9 @@ The upload command defaults to using the ACL setting `public-read` unless anothe
 
 To address this, consider updating the oclif section of your package.json with the desired ACL setting. The example below demonstrates how to set the acl to bucket-owner-full-control:
 
-```
-"oclif": {
+```json
+{
+  "oclif": {
     "bin": "myOclifApp",
     "dirname": "myOclifApp-cli-data",
     "update": {
@@ -79,10 +97,8 @@ To address this, consider updating the oclif section of your package.json with t
     },
     "macos": {
       "identifier": "com.myOclifApp.cli"
-    },
-
-...
-
+    }
+  }
 }
 ```
 
@@ -90,11 +106,11 @@ Amazon has a userguide [here](https://docs.aws.amazon.com/AmazonS3/latest/usergu
 
 ### Signing the installer
 
-To be able to sign an "installer signing identity" has to be available on the build machine (read more on certificates [here](https://developer.apple.com/help/account/create-certificates/certificates-overview)).  
-Make sure such a certificate is created in developer.apple.com and that the certificate is downloaded and installed in the KeyChain of the build machine.  
-The certificate name has to be specified in the `oclif.macos.sign` in `package.json`.  
+To be able to sign an "installer signing identity" has to be available on the build machine (read more on certificates [here](https://developer.apple.com/help/account/create-certificates/certificates-overview)).
+Make sure such a certificate is created in developer.apple.com and that the certificate is downloaded and installed in the KeyChain of the build machine.
+The certificate name has to be specified in the `oclif.macos.sign` in `package.json`.
 
-Example: 
+Example:
 ```
     "macos": {
       "identifier": "com.myOclifApp",
@@ -102,7 +118,7 @@ Example:
     },
 ```
 
-Pay attention to the escaped quotation marks, the certificate name is passed on as an argument to the `pkgbuild` command so without quotation marks it might break.  
+Pay attention to the escaped quotation marks, the certificate name is passed on as an argument to the `pkgbuild` command so without quotation marks it might break.
 For the Heroku CLI the certificate name is "Developer ID Installer: Heroku INC". And optionally set the keychain with `OSX_KEYCHAIN`.
 
 Installed certificates on the build machine can be viewed in the Keychain Access app.
