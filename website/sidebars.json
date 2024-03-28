@@ -20,7 +20,8 @@
       "plugins",
       "help_classes",
       "error_handling",
-      "json"
+      "json",
+      "performance"
     ],
     "How to": [
       "releasing",
@@ -36,7 +37,7 @@
       "notifications",
       "debugging",
       "flexible_taxonomy",
-      "global_flags",
+      "flag_inheritance",
       "single_command_cli",
       "esm",
       "themes"

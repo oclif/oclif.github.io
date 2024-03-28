@@ -17,4 +17,4 @@ To support this, you will need to put your command logic into `src/index.ts` and
 }
 ```
 
-See [Command Discovery Strategies](./command_discovery_strategies) for more details.
+where `./dist/index.js` is a file that exports a `Command` class. See [Command Discovery Strategies](./command_discovery_strategies) for more details.

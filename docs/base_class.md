@@ -10,13 +10,6 @@ For large CLIs with multiple plugins, it's useful to put this base class into it
 // src/baseCommand.ts
 import {Command, Flags, Interfaces} from '@oclif/core'
 
-enum LogLevel {
-  debug = 'debug',
-  info = 'info',
-  warn = 'warn',
-  error = 'error',
-}
-
 export type Flags<T extends typeof Command> = Interfaces.InferredFlags<typeof BaseCommand['baseFlags'] & T['flags']>
 export type Args<T extends typeof Command> = Interfaces.InferredArgs<T['args']>
 
@@ -26,10 +19,11 @@ export abstract class BaseCommand<T extends typeof Command> extends Command {
 
   // define flags that can be inherited by any command that extends BaseCommand
   static baseFlags = {
-    'log-level': Flags.custom<LogLevel>({
-      summary: 'Specify level for logging.',
-      options: Object.values(LogLevel),
+    'log-level': Flags.option({
+      default: 'info',
       helpGroup: 'GLOBAL',
+      options: ['debug', 'warn', 'error', 'info', 'trace'] as const,
+      summary: 'Specify level for logging.',
     })(),
   }
 
