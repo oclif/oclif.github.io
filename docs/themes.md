@@ -2,15 +2,13 @@
 title: Themes
 ---
 
-oclif supports themes that users can either define for themselves or select from a variety of themes you ship with your CLI.
+oclif supports themes that you can ship with your CLI, which users can then override if they choose.
 
 By default, the theme only applies to help output but you can extend the theme for your own purposes if you want. See [Extending Themes](#extending-themes) section below.
 
 ## theme.json
 
-By default oclif will read themes from `~/.config/<CLI>/theme.json`.
-
-This file takes the following shape:
+The theme file takes the following shape:
 
 ```json
 {
@@ -55,6 +53,33 @@ The values for each of these must be one of the following:
 - a style supported by `chalk` (see https://github.com/chalk/chalk/#styles)
 
 Any invalid values will be ignored.
+
+## Shipping a Theme
+
+Shipping a theme with your CLI is very simple.
+
+First you need to create a new theme file (see above) in your CLI. Then, in your package.json, you just need to tell oclif where to find that file:
+
+```json
+{
+  "files": [
+    "/theme.json",
+    "/oclif.manifest.json",
+    "/dist",
+  ],
+  "oclif": {
+    "theme": "theme.json"
+  }
+}
+```
+
+It's important that you also add the file to the list of `files` so that it will be packed with your CLI whenever you publish to npm or when pack your CLI using `oclif pack`.
+
+## Overriding Themes
+
+If you've shipped a theme with your CLI, users can then override the theme by creating their own `theme.json` in the config directory of your CLI (`~/.config/<CLI>` on unix, `%LOCALAPPDATA%\<CLI>` on windows.)
+
+Users can specify one or all of the theme properties in their own `theme.json`, meaning that they can choose to only override a single property of the default theme.
 
 ## Disabling Themes
 
