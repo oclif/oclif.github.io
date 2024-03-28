@@ -10,24 +10,11 @@ As an open-source project, [oclif repos live on GitHub](https://github.com/oclif
 
 We are thrilled to offer oclif as open-source. As such, please review our project [Code of Conduct](https://github.com/salesforce/oss-template/blob/master/CODE_OF_CONDUCT.md). If you have any questions or concerns, please [contact us](feedback.md).
 
-## Work Tracking
-
-We use a [GitHub Project board](https://github.com/orgs/oclif/projects/1) to manage our work across all oclif repos. This board is used kanban style, in which, cards (i.e. work items) move left to right as they progress towards “Done” and higher priority cards sit towards the top of the columns, with lower priority cards sitting further below.
-
 ## Issues
 
 Issues are made in their corresponding repo as appropriate. If you are unsure which repo an issue might belong to, make an [issue in the oclif repo](https://github.com/oclif/oclif/issues).
 
 We triage issues as we can, usually with a week of when it was created (unfortunately, we can make no commitment to when an issue will be triaged).
-
-Issues triaged by an our team will be marked with one of the following labels :
-
-* “bug”
-* “enhancement”
-* “docs”
-* “wont-fix”
-* “invalid”
-* “duplicate”
 
 An issue will be considered stale after a month has passed with no further feedback or input from the author after input from an oclif team member. Stale issues will be notified with a comment of its stale state and any actions needed to take to keep it alive.
 
@@ -52,12 +39,6 @@ A PR will be closed if:
 * It has been merged
 * After a dialogue with the author informing them why the PR cannot be accepted
 * A week has passed after a stale PR notification has been posted with no further feedback or input from the author
-
-## Deprecations
-
-oclif packages follow semantic versioning and therefore only deprecate features in new major version releases.
-
-In the exceptional case a deprecation needs to happen outside a new major version, we will notify users via our blog or, as appropriate, with deprecation warnings in the tooling itself.
 
 ## Blog Posts
 

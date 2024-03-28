@@ -12,7 +12,7 @@ $ mycli --force --file=./myfile
 
 It would be declared like this:
 
-```js
+```typescript
 import {Command, Flags} from '@oclif/core'
 
 export class MyCLI extends Command {
@@ -37,8 +37,10 @@ Here are the options flags can have:
 ```js
 static flags = {
   name: Flags.string({
+    // The following can be set on both boolean and option flag (e.g. string, integer, url, custom, etc) types.
     char: 'n',                                   // shorter flag version
     summary: 'brief summary',                    // help summary for flag
+    helpLabel: '--my-flags',                     // The flag label to show in help. Defaults to "[-<char>] --<name>" where -<char> is only displayed if the char is defined.
     helpGroup: 'THE BEST FLAGS',                 // Put flag into THE BEST FLAGS group in help
     description: 'in-depth overview',            // help description for flag
     hidden: false,                               // hide from help
@@ -47,10 +49,13 @@ static flags = {
     options: ['a', 'b'],                         // only allow the value to be from a discrete set
     parse: async input => 'output',              // instead of the user input, return a different value
     default: 'world',                            // default value if flag not passed (can be an async function that returns a string or undefined)
-    defaultHelp: 'a dynamic value'               // dyanmic default value to show in help output (e.g. current working directory). Can be an async function that returns a string or undefined
+    defaultHelp: 'a dynamic value'               // dynamic default value to show in help output (e.g. current working directory). Can be an async function that returns a string or undefined
     required: false,                             // make flag required
     aliases: ['username', 'u'],                  // aliases for the flag - can be short char or long flags
+    aliases: ['u', 'n'],                         // single character aliases for the flag
+    deprecated: false,                           // mark the flag as deprecated.
     deprecateAliases: false,                     // emit deprecation warning anytime a flag alias is provided
+    noCacheDefault: false,                       // if true, the value returned by defaultHelp will not be cached in the oclif.manifest.json.
     dependsOn: ['extra-flag'],                   // this flag requires another flag
     exclusive: ['extra-flag'],                   // this flag cannot be specified alongside this other flag
     exactlyOne: ['extra-flag', 'another-flag'],  // exactly one of these flags must be provided
@@ -69,18 +74,19 @@ static flags = {
         // Include flag-seven but only when flag-eight is equal to FooBar
         {name: 'flag-seven', when: async (flags) => flags['flag-eight'] === 'FooBar'}
       ]}
-    ]
+    ],
+    // The following properties cannot be set on boolean flags
+    helpValue: '<name>',                         // The flag value to show in help. Defaults to "<value>",
+    multipleNonGreedy: false,                    // Parse one value per flag to allow `-m val1 -m val2` but disallow `-m val1 val2`. Only respected if multiple is set to true
+    delimiter: ','                               // Delimiter to separate the values for a multiple value flag. Only respected if multiple is set to true. Default behavior is to separate on spaces.
+    allowStdin: false,                           // Allow input value to be read from stdin if the provided value is `-`. Can also be set to `only` to allow flag to always read from stdin even if no value is provided.
   }),
 
   // flag with no value (-f, --force)
   force: Flags.boolean({
-    char: 'f',                    // short character for flag
-    default: true,                // default value if flag not passed (can be a function that returns a boolean)
-    env: 'MY_NAME',               // default value to the value of an environment variable
-    // boolean flags may be reversed with `--no-` (in this case: `--no-force`).
-    // The flag will be set to false if reversed. This functionality
-    // is disabled by default, to enable it:
-    // allowNo: true
+    // Boolean flags take all the same properties described in the previous example
+    // in addition to:
+    allowNo: true // Support reversible boolean flag with `--no-` prefix (e.g. `--no-force`). This is disabled by default.
   }),
 }
 ```
@@ -89,7 +95,7 @@ static flags = {
 
 For larger CLIs, it can be useful to declare a custom flag that can be shared amongst multiple commands. Here is an example of a custom flag:
 
-```js
+```typescript
 // src/flags.ts
 import {Flags} from '@oclif/core'
 
@@ -106,7 +112,7 @@ function getTeam(): Promise<Team> {
 export const team = Flags.custom<Team>({
   char: 't',
   description: 'team to use',
-  default: () => getTeam(),
+  default: async () => getTeam(),
 })
 
 // src/commands/mycommand.ts
@@ -115,7 +121,9 @@ import {Command} from '@oclif/core'
 
 export class MyCLI extends Command {
   static flags = {
-    team: team(),
+    team: team({
+      required: true,
+    }),
   }
 
   async run() {
@@ -150,3 +158,5 @@ $ mycli -vffoo
 ```
 
 The last one seems a little odd at first glance, but it's relatively standard in unix and makes commands like `tar -xvzfmytarball.tar.gz` possible.
+
+See our blog post [CLI Flags Explained](../blog/2019/02/20/cli-flags-explained) for a deeper dive into CLI flags.
