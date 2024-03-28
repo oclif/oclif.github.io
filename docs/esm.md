@@ -4,20 +4,6 @@ title: ESM
 
 Version 3.0.0 of `@oclif/core` officially supports ESM plugin development and CJS/ESM interoperability, meaning that you can have a root plugin written with CJS and your plugins written in ESM or vice versa.
 
-- [Interoperability Overview](#interoperability-overview)
-  - [ESM Root plugin](#esm-root-plugin)
-  - [CJS Root plugin](#cjs-root-plugin)
-- [Creating an ESM plugin](#creating-an-esm-plugin)
-- [Migrating a CJS plugin to ESM](#migrating-a-cjs-plugin-to-esm)
-  - [Update bin scripts](#update-bin-scripts)
-    - [bin/dev → bin/dev.js](#bindev--bindevjs)
-    - [bin/run → bin/run.js](#binrun--binrunjs)
-  - [Update tsconfig.json](#update-tsconfigjson)
-  - [Update package.json to "module" type](#update-packagejson-to-module-type)
-  - [Update references to bin scripts](#update-references-to-bin-scripts)
-  - [Update mocharc settings](#update-mocharc-settings)
-
-
 ## Interoperability Overview
 
 Here's a high level overview of ESM/CJS interoperability:
