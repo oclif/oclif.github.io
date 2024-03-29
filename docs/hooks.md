@@ -52,7 +52,7 @@ You can create hooks with `oclif generate hook myhook --event=init`.
 * `command_not_found` - runs if a command is not found before the error is displayed
 * `command_incomplete` - runs if a command is not found but it is a partial of an existing command. Only works if [flexible taxonomy](./flexible_taxonomy.md) is enabled. Useful for instances where you'd like to present a prompt with all the matching commands. See Salesforce CLI's [implementation](https://github.com/salesforcecli/cli/blob/main/src/hooks/incomplete.ts).
 * `jit_plugin_not_installed` - runs if a command from a [JIT plugin](./jit_plugins.md) is executed but the plugin isn't installed yet. See Salesforce CLI's [implementation](https://github.com/salesforcecli/plugin-trust/blob/main/src/hooks/jitPluginInstall.ts).
-* `preparse` - runs before flags and args are parsed and validated. Useful if you need to manipulate the input. See Salesforce CLI's [implementation](https://github.com/salesforcecli/cli/blob/main/src/hooks/preparse.ts).
+* `preparse` - runs before flags and args are parsed and validated. Useful if you need to manipulate the input. See Salesforce CLI's [implementation](https://github.com/salesforcecli/cli/blob/main/src/hooks/preparse.ts). This can only be implemented by the root CLI.
 * `postrun` - runs after the command only if the command finishes with no error
 
 ## Custom Events
