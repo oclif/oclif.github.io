@@ -1,5 +1,6 @@
 ---
 title: User Experience
+description: Provided user-experience utilities
 ---
 
 oclif's philosophy is that developers should free to design any user experience that they want for their users. In other words, we try really hard to not make any UX decisions for you.

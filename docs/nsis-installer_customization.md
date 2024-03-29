@@ -1,5 +1,6 @@
 ---
 title: NSIS Installer Customization
+description: Custom nsis installer script
 ---
 
 Sometimes you need to verify some dependencies, ensure there are no conflicting CLIs installed, or do some other custom logic before installing your CLI. For npm-scenarios, simply specify a `preinstall` script. But Windows installers don't include this script. You must instead write your own nsis modification to do these checks. See where this custom script gets placed in the installer in the [oclif/oclif](https://github.com/oclif/oclif/blob/b8d76af9290716ef69d8d1026f98041268306dfd/src/commands/pack/win.ts#L60) repo.

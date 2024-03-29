@@ -1,5 +1,6 @@
 ---
 title: Release
+description: How to release your CLI
 ---
 
 There are 2 main strategies for releasing oclif CLIs: npm and standalone tarballs. You can publish to one or both.

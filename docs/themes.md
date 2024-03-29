@@ -1,5 +1,6 @@
 ---
 title: Themes
+description: Make help output pretty
 ---
 
 oclif supports themes that you can ship with your CLI, which users can then override if they choose.

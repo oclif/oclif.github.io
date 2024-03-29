@@ -1,5 +1,6 @@
 ---
 title: JSON
+description: Native support for `--json` flag
 ---
 
 If you want to use the `--json` flag to return JSON output to the user, then you can set the `enableJsonFlag` property on the `Command` class.

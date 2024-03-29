@@ -1,5 +1,6 @@
 ---
 title: Aliases
+description: Define aliases for commands, flags, and bins
 ---
 
 ## Command Aliases

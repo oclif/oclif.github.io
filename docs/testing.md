@@ -1,5 +1,6 @@
 ---
 title: Testing
+description: How to test your CLI
 ---
 
 Testing in oclif can be done with any testing framework. You can run commands with `MyCommand.run()` which returns a promise you can wait on.

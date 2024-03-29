@@ -89,7 +89,7 @@ export const COMMANDS = {
 
 The `explicit` strategy is useful to those who can't rely on file paths because they've bundled their code (see [Bundling](#bundling)) but it can also be used if you simply prefer to be more explicit about your commands instead of relying on oclif "magically" finding commands from the file system.
 
-It can also be leveraged to create or modify commands at runtime (e.g. internationalize messages at runtime or add flags to a command based on an API spec - see `oclif + dynamic commands` section below).
+It can also be leveraged to create or modify commands at runtime (e.g. internationalize messages at runtime or add flags to a command based on an API spec - see [dynamic commands](#dynamic-commands) section below).
 
 #### Hooks
 
@@ -123,10 +123,47 @@ That configuration is essentially telling oclif to look for an `INIT_HOOK` expor
 
 #### Bundling
 
-**We do not support bundling** given the endless number of tools + configurations that could be used. But if you choose to use a bundler, like `esbuild` there are a couple hard requirements - you must have a package.json in your root directory and a `bin/run` or `bin/run.js` bin script. _This means that you will not be able to successfully bundle your entire CLI (src code, package.json, node_modules, etc) into a single file._
+**We do not support bundling** given the endless number of tools + configurations that could be used. But if you choose to use a bundler, like `esbuild`, there are a couple hard requirements - you must have a package.json in your root directory and a `bin/run` or `bin/run.js` bin script. _This means that you will not be able to successfully bundle your entire CLI (src code, package.json, node_modules, etc) into a single file._
 
-If you want to use a bundler, you can see this [example repo](https://github.com/oclif/plugin-test-esbuild/).
+If you still want to use a bundler, you can reference this [example repo](https://github.com/oclif/plugin-test-esbuild/).
 
+#### Dynamic Commands
+
+You can also use the `explicit` strategy if you want to manipulate or create commands at runtime. Please note that such usage of the `explicit` strategy **cannot** be used with an `oclif.manifest.json`, which will have significant performance implications for your CLI in production.
+
+Example:
+```typescript
+// src/index.ts
+import {Command, Flags} from '@oclif/core'
+
+import Hello from './commands/hello'
+import HelloWorld from './commands/hello/world'
+
+const dynamicCommands: Record<string, Command.Class> = {}
+if (process.env.DYNAMIC_COMMAND) {
+  dynamicCommands[process.env.DYNAMIC_COMMAND] = class extends Command {
+    static flags = {
+      flag1: Flags.boolean({description: 'flag1 description'}),
+    }
+
+    async run(): Promise<void> {
+      const {flags} = await this.parse(this.constructor as Command.Class)
+      this.log('hello from', this.id, flags)
+    }
+  }
+}
+
+export const COMMANDS = {
+  hello: Hello,
+  'hello:world': HelloWorld,
+  ...dynamicCommands,
+}
+```
+
+```
+❯ DYNAMIC_COMMAND=foo:bar:baz bin/run.js foo bar baz --flag1
+hello from foo:bar:baz { flag1: true }
+```
 
 ### `single` Strategy
 

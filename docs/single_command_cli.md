@@ -1,5 +1,6 @@
 ---
 title: Single Command CLI
+description: Configure CLI to be a single command
 ---
 
 Sometimes you may want your CLI's executable to also be the only command, similar to many bash utilities like `ls` or `cat`.

@@ -1,5 +1,6 @@
 ---
 title: Just-in-Time Plugin Installation
+description: Support for just-in-time plugin installation
 ---
 
 Sometimes you might want to have a plugin that isn't bundled in your CLI but gets installed the first time it's executed by the user - we call this just-in-time plugin installation, or JIT for short. This can be useful if you need to reduce the package size of your CLI while still allowing users access to all the plugins.
