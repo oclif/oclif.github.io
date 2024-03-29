@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://oclif.github.io/blog</id>
-    <title>oclif: The Open CLI Framework Blog</title>
+    <title>oclif.io Blog</title>
     <updated>2022-01-12T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://oclif.github.io/blog"/>
-    <subtitle>oclif: The Open CLI Framework Blog</subtitle>
+    <subtitle>The oclif.io Blog Feed</subtitle>
     <icon>https://oclif.github.io/img/oclif_rev.svg</icon>
+    <rights>Copyright © 2023 Salesforce</rights>
     <entry>
         <title type="html"><![CDATA[Announcing oclif v2!]]></title>
         <id>https://oclif.github.io/blog/2022/01/12/announcing-oclif-v2</id>

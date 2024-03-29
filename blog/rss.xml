@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>oclif: The Open CLI Framework Blog</title>
+        <title>oclif.io Blog</title>
         <link>https://oclif.github.io/blog</link>
-        <description>oclif: The Open CLI Framework Blog</description>
+        <description>The oclif.io Blog Feed</description>
         <lastBuildDate>Wed, 12 Jan 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <copyright>Copyright © 2023 Salesforce</copyright>
         <item>
             <title><![CDATA[Announcing oclif v2!]]></title>
             <link>https://oclif.github.io/blog/2022/01/12/announcing-oclif-v2</link>
