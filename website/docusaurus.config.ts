@@ -1,4 +1,6 @@
 import type {Config} from '@docusaurus/types'
+import type {Options as BlogOptions} from '@docusaurus/plugin-content-blog'
+import type * as Preset from '@docusaurus/preset-classic'
 
 export default async function createConfigAsync() {
   return {
@@ -19,28 +21,12 @@ export default async function createConfigAsync() {
         myOtherFont: ['-apple-system', 'system-ui'],
       },
       repoUrl: 'https://github.com/oclif/oclif',
-      presets: [
-        [
-          '@docusaurus/preset-classic',
-          {
-            blog: {
-              feedOptions: {
-                type: 'all',
-                title: 'oclif.io Blog',
-                description: 'The oclif.io Blog Feed',
-                copyright: 'Copyright © 2023 Salesforce',
-              },
-            },
-          },
-        ],
-      ],
-      blogSidebarCount: 'ALL',
     },
     onBrokenLinks: 'log',
     onBrokenMarkdownLinks: 'log',
     presets: [
       [
-        '@docusaurus/preset-classic',
+        'classic',
         {
           docs: {
             showLastUpdateAuthor: true,
@@ -51,11 +37,21 @@ export default async function createConfigAsync() {
           },
           blog: {
             path: 'blog',
-          },
+            blogSidebarCount: 'ALL',
+            blogTitle: 'oclif blog',
+            blogDescription: 'Read blog posts about oclif from the team',
+            blogSidebarTitle: 'All our posts',
+            feedOptions: {
+              type: 'all',
+              title: 'oclif.io Blog',
+              description: 'The oclif.io Blog Feed',
+              copyright: 'Copyright © 2023 Salesforce',
+            },
+          } satisfies BlogOptions,
           theme: {
             customCss: '../website/src/css/custom.css',
           },
-        },
+        } satisfies Preset.Options,
       ],
     ],
     plugins: [],
@@ -113,6 +109,6 @@ export default async function createConfigAsync() {
         appId: 'Q04FC8Q6OZ',
         contextualSearch: true,
       },
-    },
+    } satisfies Preset.ThemeConfig,
   } satisfies Config
 }
