@@ -18,4 +18,5 @@ However, due to time constraints we are not able to support this module as well 
 - For trees: [object-treeify](https://www.npmjs.com/package/object-treeify)
 - For colored JSON: [color-json](https://www.npmjs.com/package/color-json)
 - For notifications: [node-notifier](https://www.npmjs.com/package/node-notifier)
+- For links: [terminal-link](https://www.npmjs.com/package/terminal-link)
 - For rendering react components: [ink](https://www.npmjs.com/package/ink)
