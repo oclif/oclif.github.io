@@ -1,5 +1,6 @@
 ---
 title: Error Handling
+description: Customize error handling
 ---
 
 oclif handles intentionally - and unintentionally - thrown errors in two places. First in the `Command.catch` method and then, finally, in the `bin/run.js` `catch` handler where the Error is printed and the CLI exits. This error flow makes it possible for you to control and respond to errors that occur in your CLI as you see fit.

@@ -1,5 +1,6 @@
 ---
 title: Flag Inheritance
+description: How to share flags
 ---
 
 There are some instances where you might want to define a flag once for all of your commands. In this case you can add a base flag to an abstract base `Command` class. For example,

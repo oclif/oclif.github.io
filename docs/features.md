@@ -38,6 +38,12 @@ Use lifecycle hooks to run functionality any time a CLI starts, or on custom tri
 
 You can opt-in to using the `--json` flag which will automatically suppress console logs and display the final result of the command as valid JSON output. This is very useful if you want your CLI to be used for scripting in CI/CD environments. See [JSON](https://oclif.io/docs/json).
 
+### Flexible Taxonomy
+
+You can opt-in to what we call [flexible taxonomy](./flexible_taxonomy.md). When enabled, this features allows users to execute commands without adhering to your defined command taxonomy.
+
+This is a great way to make your CLI more user friendly, especially if you have long command names that can be hard for users to remember. For example, it might be hard for users to remember if the command is called `project deploy metadata start` or if it's called `project start deploy metadata` - with flexible taxonomy, both are valid!
+
 ### TypeScript (or not)
 
 Everything in the core of oclif is written in TypeScript and the generator can build fully configured TypeScript CLIs or just plain JavaScript CLIs. By virtue of static properties in TypeScript the syntax is a bit cleaner in TypeScript — but everything will work no matter which language you choose. If you use plugins support, the CLI will automatically use `ts-node` to run the plugins making it easy and fast to use TypeScript with minimal-to-no boilerplate needed for any oclif CLI.

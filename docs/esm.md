@@ -1,5 +1,6 @@
 ---
 title: ESM
+description: Using ESM in oclif
 ---
 
 Version 3.0.0 of `@oclif/core` officially supports ESM plugin development and CJS/ESM interoperability, meaning that you can have a root plugin written with CJS and your plugins written in ESM or vice versa.

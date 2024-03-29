@@ -1,5 +1,6 @@
 ---
 title: Custom Base Class
+description: Create an extendable Command class
 ---
 
 Use inheritance to share functionality between common commands. Here is an example of a command base class that has some common shared flags.

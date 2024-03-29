@@ -1,8 +1,9 @@
 ---
 title: Flexible Taxonomy
+description: Unlock new levels of user-friendliness
 ---
 
-If you'd like for your customers to execute commands without adhereing to the defined command taxonomy, you can enable `flexibleTaxonomy` and add a hook to the `oclif` section of your package.json:
+If you'd like for your customers to execute commands without adhering to the defined command taxonomy, you can enable `flexibleTaxonomy` and add a hook to the `oclif` section of your package.json:
 
 ```json
 {

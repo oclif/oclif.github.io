@@ -46,7 +46,7 @@ module.exports = {
           showLastUpdateTime: true,
           editUrl: "https://github.com/oclif/oclif.github.io/tree/docs/docs/",
           path: "../docs",
-          sidebarPath: "../website/sidebars.json",
+          sidebarPath: "../website/sidebars.ts",
         },
         blog: {
           path: "blog",
@@ -76,7 +76,7 @@ module.exports = {
           position: "right",
         },
         {
-          to: "docs/config",
+          to: "docs/api_reference",
           label: "API Reference",
           position: "right",
         },
