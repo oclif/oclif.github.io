@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@oclif/prettier-config": "^0.2.1"
+  }
+}
