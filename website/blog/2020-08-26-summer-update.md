@@ -1,5 +1,5 @@
 ---
-title: oclif Summer Update
+title: oclif Summer 2020 Update
 ---
 
 Hello oclif developers! We hope you are all doing well.
