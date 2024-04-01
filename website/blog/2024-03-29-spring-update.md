@@ -16,8 +16,8 @@ Since we [announced `@oclif/core` over three years ago](./2021-03-01-introducing
 
 Here are some of these changes:
 - Full support for ESM and interoperability with CommonJS (more on this topic below).
-- Configurable command discovery features that give you more control over how commands are loaded at runtime. Check out the [docs](/docs/command_discovery_strategies.md).
-- A new `preparse` hook that allows you to manipulate the provided arguments before they're parsed. Salesforce used this hook to [implement](https://github.com/salesforcecli/cli/pull/1536) a neat `--flags-dir` feature that translates files into flags.
+- Configurable command discovery strategies that give you more control over how commands are loaded at runtime. Check out the [docs](/docs/command_discovery_strategies.md).
+- A new `preparse` hook that allows you to manipulate the provided arguments before they're parsed. Salesforce used this hook to [implement](https://github.com/salesforcecli/cli/pull/1536) a neat `--flags-dir` feature that translates local files into flags.
 - A new `Performance` class that you can use to track performance inside of `@oclif/core` and your own CLI or plugin. Check out the [docs](/docs/performance).
 - A new flag type, `Flags.option`, that lets you define a flag with a preset list of options. Typescript then uses the options to infer the flag's type.
 - Flags now have a `relationship` property that allows you to define more complex relationships between flags. Check out the [flags docs](/docs/flags) for more information.
@@ -46,7 +46,7 @@ If you have any feedback or are running into issues, we want to hear about it. J
 
 ## Re-engaging the oclif Community
 
-Lastly, our biggest priority at the moment is to re-engage the oclif community. We understand how frustrating it has been over the years to see your issues and pull requests go unacknowledged. We apologize for not prioritizing the community, and are earnestly trying to make sure that every issue and pull request gets the attention it deserves going forward. 
+Lastly, our biggest priority at the moment is to re-engage the oclif community. We understand how frustrating it has been over the years to see your issues and pull requests go unacknowledged. We apologize for not prioritizing the community, and are earnestly trying to make sure that every issue and pull request gets the attention it deserves going forward.
 
 We also opened up GitHub discussions for [@oclif/core](https://github.com/oclif/core/discussions) and the [oclif CLI](https://github.com/oclif/oclif/discussions), where you can now post your questions or ideas. We hope you take advantage of them, we love hearing from you!
 
