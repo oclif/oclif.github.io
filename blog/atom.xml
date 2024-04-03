@@ -23,11 +23,11 @@
 <li>Re-engaging the oclif community</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="improving-oclifcore">Improving <code>@oclif/core</code><a href="https://oclif.github.io/blog/2024/03/29/spring-update#improving-oclifcore" class="hash-link" aria-label="Direct link to improving-oclifcore" title="Direct link to improving-oclifcore">​</a></h2>
-<p>Since we <a href="https://oclif.github.io/blog/2021/03/01/introducing-oclif-core">announced <code>@oclif/core</code> over three years ago</a>, we've released two new major versions, each packed with lots of features that we're really excited about.</p>
+<p>Since we <a href="https://oclif.github.io/blog/2024/03/29/2021-03-01-introducing-oclif-core">announced <code>@oclif/core</code> over three years ago</a>, we've released two new major versions, each packed with lots of features that we're really excited about.</p>
 <p>Here are some of these changes:</p>
 <ul>
 <li>Full support for ESM and interoperability with CommonJS (more on this topic below).</li>
-<li>Configurable command discovery strategies that give you more control over how commands are loaded at runtime. Check out the <a href="https://oclif.github.io/docs/command_discovery_strategies.md">docs</a>.</li>
+<li>Configurable command discovery strategies that give you more control over how commands are loaded at runtime. Check out the <a href="https://oclif.github.io/docs/command_discovery_strategies">docs</a>.</li>
 <li>A new <code>preparse</code> hook that allows you to manipulate the provided arguments before they're parsed. Salesforce used this hook to <a href="https://github.com/salesforcecli/cli/pull/1536" target="_blank" rel="noopener noreferrer">implement</a> a neat <code>--flags-dir</code> feature that translates local files into flags.</li>
 <li>A new <code>Performance</code> class that you can use to track performance inside of <code>@oclif/core</code> and your own CLI or plugin. Check out the <a href="https://oclif.github.io/docs/performance">docs</a>.</li>
 <li>A new flag type, <code>Flags.option</code>, that lets you define a flag with a preset list of options. Typescript then uses the options to infer the flag's type.</li>
@@ -41,7 +41,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="esm-support">ESM Support<a href="https://oclif.github.io/blog/2024/03/29/spring-update#esm-support" class="hash-link" aria-label="Direct link to ESM Support" title="Direct link to ESM Support">​</a></h2>
 <p>Version 3 of <code>@oclif/core</code> introduced full support for developing ESM plugins and CLIs. It also offered full support for interoperability between CommonJS and ESM plugins.</p>
 <p>Put more simply, you can now migrate your CLI to ESM while keeping individual plugins in CommonJS (or vice versa). The upgrade path is now much simpler for you. You also don't need to worry about any community plugins that have migrated to ESM before you did (such as all the <code>@oclif</code> plugins) or are staunchly sticking with CommonJS for the foreseeable future.</p>
-<p>Read more about this topic <a href="https://oclif.github.io/docs/esm.md">here</a>.</p>
+<p>Read more about this topic <a href="https://oclif.github.io/docs/esm">here</a>.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="improving-and-revitalizing-oclifio">Improving and Revitalizing oclif.io<a href="https://oclif.github.io/blog/2024/03/29/spring-update#improving-and-revitalizing-oclifio" class="hash-link" aria-label="Direct link to Improving and Revitalizing oclif.io" title="Direct link to Improving and Revitalizing oclif.io">​</a></h2>
 <p>Another area of focus for us has been improving our documentation site, <a href="htttps://oclif.io" target="_blank" rel="noopener noreferrer">oclif.io</a>.</p>
 <p>While improving the quality and accuracy of the documentation was our priority, we also took the time to upgrade to the latest version of <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">docusaurus</a>. This new version gave our site a much-needed facelift, as well as cool new features such as dark mode and announcements.</p>
