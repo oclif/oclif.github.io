@@ -12,11 +12,11 @@ We've been focusing on these high-level areas over the past couple of years:
 
 ## Improving `@oclif/core`
 
-Since we [announced `@oclif/core` over three years ago](./2021-03-01-introducing-oclif-core.md), we've released two new major versions, each packed with lots of features that we're really excited about.
+Since we [announced `@oclif/core` over three years ago](./2021-03-01-introducing-oclif-core), we've released two new major versions, each packed with lots of features that we're really excited about.
 
 Here are some of these changes:
 - Full support for ESM and interoperability with CommonJS (more on this topic below).
-- Configurable command discovery strategies that give you more control over how commands are loaded at runtime. Check out the [docs](/docs/command_discovery_strategies.md).
+- Configurable command discovery strategies that give you more control over how commands are loaded at runtime. Check out the [docs](/docs/command_discovery_strategies).
 - A new `preparse` hook that allows you to manipulate the provided arguments before they're parsed. Salesforce used this hook to [implement](https://github.com/salesforcecli/cli/pull/1536) a neat `--flags-dir` feature that translates local files into flags.
 - A new `Performance` class that you can use to track performance inside of `@oclif/core` and your own CLI or plugin. Check out the [docs](/docs/performance).
 - A new flag type, `Flags.option`, that lets you define a flag with a preset list of options. Typescript then uses the options to infer the flag's type.
@@ -34,7 +34,7 @@ Version 3 of `@oclif/core` introduced full support for developing ESM plugins an
 
 Put more simply, you can now migrate your CLI to ESM while keeping individual plugins in CommonJS (or vice versa). The upgrade path is now much simpler for you. You also don't need to worry about any community plugins that have migrated to ESM before you did (such as all the `@oclif` plugins) or are staunchly sticking with CommonJS for the foreseeable future.
 
-Read more about this topic [here](/docs/esm.md).
+Read more about this topic [here](/docs/esm).
 
 ## Improving and Revitalizing oclif.io
 
