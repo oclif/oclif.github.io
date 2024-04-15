@@ -45,7 +45,7 @@
 <li>Re-engaging the oclif community</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="improving-oclifcore">Improving <code>@oclif/core</code><a href="https://oclif.github.io/blog/2024/03/29/spring-update#improving-oclifcore" class="hash-link" aria-label="Direct link to improving-oclifcore" title="Direct link to improving-oclifcore">​</a></h2>
-<p>Since we <a href="https://oclif.github.io/blog/2024/03/29/2021-03-01-introducing-oclif-core">announced <code>@oclif/core</code> over three years ago</a>, we've released two new major versions, each packed with lots of features that we're really excited about.</p>
+<p>Since we <a href="https://oclif.github.io/blog/2021/03/01/introducing-oclif-core">announced <code>@oclif/core</code> over three years ago</a>, we've released two new major versions, each packed with lots of features that we're really excited about.</p>
 <p>Here are some of these changes:</p>
 <ul>
 <li>Full support for ESM and interoperability with CommonJS (more on this topic below).</li>
@@ -176,7 +176,7 @@
 <p>Earlier this year, we started our planning for oclifconf v2 and, like all conference, had to change course. We opted not to hold a virtual conference, however, we wanted to take some time to highlight a few oclif features shipped this year.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="feature-help-templating">Feature: Help templating<a href="https://oclif.github.io/blog/2020/08/26/summer-update#feature-help-templating" class="hash-link" aria-label="Direct link to Feature: Help templating" title="Direct link to Feature: Help templating">​</a></h2>
 <p>One of the most requested features, help templating enables oclif developers to customize the help output for their CLI.</p>
-<p>Read <a href="https://oclif.github.io/blog/introducing-custom-help-classes">the announcement</a>.</p>
+<p>Read <a href="https://oclif.github.io/blog/2020/05/05/introducing-custom-help-classes">the announcement</a>.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="feature-custom-error-delegation">Feature: Custom error delegation<a href="https://oclif.github.io/blog/2020/08/26/summer-update#feature-custom-error-delegation" class="hash-link" aria-label="Direct link to Feature: Custom error delegation" title="Direct link to Feature: Custom error delegation">​</a></h2>
 <p>This feature both improved how oclif throws and handles errors and allows oclif developers to overwrite or interject in oclif’s error handling.</p>
 <p>Read <a href="https://oclif.github.io/blog/2020/07/01/pretty-printable-errors">the announcement</a>.</p>
