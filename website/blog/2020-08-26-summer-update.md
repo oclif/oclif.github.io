@@ -10,7 +10,7 @@ Earlier this year, we started our planning for oclifconf v2 and, like all confer
 
 One of the most requested features, help templating enables oclif developers to customize the help output for their CLI.
 
-Read [the announcement](/blog/introducing-custom-help-classes).
+Read [the announcement](/blog/2020/05/05/introducing-custom-help-classes).
 
 ## Feature: Custom error delegation
 
