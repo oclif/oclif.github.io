@@ -12,7 +12,7 @@ We've been focusing on these high-level areas over the past couple of years:
 
 ## Improving `@oclif/core`
 
-Since we [announced `@oclif/core` over three years ago](./2021-03-01-introducing-oclif-core), we've released two new major versions, each packed with lots of features that we're really excited about.
+Since we [announced `@oclif/core` over three years ago](/blog/2021/03/01/introducing-oclif-core), we've released two new major versions, each packed with lots of features that we're really excited about.
 
 Here are some of these changes:
 - Full support for ESM and interoperability with CommonJS (more on this topic below).
