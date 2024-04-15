@@ -81,6 +81,10 @@ export default async function createConfigAsync() {
             position: 'right',
           },
           {
+            type: 'localeDropdown',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/oclif/oclif',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
@@ -110,5 +114,20 @@ export default async function createConfigAsync() {
         contextualSearch: true,
       },
     } satisfies Preset.ThemeConfig,
+    i18n: {
+      defaultLocale: 'en',
+      locales: ['en', 'zh'],
+      localeConfigs: {
+        en: {
+          label: 'English',
+          htmlLang: 'en-US',
+        },
+        zh: {
+          label: '简体中文',
+          htmlLang: 'zh-Hans',
+          path: 'zh'
+        }
+      }
+    }
   } satisfies Config
 }
