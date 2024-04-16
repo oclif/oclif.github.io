@@ -96,7 +96,7 @@ export default (props) => {
                   <Example />
                   <a
                     className="button button--info button--lg shadow--tl"
-                    href={docUrl('introduction.html', props.language)}
+                    href={docUrl('introduction', props.language)}
                   >
                     <Translate
                       id='row.button'
