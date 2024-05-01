@@ -33,7 +33,7 @@ Here's a high level overview of ESM/CJS interoperability:
 
 ## Creating an ESM plugin
 
-To generate a new ESM plugin from the [hello-world-esm template](https://github.com/oclif/hello-world-esm) run the `oclif generate` command and select `ESM` when it prompts you to select a module type:
+To generate a new ESM plugin, run the `oclif generate` command and select `ESM` when it prompts you to select a module type:
 
 ```
 $ npx oclif generate my-esm-plugin

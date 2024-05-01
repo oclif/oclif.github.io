@@ -20,11 +20,11 @@ Run a single command to scaffold out a fully functional CLI and get started quic
 
 ### Testing Helpers
 
-We've put a lot of work into making commands easily testable and easy to mock out stdout/stderr. The generator will automatically create [scaffolded tests](https://github.com/oclif/hello-world/blob/main/test/commands/hello/world.test.ts).
+We've put a lot of work into making commands easily testable and easy to mock out stdout/stderr. The generator will automatically create scaffolded tests.
 
 ### Auto-documentation
 
-By default you can pass `--help` to the CLI to get help such as flag options and argument information. This information is also automatically placed in the README whenever the npm package of the CLI is published. See the [hello-world CLI example](https://github.com/oclif/hello-world)
+By default you can pass `--help` to the CLI to get help such as flag options and argument information. This information is also automatically placed in the README whenever the npm package of the CLI is published. See the [plugin-plugins](https://github.com/oclif/plugin-plugins) as an example.
 
 ### Plugins
 

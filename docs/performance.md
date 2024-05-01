@@ -133,7 +133,7 @@ marker?.addDetails({from: flags.from, person: args.person})
 marker?.stop()
 ```
 
-And a more thorough example using the `hello` command from the [hello-world](https://github.com/oclif/hello-world) template:
+And a more thorough example:
 
 ```typescript
 // ./src/commands/hello/index.ts
