@@ -12,9 +12,9 @@ Generate a new CLI
 
 ```
 USAGE
-  $ oclif generate NAME [-y] [--author <value>] [--bin <value>] [--description <value>] [--license <value>]
-    [--module-type CommonJS|ESM] [--name <value>] [--owner <value>] [--package-manager npm|yarn] [--repository <value>]
-    [-d <value>]
+  $ oclif generate NAME [--author <value>] [--bin <value>] [--description <value>] [--license <value>]
+    [--module-type CommonJS|ESM] [--name <value>] [--owner <value>] [--package-manager npm|yarn|pnpm] [--repository
+    <value>] [-d <value>] [-y]
 
 ARGUMENTS
   NAME  Directory name of new project.
@@ -32,15 +32,18 @@ FLAGS
       --owner=<value>             Supply answer for prompt: Who is the GitHub owner of repository
                                   (https://github.com/OWNER/repo)
       --package-manager=<option>  Supply answer for prompt: Select a package manager
-                                  <options: npm|yarn>
+                                  <options: npm|yarn|pnpm>
       --repository=<value>        Supply answer for prompt: What is the GitHub name of repository
                                   (https://github.com/owner/REPO)
 
 DESCRIPTION
   Generate a new CLI
 
-  This will clone the template repo and update package properties. For CommonJS, the 'oclif/hello-world' template will
-  be used and for ESM, the 'oclif/hello-world-esm' template will be used.
+  This will generate a fully functional oclif CLI that you can build on. It will prompt you for all the necessary
+  information to get started. If you want to skip the prompts, you can pass the --yes flag to accept the defaults for
+  all prompts. You can also pass individual flags to set specific values for prompts.
+
+  Head to oclif.io/docs/introduction to learn more about building CLIs with oclif.
 
 EXAMPLES
   Generate a new CLI with prompts for all properties
@@ -60,7 +63,7 @@ EXAMPLES
     $ oclif generate my-cli --module-type CommonJS --author "John Doe" --yes
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/oclif/oclif/blob/v4.6.0/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/oclif/oclif/blob/4.10.1/src/commands/generate.ts)_
 
 ## `oclif generate command NAME`
 
@@ -68,7 +71,7 @@ Add a command to an existing CLI or plugin.
 
 ```
 USAGE
-  $ oclif generate command NAME [-y] [--commands-dir <value>] [--force]
+  $ oclif generate command NAME [--commands-dir <value>] [--force]
 
 ARGUMENTS
   NAME  name of command
@@ -81,7 +84,7 @@ DESCRIPTION
   Add a command to an existing CLI or plugin.
 ```
 
-_See code: [src/commands/generate/command.ts](https://github.com/oclif/oclif/blob/v4.6.0/src/commands/generate/command.ts)_
+_See code: [src/commands/generate/command.ts](https://github.com/oclif/oclif/blob/4.10.1/src/commands/generate/command.ts)_
 
 ## `oclif generate hook NAME`
 
@@ -89,7 +92,7 @@ Add a hook to an existing CLI or plugin.
 
 ```
 USAGE
-  $ oclif generate hook NAME [-y] [--event <value>] [--force]
+  $ oclif generate hook NAME [--event <value>] [--force]
 
 ARGUMENTS
   NAME  Name of hook (snake_case).
@@ -102,4 +105,4 @@ DESCRIPTION
   Add a hook to an existing CLI or plugin.
 ```
 
-_See code: [src/commands/generate/hook.ts](https://github.com/oclif/oclif/blob/v4.6.0/src/commands/generate/hook.ts)_
+_See code: [src/commands/generate/hook.ts](https://github.com/oclif/oclif/blob/4.10.1/src/commands/generate/hook.ts)_

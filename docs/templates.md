@@ -2,14 +2,9 @@
 title: Templates
 ---
 
-There are two templates that `oclif generate` can use:
+When you run `oclif generate`, it will ask if you'd like to use either CommonJS or ESM for your CLI. Both options produce the same CLI (same tsconfig, bin scripts, example commands, etc).
 
-* [hello-world (CommonJS)](https://github.com/oclif/hello-world)
-* [hello-world-esm (ESM)](https://github.com/oclif/hello-world-esm)
-
-Both templates come with the same boiler plate (tsconfig, bin scripts, example commands and tests, etc.). The only difference is that the `hello-world` template uses CommonJS whereas the `hello-world-esm` template uses ESM.
-
-We'll give you a brief rundown of everything that's included in the templates:
+We'll give you a brief rundown of everything that's included in your newly generated CLI:
 
 ## Bin Scripts
 
