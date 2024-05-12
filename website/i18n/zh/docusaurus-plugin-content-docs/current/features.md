@@ -20,11 +20,11 @@ title: 功能
 
 ### 测试助手
 
-我们做了大量工作，使命令易于测试，并能轻松模拟出 stdout/stderr。生成器会自动创建[脚手架测试](https://github.com/oclif/hello-world/blob/main/test/commands/hello/world.test.ts)。
+我们做了大量工作，使命令易于测试，并能轻松模拟出 stdout/stderr。生成器会自动创建脚手架测试。
 
 ### 自动文档
 
-默认情况下，你可以向 CLI 传入 `--help` 来获取帮助，如标志选项和参数信息。在发布 CLI 的 npm 包时，这些信息也会自动放在 README 中。请参阅 [hello-world CLI 示例](https://github.com/oclif/hello-world)
+默认情况下，你可以向 CLI 传入 `--help` 来获取帮助，如标志选项和参数信息。在发布 CLI 的 npm 包时，这些信息也会自动放在 README 中。请参阅 [plugin-plugins](https://github.com/oclif/plugin-plugins) 作为示例。
 
 ### 插件
 

@@ -35,7 +35,7 @@ description: 在 oclif 中使用 ESM
 
 ## 创建 ESM 插件
 
-要从 [hello-world-esm 模板](https://github.com/oclif/hello-world-esm)生成新的 ESM 插件，请运行 `oclif generate` 命令，并在提示你选择模块类型时选择 `ESM` ：
+要从生成新的 ESM 插件，请运行 `oclif generate` 命令，并在提示你选择模块类型时选择 `ESM` ：
 
 ```shell
 $ npx oclif generate my-esm-plugin

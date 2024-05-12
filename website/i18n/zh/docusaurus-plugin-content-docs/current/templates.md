@@ -2,14 +2,9 @@
 title: 模板
 ---
 
-`oclif generate` 可以使用两种模板：
+运行 `oclif generate` 时，它会询问你的 CLI 是使用 CommonJS 还是 ESM。这两个选项会生成相同的 CLI（相同的 tsconfig、bin 脚本、示例命令等）。
 
-* [hello-world (CommonJS)](https://github.com/oclif/hello-world)
-* [hello-world-esm (ESM)](https://github.com/oclif/hello-world-esm)
-
-两个模板都有相同的结构（tsconfig、bin 脚本、示例命令和测试等）。唯一不同的是， `hello-world` 模板使用的是 CommonJS，而 `hello-world-esm` 模板使用的是 ESM。
-
-我们将为你简要介绍模板中包含的所有内容：
+我们将简要介绍新生成的 CLI 中包含的所有内容：
 
 ## Bin 脚本
 

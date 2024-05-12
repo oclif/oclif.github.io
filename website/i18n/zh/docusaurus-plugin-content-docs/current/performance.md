@@ -134,7 +134,7 @@ marker?.addDetails({from: flags.from, person: args.person})
 marker?.stop()
 ```
 
-下面是一个使用 [hello-world](https://github.com/oclif/hello-world) 模板中的 `hello` 命令的更全面的示例：
+还有一个更彻底的例子：
 
 ```typescript
 // ./src/commands/hello/index.ts
