@@ -2,9 +2,9 @@
 title: Introduction
 ---
 
-oclif is a framework for building CLIs in Node. It can be used like a [simple flag parser](https://github.com/oclif/core#usage) but is capable of much more. It's designed to be extensible so that you can easily add plugins such as the [update warning plugin](https://github.com/oclif/plugin-warn-if-update-available) or build your own for users to install at runtime.
+oclif is a framework for building command-line interfaces (CLIs) using [Node.js](https://nodejs.org/en). You can use it like a [simple flag parser](https://github.com/oclif/core#usage), but it's capable of much more. It's designed to be extensible so that you can easily add plugins, such as the [update warning plugin](https://github.com/oclif/plugin-warn-if-update-available), or build your own for users to install at runtime.
 
-The oclif generator creates a CLI project in TypeScript to get you started quickly. It requires very few runtime dependencies and has minimal overhead.
+The oclif generator creates a CLI project in TypeScript to get you started quickly. The generated CLI requires very few runtime dependencies and has minimal overhead.
 
 Everything is customizable in oclif. Even the flag parser and help generation is optional and can be replaced. It's a platform to build upon that provides smart defaults without locking you in to any specific tools or behavior.
 
