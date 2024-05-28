@@ -2,29 +2,31 @@
 title: Features
 ---
 
-### Flag/Argument parsing
+Here are some key features that set oclif apart from other CLI frameworks.
 
-No CLI framework would be complete without a flag parser. We've built a custom one from years of experimentation that we feel consistently handles user input flexible enough for the user to be able to easily use the CLI in ways they expect, but without compromising strictness guarantees to the developer.
+### Flag and Argument Parsing
+
+No CLI framework would be complete without a flag parser. We've built a custom flag parser from years of experimentation that we feel is flexible enough to make an easy, predictable user experience but without compromising type safety for the developer.
 
 ### Configurable Topic Separators
 
-By default topics will be separated with colons, e.g. `my:awesome:command`. However, you have the option to use spaces if you prefer, e.g. `my awesome command`.
+By default, topics are separated with colons, such as `my:awesome:command`. However, you can use spaces if you prefer, such as `my awesome command`.
 
 ### Super Speed
 
-The overhead for running an oclif CLI command is almost nothing. [It requires very few dependencies](https://www.npmjs.com/package/@oclif/core?activeTab=dependencies) (only 28 dependencies in a minimal setup—including all transitive dependencies). Also, only the command to be executed will be required with node. So large CLIs with many commands will load just as fast as a small one with a single command.
+The overhead for running an oclif CLI command is almost nothing. [The command requires very few dependencies](https://www.npmjs.com/package/@oclif/core?activeTab=dependencies); for example, only 28 dependencies are required for a minimal setup, including all transitive dependencies. Also, only the command to be executed requires Node.js. Which means that a large CLI with many commands loads just as fast as a small CLI with just a single command.
 
 ### CLI Generator
 
-Run a single command to scaffold out a fully functional CLI and get started quickly. See [Generator Commands](https://oclif.io/docs/generator_commands).
+You can get started from scratch quickly because you need to run just a single command to scaffold out a fully functional CLI. See [Generator Commands](https://oclif.io/docs/generator_commands).
 
 ### Testing Helpers
 
-We've put a lot of work into making commands easily testable and easy to mock out stdout/stderr. The generator will automatically create scaffolded tests.
+We've worked hard to make commands easily testable and easy to mock out stdout and stderr. The CLI generator automatically creates scaffolded tests.
 
 ### Auto-documentation
 
-By default you can pass `--help` to the CLI to get help such as flag options and argument information. This information is also automatically placed in the README whenever the npm package of the CLI is published. See the [plugin-plugins](https://github.com/oclif/plugin-plugins) as an example.
+By default, you pass `--help` to a CLI command to get help, such as the flag options and argument information. This information is also automatically added to the README whenever the CLI's npm package is published. See the [plugin-plugins](https://github.com/oclif/plugin-plugins) as an example.
 
 ### Plugins
 
