@@ -29,12 +29,15 @@ In the case of JIT plugin installation, there are many possible user experiences
 Here's an example of how you might implement the hook,
 
 ```typescript
-import { Hook, Errors, ux } from '@oclif/core';
+import { Hook, Errors } from '@oclif/core';
+import confirm from '@inquirer/confirm';
 
 const hook: Hook.JitPluginNotInstalled = async function (opts) {
   try {
-    const answer = await ux.confirm(`${opts.command.pluginName} not installed. Would you like to install?`)
-    if (answer === 'y') {
+    const answer = await confirm({
+      message: `${opts.command.pluginName} not installed. Would you like to install?`
+    })
+    if (answer) {
       await opts.config.runCommand('plugins:install', [`${opts.command.pluginName}@${opts.pluginVersion}`]);
     }
   } catch (error) {

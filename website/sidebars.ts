@@ -26,6 +26,7 @@ const sidebars: SidebarsConfig = {
         'flexible_taxonomy',
         'jit_plugins',
         'json',
+        'logging',
         'nsis-installer_customization',
         'releasing',
         'running_programmatically',
