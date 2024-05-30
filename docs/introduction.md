@@ -12,7 +12,7 @@ Everything is customizable in oclif. Even the flag parser and help generation is
 
 Only [LTS Node versions](https://nodejs.org/en/about/previous-releases) are supported. If you want to ensure that users are on a specifc Node.js version, you can add the [node](https://www.npmjs.com/package/node) package to your CLI.
 
-To install the oclif npm package so you can later use the generator commands, run this command:
+To install the oclif CLI itself, run this command:
 
 ```
 $ npm install --global oclif
