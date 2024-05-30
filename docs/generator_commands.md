@@ -2,13 +2,17 @@
 title: Generator Commands
 ---
 
+Use these commands to generate the scaffoling for a new CLI, a command, or a hook. The scaffolding includes CLI configuration files, scripts, and sample TypeScript files for a simple  `hello world` command. 
+
+Run each command with the `--help` flag, but without its argument, to see the same information documented below; for example, `oclif generate --help`. 
+
 - [`oclif generate NAME`](#oclif-generate-name)
 - [`oclif generate command NAME`](#oclif-generate-command-name)
 - [`oclif generate hook NAME`](#oclif-generate-hook-name)
 
 ## `oclif generate NAME`
 
-Generate a new CLI
+Generate a new CLI. 
 
 ```
 USAGE
