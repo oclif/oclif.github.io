@@ -12,14 +12,25 @@ Everything is customizable in oclif. Even the flag parser and help generation is
 
 Only [LTS Node versions](https://nodejs.org/en/about/previous-releases) are supported. If you want to ensure that users are on a specifc Node.js version, you can add the [node](https://www.npmjs.com/package/node) package to your CLI.
 
+To install the oclif npm package so you can later use the generator commands, run this command:
+
+```
+$ npm install --global oclif
+```
+
 
 ## Create an oclif Project from Scratch
 
-To create a new oclif project from scratch, run the `oclif generate` command. The example uses [`npx`](https://docs.npmjs.com/cli/v8/commands/npx) to run the command because `oclif` is an `npm` package:
+To create a new oclif project from scratch, run the `oclif generate` command. 
 
 ```
-$ npx oclif generate mynewcli
-? npm package name (mynewcli): mynewcli
+$ oclif generate mynewcli
+Generating mynewcli in /Users/me/oclif/mynewcli
+? Select a module type ESM
+? NPM package name mynewcli
+? Command bin name the CLI will export mynewcli
+<more prompts...>
+
 $ cd mynewcli
 $ ./bin/dev.js hello world
 hello world! (./src/commands/hello/world.ts)
@@ -48,7 +59,7 @@ After `oclif generate` completes, run your CLI using the included [bin scripts](
 If you want to start using oclif inside an existing project, then use the `oclif init` command to add the necessary files, dependencies, and configuration.
 
 ```
-$ npx oclif init
+$ oclif init
 ? Command bin name the CLI will export (my-pkg): my-pkg
 ? Select topic separator: spaces
 ? Select a module type: CommonJS
@@ -58,6 +69,7 @@ Created CLI in my-pkg
 ```
 
 `oclif init` adds the following:
+
 - bin scripts: `bin/run.js`, `bin/run.cmd`, `bin/dev.js`, and `bin/dev.cmd`. See [bin scripts](./templates.md#bin-scripts) for more information.
 - `oclif` section to `package.json` with the `bin`, `dirname`, `commands`, and `topicSeparator` properties set. See [Configuring Your CLI](./configuring_your_cli.md) for more information.
 - `@oclif/core` to the `dependencies` property in your `package.json` (if it's not already there).
@@ -69,7 +81,7 @@ Created CLI in my-pkg
 After you've generated an oclif project or initialized it in your existing project, start adding new [commands](./commands.md). This example creates a new command with the TypeScript source file `src/commands/foo/bar.ts` that you can customize to do whatever you want:
 
 ```
-$ npx oclif generate command foo:bar
+$ oclif generate command foo:bar
 ```
 
 See the documentation for [flags](./flags.md) and [args](./args.md) which shows how to add flags and arguments to your command; the documentation for [commands](./commands.md) shows the other options you can set on your command.
@@ -79,7 +91,7 @@ See the documentation for [flags](./flags.md) and [args](./args.md) which shows 
 You can also add [hooks](./hooks.md) to your CLI that allow you to further customize the behavior of your CLI:
 
 ```
-$ npx oclif generate hook my-hook --event init
+$ oclif generate hook my-hook --event init
 ```
 
 ### Further customizations
