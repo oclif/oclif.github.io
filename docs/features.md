@@ -56,7 +56,7 @@ oclif can package your CLI into [different installers](releasing.md) that don't 
 
 ### Autocomplete
 
-Include terminal autocompletion for your CLI with the [plugin-autocomplete](https://github.com/oclif/plugin-autocomplete). After the autocomplete feature is configured, users can complete command names and flag names by pressing the <TAB> key. 
+Include terminal autocompletion for your CLI with the [plugin-autocomplete](https://github.com/oclif/plugin-autocomplete). After the autocomplete feature is configured, users can complete command names and flag names by pressing the `tab` key.
 
 ```bash
 $ my-cli p<tab><tab> # lists all commands starting with 'p' for completion
