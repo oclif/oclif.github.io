@@ -89,8 +89,9 @@ export default async function createConfigAsync() {
         ],
       },
       announcementBar: {
-        id: 'announcementBar-1', // Increment on change (otherwise new announcements won't show up for users who have already dismissed old ones)
-        content: `<b><a target="_blank" href="https://github.com/oclif/core/releases/tag/3.0.0">@oclif/core v3.0</a> is now out! 🥳️</b>`,
+        // Increment on change (otherwise new announcements won't show up for users who have already dismissed old ones)
+        id: 'announcementBar-2',
+        content: `<b><a target="_blank" href="https://github.com/oclif/core/releases/tag/4.0.0">@oclif/core v4.0</a> is now out! 🥳️</b>`,
       },
       footer: {
         links: [],

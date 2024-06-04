@@ -5,7 +5,7 @@ description: Make help output pretty
 
 oclif supports themes that you can ship with your CLI, which users can then override if they choose.
 
-By default, the theme only applies to help output but you can extend the theme for your own purposes if you want. See [Extending Themes](#extending-themes) section below.
+By default, the theme only applies to help and JSON output but you can extend the theme for your own purposes if you want. See [Extending Themes](#extending-themes) section below.
 
 ## theme.json
 
@@ -22,6 +22,17 @@ The theme file takes the following shape:
   "flagOptions": "white",
   "flagRequired": "red",
   "flagSeparator": "white",
+  "json": {
+    "brace": "magenta",
+    "bracket": "magenta",
+    "colon": "dim",
+    "comma": "dim",
+    "key": "yellow",
+    "string": "green",
+    "number": "green",
+    "boolean": "green",
+    "null": "red"
+  },
   "sectionDescription": "white",
   "sectionHeader": "underline",
   "topic": "white",
@@ -31,7 +42,7 @@ The theme file takes the following shape:
 
 ### Supported Theme Properties
 
-As mentioned, the theme only applies to help output by default. The following properties can be used:
+As mentioned, the theme only applies to help and JSON output by default. The following properties can be used:
 
 - `alias`: the aliases under the `ALIASES` section
 - `bin`: the name of your CLI's executable (e.g. `sf`, `heroku`)
@@ -43,6 +54,16 @@ As mentioned, the theme only applies to help output by default. The following pr
 - `flagOptions`: the valid options for a flag
 - `flagRequired`: the `(required)` that shows on required flags
 - `flagSeparator`: the `,` that separates the short char and long flag names (e.g. `-f, --foo`)
+- `json`: the theme for JSON output
+  - `brace`: the `[` and `]`
+  - `bracket`: the `{` and `}`
+  - `colon`: the `:`
+  - `comma`: the `,`
+  - `key`: all keys
+  - `string`: string values
+  - `number`: number values
+  - `boolean`: boolean values
+  - `null `: null values
 - `sectionDescription`: the text inside of each section (e.g. everything under `DESCRIPTION`)
 - `sectionHeader`: the section header (e.g. `DESCRIPTION`)
 - `topic`: the topics under the `TOPICS` section
@@ -51,7 +72,7 @@ As mentioned, the theme only applies to help output by default. The following pr
 The values for each of these must be one of the following:
 - a hex code, e.g. `#FF0000`
 - a rgb, e.g. `rgb(255,255,255)`
-- a style supported by `chalk` (see https://github.com/chalk/chalk/#styles)
+- a standard ANSI color (see https://github.com/chalk/chalk/#styles)
 
 Any invalid values will be ignored.
 

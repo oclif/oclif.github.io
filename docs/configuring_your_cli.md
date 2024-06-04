@@ -3,7 +3,9 @@ title: Configuring Your CLI
 description: All about configuring oclif
 ---
 
-You can configure the behavior of oclif inside your CLI or plugin's package.json. All of the configuration options should be placed under the `oclif` section. For example:
+You can configure the behavior of oclif inside your CLI or plugin's package.json or using an rc file.
+
+In you use the `package.json`, all of the configuration options should be placed under the `oclif` section. For example:
 
 ```json
 {
@@ -19,6 +21,35 @@ You can configure the behavior of oclif inside your CLI or plugin's package.json
     "topicSeparator": " "
   }
 }
+```
+
+If you'd like to use an rc file, then you do not need to put the configuration under `oclif`. For instance:
+
+```javascript
+//.oclifrc.js
+
+module.exports = {
+  bin: "mycli",
+  dirname: "mycli",
+  commands: "./dist/commands",
+  topicSeparator: " "
+}
+```
+
+The following rc files are supported:
+```
+.oclifrc
+.oclifrc.json
+.oclifrc.yaml
+.oclifrc.yml
+.oclifrc.js
+.oclifrc.ts
+.oclifrc.mjs
+.oclifrc.cjs
+oclif.config.js
+oclif.config.ts
+oclif.config.mjs
+oclif.config.cjs
 ```
 
 Here's a list of all the options that you can configure.
