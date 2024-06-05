@@ -18,7 +18,8 @@ Here's a high level overview of ESM/CJS interoperability:
 
 ⚠️ Link ESM plugins
 
-  - Auto-compilation will **not** work with linked ESM plugins. Instead, oclif will use the plugin's compiled source - this means that you must compile the plugin yourself before executing any of the commands. We plan to support this again once the node ecosystem offers more comprehensive native support for ESM.
+  - Auto-compilation will **not** work with linked ESM plugins that have `ts-node` as a dev dependency. Instead, oclif will use the plugin's compiled source - this means that you must compile the plugin yourself before executing any of the commands. We plan to support this again once the node ecosystem offers more comprehensive native support for ESM.
+  - You can, however, replace `ts-node` with `tsx` in your dev dependencies if you'd like to have runtime auto-compilation for linked ESM plugins.
 
 ### CJS Root plugin
 ✅ Install CJS plugins
@@ -29,7 +30,8 @@ Here's a high level overview of ESM/CJS interoperability:
 
 ⚠️ Link ESM plugins
 
-  - Auto-compilation will **not** work with linked ESM plugins. Instead, oclif will use the plugin's compiled source - this means that you must compile the plugin yourself before executing any of the commands. We plan to support this again once the node ecosystem offers more comprehensive native support for ESM.
+  - Auto-compilation will **not** work with linked ESM plugins that have `ts-node` as a dev dependency. Instead, oclif will use the plugin's compiled source - this means that you must compile the plugin yourself before executing any of the commands. We plan to support this again once the node ecosystem offers more comprehensive native support for ESM.
+  - You can, however, replace `ts-node` with `tsx` in your dev dependencies if you'd like to have runtime auto-compilation for linked ESM plugins.
 
 ## Creating an ESM plugin
 
