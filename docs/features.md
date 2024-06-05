@@ -14,7 +14,7 @@ By default, topics are separated with colons, such as `my:awesome:command`. Howe
 
 ### Super Speed
 
-The overhead for running an oclif CLI command is almost nothing. [The command requires few dependencies](https://www.npmjs.com/package/@oclif/core?activeTab=dependencies); for example, only 28 dependencies are required for a minimal setup, including all transitive dependencies. Also, only the command to be executed requires Node.js. Which means that a large CLI with many commands loads as fast as a small CLI with just a single command.
+The overhead for running an oclif CLI command is almost nothing. [The command requires few dependencies](https://www.npmjs.com/package/@oclif/core?activeTab=dependencies); for example, only 17 dependencies are required for a minimal setup. Also, only the command to be executed requires Node.js. Which means that a large CLI with many commands loads as fast as a small CLI with just a single command.
 
 ### CLI Generator
 
