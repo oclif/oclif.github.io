@@ -71,3 +71,13 @@ export class MyCLI extends Command {
     this.log(`running my command with args: ${argv[0]}, ${argv[1]}`)
   }
 }
+```
+
+Arguments can also be piped via stdin. This is particularly useful when creating scripts with your CLI commands. For example:
+
+```
+$ echo arg1 | mycli
+running my command with args: arg1
+```
+
+This can behavior can be disabled on an argument by setting the `ignoreStdin` property to `true` on the argument's definition.
