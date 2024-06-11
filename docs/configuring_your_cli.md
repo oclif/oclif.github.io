@@ -40,14 +40,10 @@ The following rc files are supported:
 ```
 .oclifrc
 .oclifrc.json
-.oclifrc.yaml
-.oclifrc.yml
 .oclifrc.js
-.oclifrc.ts
 .oclifrc.mjs
 .oclifrc.cjs
 oclif.config.js
-oclif.config.ts
 oclif.config.mjs
 oclif.config.cjs
 ```
