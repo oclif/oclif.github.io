@@ -32,69 +32,69 @@ await run(config)
 
 ## Accessing oclif-specific performance metrics
 
-Once performance is enabled, you can see the in the debug output under the `oclif-perf` scope.
+Once performance is enabled, you can see the in the debug output under the `oclif:perf` scope.
 
 ```
-❯ DEBUG=oclif-perf sf version
+❯ DEBUG=oclif:perf sf version
 @salesforce/cli/2.35.6 darwin-arm64 node-v20.11.0
-  oclif-perf Process Uptime: 747.6823ms +0ms
-  oclif-perf Oclif Time: 302.1286ms +0ms
-  oclif-perf Init Time: 37.7735ms +0ms
-  oclif-perf Config Load Time: 294.5321ms +0ms
-  oclif-perf   • Root Plugin Load Time: 11.2781ms +0ms
-  oclif-perf   • Plugins Load Time: 274.6006ms +0ms
-  oclif-perf   • Commands Load Time: 6.7736ms +0ms
-  oclif-perf Core Plugin Load Time: 20.9403ms +0ms
-  oclif-perf User Plugin Load Time: 0.0000ms +0ms
-  oclif-perf Linked Plugin Load Time: 2.3124ms +0ms
-  oclif-perf Plugin Load Times: +0ms
-  oclif-perf   oclif-hello-world: 239.1951ms (no manifest!) +0ms
-  oclif-perf   @oclif/plugin-update: 18.8549ms +0ms
-  oclif-perf   @oclif/plugin-autocomplete: 17.5277ms +0ms
-  oclif-perf   @oclif/plugin-commands: 16.4917ms +0ms
-  oclif-perf   @oclif/plugin-not-found: 16.3310ms +0ms
-  oclif-perf   @oclif/plugin-search: 15.8846ms +0ms
-  oclif-perf   @oclif/plugin-version: 14.8063ms +0ms
-  oclif-perf   @salesforce/plugin-org: 14.5657ms +0ms
-  oclif-perf   @salesforce/plugin-data: 14.3991ms +0ms
-  oclif-perf   @oclif/plugin-warn-if-update-available: 14.3733ms +0ms
-  oclif-perf   @oclif/plugin-which: 14.1629ms +0ms
-  oclif-perf   @salesforce/plugin-apex: 13.9885ms +0ms
-  oclif-perf   @salesforce/plugin-auth: 13.6895ms +0ms
-  oclif-perf   @salesforce/plugin-deploy-retrieve: 13.6353ms +0ms
-  oclif-perf   @salesforce/plugin-limits: 13.1123ms +0ms
-  oclif-perf   @salesforce/plugin-packaging: 12.9777ms +0ms
-  oclif-perf   @salesforce/plugin-info: 12.7787ms +0ms
-  oclif-perf   @salesforce/plugin-marketplace: 12.1542ms +0ms
-  oclif-perf   @salesforce/plugin-source: 11.9480ms +0ms
-  oclif-perf   @salesforce/plugin-schema: 11.7775ms +0ms
-  oclif-perf   @salesforce/plugin-settings: 11.4785ms +0ms
-  oclif-perf   @salesforce/plugin-templates: 11.4225ms +0ms
-  oclif-perf   @salesforce/plugin-sobject: 11.3670ms +0ms
-  oclif-perf   root: 11.2781ms +0ms
-  oclif-perf   @salesforce/plugin-user: 10.8521ms +0ms
-  oclif-perf   @salesforce/plugin-telemetry: 10.5724ms +1ms
-  oclif-perf   @salesforce/plugin-trust: 10.4463ms +0ms
-  oclif-perf   @oclif/plugin-plugins: 2.0135ms +0ms
-  oclif-perf   @oclif/plugin-help: 1.9039ms +0ms
-  oclif-perf Hook Run Times: +0ms
-  oclif-perf   init: +0ms
-  oclif-perf     total: 37.4624ms +0ms
-  oclif-perf     oclif-hello-world(./dist/hooks/init/init): 7.9818ms +0ms
-  oclif-perf     @oclif/plugin-warn-if-update-available(./lib/hooks/init/check-update): 37.1145ms +0ms
-  oclif-perf     @salesforce/plugin-settings(./lib/hooks/init/load_config_meta): 29.3073ms +0ms
-  oclif-perf     @oclif/plugin-update(./dist/hooks/init.js): 33.1767ms +0ms
-  oclif-perf   prerun: +0ms
-  oclif-perf     total: 260.5702ms +0ms
-  oclif-perf     @salesforce/cli(./dist/hooks/prerun): 2.3582ms +0ms
-  oclif-perf     @salesforce/plugin-telemetry(./lib/hooks/telemetryPrerun.js): 260.2634ms +0ms
-  oclif-perf   preparse: +0ms
-  oclif-perf     total: 0.5351ms +0ms
-  oclif-perf     @salesforce/cli(/dist/hooks/preparse): 0.5045ms +0ms
-  oclif-perf   postrun: +0ms
-  oclif-perf     total: 0.3507ms +0ms
-  oclif-perf Command Load Time: 0.7478ms +0ms
-  oclif-perf Command Run Time: 264.2587ms +0ms
+  oclif:perf Process Uptime: 747.6823ms +0ms
+  oclif:perf Oclif Time: 302.1286ms +0ms
+  oclif:perf Init Time: 37.7735ms +0ms
+  oclif:perf Config Load Time: 294.5321ms +0ms
+  oclif:perf   • Root Plugin Load Time: 11.2781ms +0ms
+  oclif:perf   • Plugins Load Time: 274.6006ms +0ms
+  oclif:perf   • Commands Load Time: 6.7736ms +0ms
+  oclif:perf Core Plugin Load Time: 20.9403ms +0ms
+  oclif:perf User Plugin Load Time: 0.0000ms +0ms
+  oclif:perf Linked Plugin Load Time: 2.3124ms +0ms
+  oclif:perf Plugin Load Times: +0ms
+  oclif:perf   oclif-hello-world: 239.1951ms (no manifest!) +0ms
+  oclif:perf   @oclif/plugin-update: 18.8549ms +0ms
+  oclif:perf   @oclif/plugin-autocomplete: 17.5277ms +0ms
+  oclif:perf   @oclif/plugin-commands: 16.4917ms +0ms
+  oclif:perf   @oclif/plugin-not-found: 16.3310ms +0ms
+  oclif:perf   @oclif/plugin-search: 15.8846ms +0ms
+  oclif:perf   @oclif/plugin-version: 14.8063ms +0ms
+  oclif:perf   @salesforce/plugin-org: 14.5657ms +0ms
+  oclif:perf   @salesforce/plugin-data: 14.3991ms +0ms
+  oclif:perf   @oclif/plugin-warn-if-update-available: 14.3733ms +0ms
+  oclif:perf   @oclif/plugin-which: 14.1629ms +0ms
+  oclif:perf   @salesforce/plugin-apex: 13.9885ms +0ms
+  oclif:perf   @salesforce/plugin-auth: 13.6895ms +0ms
+  oclif:perf   @salesforce/plugin-deploy-retrieve: 13.6353ms +0ms
+  oclif:perf   @salesforce/plugin-limits: 13.1123ms +0ms
+  oclif:perf   @salesforce/plugin-packaging: 12.9777ms +0ms
+  oclif:perf   @salesforce/plugin-info: 12.7787ms +0ms
+  oclif:perf   @salesforce/plugin-marketplace: 12.1542ms +0ms
+  oclif:perf   @salesforce/plugin-source: 11.9480ms +0ms
+  oclif:perf   @salesforce/plugin-schema: 11.7775ms +0ms
+  oclif:perf   @salesforce/plugin-settings: 11.4785ms +0ms
+  oclif:perf   @salesforce/plugin-templates: 11.4225ms +0ms
+  oclif:perf   @salesforce/plugin-sobject: 11.3670ms +0ms
+  oclif:perf   root: 11.2781ms +0ms
+  oclif:perf   @salesforce/plugin-user: 10.8521ms +0ms
+  oclif:perf   @salesforce/plugin-telemetry: 10.5724ms +1ms
+  oclif:perf   @salesforce/plugin-trust: 10.4463ms +0ms
+  oclif:perf   @oclif/plugin-plugins: 2.0135ms +0ms
+  oclif:perf   @oclif/plugin-help: 1.9039ms +0ms
+  oclif:perf Hook Run Times: +0ms
+  oclif:perf   init: +0ms
+  oclif:perf     total: 37.4624ms +0ms
+  oclif:perf     oclif-hello-world(./dist/hooks/init/init): 7.9818ms +0ms
+  oclif:perf     @oclif/plugin-warn-if-update-available(./lib/hooks/init/check-update): 37.1145ms +0ms
+  oclif:perf     @salesforce/plugin-settings(./lib/hooks/init/load_config_meta): 29.3073ms +0ms
+  oclif:perf     @oclif/plugin-update(./dist/hooks/init.js): 33.1767ms +0ms
+  oclif:perf   prerun: +0ms
+  oclif:perf     total: 260.5702ms +0ms
+  oclif:perf     @salesforce/cli(./dist/hooks/prerun): 2.3582ms +0ms
+  oclif:perf     @salesforce/plugin-telemetry(./lib/hooks/telemetryPrerun.js): 260.2634ms +0ms
+  oclif:perf   preparse: +0ms
+  oclif:perf     total: 0.5351ms +0ms
+  oclif:perf     @salesforce/cli(/dist/hooks/preparse): 0.5045ms +0ms
+  oclif:perf   postrun: +0ms
+  oclif:perf     total: 0.3507ms +0ms
+  oclif:perf Command Load Time: 0.7478ms +0ms
+  oclif:perf Command Run Time: 264.2587ms +0ms
 ```
 
 You can also access these metrics programmatically like so:
