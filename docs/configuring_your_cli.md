@@ -5,7 +5,7 @@ description: All about configuring oclif
 
 You can configure the behavior of oclif inside your CLI or plugin's package.json or using an rc file.
 
-In you use the `package.json`, all of the configuration options should be placed under the `oclif` section. For example:
+If you use the `package.json`, all of the configuration options should be placed under the `oclif` section. For example:
 
 ```json
 {
