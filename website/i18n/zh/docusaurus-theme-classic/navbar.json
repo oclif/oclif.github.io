@@ -1,0 +1,18 @@
+{
+  "logo.alt": {
+    "message": "oclif",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Getting Started": {
+    "message": "快速开始",
+    "description": "Navbar item with label Getting Started"
+  },
+  "item.label.API Reference": {
+    "message": "API 参考",
+    "description": "Navbar item with label API Reference"
+  },
+  "item.label.Blog": {
+    "message": "博客",
+    "description": "Navbar item with label Blog"
+  }
+}
