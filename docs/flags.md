@@ -52,7 +52,7 @@ static flags = {
     defaultHelp: 'a dynamic value'               // dynamic default value to show in help output (e.g. current working directory). Can be an async function that returns a string or undefined
     required: false,                             // make flag required
     aliases: ['username', 'u'],                  // aliases for the flag - can be short char or long flags
-    aliases: ['u', 'n'],                         // single character aliases for the flag
+    charAliases: ['u', 'n'],                     // single character aliases for the flag
     deprecated: false,                           // mark the flag as deprecated.
     deprecateAliases: false,                     // emit deprecation warning anytime a flag alias is provided
     noCacheDefault: false,                       // if true, the value returned by defaultHelp will not be cached in the oclif.manifest.json.
