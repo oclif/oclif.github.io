@@ -11,7 +11,7 @@ A basic hook looks like the following in TypeScript:
 ```typescript
 import {Hook} from '@oclif/core'
 
-const hook: Hook<'init'> = async function (options) {
+const hook: Hook.Init = async function (options) {
   console.log(`example init hook running before ${options.id}`)
 }
 
@@ -54,6 +54,7 @@ You can create hooks with `oclif generate hook myhook --event=init`.
 * `jit_plugin_not_installed` - runs if a command from a [JIT plugin](./jit_plugins.md) is executed but the plugin isn't installed yet. See Salesforce CLI's [implementation](https://github.com/salesforcecli/plugin-trust/blob/main/src/hooks/jitPluginInstall.ts).
 * `preparse` - runs before flags and args are parsed and validated. Useful if you need to manipulate the input. See Salesforce CLI's [implementation](https://github.com/salesforcecli/cli/blob/main/src/hooks/preparse.ts). This can only be implemented by the root CLI.
 * `postrun` - runs after the command only if the command finishes with no error
+* `finally` - runs after the command finishes, regardless of the command's exit status
 
 ## Custom Events
 
