@@ -12,15 +12,18 @@ Inside a command, `this.config` provides access to the `Config` class, which con
   - macOS: `~/Library/Caches/mycli`
   - Unix: `~/.cache/mycli`
   - Windows: `%LOCALAPPDATA%\mycli`
-  - Can be overridden with `XDG_CACHE_HOME`
+  - Can be overridden with `<CLI>_CACHE_HOME`, where `<CLI>` is the name of your CLI.
+  - On linux systems, you can use `XDG_CACHE_HOME` to override
 - **configDir** - CLI config directory
   - Unix: `~/.config/mycli`
   - Windows: `%LOCALAPPDATA%\mycli`
-  - Can be overridden with `XDG_CONFIG_HOME`
+  - Can be overridden with `<CLI>_CONFIG_HOME`, where `<CLI>` is the name of your CLI.
+  - On linux systems, you can use `XDG_CONFIG_HOME` to override
 - **dataDir** - CLI data directory
   - Unix: `~/.data/mycli`
   - Windows: `%LOCALAPPDATA%\mycli`
-  - Can be overridden with `XDG_DATA_HOME`
+  - Can be overridden with `<CLI>_DATA_HOME`, where `<CLI>` is the name of your CLI.
+  - On linux systems, you can use `XDG_DATA_HOME` to override
 - **dirname** - dirname used with `cacheDir|configDir|dataDir`. Can be overridden in `package.json`.
 - **errlog** - path to error log inside of `cacheDir`
 - **home** - user home directory
