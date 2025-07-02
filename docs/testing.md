@@ -68,6 +68,32 @@ describe('whoami', () => {
 
 For more on how to test with oclif, check out the docs for [@oclif/test](https://github.com/oclif/test).
 
+## Capturing `stdout` and `stderr` with Vitest
+
+When using `@oclif/test` in combination with **Vitest**, be aware that Vitest intercepts `console.log`, `console.error`, and other console methods by default. This can interfere with `@oclif/test`’s ability to capture `stdout` and `stderr` when calling `runCommand()`.
+
+To ensure that `stdout` and `stderr` are captured properly (e.g. when using `const { stdout, stderr } = await runCommand("config:dump");`), you **must** disable console interception in your Vitest configuration by adding the line `disableConsoleIntercept: true` to your `vitest.config.ts`.
+
+### Example `vitest.config.ts`
+
+```
+ts
+CopyEdit
+import { defineConfig } from "vitest/config";
+
+export default defineConfig({
+  test: {
+    setupFiles: ["./src/vitest.setup.ts"],
+    disableConsoleIntercept: true
+  }
+});
+
+```
+
+### Why This Matters
+
+`@oclif/test` relies on native `stdout`/`stderr` streams to verify command-line output. If `Vitest` intercepts these streams, captured output will be incomplete or missing—leading to failed or misleading assertions.
+
 ## Code Coverage
 
 Code coverage is provided automatically for JavaScript and TypeScript projects via [nyc](https://npm.im/nyc). Just run `yarn test` and it will show the code coverage. The coverage can optionally be sent to [codecov](https://codecov.io) in the CI scripts as well.
