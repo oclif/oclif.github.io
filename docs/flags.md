@@ -159,4 +159,4 @@ $ mycli -vffoo
 
 The last one seems a little odd at first glance, but it's relatively standard in unix and makes commands like `tar -xvzfmytarball.tar.gz` possible.
 
-See our blog post [CLI Flags Explained](../blog/2019/02/20/cli-flags-explained) for a deeper dive into CLI flags.
+See our blog post [CLI Flags Explained](/blog/2019/02/20/cli-flags-explained) for a deeper dive into CLI flags.
