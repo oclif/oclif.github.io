@@ -1,0 +1,10 @@
+{
+  "copyright": {
+    "message": "Copyright © 2023 Salesforce",
+    "description": "The footer copyright"
+  },
+  "logo.alt": {
+    "message": "Salesforce",
+    "description": "The alt text of footer logo"
+  }
+}
