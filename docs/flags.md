@@ -59,6 +59,7 @@ static flags = {
     dependsOn: ['extra-flag'],                   // this flag requires another flag
     exclusive: ['extra-flag'],                   // this flag cannot be specified alongside this other flag
     exactlyOne: ['extra-flag', 'another-flag'],  // exactly one of these flags must be provided
+    compatible: ['extra-flag'],                  // this flag can ONLY be used in combination with the provided flags
     relationships: [                             // define complex relationships between flags
       // Make this flag dependent on all of these flags
       {type: 'all', flags: ['flag-one', 'flag-two']}
@@ -66,6 +67,8 @@ static flags = {
       {type: 'some', flags: ['flag-three', 'flag-four']}
       // Make this flag exclusive of all these flags
       {type: 'none', flags: ['flag-five', 'flag-six']}
+      // Make this only compatible with these flags
+      {type: 'only', flags: ['flag-one', 'flag-two']}
 
       // Make this flag dependent on all of these flags
       {type: 'all', flags: [
