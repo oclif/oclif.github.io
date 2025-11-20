@@ -2,7 +2,7 @@
 title: Performance
 ---
 
-oclif supports performance tracking out of the box - both for oclif and you own code. You can enable it in one of two ways depending on how you've implemented your bin scripts.
+oclif supports performance tracking out of the box, both for oclif itself and your custom code. You can enable it in one of two ways depending on how you've implemented your bin scripts.
 
 If you're using the bin scripts that come from the generator, you can simply set `performanceEnabled` on the `settings` module:
 
