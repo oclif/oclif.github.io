@@ -54,8 +54,7 @@ Here are the types of args that `Args` exports:
 - `directory`
 - `custom`
 
-For variable-length arguments, use the `multiple: true` property. When this property is used, all args before and after the variable-length argument
-must be `required: true`.
+For variable-length arguments, use the `multiple: true` property. When you use it, you must also set all args before and after the variable-length argument to `required: true`.
 
 ```typescript
 import {Args, Command} from '@oclif/core'
