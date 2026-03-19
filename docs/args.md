@@ -38,7 +38,8 @@ static args = {
       defaultHelp: 'a dynamic value'    // dynamic default value to show in help output (e.g. current working directory). Can be an async function that returns a string or undefined
       options: ['a', 'b'],              // only allow input to be from a discrete set
       ignoreStdin: false,               // set to true to ignore any value provided by stdin
-      noCacheDefault: false             // if true, the value returned by defaultHelp will not be cached in the oclif.manifest.json.
+      noCacheDefault: false,            // if true, the value returned by defaultHelp will not be cached in the oclif.manifest.json.
+      multiple: false                   // if true, this argument will support multiple inputs and parse them as an array
     }
   ),
 }
@@ -53,22 +54,23 @@ Here are the types of args that `Args` exports:
 - `directory`
 - `custom`
 
-For variable length arguments, disable argument validation with `static strict = false` on the command.
+For variable-length arguments, use the `multiple: true` property. When you use it, you must also set all args before and after the variable-length argument to `required: true`.
 
 ```typescript
 import {Args, Command} from '@oclif/core'
 
 export class MyCLI extends Command {
   static args = {
-    things: Args.string(),
+    arg1: Args.string({required: true}),
+    arg2: Args.string({multiple: true, required: true}),
+    arg3: Args.string({required: true})
   }
 
-  static strict = false
-
   async run() {
-    // If you're using strict=false you should use argv to access the provided args.
-    const {argv} = await this.parse(MyCLI)
-    this.log(`running my command with args: ${argv[0]}, ${argv[1]}`)
+    const {args} = await this.parse(MyCLI)
+    this.log(`arg 1 is ${args.arg1}`)            // args.arg1 is a string
+    this.log(`arg 2 is ${args.arg2.join(',')}`)  // args.arg2 is a string[]
+    this.log(`arg3 is ${args.arg3}`)             // args.arg3 is a string
   }
 }
 ```
