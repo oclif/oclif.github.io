@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[6344],{3880:e=>{e.exports=JSON.parse('{"categoryGeneratedIndex":{"title":"Guides","slug":"guides","permalink":"/docs/guides","sidebar":"docs","navigation":{"previous":{"title":"Templates","permalink":"/docs/templates"},"next":{"title":"Aliases","permalink":"/docs/aliases"}}}}')}}]);
