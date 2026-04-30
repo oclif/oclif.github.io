@@ -47,7 +47,18 @@ const sidebars: SidebarsConfig = {
       items: [
         'commands',
         'args',
-        'flags',
+        {
+          label: 'Command Flags',
+          type: 'category',
+          collapsed: true,
+          link: {
+            type: 'doc',
+            id: 'flags'
+          },
+          items: [
+              'constraints'
+          ]
+        },
         'config',
         'command_discovery_strategies',
         'topics',
