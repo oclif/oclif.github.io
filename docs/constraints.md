@@ -192,7 +192,7 @@ Satisfied if all methods return true.
 
 In this example, `foo` and `bar` are mutually exclusive if `baz1` is equal to `5` AND `baz2` is equal to `7`:
 ```typescript
-Constraints.flags('foo', 'bar').are.mutuallyExclusive.when.allFlagCriteriaSatisfied({
+Constraints.flags('foo', 'bar').are.mutuallyExclusive().when.allFlagCriteriaSatisfied({
   baz1: (v) => v === 5,
   baz2: (v) => v === 7
 })
@@ -205,7 +205,7 @@ Satisfied if any method returns true.
 
 In this example, `foo` and `bar` are mutually exclusive if `baz1` is equal to `5` OR `baz2` is equal to `7`:
 ```typescript
-Constraints.flags('foo', 'bar').are.mutuallyExclusive.when.anyFlagCriterionSatisfied({
+Constraints.flags('foo', 'bar').are.mutuallyExclusive().when.anyFlagCriterionSatisfied({
   baz1: (v) => v === 5,
   baz2: (v) => v === 7
 })
