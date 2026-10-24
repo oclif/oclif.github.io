@@ -1,5 +1,5 @@
 {
   "devDependencies": {
-    "@oclif/prettier-config": "^0.2.1"
+    "@oclif/prettier-config": "^0.2.2"
   }
 }
